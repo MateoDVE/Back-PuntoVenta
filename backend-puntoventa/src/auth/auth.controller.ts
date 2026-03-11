@@ -8,10 +8,11 @@ import { GetUser } from './get-user.decorator';
 export class AuthController {
   constructor(private authService: AuthService) {}
 
-  @Post('signup')
-  async signUp(@Body() signUpDto: SignUpDto) {
-    return this.authService.signUp(signUpDto);
-  }
+  // Signup comentado - Los administradores crearán usuarios desde Supabase o endpoint protegido  
+  // @Post('signup')
+  // async signUp(@Body() signUpDto: SignUpDto) {
+  //   return this.authService.signUp(signUpDto);
+  // }
 
   @Post('signin')
   @HttpCode(HttpStatus.OK)

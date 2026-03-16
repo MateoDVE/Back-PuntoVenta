@@ -4,7 +4,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { SupabaseModule } from './supabase/supabase.module';
 import { AuthModule } from './auth/auth.module';
-import { ProductosModule } from './productos/productos.module'; 
+import { VendedoresModule } from './vendedores/vendedores.module';
+
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -13,7 +14,7 @@ import { ProductosModule } from './productos/productos.module';
     }),
     SupabaseModule,
     AuthModule,
-    ProductosModule, 
+    VendedoresModule,
   ],
   controllers: [AppController],
   providers: [AppService],

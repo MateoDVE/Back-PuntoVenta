@@ -5,6 +5,7 @@ import { AppService } from './app.service';
 import { SupabaseModule } from './supabase/supabase.module';
 import { AuthModule } from './auth/auth.module';
 import { VendedoresModule } from './vendedores/vendedores.module';
+import { ProductosModule } from './productos/productos.module';
 
 @Module({
   imports: [
@@ -15,6 +16,7 @@ import { VendedoresModule } from './vendedores/vendedores.module';
     SupabaseModule,
     AuthModule,
     VendedoresModule,
+    ProductosModule,
   ],
   controllers: [AppController],
   providers: [AppService],

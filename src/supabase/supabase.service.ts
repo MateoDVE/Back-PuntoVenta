@@ -64,6 +64,25 @@ export class SupabaseService {
     return data;
   }
 
+  async deleteUserByAdmin(userId: string) {
+    const { error } = await this.supabase.auth.admin.deleteUser(userId);
+
+    if (error) throw error;
+  }
+
+  async updateUserByAdmin(
+    userId: string,
+    payload: { email?: string; password?: string; user_metadata?: Record<string, unknown> },
+  ) {
+    const { data, error } = await this.supabase.auth.admin.updateUserById(
+      userId,
+      payload,
+    );
+
+    if (error) throw error;
+    return data;
+  }
+
   async signIn(email: string, password: string) {
     const { data, error } = await this.supabase.auth.signInWithPassword({
       email,

@@ -98,23 +98,23 @@ Recomendación:
 
 ## Ejecución local
 
-Desde la carpeta app:
+En Windows (PowerShell):
 
 ```powershell
-.\mvnw.cmd clean compile
+cd Back-PuntoVenta
 .\mvnw.cmd spring-boot:run
 ```
 
 En macOS/Linux:
 
 ```bash
-./mvnw clean compile
+cd Back-PuntoVenta
 ./mvnw spring-boot:run
 ```
 
 La API levanta en:
 
-- http://localhost:3000
+- http://localhost:3000 (puerto configurado en application.properties)
 
 ## Endpoints de la API
 

@@ -2,8 +2,6 @@
 
 Backend del sistema PuntoVenta construido con Spring Boot, Maven y Supabase, siguiendo una arquitectura hexagonal (Ports and Adapters).
 
-> ✨ **Estructura recientemente reorganizada** - El backend ahora mantiene una separación clara por capas y módulos de negocio, con DTOs organizados en `application/<modulo>/dto/` para máxima claridad y mantenibilidad.
-
 ## Contenido
 
 - Descripción general
@@ -14,6 +12,7 @@ Backend del sistema PuntoVenta construido con Spring Boot, Maven y Supabase, sig
 - Ejecución local
 - Endpoints de la API
 - Manejo de errores
+- Logging
 - CORS
 - Estructura de carpetas
 - Notas de despliegue
@@ -333,6 +332,120 @@ Se manejan:
 - MethodArgumentNotValidException
 - ConstraintViolationException
 - Exception genérica
+
+## Loggers
+
+### Sistema de logging
+
+El proyecto utiliza **SLF4J + Logback** (incluido por defecto en Spring Boot) para registrar eventos, errores y debugging.
+
+**Archivo de configuración:**
+- `src/main/resources/logback-spring.xml`
+
+**Archivos de logs:**
+- `logs/app.log` (rotación diaria, máximo 30 días)
+
+### Niveles de logging
+
+| Nivel | Uso | Ejemplo |
+|-------|-----|---------|
+| **DEBUG** | Información detallada para debugging | Entrada en métodos, valores intermedios, búsquedas |
+| **INFO** | Eventos importantes de la aplicación | Creación exitosa, actualización, login |
+| **WARN** | Situaciones inesperadas pero recuperables | Email duplicado, validación fallida, archivo vacío |
+| **ERROR** | Errores que requieren atención | Excepciones inesperadas (incluir stack trace) |
+
+### Guía: Agregar logging a un nuevo Controller
+
+**Paso 1:** Importar las clases necesarias
+
+```java
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+```
+
+**Paso 2:** Declarar el logger en la clase
+
+```java
+@RestController
+@RequestMapping("/categorias")
+public class CategoriasRestAdapter {
+    
+    private static final Logger logger = LoggerFactory.getLogger(CategoriasRestAdapter.class);
+    private final GestionCategoriasService gestionCategoriasService;
+    
+    // ... constructor y métodos
+}
+```
+
+**Paso 3:** Agregar logs en cada endpoint
+
+```java
+@PostMapping
+public ResponseEntity<Map<String, Object>> crear(@RequestBody CreateCategoriaDto request) {
+    logger.info("POST /categorias - Crear nueva categoría: {}", request.getNombre());
+    try {
+        Categoria categoria = gestionCategoriasService.crearCategoria(request.getNombre());
+        logger.info("Categoría creada exitosamente - ID: {}, Nombre: {}", 
+            categoria.getId(), categoria.getNombre());
+        return ResponseEntity.status(HttpStatus.CREATED).body(mapCategoriaToResponse(categoria));
+    } catch (IllegalArgumentException ex) {
+        logger.warn("Error al crear categoría: {}", ex.getMessage());
+        throw new ApiException(HttpStatus.BAD_REQUEST, ex.getMessage());
+    } catch (Exception ex) {
+        logger.error("Error interno al crear categoría", ex);
+        throw new ApiException(HttpStatus.INTERNAL_SERVER_ERROR, ex.getMessage());
+    }
+}
+
+
+```
+
+### Guía: Agregar logging a un nuevo Service
+
+**Paso 1:** Importar el logger
+
+```java
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+```
+
+**Paso 2:** Declarar el logger
+
+```java
+public class GestionCategoriasService {
+    
+    private static final Logger logger = LoggerFactory.getLogger(GestionCategoriasService.class);
+    private final CategoriaRepositoryPort CategoriaRepositoryPort;
+    
+    // ... constructor
+}
+```
+
+**Paso 3:** Agregar logs en métodos clave
+
+```java
+public Categoria crearCategoria(String nombre) {
+    logger.debug("Creando categoría - Nombre: {}", nombre);
+    nombre = nombre.trim();
+    
+    if (nombre.isBlank()) {
+        logger.warn("Intento de crear categoría con nombre vacío");
+        throw new DomainException("Nombre no puede estar vacío");
+    }
+    
+    if (categoriaRepositoryPort.existeNombre(nombre)) {
+        logger.warn("Intento de crear categoría con nombre existente: {}", nombre);
+        throw new DomainException("Ya existe una categoría con ese nombre");
+    }
+    
+    Categoria categoria = new Categoria(null, nombre, LocalDateTime.now());
+    categoria = categoriaRepositoryPort.crear(categoria);
+    logger.info("Categoría creada exitosamente - ID: {}, Nombre: {}", 
+        categoria.getId(), nombre);
+    return categoria;
+}
+
+```
 
 ## CORS
 

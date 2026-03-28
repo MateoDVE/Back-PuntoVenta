@@ -75,3 +75,224 @@
 2026-03-28 17:41:57 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-3000"]
 2026-03-28 17:41:57 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
 2026-03-28 17:41:57 [Thread-1] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-3000"]
+2026-03-28 17:41:57 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 26 with PID 27480 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-03-28 17:41:57 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v4.0.4, Spring v7.0.6
+2026-03-28 17:41:57 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-28 17:41:57 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-28 17:41:57 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-28 17:41:57 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-28 17:41:57 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-28 17:41:57 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 379 ms
+2026-03-28 17:41:57 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-28 17:41:57 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-28 17:41:57 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 0.624 seconds (process running for 4381.643)
+2026-03-28 17:41:57 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-03-28 18:02:21 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-03-28 18:02:21 [Thread-5] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-28 18:02:21 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:02:21 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-28 18:02:21 [Thread-5] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:02:21 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 26 with PID 27480 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-03-28 18:02:21 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v4.0.4, Spring v7.0.6
+2026-03-28 18:02:21 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-28 18:02:21 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-28 18:02:21 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:02:21 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-28 18:02:21 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-28 18:02:21 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 198 ms
+2026-03-28 18:02:21 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:02:21 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-28 18:02:21 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 0.34 seconds (process running for 5605.727)
+2026-03-28 18:02:21 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-03-28 18:03:19 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-03-28 18:03:19 [Thread-9] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-28 18:03:19 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:03:19 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-28 18:03:19 [Thread-9] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:03:19 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 26 with PID 27480 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-03-28 18:03:19 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v4.0.4, Spring v7.0.6
+2026-03-28 18:03:19 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-28 18:03:20 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-28 18:03:20 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:03:20 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-28 18:03:20 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-28 18:03:20 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 167 ms
+2026-03-28 18:03:20 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:03:20 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-28 18:03:20 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 0.273 seconds (process running for 5664.017)
+2026-03-28 18:03:20 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-03-28 18:03:57 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-03-28 18:03:57 [Thread-13] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-28 18:03:57 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:03:57 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-28 18:03:57 [Thread-13] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:03:57 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 26 with PID 27480 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-03-28 18:03:57 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v4.0.4, Spring v7.0.6
+2026-03-28 18:03:57 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-28 18:03:57 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 0 (http)
+2026-03-28 18:03:57 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-1"]
+2026-03-28 18:03:57 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-28 18:03:57 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-28 18:03:57 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 178 ms
+2026-03-28 18:03:57 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-1"]
+2026-03-28 18:03:57 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 55757 (http) with context path '/'
+2026-03-28 18:03:57 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 0.275 seconds (process running for 5701.562)
+2026-03-28 18:03:57 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-03-28 18:04:00 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-03-28 18:04:00 [Thread-17] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-28 18:04:00 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-auto-1-55757"]
+2026-03-28 18:04:00 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-28 18:04:00 [Thread-17] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-auto-1"]
+2026-03-28 18:04:00 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 26 with PID 27480 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-03-28 18:04:00 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v4.0.4, Spring v7.0.6
+2026-03-28 18:04:00 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-28 18:04:00 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-28 18:04:00 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:04:00 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-28 18:04:00 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-28 18:04:00 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 169 ms
+2026-03-28 18:04:00 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:04:00 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-28 18:04:00 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 0.263 seconds (process running for 5704.311)
+2026-03-28 18:04:00 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-03-28 18:04:58 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-03-28 18:04:58 [Thread-21] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-28 18:04:58 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:04:58 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-28 18:04:58 [Thread-21] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:04:58 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 26 with PID 27480 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-03-28 18:04:58 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v4.0.4, Spring v7.0.6
+2026-03-28 18:04:58 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-28 18:04:58 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-28 18:04:58 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:04:58 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-28 18:04:58 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-28 18:04:58 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 255 ms
+2026-03-28 18:04:58 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:04:58 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-28 18:04:58 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 0.364 seconds (process running for 5762.521)
+2026-03-28 18:04:58 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-03-28 18:05:01 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-03-28 18:05:01 [Thread-25] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-28 18:05:01 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:05:01 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-28 18:05:01 [Thread-25] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:05:01 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 26 with PID 27480 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-03-28 18:05:01 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v4.0.4, Spring v7.0.6
+2026-03-28 18:05:01 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-28 18:05:01 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-28 18:05:01 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:05:01 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-28 18:05:01 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-28 18:05:01 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 184 ms
+2026-03-28 18:05:01 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:05:01 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-28 18:05:01 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 0.282 seconds (process running for 5765.272)
+2026-03-28 18:05:01 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-03-28 18:05:07 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-03-28 18:05:07 [Thread-29] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-28 18:05:07 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:05:07 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-28 18:05:07 [Thread-29] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:05:07 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 26 with PID 27480 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-03-28 18:05:07 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v4.0.4, Spring v7.0.6
+2026-03-28 18:05:07 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-28 18:05:08 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-28 18:05:08 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:05:08 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-28 18:05:08 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-28 18:05:08 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 160 ms
+2026-03-28 18:05:08 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:05:08 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-28 18:05:08 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 0.266 seconds (process running for 5772.064)
+2026-03-28 18:05:08 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-03-28 18:05:19 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-03-28 18:05:19 [Thread-33] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-28 18:05:19 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:05:19 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-28 18:05:19 [Thread-33] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:05:19 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 26 with PID 27480 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-03-28 18:05:19 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v4.0.4, Spring v7.0.6
+2026-03-28 18:05:19 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-28 18:05:19 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-28 18:05:19 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:05:19 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-28 18:05:19 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-28 18:05:20 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 164 ms
+2026-03-28 18:05:20 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:05:20 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-28 18:05:20 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 0.254 seconds (process running for 5783.963)
+2026-03-28 18:05:20 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-03-28 18:05:23 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-03-28 18:05:23 [Thread-37] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-28 18:05:23 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:05:23 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-28 18:05:23 [Thread-37] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:05:23 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 26 with PID 27480 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-03-28 18:05:23 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v4.0.4, Spring v7.0.6
+2026-03-28 18:05:23 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-28 18:05:23 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-28 18:05:23 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:05:23 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-28 18:05:23 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-28 18:05:23 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 146 ms
+2026-03-28 18:05:23 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:05:23 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-28 18:05:23 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 0.238 seconds (process running for 5787.687)
+2026-03-28 18:05:23 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-03-28 18:05:26 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-03-28 18:05:26 [Thread-41] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-28 18:05:26 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:05:26 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-28 18:05:26 [Thread-41] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:05:26 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 26 with PID 27480 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-03-28 18:05:26 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v4.0.4, Spring v7.0.6
+2026-03-28 18:05:26 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-28 18:05:26 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-28 18:05:26 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:05:26 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-28 18:05:26 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-28 18:05:26 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 169 ms
+2026-03-28 18:05:26 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:05:26 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-28 18:05:26 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 0.27 seconds (process running for 5790.433)
+2026-03-28 18:05:26 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-03-28 18:05:33 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-03-28 18:05:33 [Thread-45] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-28 18:05:33 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:05:33 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-28 18:05:33 [Thread-45] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:05:33 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 26 with PID 27480 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-03-28 18:05:33 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v4.0.4, Spring v7.0.6
+2026-03-28 18:05:33 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-28 18:05:33 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-28 18:05:33 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:05:33 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-28 18:05:33 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-28 18:05:33 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 152 ms
+2026-03-28 18:05:33 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:05:33 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-28 18:05:33 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 0.24 seconds (process running for 5797.193)
+2026-03-28 18:05:33 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-03-28 18:05:34 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-03-28 18:05:34 [Thread-49] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-28 18:05:34 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:05:34 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-28 18:05:34 [Thread-49] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:05:34 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 26 with PID 27480 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-03-28 18:05:34 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v4.0.4, Spring v7.0.6
+2026-03-28 18:05:34 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-28 18:05:35 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-28 18:05:35 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:05:35 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-28 18:05:35 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-28 18:05:35 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 235 ms
+2026-03-28 18:05:35 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:05:35 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-28 18:05:35 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 0.374 seconds (process running for 5799.066)
+2026-03-28 18:05:35 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-03-28 18:05:43 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-03-28 18:05:43 [Thread-53] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-28 18:05:43 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2026-03-28 18:05:43 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-28 18:05:43 [Thread-53] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]

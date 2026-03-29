@@ -34,8 +34,16 @@ public class GestionInventarioService {
         AsignacionStock resultado = asignacionRepository.guardar(nuevaAsignacion);
         return resultado;
     }
-
+    
     public List<AsignacionStock> obtenerCargasPorVendedor(String vendedorId) {
         return asignacionRepository.obtenerPorVendedor(vendedorId);
     }
+public AsignacionStock confirmarSalidaInventario(String idCarga) {
+    AsignacionStock asignacion = asignacionRepository.obtenerPorId(idCarga)
+            .orElseThrow(() -> new DomainException("No se encontró la carga de transporte especificada"));
+    if ("VALIDADO".equals(asignacion.getEstadoValidacion())) {
+        throw new DomainException("Esta carga ya fue validada previamente y está en ruta");
+    }
+    return asignacionRepository.actualizarEstado(idCarga, "VALIDADO");
+}
 }

@@ -46,10 +46,21 @@ public class SupabaseAsignacionRepositoryAdapter implements AsignacionRepository
     public Optional<AsignacionStock> obtenerPorId(String idCarga) {
         return Optional.empty();
     }
+@Override
+public AsignacionStock actualizarEstado(String idCarga, String nuevoEstado) {
+    Map<String, String> queryParams = new HashMap<>();
+    queryParams.put("id_carga", "eq." + idCarga);
 
-    @Override
-    public AsignacionStock actualizarEstado(String idCarga, String nuevoEstado) {
-        return null;
-    }
+    Map<String, Object> body = new HashMap<>();
+    body.put("estado_validacion", nuevoEstado);
+
+    // Esto hace el PATCH en Supabase para cambiar de PENDIENTE a VALIDADO
+    supabaseHttpClient.update(TABLE, queryParams, body);
+    
+    // Aquí podrías volver a obtener la asignación actualizada si fuera necesario
+    return null; 
+}
+    
+    
 }
 

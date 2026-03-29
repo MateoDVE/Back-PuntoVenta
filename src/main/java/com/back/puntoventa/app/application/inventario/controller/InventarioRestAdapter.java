@@ -42,4 +42,26 @@ public class InventarioRestAdapter {
             throw new ApiException(HttpStatus.BAD_REQUEST, ex.getMessage());
         }
     }
+
+    /**
+     * Nuevo Endpoint para la Lógica de Salida.
+     * Este método simula la validación que haría el vendedor al recibir la carga.
+     * Cambia el estado de "PENDIENTE" a "VALIDADO".
+     */
+    @PatchMapping("/confirmar-salida/{idCarga}")
+    public ResponseEntity<Map<String, Object>> confirmarSalida(@PathVariable String idCarga) {
+        try {
+            // Llamamos a la lógica de negocio para validar la recepción física
+            AsignacionStock validada = gestionInventarioService.confirmarSalidaInventario(idCarga);
+            
+            Map<String, Object> response = new HashMap<>();
+            response.put("id_carga", idCarga);
+            response.put("estado_final", "VALIDADO");
+            response.put("mensaje", "Salida de inventario confirmada. El stock ya está en el transporte ");
+            
+            return ResponseEntity.ok(response);
+        } catch (Exception ex) {
+            throw new ApiException(HttpStatus.BAD_REQUEST, ex.getMessage());
+        }
+    }
 }

@@ -3,12 +3,15 @@ package com.back.puntoventa.app.config;
 import com.back.puntoventa.app.domain.auth.port.AutenticacionPort;
 import com.back.puntoventa.app.domain.auth.port.UsuarioRepositoryPort;
 import com.back.puntoventa.app.domain.auth.service.AutorizacionAuthService;
+import com.back.puntoventa.app.domain.inventario.port.AsignacionRepositoryPort;
+import com.back.puntoventa.app.domain.inventario.service.GestionInventarioService;
 import com.back.puntoventa.app.domain.productos.port.ProductoRepositoryPort;
 import com.back.puntoventa.app.domain.productos.port.StoragePort;
 import com.back.puntoventa.app.domain.productos.service.GestionProductosService;
 import com.back.puntoventa.app.domain.vendedores.port.GestorUsuariosPort;
 import com.back.puntoventa.app.domain.vendedores.port.VendedorRepositoryPort;
 import com.back.puntoventa.app.domain.vendedores.service.GestionVendedoresService;
+import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseAsignacionRepositoryAdapter;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseAutenticacionAdapter;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseGestorUsuariosAdapter;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseProductoRepositoryAdapter;
@@ -18,6 +21,8 @@ import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.Supab
 import com.back.puntoventa.app.infrastructure.persistence.supabase.client.SupabaseHttpClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import com.back.puntoventa.app.domain.inventario.port.AsignacionRepositoryPort;
+import com.back.puntoventa.app.domain.inventario.service.GestionInventarioService;
 
 /**
  * Configuración de la arquitectura Hexagonal.
@@ -86,5 +91,15 @@ public class HexagonalArchitectureConfig {
             ProductoRepositoryPort productoRepositoryPort,
             StoragePort storagePort) {
         return new GestionProductosService(productoRepositoryPort, storagePort);
+    }
+    @Bean
+    public GestionInventarioService gestionInventarioService(
+            AsignacionRepositoryPort asignacionRepositoryPort,
+            ProductoRepositoryPort productoRepositoryPort) {
+        return new GestionInventarioService(asignacionRepositoryPort, productoRepositoryPort);
+    }
+    @Bean
+    public AsignacionRepositoryPort asignacionRepositoryPort(SupabaseHttpClient supabaseHttpClient) {
+        return new SupabaseAsignacionRepositoryAdapter(supabaseHttpClient);
     }
 }

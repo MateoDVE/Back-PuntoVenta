@@ -21,8 +21,6 @@ import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.Supab
 import com.back.puntoventa.app.infrastructure.persistence.supabase.client.SupabaseHttpClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import com.back.puntoventa.app.domain.inventario.port.AsignacionRepositoryPort;
-import com.back.puntoventa.app.domain.inventario.service.GestionInventarioService;
 
 /**
  * Configuración de la arquitectura Hexagonal.
@@ -92,12 +90,14 @@ public class HexagonalArchitectureConfig {
             StoragePort storagePort) {
         return new GestionProductosService(productoRepositoryPort, storagePort);
     }
+
     @Bean
     public GestionInventarioService gestionInventarioService(
             AsignacionRepositoryPort asignacionRepositoryPort,
             ProductoRepositoryPort productoRepositoryPort) {
         return new GestionInventarioService(asignacionRepositoryPort, productoRepositoryPort);
     }
+
     @Bean
     public AsignacionRepositoryPort asignacionRepositoryPort(SupabaseHttpClient supabaseHttpClient) {
         return new SupabaseAsignacionRepositoryAdapter(supabaseHttpClient);

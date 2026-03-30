@@ -73,6 +73,21 @@ public class GestionProductosService {
         return productos;
     }
 
+    public List<Producto> obtenerStockBajo(Integer umbral) {
+        int limite = (umbral == null || umbral < 0) ? 100 : umbral;
+        logger.debug("Obteniendo productos con stock bajo. Umbral: {}", limite);
+
+        List<Producto> productos = productoRepositoryPort.obtenerTodos().stream()
+                .filter(producto -> {
+                    int stock = producto.getStockAlmacenCentral() == null ? 0 : producto.getStockAlmacenCentral();
+                    return stock < limite;
+                })
+                .toList();
+
+        logger.debug("Se encontraron {} productos con stock bajo", productos.size());
+        return productos;
+    }
+
     public Producto obtenerPorId(String id) {
         logger.debug("Obteniendo producto por ID: {}", id);
         Producto producto = productoRepositoryPort.obtenerPorId(id)

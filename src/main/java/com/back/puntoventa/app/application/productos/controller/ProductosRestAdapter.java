@@ -77,6 +77,22 @@ public class ProductosRestAdapter {
         }
     }
 
+    @GetMapping("/stock-bajo")
+    public ResponseEntity<List<Map<String, Object>>> obtenerStockBajo(
+            @RequestParam(name = "umbral", defaultValue = "100") Integer umbral) {
+        logger.info("GET /productos/stock-bajo - Consultando alertas con umbral: {}", umbral);
+        try {
+            List<Producto> productos = gestionProductosService.obtenerStockBajo(umbral);
+            List<Map<String, Object>> response = productos.stream()
+                    .map(this::mapProductoToResponse)
+                    .toList();
+            return ResponseEntity.ok(response);
+        } catch (Exception ex) {
+            logger.error("Error al obtener productos con stock bajo", ex);
+            throw new ApiException(HttpStatus.INTERNAL_SERVER_ERROR, ex.getMessage());
+        }
+    }
+
     @GetMapping("/{id}")
     public ResponseEntity<Map<String, Object>> obtenerPorId(@PathVariable String id) {
         logger.info("GET /productos/{} - Obtener producto por ID", id);

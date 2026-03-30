@@ -1,0 +1,19 @@
+{
+  "properties": [
+    {
+      "name": "supabase.url",
+      "type": "java.lang.String",
+      "description": "Base URL of the Supabase project."
+    },
+    {
+      "name": "supabase.serviceKey",
+      "type": "java.lang.String",
+      "description": "Supabase service role key used by backend adapters."
+    },
+    {
+      "name": "supabase.jwtSecret",
+      "type": "java.lang.String",
+      "description": "JWT secret for token validation integrations."
+    }
+  ]
+}

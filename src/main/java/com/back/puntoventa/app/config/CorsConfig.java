@@ -15,7 +15,8 @@ public class CorsConfig {
                 registry.addMapping("/**")
                         .allowedOrigins(
                             "http://localhost:4200", 
-                            "https://front-puntoventa.onrender.com"
+                            "https://front-puntoventa.onrender.com",
+                            "https://front-punto-venta.vercel.app"
                         )
                         .allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS")
                         .allowedHeaders("*")

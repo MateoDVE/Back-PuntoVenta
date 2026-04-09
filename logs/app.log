@@ -20,3 +20,17 @@
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52)
+2026-04-05 10:58:25 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-04-05 10:58:25 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 26 with PID 6504 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-04-05 10:58:25 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-05 10:58:25 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-05 10:58:25 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-05 10:58:25 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-05 10:58:26 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-05 10:58:26 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-05 10:58:26 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-05 10:58:26 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-05 10:58:26 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1089 ms
+2026-04-05 10:58:27 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-04-05 10:58:27 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-04-05 10:58:27 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 2.527 seconds (process running for 2.929)

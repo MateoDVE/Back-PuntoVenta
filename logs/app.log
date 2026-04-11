@@ -118,3 +118,109 @@
 2026-03-31 17:09:41 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 2.002 seconds (process running for 2.391)
 2026-03-31 17:13:05 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
 2026-03-31 17:13:05 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-04-01 13:41:07 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-04-01 13:41:07 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 26 with PID 21360 (C:\Users\Andrews\Documents\Taller\Back-PuntoVenta\target\classes started by Andrews in C:\Users\Andrews\Documents\Taller\Back-PuntoVenta)
+2026-04-01 13:41:07 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-01 13:41:07 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-01 13:41:07 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-01 13:41:07 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-01 13:41:08 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 3000 (http)
+2026-04-01 13:41:08 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2026-04-01 13:41:08 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-01 13:41:08 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-01 13:41:08 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1024 ms
+2026-04-01 13:41:09 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2026-04-01 13:41:09 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 3000 (http) with context path '/'
+2026-04-01 13:41:09 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 2.166 seconds (process running for 2.65)
+2026-04-01 13:43:30 [http-nio-3000-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-01 13:43:30 [http-nio-3000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-01 13:43:30 [http-nio-3000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-04-01 13:43:30 [http-nio-3000-exec-3] INFO  c.b.p.a.a.a.c.AuthRestAdapter - POST /auth/signin - Intento de autenticación para email: mateovargas220705@gmail.com
+2026-04-01 13:43:30 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticando usuario con email: mateovargas220705@gmail.com
+2026-04-01 13:43:32 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticación completada para email: mateovargas220705@gmail.com
+2026-04-01 13:43:32 [http-nio-3000-exec-3] INFO  c.b.p.a.a.a.c.AuthRestAdapter - Autenticación exitosa para email: mateovargas220705@gmail.com
+2026-04-01 13:43:32 [http-nio-3000-exec-4] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
+2026-04-01 13:43:32 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
+2026-04-01 13:43:32 [http-nio-3000-exec-7] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
+2026-04-01 13:43:32 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
+2026-04-01 13:43:32 [http-nio-3000-exec-8] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos/stock-bajo - Consultando alertas con umbral: 100
+2026-04-01 13:43:32 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo productos con stock bajo. Umbral: 100
+2026-04-01 13:43:32 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 23 productos
+2026-04-01 13:43:32 [http-nio-3000-exec-4] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 23 productos
+2026-04-01 13:43:32 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se encontraron 22 productos con stock bajo
+2026-04-01 13:43:32 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 5 vendedores
+2026-04-01 13:43:32 [http-nio-3000-exec-7] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 5 vendedores
+2026-04-01 13:43:37 [http-nio-3000-exec-9] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
+2026-04-01 13:43:37 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
+2026-04-01 13:43:37 [http-nio-3000-exec-10] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
+2026-04-01 13:43:37 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
+2026-04-01 13:43:37 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 23 productos
+2026-04-01 13:43:37 [http-nio-3000-exec-9] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 23 productos
+2026-04-01 13:43:37 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 5 vendedores
+2026-04-01 13:43:37 [http-nio-3000-exec-10] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 5 vendedores
+2026-04-01 13:43:37 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-04-01 13:43:37 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-04-01 13:43:37 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-04-01 13:43:37 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-04-01 13:43:37 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-04-01 13:43:38 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-04-01 13:43:38 [http-nio-3000-exec-9] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/997e2337-32a6-4ba5-84fb-873ef1b6036f - consulta por mateovargas220705@gmail.com
+2026-04-01 13:43:38 [http-nio-3000-exec-9] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 997e2337-32a6-4ba5-84fb-873ef1b6036f
+2026-04-01 13:43:38 [http-nio-3000-exec-9] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 997e2337-32a6-4ba5-84fb-873ef1b6036f
+2026-04-01 13:43:38 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-04-01 13:43:38 [http-nio-3000-exec-7] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/2ab0631c-da17-4bd8-b9b9-237de54711c6 - consulta por mateovargas220705@gmail.com
+2026-04-01 13:43:38 [http-nio-3000-exec-7] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 2ab0631c-da17-4bd8-b9b9-237de54711c6
+2026-04-01 13:43:38 [http-nio-3000-exec-7] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 2ab0631c-da17-4bd8-b9b9-237de54711c6
+2026-04-01 13:43:38 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-04-01 13:43:38 [http-nio-3000-exec-4] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/73ed0c2b-851c-44c8-a08b-ded6f61924f9 - consulta por mateovargas220705@gmail.com
+2026-04-01 13:43:38 [http-nio-3000-exec-4] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 73ed0c2b-851c-44c8-a08b-ded6f61924f9
+2026-04-01 13:43:38 [http-nio-3000-exec-4] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 73ed0c2b-851c-44c8-a08b-ded6f61924f9
+2026-04-01 13:43:38 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-04-01 13:43:38 [http-nio-3000-exec-10] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e - consulta por mateovargas220705@gmail.com
+2026-04-01 13:43:38 [http-nio-3000-exec-10] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e
+2026-04-01 13:43:38 [http-nio-3000-exec-10] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e
+2026-04-01 13:43:38 [http-nio-3000-exec-9] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 997e2337-32a6-4ba5-84fb-873ef1b6036f: 0
+2026-04-01 13:43:38 [http-nio-3000-exec-7] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 2ab0631c-da17-4bd8-b9b9-237de54711c6: 7
+2026-04-01 13:43:38 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-04-01 13:43:38 [http-nio-3000-exec-8] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/6b0a5026-52f3-475a-a20f-5aacf94764f0 - consulta por mateovargas220705@gmail.com
+2026-04-01 13:43:38 [http-nio-3000-exec-8] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-04-01 13:43:38 [http-nio-3000-exec-8] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-04-01 13:43:38 [http-nio-3000-exec-4] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 73ed0c2b-851c-44c8-a08b-ded6f61924f9: 4
+2026-04-01 13:43:38 [http-nio-3000-exec-10] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e: 0
+2026-04-01 13:43:38 [http-nio-3000-exec-8] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0: 4
+2026-04-01 13:43:46 [http-nio-3000-exec-1] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
+2026-04-01 13:43:46 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
+2026-04-01 13:43:46 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 5 vendedores
+2026-04-01 13:43:46 [http-nio-3000-exec-1] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 5 vendedores
+2026-04-01 13:43:47 [http-nio-3000-exec-3] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
+2026-04-01 13:43:47 [http-nio-3000-exec-2] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
+2026-04-01 13:43:47 [http-nio-3000-exec-5] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos/stock-bajo - Consultando alertas con umbral: 100
+2026-04-01 13:43:47 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
+2026-04-01 13:43:47 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
+2026-04-01 13:43:47 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo productos con stock bajo. Umbral: 100
+2026-04-01 13:43:47 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 5 vendedores
+2026-04-01 13:43:47 [http-nio-3000-exec-3] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 5 vendedores
+2026-04-01 13:43:47 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se encontraron 22 productos con stock bajo
+2026-04-01 13:43:47 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 23 productos
+2026-04-01 13:43:47 [http-nio-3000-exec-2] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 23 productos
+2026-04-01 13:43:48 [http-nio-3000-exec-6] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
+2026-04-01 13:43:48 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
+2026-04-01 13:43:48 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 23 productos
+2026-04-01 13:43:48 [http-nio-3000-exec-6] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 23 productos
+2026-04-01 13:43:49 [http-nio-3000-exec-9] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
+2026-04-01 13:43:49 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
+2026-04-01 13:43:49 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 5 vendedores
+2026-04-01 13:43:49 [http-nio-3000-exec-9] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 5 vendedores
+2026-04-01 13:43:51 [http-nio-3000-exec-4] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
+2026-04-01 13:43:51 [http-nio-3000-exec-7] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
+2026-04-01 13:43:51 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
+2026-04-01 13:43:51 [http-nio-3000-exec-10] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos/stock-bajo - Consultando alertas con umbral: 100
+2026-04-01 13:43:51 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
+2026-04-01 13:43:51 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo productos con stock bajo. Umbral: 100
+2026-04-01 13:43:51 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se encontraron 22 productos con stock bajo
+2026-04-01 13:43:51 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 23 productos
+2026-04-01 13:43:51 [http-nio-3000-exec-7] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 23 productos
+2026-04-01 13:43:51 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 5 vendedores
+2026-04-01 13:43:51 [http-nio-3000-exec-4] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 5 vendedores
+2026-04-01 13:50:11 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-01 13:50:11 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete

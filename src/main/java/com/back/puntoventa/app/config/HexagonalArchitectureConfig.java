@@ -8,6 +8,8 @@ import com.back.puntoventa.app.domain.inventario.service.GestionInventarioServic
 import com.back.puntoventa.app.domain.productos.port.ProductoRepositoryPort;
 import com.back.puntoventa.app.domain.productos.port.StoragePort;
 import com.back.puntoventa.app.domain.productos.service.GestionProductosService;
+import com.back.puntoventa.app.domain.ruta.port.RutaRepositoryPort;
+import com.back.puntoventa.app.domain.ruta.service.RutaService;
 import com.back.puntoventa.app.domain.vendedores.port.GestorUsuariosPort;
 import com.back.puntoventa.app.domain.vendedores.port.VendedorRepositoryPort;
 import com.back.puntoventa.app.domain.vendedores.service.GestionVendedoresService;
@@ -15,6 +17,7 @@ import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.Supab
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseAutenticacionAdapter;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseGestorUsuariosAdapter;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseProductoRepositoryAdapter;
+import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseRutaAdapter;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseStorageAdapter;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseUsuarioRepositoryAdapter;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseVendedorRepositoryAdapter;
@@ -99,7 +102,17 @@ public class HexagonalArchitectureConfig {
     }
 
     @Bean
+    public RutaService rutaService(RutaRepositoryPort rutaRepositoryPort) {
+        return new RutaService(rutaRepositoryPort);
+    }
+
+    @Bean
     public AsignacionRepositoryPort asignacionRepositoryPort(SupabaseHttpClient supabaseHttpClient) {
         return new SupabaseAsignacionRepositoryAdapter(supabaseHttpClient);
+    }
+
+    @Bean
+    public RutaRepositoryPort rutaRepositoryPort(SupabaseHttpClient supabaseHttpClient) {
+        return new SupabaseRutaAdapter(supabaseHttpClient);
     }
 }

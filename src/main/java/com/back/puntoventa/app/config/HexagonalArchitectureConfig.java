@@ -5,6 +5,8 @@ import com.back.puntoventa.app.domain.auth.port.UsuarioRepositoryPort;
 import com.back.puntoventa.app.domain.auth.service.AutorizacionAuthService;
 import com.back.puntoventa.app.domain.inventario.port.AsignacionRepositoryPort;
 import com.back.puntoventa.app.domain.inventario.service.GestionInventarioService;
+import com.back.puntoventa.app.domain.clientes.port.ClienteRepositoryPort;
+import com.back.puntoventa.app.domain.clientes.service.GestionClientesService;
 import com.back.puntoventa.app.domain.productos.port.ProductoRepositoryPort;
 import com.back.puntoventa.app.domain.productos.port.StoragePort;
 import com.back.puntoventa.app.domain.productos.service.GestionProductosService;
@@ -16,6 +18,7 @@ import com.back.puntoventa.app.domain.vendedores.service.GestionVendedoresServic
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseAsignacionRepositoryAdapter;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseAutenticacionAdapter;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseGestorUsuariosAdapter;
+import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseClienteRepositoryAdapter;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseProductoRepositoryAdapter;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseRutaAdapter;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseStorageAdapter;
@@ -59,6 +62,11 @@ public class HexagonalArchitectureConfig {
     }
 
     @Bean
+    public ClienteRepositoryPort clienteRepositoryPort(SupabaseHttpClient supabaseHttpClient) {
+        return new SupabaseClienteRepositoryAdapter(supabaseHttpClient);
+    }
+
+    @Bean
     public ProductoRepositoryPort productoRepositoryPort(SupabaseHttpClient supabaseHttpClient) {
         return new SupabaseProductoRepositoryAdapter(supabaseHttpClient);
     }
@@ -85,6 +93,11 @@ public class HexagonalArchitectureConfig {
             VendedorRepositoryPort vendedorRepositoryPort,
             GestorUsuariosPort gestorUsuariosPort) {
         return new GestionVendedoresService(vendedorRepositoryPort, gestorUsuariosPort);
+    }
+
+    @Bean
+    public GestionClientesService gestionClientesService(ClienteRepositoryPort clienteRepositoryPort) {
+        return new GestionClientesService(clienteRepositoryPort);
     }
 
     @Bean

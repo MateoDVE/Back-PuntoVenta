@@ -1,0 +1,100 @@
+2026-04-13 13:22:54 [http-nio-3000-exec-1] DEBUG c.b.p.a.a.a.c.AuthRestAdapter - Perfil obtenido para usuario: andres@gmail.com
+2026-04-13 13:22:54 [http-nio-3000-exec-7] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
+2026-04-13 13:22:54 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
+2026-04-13 13:22:54 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-04-13 13:22:54 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-04-13 13:22:54 [http-nio-3000-exec-8] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/6b0a5026-52f3-475a-a20f-5aacf94764f0 - consulta por andres@gmail.com
+2026-04-13 13:22:54 [http-nio-3000-exec-8] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-04-13 13:22:54 [http-nio-3000-exec-8] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-04-13 13:22:54 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 23 productos
+2026-04-13 13:22:54 [http-nio-3000-exec-7] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 23 productos
+2026-04-13 13:22:54 [http-nio-3000-exec-8] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0: 4
+2026-04-13 13:22:54 [http-nio-3000-exec-9] INFO  c.b.p.a.a.a.c.AuthRestAdapter - GET /auth/me - Obtener perfil del usuario actual
+2026-04-13 13:22:54 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-04-13 13:22:55 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-04-13 13:22:55 [http-nio-3000-exec-9] DEBUG c.b.p.a.a.a.c.AuthRestAdapter - Perfil obtenido para usuario: andres@gmail.com
+2026-04-13 13:22:55 [http-nio-3000-exec-2] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-04-13 13:22:55 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-04-13 13:22:55 [http-nio-3000-exec-2] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-04-13 13:27:37 [http-nio-3000-exec-1] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-04-13 13:27:37 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-04-13 13:27:37 [http-nio-3000-exec-1] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-04-13 13:28:25 [http-nio-3000-exec-5] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-04-13 13:28:25 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-04-13 13:28:25 [http-nio-3000-exec-5] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-04-13 13:30:01 [http-nio-3000-exec-8] INFO  c.b.p.a.a.c.c.ClientesRestAdapter - POST /clientes/upload-photo - Subiendo foto de cliente: Licor.jpg
+2026-04-13 13:30:02 [http-nio-3000-exec-8] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.back.puntoventa.app.common.ApiException: {"statusCode":"404","error":"Bucket not found","message":"Bucket not found"}]
+2026-04-13 13:30:07 [http-nio-3000-exec-9] INFO  c.b.p.a.a.c.c.ClientesRestAdapter - POST /clientes/upload-photo - Subiendo foto de cliente: Licor.jpg
+2026-04-13 13:30:07 [http-nio-3000-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.back.puntoventa.app.common.ApiException: {"statusCode":"404","error":"Bucket not found","message":"Bucket not found"}]
+2026-04-13 13:30:21 [http-nio-3000-exec-10] INFO  c.b.p.a.a.c.c.ClientesRestAdapter - POST /clientes/upload-photo - Subiendo foto de cliente: Licor.jpg
+2026-04-13 13:30:21 [http-nio-3000-exec-10] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.back.puntoventa.app.common.ApiException: {"statusCode":"404","error":"Bucket not found","message":"Bucket not found"}]
+2026-04-13 13:34:27 [http-nio-3000-exec-2] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo cliente por id=upload-photo
+2026-04-13 13:34:27 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo cliente por ID: upload-photo
+2026-04-13 13:34:27 [http-nio-3000-exec-2] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo cliente por id=upload-photo
+2026-04-13 13:34:28 [http-nio-3000-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.back.puntoventa.app.common.ApiException: {"code":"22P02","details":null,"hint":null,"message":"invalid input syntax for type integer: \"upload-photo\""}]
+2026-04-13 13:35:34 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 9 class path changes (0 additions, 0 deletions, 9 modifications)
+2026-04-13 13:35:34 [Thread-1] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-13 13:35:34 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-3000"]
+2026-04-13 13:35:34 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-04-13 13:35:34 [Thread-1] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-3000"]
+2026-04-13 13:35:34 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 26 with PID 23452 (C:\Users\Mateo\Documents\Mateo Tareas\Taller\Back-PuntoVenta\target\classes started by Mateo in C:\Users\Mateo\Documents\Mateo Tareas\Taller\Back-PuntoVenta)
+2026-04-13 13:35:34 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-13 13:35:34 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-13 13:35:35 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 3000 (http)
+2026-04-13 13:35:35 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2026-04-13 13:35:35 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-13 13:35:35 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-13 13:35:35 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 165 ms
+2026-04-13 13:35:35 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2026-04-13 13:35:35 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 3000 (http) with context path '/'
+2026-04-13 13:35:35 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 0.286 seconds (process running for 772.697)
+2026-04-13 13:35:35 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-04-13 13:35:50 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-13 13:35:50 [Thread-5] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-13 13:35:50 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-3000"]
+2026-04-13 13:35:50 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-04-13 13:35:50 [Thread-5] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-3000"]
+2026-04-13 13:35:50 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 26 with PID 23452 (C:\Users\Mateo\Documents\Mateo Tareas\Taller\Back-PuntoVenta\target\classes started by Mateo in C:\Users\Mateo\Documents\Mateo Tareas\Taller\Back-PuntoVenta)
+2026-04-13 13:35:50 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-13 13:35:50 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-13 13:35:50 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 3000 (http)
+2026-04-13 13:35:50 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2026-04-13 13:35:50 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-13 13:35:50 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-13 13:35:50 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 123 ms
+2026-04-13 13:35:51 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2026-04-13 13:35:51 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 3000 (http) with context path '/'
+2026-04-13 13:35:51 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 0.196 seconds (process running for 788.541)
+2026-04-13 13:35:51 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-04-13 13:36:07 [http-nio-3000-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-13 13:36:07 [http-nio-3000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-13 13:36:07 [http-nio-3000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-04-13 13:36:07 [http-nio-3000-exec-3] INFO  c.b.p.a.a.a.c.AuthRestAdapter - POST /auth/signin - Intento de autenticación para email: andres@gmail.com
+2026-04-13 13:36:07 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticando usuario con email: andres@gmail.com
+2026-04-13 13:36:07 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticación completada para email: andres@gmail.com
+2026-04-13 13:36:07 [http-nio-3000-exec-3] INFO  c.b.p.a.a.a.c.AuthRestAdapter - Autenticación exitosa para email: andres@gmail.com
+2026-04-13 13:36:08 [http-nio-3000-exec-6] INFO  c.b.p.a.a.a.c.AuthRestAdapter - GET /auth/me - Obtener perfil del usuario actual
+2026-04-13 13:36:08 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-04-13 13:36:08 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-04-13 13:36:08 [http-nio-3000-exec-6] DEBUG c.b.p.a.a.a.c.AuthRestAdapter - Perfil obtenido para usuario: andres@gmail.com
+2026-04-13 13:36:08 [http-nio-3000-exec-5] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
+2026-04-13 13:36:08 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
+2026-04-13 13:36:08 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-04-13 13:36:08 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 23 productos
+2026-04-13 13:36:08 [http-nio-3000-exec-5] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 23 productos
+2026-04-13 13:36:09 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-04-13 13:36:09 [http-nio-3000-exec-2] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/6b0a5026-52f3-475a-a20f-5aacf94764f0 - consulta por andres@gmail.com
+2026-04-13 13:36:09 [http-nio-3000-exec-2] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-04-13 13:36:09 [http-nio-3000-exec-2] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-04-13 13:36:09 [http-nio-3000-exec-2] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0: 4
+2026-04-13 13:36:10 [http-nio-3000-exec-7] INFO  c.b.p.a.a.a.c.AuthRestAdapter - GET /auth/me - Obtener perfil del usuario actual
+2026-04-13 13:36:10 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-04-13 13:36:11 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-04-13 13:36:11 [http-nio-3000-exec-7] DEBUG c.b.p.a.a.a.c.AuthRestAdapter - Perfil obtenido para usuario: andres@gmail.com
+2026-04-13 13:36:11 [http-nio-3000-exec-8] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-04-13 13:36:11 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-04-13 13:36:11 [http-nio-3000-exec-8] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-04-13 13:37:04 [http-nio-3000-exec-9] INFO  c.b.p.a.a.c.c.ClientesRestAdapter - POST /clientes/upload-photo - Subiendo foto de cliente: Licor.jpg
+2026-04-13 13:37:04 [http-nio-3000-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [jakarta.servlet.ServletException: Handler dispatch failed: java.lang.Error: Unresolved compilation problem: <EOL>?The method getRawStatusCode() is undefined for the type RestClientResponseException<EOL>]
+2026-04-13 13:37:13 [http-nio-3000-exec-4] INFO  c.b.p.a.a.c.c.ClientesRestAdapter - POST /clientes/upload-photo - Subiendo foto de cliente: Licor.jpg
+2026-04-13 13:37:13 [http-nio-3000-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [jakarta.servlet.ServletException: Handler dispatch failed: java.lang.Error: Unresolved compilation problem: <EOL>?The method getRawStatusCode() is undefined for the type RestClientResponseException<EOL>]

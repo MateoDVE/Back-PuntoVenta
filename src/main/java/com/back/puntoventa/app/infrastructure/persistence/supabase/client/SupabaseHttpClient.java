@@ -5,6 +5,8 @@ import com.back.puntoventa.app.config.SupabaseProperties;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
@@ -15,6 +17,8 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 @Service
 public class SupabaseHttpClient {
+
+    private static final Logger logger = LoggerFactory.getLogger(SupabaseHttpClient.class);
 
     private final RestClient restClient;
     private final String baseUrl;
@@ -197,22 +201,49 @@ public class SupabaseHttpClient {
     public String uploadToStorage(String bucket, String path, byte[] body, String mimeType) {
         ensureConfigured();
         try {
-            Map<?, ?> response = restClient.post()
-                    .uri(baseUrl + "/storage/v1/object/" + bucket + "/" + path)
+            uploadToBucket(bucket, path, body, mimeType);
+            return buildPublicStorageUrl(bucket, path);
+        } catch (RestClientResponseException ex) {
+            String responseBody = ex.getResponseBodyAsString();
+            if (ex.getStatusCode().value() == 404 && responseBody != null
+                    && responseBody.contains("Bucket not found")) {
+                logger.warn("Bucket '{}' not found in Supabase, creating it automatically", bucket);
+                createBucket(bucket, true);
+                uploadToBucket(bucket, path, body, mimeType);
+                return buildPublicStorageUrl(bucket, path);
+            }
+            throw toApiException(ex);
+        }
+    }
+
+    private void uploadToBucket(String bucket, String path, byte[] body, String mimeType) {
+        restClient.post()
+                .uri(baseUrl + "/storage/v1/object/" + bucket + "/" + path)
+                .header("apikey", serviceKey)
+                .header("Authorization", "Bearer " + serviceKey)
+                .contentType(MediaType.parseMediaType(mimeType))
+                .body(body)
+                .retrieve()
+                .toBodilessEntity();
+    }
+
+    private void createBucket(String bucket, boolean isPublic) {
+        ensureConfigured();
+        Map<String, Object> body = new HashMap<>();
+        body.put("name", bucket);
+        body.put("public", isPublic);
+
+        try {
+            restClient.post()
+                    .uri(baseUrl + "/storage/v1/bucket")
                     .header("apikey", serviceKey)
                     .header("Authorization", "Bearer " + serviceKey)
-                    .contentType(MediaType.parseMediaType(mimeType))
+                    .contentType(MediaType.APPLICATION_JSON)
                     .body(body)
                     .retrieve()
-                    .body(Map.class);
-
-            Map<String, Object> node = toMap(response);
-            Object key = node.get("Key");
-            if (key instanceof String keyString && StringUtils.hasText(keyString)) {
-                return keyString;
-            }
-            return path;
+                    .toBodilessEntity();
         } catch (RestClientResponseException ex) {
+            logger.error("Error creating Supabase storage bucket '{}': {}", bucket, ex.getResponseBodyAsString(), ex);
             throw toApiException(ex);
         }
     }

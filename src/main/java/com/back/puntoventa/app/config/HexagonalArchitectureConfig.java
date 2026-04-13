@@ -5,16 +5,22 @@ import com.back.puntoventa.app.domain.auth.port.UsuarioRepositoryPort;
 import com.back.puntoventa.app.domain.auth.service.AutorizacionAuthService;
 import com.back.puntoventa.app.domain.inventario.port.AsignacionRepositoryPort;
 import com.back.puntoventa.app.domain.inventario.service.GestionInventarioService;
+import com.back.puntoventa.app.domain.clientes.port.ClienteRepositoryPort;
+import com.back.puntoventa.app.domain.clientes.service.GestionClientesService;
 import com.back.puntoventa.app.domain.productos.port.ProductoRepositoryPort;
 import com.back.puntoventa.app.domain.productos.port.StoragePort;
 import com.back.puntoventa.app.domain.productos.service.GestionProductosService;
+import com.back.puntoventa.app.domain.ruta.port.RutaRepositoryPort;
+import com.back.puntoventa.app.domain.ruta.service.RutaService;
 import com.back.puntoventa.app.domain.vendedores.port.GestorUsuariosPort;
 import com.back.puntoventa.app.domain.vendedores.port.VendedorRepositoryPort;
 import com.back.puntoventa.app.domain.vendedores.service.GestionVendedoresService;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseAsignacionRepositoryAdapter;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseAutenticacionAdapter;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseGestorUsuariosAdapter;
+import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseClienteRepositoryAdapter;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseProductoRepositoryAdapter;
+import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseRutaAdapter;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseStorageAdapter;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseUsuarioRepositoryAdapter;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseVendedorRepositoryAdapter;
@@ -56,6 +62,11 @@ public class HexagonalArchitectureConfig {
     }
 
     @Bean
+    public ClienteRepositoryPort clienteRepositoryPort(SupabaseHttpClient supabaseHttpClient) {
+        return new SupabaseClienteRepositoryAdapter(supabaseHttpClient);
+    }
+
+    @Bean
     public ProductoRepositoryPort productoRepositoryPort(SupabaseHttpClient supabaseHttpClient) {
         return new SupabaseProductoRepositoryAdapter(supabaseHttpClient);
     }
@@ -85,6 +96,11 @@ public class HexagonalArchitectureConfig {
     }
 
     @Bean
+    public GestionClientesService gestionClientesService(ClienteRepositoryPort clienteRepositoryPort) {
+        return new GestionClientesService(clienteRepositoryPort);
+    }
+
+    @Bean
     public GestionProductosService gestionProductosService(
             ProductoRepositoryPort productoRepositoryPort,
             StoragePort storagePort) {
@@ -99,7 +115,17 @@ public class HexagonalArchitectureConfig {
     }
 
     @Bean
+    public RutaService rutaService(RutaRepositoryPort rutaRepositoryPort) {
+        return new RutaService(rutaRepositoryPort);
+    }
+
+    @Bean
     public AsignacionRepositoryPort asignacionRepositoryPort(SupabaseHttpClient supabaseHttpClient) {
         return new SupabaseAsignacionRepositoryAdapter(supabaseHttpClient);
+    }
+
+    @Bean
+    public RutaRepositoryPort rutaRepositoryPort(SupabaseHttpClient supabaseHttpClient) {
+        return new SupabaseRutaAdapter(supabaseHttpClient);
     }
 }

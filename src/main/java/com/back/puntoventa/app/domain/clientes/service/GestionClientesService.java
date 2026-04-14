@@ -42,12 +42,20 @@ public class GestionClientesService {
             throw new DomainException("Ya existe un cliente con ese CI/NIT");
         }
 
+        String celularFinal = null;
+        if (celular != null && !celular.isBlank()) {
+            celularFinal = celular.trim();
+            if (!celularFinal.matches("^[67]\\d{7}$")) {
+                throw new DomainException("El celular debe tener 8 dígitos y empezar por 6 o 7");
+            }
+        }
+
         Cliente cliente = new Cliente(
                 null,
                 idVendedorCreador.trim(),
                 nombreNegocio.trim(),
                 ciNitFinal,
-                celular == null ? null : celular.trim(),
+                celularFinal,
                 latitud,
                 longitud,
                 urlFotoFachada == null ? null : urlFotoFachada.trim(),
@@ -109,7 +117,14 @@ public class GestionClientesService {
             }
         }
         if (celular != null) {
-            celularFinal = celular.trim();
+            if (!celular.isBlank()) {
+                celularFinal = celular.trim();
+                if (!celularFinal.matches("^[67]\\d{7}$")) {
+                    throw new DomainException("El celular debe tener 8 dígitos y empezar por 6 o 7");
+                }
+            } else {
+                celularFinal = null;
+            }
         }
         if (latitud != null) {
             latitudFinal = latitud;

@@ -93,7 +93,7 @@ public class ClientesRestAdapter {
                 throw new ApiException(HttpStatus.BAD_REQUEST, "El archivo debe ser una imagen");
             }
 
-            String path = "temp/" + fileName;
+            String path = "clientes/" + fileName;
             String url = supabaseHttpClient.uploadToStorage("clientes", path, content, mimeType);
             Map<String, Object> response = new HashMap<>();
             response.put("imageUrl", url);

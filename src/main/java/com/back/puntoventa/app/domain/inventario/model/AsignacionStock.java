@@ -1,17 +1,12 @@
 package com.back.puntoventa.app.domain.inventario.model;
 
 import java.time.LocalDateTime;
-
-/**
- * Entidad de dominio: Representa la transferencia de stock a un camión.
- * Parte del Sprint 2: Logística de Salida.
- */
 public class AsignacionStock {
     private final String idCarga;
     private final String idVendedor;
     private final String idProducto;
     private final Integer cantidadAsignada;
-    private final String estadoValidacion; // "PENDIENTE" o "VALIDADO"
+    private final String estadoValidacion;
     private final LocalDateTime fechaAsignacion;
 
     public AsignacionStock(String idCarga, String idVendedor, String idProducto, 

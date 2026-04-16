@@ -13,7 +13,8 @@ public class CorsConfig implements WebMvcConfigurer {
                 .allowedOriginPatterns(
                     "http://localhost:4200",
                     "https://front-puntoventa.onrender.com",
-                    "https://*.onrender.com" // Esto permite cualquier subdominio de Render
+                    "https://*.onrender.com", // Esto permite cualquier subdominio de Render
+                    "https://front-punto-venta.vercel.app"
                 )
                 .allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS")
                 .allowedHeaders("*")

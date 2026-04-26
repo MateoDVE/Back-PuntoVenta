@@ -144,3 +144,28 @@ Caused by: java.io.FileNotFoundException: class path resource [com/back/puntoven
 2026-04-26 00:19:45 [http-nio-3000-exec-1] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 2ab0631c-da17-4bd8-b9b9-237de54711c6 en fecha 2026-04-25
 2026-04-26 00:20:33 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
 2026-04-26 00:20:33 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-04-26 11:12:45 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-04-26 11:12:45 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 17.0.18 with PID 23316 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-04-26 11:12:45 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-04-26 11:12:45 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-26 11:12:45 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-26 11:12:45 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-26 11:12:46 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 3000 (http)
+2026-04-26 11:12:47 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2026-04-26 11:12:47 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-26 11:12:47 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-04-26 11:12:47 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-26 11:12:47 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1304 ms
+2026-04-26 11:12:47 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-04-26 11:12:47 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2026-04-26 11:12:47 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 3000 (http) with context path '/'
+2026-04-26 11:12:47 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 2.754 seconds (process running for 3.27)
+2026-04-26 11:13:00 [http-nio-3000-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-26 11:13:00 [http-nio-3000-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-26 11:13:00 [http-nio-3000-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-04-26 11:13:00 [http-nio-3000-exec-2] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor 2ab0631c-da17-4bd8-b9b9-237de54711c6 y fecha 2026-04-25
+2026-04-26 11:13:00 [http-nio-3000-exec-2] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 2ab0631c-da17-4bd8-b9b9-237de54711c6 en fecha 2026-04-25
+2026-04-26 11:13:21 [http-nio-3000-exec-3] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor 2ab0631c-da17-4bd8-b9b9-237de54711c6 y fecha 2026-04-26
+2026-04-26 11:13:21 [http-nio-3000-exec-3] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 2ab0631c-da17-4bd8-b9b9-237de54711c6 en fecha 2026-04-26
+2026-04-26 11:26:18 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-26 11:26:18 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete

@@ -15,6 +15,8 @@ import com.back.puntoventa.app.domain.ruta.service.RutaService;
 import com.back.puntoventa.app.domain.vendedores.port.GestorUsuariosPort;
 import com.back.puntoventa.app.domain.vendedores.port.VendedorRepositoryPort;
 import com.back.puntoventa.app.domain.vendedores.service.GestionVendedoresService;
+import com.back.puntoventa.app.domain.ventas.port.VentaRepositoryPort;
+import com.back.puntoventa.app.domain.ventas.service.GestionVentasService;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseAsignacionRepositoryAdapter;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseAutenticacionAdapter;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseGestorUsuariosAdapter;
@@ -24,6 +26,7 @@ import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.Supab
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseStorageAdapter;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseUsuarioRepositoryAdapter;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseVendedorRepositoryAdapter;
+import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseVentaRepositoryAdapter;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.client.SupabaseHttpClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -76,6 +79,11 @@ public class HexagonalArchitectureConfig {
         return new SupabaseStorageAdapter(supabaseHttpClient);
     }
 
+    @Bean
+    public VentaRepositoryPort ventaRepositoryPort(SupabaseHttpClient supabaseHttpClient) {
+        return new SupabaseVentaRepositoryAdapter(supabaseHttpClient);
+    }
+
     /**
      * Configura los servicios de dominio (use cases).
      * Estos dependen de los puertos (interfaces), no de implementaciones concretas.
@@ -105,6 +113,11 @@ public class HexagonalArchitectureConfig {
             ProductoRepositoryPort productoRepositoryPort,
             StoragePort storagePort) {
         return new GestionProductosService(productoRepositoryPort, storagePort);
+    }
+
+    @Bean
+    public GestionVentasService gestionVentasService(VentaRepositoryPort ventaRepositoryPort) {
+        return new GestionVentasService(ventaRepositoryPort);
     }
 
     @Bean

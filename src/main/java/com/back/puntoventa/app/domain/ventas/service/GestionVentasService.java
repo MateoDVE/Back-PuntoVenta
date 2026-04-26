@@ -9,8 +9,10 @@ import com.back.puntoventa.app.domain.ventas.model.response.ConciliacionInventar
 import com.back.puntoventa.app.domain.ventas.model.response.DetalleProductoConciliacionResponse;
 import com.back.puntoventa.app.domain.ventas.model.response.DetalleVentaCierreResponse;
 import com.back.puntoventa.app.domain.ventas.model.response.ResumenFinancieroResponse;
+import com.back.puntoventa.app.domain.ventas.model.request.ConfirmarCierreRequest;
 import com.back.puntoventa.app.domain.ventas.model.request.CrearVentaRequest;
 import com.back.puntoventa.app.domain.ventas.model.request.ItemVentaRequest;
+import com.back.puntoventa.app.domain.ventas.model.response.ConfirmarCierreResponse;
 import com.back.puntoventa.app.domain.ventas.model.response.DetalleVentaResponse;
 import com.back.puntoventa.app.domain.ventas.model.response.ResumenDiarioResponse;
 import com.back.puntoventa.app.domain.ventas.model.response.VentaResumenResponse;
@@ -299,6 +301,47 @@ public class GestionVentasService {
                 stockInicialTotal, vendidosTotal, stockFinalTotal, estadoConciliacion, detalleProductos);
 
         return new CierreJornadaResponse(idVendedor, fecha, resumenFinanciero, conciliacionInventario);
+    }
+
+    public ConfirmarCierreResponse confirmarCierreJornada(UUID idVendedor, LocalDate fecha, BigDecimal dineroContado) {
+        logger.info("Confirmando cierre de jornada para vendedor {} en fecha {} con dinero contado {}", idVendedor, fecha, dineroContado);
+        if (idVendedor == null) {
+            throw new IllegalArgumentException("ID de vendedor es obligatorio");
+        }
+        if (fecha == null) {
+            throw new IllegalArgumentException("Fecha es obligatoria");
+        }
+        if (dineroContado == null) {
+            throw new IllegalArgumentException("Dinero contado es obligatorio");
+        }
+
+        validarVendedor(idVendedor);
+
+        // Obtener ventas del día
+        List<Venta> ventas = ventaRepositoryPort.obtenerVentasPorVendedorYFecha(idVendedor, fecha);
+
+        // Calcular dinero esperado: suma de totalEfectivo de las ventas
+        BigDecimal dineroEsperado = ventas.stream()
+                .map(Venta::getTotalEfectivo)
+                .reduce(BigDecimal.ZERO, BigDecimal::add);
+
+        // Calcular diferencia
+        BigDecimal diferencia = dineroContado.subtract(dineroEsperado);
+
+        // Determinar estado de conciliación
+        String estadoConciliacion;
+        if (diferencia.compareTo(BigDecimal.ZERO) == 0) {
+            estadoConciliacion = "CORRECTO";
+        } else if (diferencia.compareTo(BigDecimal.ZERO) > 0) {
+            estadoConciliacion = "SOBRANTE";
+        } else {
+            estadoConciliacion = "FALTANTE";
+        }
+
+        logger.info("Conciliación de efectivo completada - Esperado: {}, Contado: {}, Diferencia: {}, Estado: {}",
+                dineroEsperado, dineroContado, diferencia, estadoConciliacion);
+
+        return new ConfirmarCierreResponse(dineroEsperado, dineroContado, diferencia, estadoConciliacion);
     }
 
     private void validarCliente(Integer idCliente) {

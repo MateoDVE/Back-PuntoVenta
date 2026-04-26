@@ -1,6 +1,8 @@
 package com.back.puntoventa.app.application.ventas;
 
+import com.back.puntoventa.app.domain.ventas.model.request.ConfirmarCierreRequest;
 import com.back.puntoventa.app.domain.ventas.model.request.CrearVentaRequest;
+import com.back.puntoventa.app.domain.ventas.model.response.ConfirmarCierreResponse;
 import com.back.puntoventa.app.domain.ventas.model.response.CierreJornadaResponse;
 import com.back.puntoventa.app.domain.ventas.model.response.ResumenDiarioResponse;
 import com.back.puntoventa.app.domain.ventas.model.response.VentaResumenResponse;
@@ -115,6 +117,25 @@ public class VentaRestAdapter {
             throw new ApiException(HttpStatus.BAD_REQUEST, ex.getMessage());
         } catch (Exception ex) {
             logger.error("Error interno al obtener cierre de jornada", ex);
+            throw new ApiException(HttpStatus.INTERNAL_SERVER_ERROR, ex.getMessage());
+        }
+    }
+
+    @PostMapping("/confirmar-cierre")
+    public ResponseEntity<ConfirmarCierreResponse> confirmarCierreJornada(@RequestBody ConfirmarCierreRequest request) {
+        logger.info("POST /ventas/confirmar-cierre - Confirmar cierre de jornada para vendedor {} y fecha {}", request.idVendedor(), request.fecha());
+        try {
+            ConfirmarCierreResponse response = gestionVentasService.confirmarCierreJornada(request.idVendedor(), request.fecha(), request.dineroContado());
+            logger.info("Cierre de jornada confirmado - Estado conciliación: {}", response.estadoConciliacion());
+            return ResponseEntity.ok(response);
+        } catch (DomainException ex) {
+            logger.warn("Error de dominio al confirmar cierre: {}", ex.getMessage());
+            throw new ApiException(HttpStatus.BAD_REQUEST, ex.getMessage());
+        } catch (IllegalArgumentException ex) {
+            logger.warn("Argumento inválido al confirmar cierre: {}", ex.getMessage());
+            throw new ApiException(HttpStatus.BAD_REQUEST, ex.getMessage());
+        } catch (Exception ex) {
+            logger.error("Error interno al confirmar cierre", ex);
             throw new ApiException(HttpStatus.INTERNAL_SERVER_ERROR, ex.getMessage());
         }
     }

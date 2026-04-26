@@ -169,3 +169,77 @@ Caused by: java.io.FileNotFoundException: class path resource [com/back/puntoven
 2026-04-26 11:13:21 [http-nio-3000-exec-3] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 2ab0631c-da17-4bd8-b9b9-237de54711c6 en fecha 2026-04-26
 2026-04-26 11:26:18 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
 2026-04-26 11:26:18 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-04-26 11:41:17 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-04-26 11:41:17 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 17.0.18 with PID 2420 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-04-26 11:41:17 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-04-26 11:41:17 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-26 11:41:17 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-26 11:41:17 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-26 11:41:18 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 3000 (http)
+2026-04-26 11:41:18 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2026-04-26 11:41:18 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-26 11:41:18 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-04-26 11:41:18 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-26 11:41:18 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1179 ms
+2026-04-26 11:41:19 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-04-26 11:41:19 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2026-04-26 11:41:19 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 3000 (http) with context path '/'
+2026-04-26 11:41:19 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 2.38 seconds (process running for 2.72)
+2026-04-26 11:42:12 [http-nio-3000-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-26 11:42:12 [http-nio-3000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-26 11:42:12 [http-nio-3000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-04-26 11:42:12 [http-nio-3000-exec-1] INFO  c.b.p.a.a.ventas.VentaRestAdapter - POST /ventas/confirmar-cierre - Confirmar cierre de jornada para vendedor 2ab0631c-da17-4bd8-b9b9-237de54711c6 y fecha 2026-04-26
+2026-04-26 11:42:12 [http-nio-3000-exec-1] INFO  c.b.p.a.d.v.s.GestionVentasService - Confirmando cierre de jornada para vendedor 2ab0631c-da17-4bd8-b9b9-237de54711c6 en fecha 2026-04-26 con dinero contado 350.0
+2026-04-26 11:42:15 [http-nio-3000-exec-1] INFO  c.b.p.a.d.v.s.GestionVentasService - Conciliación de efectivo completada - Esperado: 0, Contado: 350.0, Diferencia: 350.0, Estado: SOBRANTE
+2026-04-26 11:42:15 [http-nio-3000-exec-1] INFO  c.b.p.a.a.ventas.VentaRestAdapter - Cierre de jornada confirmado - Estado conciliación: SOBRANTE
+2026-04-26 11:42:37 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 6 class path changes (0 additions, 0 deletions, 6 modifications)
+2026-04-26 11:42:37 [Thread-5] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-26 11:42:37 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-3000"]
+2026-04-26 11:42:37 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-04-26 11:42:37 [Thread-5] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-3000"]
+2026-04-26 11:42:37 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 17.0.18 with PID 2420 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-04-26 11:42:37 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-04-26 11:42:37 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-26 11:42:37 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Incompatible class format in file [C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes\com\back\puntoventa\app\application\ventas\VentaRestAdapter.class]: set system property 'spring.classformat.ignore' to 'true' if you mean to ignore such files during classpath scanning
+2026-04-26 11:42:37 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Incompatible class format in file [C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes\com\back\puntoventa\app\application\ventas\VentaRestAdapter.class]: set system property 'spring.classformat.ignore' to 'true' if you mean to ignore such files during classpath scanning
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:504)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.findCandidateComponents(ClassPathScanningCandidateComponentProvider.java:351)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:277)
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:332)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:267)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:193)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:171)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:418)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.back.puntoventa.app.AppApplication.main(AppApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.core.type.classreading.ClassFormatException: ASM ClassReader failed to parse class file - probably due to a new Java class file version that is not supported yet. Consider compiling with a lower '-target' or upgrade your framework version. Affected class: file [C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes\com\back\puntoventa\app\application\ventas\VentaRestAdapter.class]
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:59)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.core.type.classreading.CachingMetadataReaderFactory.getMetadataReader(CachingMetadataReaderFactory.java:122)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:470)
+	... 25 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Unsupported class file major version 69
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:200)
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:180)
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:166)
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:288)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:56)
+	... 29 common frames omitted

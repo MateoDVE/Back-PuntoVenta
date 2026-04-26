@@ -4,12 +4,22 @@ import com.back.puntoventa.app.domain.common.exception.DomainException;
 import com.back.puntoventa.app.domain.productos.model.Producto;
 import com.back.puntoventa.app.domain.ventas.model.DetalleVenta;
 import com.back.puntoventa.app.domain.ventas.model.Venta;
+import com.back.puntoventa.app.domain.ventas.model.response.CierreJornadaResponse;
+import com.back.puntoventa.app.domain.ventas.model.response.ConciliacionInventarioResponse;
+import com.back.puntoventa.app.domain.ventas.model.response.DetalleProductoConciliacionResponse;
+import com.back.puntoventa.app.domain.ventas.model.response.DetalleVentaCierreResponse;
+import com.back.puntoventa.app.domain.ventas.model.response.ResumenFinancieroResponse;
+import com.back.puntoventa.app.domain.ventas.model.request.ConfirmarCierreRequest;
 import com.back.puntoventa.app.domain.ventas.model.request.CrearVentaRequest;
 import com.back.puntoventa.app.domain.ventas.model.request.ItemVentaRequest;
+import com.back.puntoventa.app.domain.ventas.model.response.ConfirmarCierreResponse;
 import com.back.puntoventa.app.domain.ventas.model.response.DetalleVentaResponse;
+import com.back.puntoventa.app.domain.ventas.model.response.ResumenDiarioResponse;
+import com.back.puntoventa.app.domain.ventas.model.response.VentaResumenResponse;
 import com.back.puntoventa.app.domain.ventas.model.response.VentaResponse;
 import com.back.puntoventa.app.domain.ventas.port.VentaRepositoryPort;
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -135,6 +145,203 @@ public class GestionVentasService {
 
         logger.info("Venta completada exitosamente - ID: {}, Total: {}", ventaCreada.getIdVenta(), totalEfectivo);
         return response;
+    }
+
+    public List<VentaResumenResponse> obtenerVentas() {
+        logger.info("Obteniendo listado de ventas resumidas");
+        return ventaRepositoryPort.obtenerVentas().stream()
+                .map(venta -> new VentaResumenResponse(
+                        venta.getIdVenta(),
+                        venta.getIdCliente(),
+                        venta.getIdVendedor(),
+                        venta.getFechaHora(),
+                        venta.getSubtotal(),
+                        venta.getDescuento(),
+                        venta.getTotalEfectivo(),
+                        venta.getEstado()))
+                .toList();
+    }
+
+    public VentaResponse obtenerVentaPorId(String idVenta) {
+        logger.info("Obteniendo venta por id: {}", idVenta);
+        if (idVenta == null || idVenta.isBlank()) {
+            throw new IllegalArgumentException("ID de venta es obligatorio");
+        }
+
+        Venta venta = ventaRepositoryPort.obtenerVentaPorId(idVenta);
+        if (venta == null) {
+            logger.warn("Venta no encontrada: {}", idVenta);
+            throw new DomainException("Venta no encontrada");
+        }
+
+        List<DetalleVenta> detalles = ventaRepositoryPort.obtenerDetallesPorVentaId(idVenta);
+        List<DetalleVentaResponse> detallesResponse = detalles.stream()
+                .map(d -> new DetalleVentaResponse(d.getIdDetalle(), d.getIdProducto(), d.getCantidad(),
+                        d.getTipoUnidad(), d.getPrecioUnitario(), d.getSubtotal()))
+                .toList();
+
+        return new VentaResponse(
+                venta.getIdVenta(),
+                venta.getIdCliente(),
+                venta.getIdVendedor(),
+                venta.getFechaHora(),
+                venta.getSubtotal(),
+                venta.getDescuento(),
+                venta.getTotalEfectivo(),
+                venta.getEstado(),
+                detallesResponse);
+    }
+
+    public ResumenDiarioResponse obtenerResumenDiario(UUID idVendedor, LocalDate fecha) {
+        logger.info("Obteniendo resumen diario para vendedor {} en fecha {}", idVendedor, fecha);
+        if (idVendedor == null) {
+            throw new IllegalArgumentException("ID de vendedor es obligatorio");
+        }
+        if (fecha == null) {
+            throw new IllegalArgumentException("Fecha es obligatoria");
+        }
+
+        validarVendedor(idVendedor);
+        List<Venta> ventas = ventaRepositoryPort.obtenerVentasPorVendedorYFecha(idVendedor, fecha);
+
+        int cantidadVentas = ventas.size();
+        BigDecimal montoTotalVendido = ventas.stream()
+                .map(Venta::getTotalEfectivo)
+                .reduce(BigDecimal.ZERO, BigDecimal::add);
+        BigDecimal totalDescuentos = ventas.stream()
+                .map(Venta::getDescuento)
+                .reduce(BigDecimal.ZERO, BigDecimal::add);
+
+        int totalProductosVendidos = ventas.stream()
+                .flatMap(venta -> ventaRepositoryPort.obtenerDetallesPorVentaId(venta.getIdVenta()).stream())
+                .mapToInt(DetalleVenta::getCantidad)
+                .sum();
+
+        BigDecimal dineroEsperado = montoTotalVendido;
+        return new ResumenDiarioResponse(idVendedor, fecha, cantidadVentas, montoTotalVendido, totalProductosVendidos,
+                totalDescuentos, dineroEsperado);
+    }
+
+    public CierreJornadaResponse obtenerResumenCierreJornada(UUID idVendedor, LocalDate fecha) {
+        logger.info("Obteniendo resumen de cierre de jornada para vendedor {} en fecha {}", idVendedor, fecha);
+        if (idVendedor == null) {
+            throw new IllegalArgumentException("ID de vendedor es obligatorio");
+        }
+        if (fecha == null) {
+            throw new IllegalArgumentException("Fecha es obligatoria");
+        }
+
+        validarVendedor(idVendedor);
+
+        // Obtener ventas del día
+        List<Venta> ventas = ventaRepositoryPort.obtenerVentasPorVendedorYFecha(idVendedor, fecha);
+        List<String> idsVentas = ventas.stream().map(Venta::getIdVenta).toList();
+
+        // Obtener detalles de ventas
+        List<DetalleVenta> detallesVentas = ventaRepositoryPort.obtenerDetallesPorVentasIds(idsVentas);
+
+        // Obtener productos vendidos
+        List<String> idsProductosVendidos = detallesVentas.stream()
+                .map(DetalleVenta::getIdProducto)
+                .distinct()
+                .toList();
+
+        List<Producto> productos = ventaRepositoryPort.obtenerProductosPorIds(idsProductosVendidos);
+        Map<String, Producto> productosMap = productos.stream()
+                .collect(Collectors.toMap(Producto::getId, p -> p));
+
+        // Calcular resumen financiero
+        Integer ventasRealizadas = ventas.size();
+        BigDecimal totalEfectivo = ventas.stream()
+                .map(Venta::getTotalEfectivo)
+                .reduce(BigDecimal.ZERO, BigDecimal::add);
+        BigDecimal totalDescuentos = ventas.stream()
+                .map(Venta::getDescuento)
+                .reduce(BigDecimal.ZERO, BigDecimal::add);
+        List<DetalleVentaCierreResponse> detalleVentasResponse = ventas.stream()
+                .map(v -> new DetalleVentaCierreResponse(v.getIdVenta(), v.getFechaHora(), v.getSubtotal(),
+                        v.getDescuento(), v.getTotalEfectivo(), v.getEstado()))
+                .toList();
+        ResumenFinancieroResponse resumenFinanciero = new ResumenFinancieroResponse(ventasRealizadas,
+                totalEfectivo, totalDescuentos, detalleVentasResponse);
+
+        // Calcular conciliación de inventario
+        Map<String, Integer> vendidosPorProducto = detallesVentas.stream()
+                .collect(Collectors.groupingBy(DetalleVenta::getIdProducto,
+                        Collectors.summingInt(DetalleVenta::getCantidad)));
+
+        Integer stockInicialTotal = 0;
+        Integer vendidosTotal = detallesVentas.stream().mapToInt(DetalleVenta::getCantidad).sum();
+        Integer stockFinalTotal = 0;
+        List<DetalleProductoConciliacionResponse> detalleProductos = new ArrayList<>();
+        boolean conciliacionCorrecta = true;
+
+        for (String idProducto : idsProductosVendidos) {
+            Producto producto = productosMap.get(idProducto);
+            if (producto == null) continue;
+
+            Integer vendido = vendidosPorProducto.getOrDefault(idProducto, 0);
+            Integer actual = producto.getStockAlmacenCentral() != null ? producto.getStockAlmacenCentral() : 0;
+            Integer stockInicial = actual + vendido;
+            Integer esperado = stockInicial - vendido;
+
+            if (!esperado.equals(actual)) {
+                conciliacionCorrecta = false;
+            }
+
+            stockInicialTotal += stockInicial;
+            stockFinalTotal += actual;
+
+            detalleProductos.add(new DetalleProductoConciliacionResponse(idProducto, producto.getNombre(),
+                    stockInicial, vendido, esperado, actual));
+        }
+
+        String estadoConciliacion = conciliacionCorrecta ? "CORRECTO" : "DIFERENCIA";
+        ConciliacionInventarioResponse conciliacionInventario = new ConciliacionInventarioResponse(
+                stockInicialTotal, vendidosTotal, stockFinalTotal, estadoConciliacion, detalleProductos);
+
+        return new CierreJornadaResponse(idVendedor, fecha, resumenFinanciero, conciliacionInventario);
+    }
+
+    public ConfirmarCierreResponse confirmarCierreJornada(UUID idVendedor, LocalDate fecha, BigDecimal dineroContado) {
+        logger.info("Confirmando cierre de jornada para vendedor {} en fecha {} con dinero contado {}", idVendedor, fecha, dineroContado);
+        if (idVendedor == null) {
+            throw new IllegalArgumentException("ID de vendedor es obligatorio");
+        }
+        if (fecha == null) {
+            throw new IllegalArgumentException("Fecha es obligatoria");
+        }
+        if (dineroContado == null) {
+            throw new IllegalArgumentException("Dinero contado es obligatorio");
+        }
+
+        validarVendedor(idVendedor);
+
+        // Obtener ventas del día
+        List<Venta> ventas = ventaRepositoryPort.obtenerVentasPorVendedorYFecha(idVendedor, fecha);
+
+        // Calcular dinero esperado: suma de totalEfectivo de las ventas
+        BigDecimal dineroEsperado = ventas.stream()
+                .map(Venta::getTotalEfectivo)
+                .reduce(BigDecimal.ZERO, BigDecimal::add);
+
+        // Calcular diferencia
+        BigDecimal diferencia = dineroContado.subtract(dineroEsperado);
+
+        // Determinar estado de conciliación
+        String estadoConciliacion;
+        if (diferencia.compareTo(BigDecimal.ZERO) == 0) {
+            estadoConciliacion = "CORRECTO";
+        } else if (diferencia.compareTo(BigDecimal.ZERO) > 0) {
+            estadoConciliacion = "SOBRANTE";
+        } else {
+            estadoConciliacion = "FALTANTE";
+        }
+
+        logger.info("Conciliación de efectivo completada - Esperado: {}, Contado: {}, Diferencia: {}, Estado: {}",
+                dineroEsperado, dineroContado, diferencia, estadoConciliacion);
+
+        return new ConfirmarCierreResponse(dineroEsperado, dineroContado, diferencia, estadoConciliacion);
     }
 
     private void validarCliente(Integer idCliente) {

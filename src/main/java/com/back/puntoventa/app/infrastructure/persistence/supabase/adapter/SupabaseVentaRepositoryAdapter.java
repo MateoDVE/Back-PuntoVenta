@@ -1,6 +1,7 @@
 package com.back.puntoventa.app.infrastructure.persistence.supabase.adapter;
 
 import com.back.puntoventa.app.domain.productos.model.Producto;
+import com.back.puntoventa.app.domain.ventas.model.CargaTransporte;
 import com.back.puntoventa.app.domain.ventas.model.DetalleVenta;
 import com.back.puntoventa.app.domain.ventas.model.Venta;
 import com.back.puntoventa.app.domain.ventas.port.VentaRepositoryPort;
@@ -26,6 +27,7 @@ public class SupabaseVentaRepositoryAdapter implements VentaRepositoryPort {
     private static final String TABLE_PRODUCTOS = "productos";
     private static final String TABLE_CLIENTES = "clientes";
     private static final String TABLE_USUARIOS = "usuarios";
+    private static final String TABLE_CARGA_TRANSPORTE = "carga_transporte";
 
     private final SupabaseHttpClient supabaseHttpClient;
 
@@ -120,6 +122,86 @@ public class SupabaseVentaRepositoryAdapter implements VentaRepositoryPort {
         }
     }
 
+    @Override
+    public List<Venta> obtenerVentas() {
+        Map<String, String> queryParams = new HashMap<>();
+        queryParams.put("select", "*");
+        queryParams.put("order", "fecha_hora.desc");
+
+        List<Map<String, Object>> rows = supabaseHttpClient.select(TABLE_VENTAS, queryParams);
+        return rows.stream()
+                .map(this::mapToVenta)
+                .toList();
+    }
+
+    @Override
+    public Venta obtenerVentaPorId(String idVenta) {
+        Map<String, String> queryParams = new HashMap<>();
+        queryParams.put("id_venta", "eq." + idVenta);
+        queryParams.put("select", "*");
+
+        List<Map<String, Object>> rows = supabaseHttpClient.select(TABLE_VENTAS, queryParams);
+        if (rows.isEmpty()) {
+            return null;
+        }
+        return mapToVenta(rows.get(0));
+    }
+
+    @Override
+    public List<DetalleVenta> obtenerDetallesPorVentaId(String idVenta) {
+        Map<String, String> queryParams = new HashMap<>();
+        queryParams.put("id_venta", "eq." + idVenta);
+        queryParams.put("select", "*");
+
+        List<Map<String, Object>> rows = supabaseHttpClient.select(TABLE_DETALLE_VENTA, queryParams);
+        return rows.stream()
+                .map(this::mapToDetalleVenta)
+                .toList();
+    }
+
+    @Override
+    public List<Venta> obtenerVentasPorVendedorYFecha(UUID idVendedor, java.time.LocalDate fecha) {
+        List<Map.Entry<String, String>> queryParams = List.of(
+                Map.entry("id_vendedor", "eq." + idVendedor),
+                Map.entry("fecha_hora", "gte." + fecha.atStartOfDay().format(ISO_FORMATTER)),
+                Map.entry("fecha_hora", "lt." + fecha.plusDays(1).atStartOfDay().format(ISO_FORMATTER)),
+                Map.entry("select", "*"));
+
+        List<Map<String, Object>> rows = supabaseHttpClient.select(TABLE_VENTAS, queryParams);
+        return rows.stream()
+                .map(this::mapToVenta)
+                .toList();
+    }
+
+    @Override
+    public List<DetalleVenta> obtenerDetallesPorVentasIds(List<String> idsVentas) {
+        if (idsVentas.isEmpty()) {
+            return List.of();
+        }
+        String idsIn = String.join(",", idsVentas);
+        List<Map.Entry<String, String>> queryParams = List.of(
+                Map.entry("id_venta", "in.(" + idsIn + ")"),
+                Map.entry("select", "*"));
+
+        List<Map<String, Object>> rows = supabaseHttpClient.select(TABLE_DETALLE_VENTA, queryParams);
+        return rows.stream()
+                .map(this::mapToDetalleVenta)
+                .toList();
+    }
+
+    @Override
+    public List<CargaTransporte> obtenerCargasPorVendedorYFecha(UUID idVendedor, java.time.LocalDate fecha) {
+        List<Map.Entry<String, String>> queryParams = List.of(
+                Map.entry("id_vendedor", "eq." + idVendedor),
+                Map.entry("fecha_asignacion", "eq." + fecha),
+                Map.entry("select", "*"));
+
+        List<Map<String, Object>> rows = supabaseHttpClient.select(TABLE_CARGA_TRANSPORTE, queryParams);
+        return rows.stream()
+                .map(this::mapToCargaTransporte)
+                .toList();
+    }
+
     private Map<String, Object> mapDetalleToBody(DetalleVenta detalle) {
         Map<String, Object> body = new HashMap<>();
         body.put("id_venta", detalle.getIdVenta());
@@ -189,6 +271,28 @@ public class SupabaseVentaRepositoryAdapter implements VentaRepositoryPort {
 
         return new Producto(id, sku, idCategoria, nombre, precioUnidad, precioCaja, unidadesPorCaja,
                 stockAlmacenCentral, descripcion, urlImagen, estado, createdAt);
+    }
+
+    private CargaTransporte mapToCargaTransporte(Map<String, Object> row) {
+        String idCarga = getString(row.get("id_carga"));
+        UUID idVendedor = UUID.fromString(getString(row.get("id_vendedor")));
+        String idVehiculo = getString(row.get("id_vehiculo"));
+        String idProducto = getString(row.get("id_producto"));
+        java.time.LocalDate fechaAsignacion = null;
+        Object fechaObj = row.get("fecha_asignacion");
+        if (fechaObj instanceof String fechaStr) {
+            try {
+                fechaAsignacion = java.time.LocalDate.parse(fechaStr);
+            } catch (Exception e) {
+                // Ignorar formato inválido
+            }
+        }
+        Integer cantidadInicial = getInteger(row.get("cantidad_inicial"));
+        Integer cantidadActual = getInteger(row.get("cantidad_actual"));
+        String estadoValidacion = getString(row.get("estado_validacion"));
+
+        return new CargaTransporte(idCarga, idVendedor, idVehiculo, idProducto, fechaAsignacion,
+                cantidadInicial, cantidadActual, estadoValidacion);
     }
 
     private String getString(Object value) {

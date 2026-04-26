@@ -139,6 +139,22 @@ public class SupabaseHttpClient {
         }
     }
 
+    public List<Map<String, Object>> select(String table, List<Map.Entry<String, String>> queryParams) {
+        ensureConfigured();
+        String uri = buildRestUri(table, queryParams);
+        try {
+            List<?> response = restClient.get()
+                    .uri(uri)
+                    .header("apikey", serviceKey)
+                    .header("Authorization", "Bearer " + serviceKey)
+                    .retrieve()
+                    .body(List.class);
+            return toMapList(response);
+        } catch (RestClientResponseException ex) {
+            throw toApiException(ex);
+        }
+    }
+
     public List<Map<String, Object>> insert(String table, Object body, String onConflict, String prefer) {
         ensureConfigured();
         UriComponentsBuilder builder = UriComponentsBuilder.fromUriString(baseUrl + "/rest/v1/" + table);
@@ -277,6 +293,12 @@ public class SupabaseHttpClient {
     private String buildRestUri(String table, Map<String, String> queryParams) {
         UriComponentsBuilder builder = UriComponentsBuilder.fromUriString(baseUrl + "/rest/v1/" + table);
         queryParams.forEach(builder::queryParam);
+        return builder.build(true).toUriString();
+    }
+
+    private String buildRestUri(String table, List<Map.Entry<String, String>> queryParams) {
+        UriComponentsBuilder builder = UriComponentsBuilder.fromUriString(baseUrl + "/rest/v1/" + table);
+        queryParams.forEach(entry -> builder.queryParam(entry.getKey(), entry.getValue()));
         return builder.build(true).toUriString();
     }
 

@@ -5,6 +5,8 @@ import com.back.puntoventa.app.domain.auth.port.UsuarioRepositoryPort;
 import com.back.puntoventa.app.domain.auth.service.AutorizacionAuthService;
 import com.back.puntoventa.app.domain.inventario.port.AsignacionRepositoryPort;
 import com.back.puntoventa.app.domain.inventario.service.GestionInventarioService;
+import com.back.puntoventa.app.domain.inventario_ruta.port.InventarioRutaRepositoryPort;
+import com.back.puntoventa.app.domain.inventario_ruta.service.GestionInventarioRutaService;
 import com.back.puntoventa.app.domain.clientes.port.ClienteRepositoryPort;
 import com.back.puntoventa.app.domain.clientes.service.GestionClientesService;
 import com.back.puntoventa.app.domain.productos.port.ProductoRepositoryPort;
@@ -18,6 +20,7 @@ import com.back.puntoventa.app.domain.vendedores.service.GestionVendedoresServic
 import com.back.puntoventa.app.domain.ventas.port.VentaRepositoryPort;
 import com.back.puntoventa.app.domain.ventas.service.GestionVentasService;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseAsignacionRepositoryAdapter;
+import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseInventarioRutaRepositoryAdapter;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseAutenticacionAdapter;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseGestorUsuariosAdapter;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseClienteRepositoryAdapter;
@@ -128,6 +131,11 @@ public class HexagonalArchitectureConfig {
     }
 
     @Bean
+    public GestionInventarioRutaService gestionInventarioRutaService(InventarioRutaRepositoryPort inventarioRutaRepositoryPort) {
+        return new GestionInventarioRutaService(inventarioRutaRepositoryPort);
+    }
+
+    @Bean
     public RutaService rutaService(RutaRepositoryPort rutaRepositoryPort) {
         return new RutaService(rutaRepositoryPort);
     }
@@ -135,6 +143,11 @@ public class HexagonalArchitectureConfig {
     @Bean
     public AsignacionRepositoryPort asignacionRepositoryPort(SupabaseHttpClient supabaseHttpClient) {
         return new SupabaseAsignacionRepositoryAdapter(supabaseHttpClient);
+    }
+
+    @Bean
+    public InventarioRutaRepositoryPort inventarioRutaRepositoryPort(SupabaseHttpClient supabaseHttpClient) {
+        return new SupabaseInventarioRutaRepositoryAdapter(supabaseHttpClient);
     }
 
     @Bean

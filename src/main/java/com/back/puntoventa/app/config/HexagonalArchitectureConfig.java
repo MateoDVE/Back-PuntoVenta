@@ -5,6 +5,8 @@ import com.back.puntoventa.app.domain.auth.port.UsuarioRepositoryPort;
 import com.back.puntoventa.app.domain.auth.service.AutorizacionAuthService;
 import com.back.puntoventa.app.domain.inventario.port.AsignacionRepositoryPort;
 import com.back.puntoventa.app.domain.inventario.service.GestionInventarioService;
+import com.back.puntoventa.app.domain.inventario_ruta.port.InventarioRutaRepositoryPort;
+import com.back.puntoventa.app.domain.inventario_ruta.service.GestionInventarioRutaService;
 import com.back.puntoventa.app.domain.clientes.port.ClienteRepositoryPort;
 import com.back.puntoventa.app.domain.clientes.service.GestionClientesService;
 import com.back.puntoventa.app.domain.productos.port.ProductoRepositoryPort;
@@ -15,7 +17,13 @@ import com.back.puntoventa.app.domain.ruta.service.RutaService;
 import com.back.puntoventa.app.domain.vendedores.port.GestorUsuariosPort;
 import com.back.puntoventa.app.domain.vendedores.port.VendedorRepositoryPort;
 import com.back.puntoventa.app.domain.vendedores.service.GestionVendedoresService;
+import com.back.puntoventa.app.domain.cierre.port.CierreJornadaRepositoryPort;
+import com.back.puntoventa.app.domain.cierre.service.GestionCierreJornadaService;
+import com.back.puntoventa.app.domain.ventas.port.VentaRepositoryPort;
+import com.back.puntoventa.app.domain.ventas.service.GestionVentasService;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseAsignacionRepositoryAdapter;
+import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseCierreJornadaRepositoryAdapter;
+import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseInventarioRutaRepositoryAdapter;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseAutenticacionAdapter;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseGestorUsuariosAdapter;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseClienteRepositoryAdapter;
@@ -24,6 +32,7 @@ import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.Supab
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseStorageAdapter;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseUsuarioRepositoryAdapter;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseVendedorRepositoryAdapter;
+import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseVentaRepositoryAdapter;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.client.SupabaseHttpClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -76,6 +85,11 @@ public class HexagonalArchitectureConfig {
         return new SupabaseStorageAdapter(supabaseHttpClient);
     }
 
+    @Bean
+    public VentaRepositoryPort ventaRepositoryPort(SupabaseHttpClient supabaseHttpClient) {
+        return new SupabaseVentaRepositoryAdapter(supabaseHttpClient);
+    }
+
     /**
      * Configura los servicios de dominio (use cases).
      * Estos dependen de los puertos (interfaces), no de implementaciones concretas.
@@ -108,10 +122,20 @@ public class HexagonalArchitectureConfig {
     }
 
     @Bean
+    public GestionVentasService gestionVentasService(VentaRepositoryPort ventaRepositoryPort) {
+        return new GestionVentasService(ventaRepositoryPort);
+    }
+
+    @Bean
     public GestionInventarioService gestionInventarioService(
             AsignacionRepositoryPort asignacionRepositoryPort,
             ProductoRepositoryPort productoRepositoryPort) {
         return new GestionInventarioService(asignacionRepositoryPort, productoRepositoryPort);
+    }
+
+    @Bean
+    public GestionInventarioRutaService gestionInventarioRutaService(InventarioRutaRepositoryPort inventarioRutaRepositoryPort) {
+        return new GestionInventarioRutaService(inventarioRutaRepositoryPort);
     }
 
     @Bean
@@ -125,7 +149,22 @@ public class HexagonalArchitectureConfig {
     }
 
     @Bean
+    public InventarioRutaRepositoryPort inventarioRutaRepositoryPort(SupabaseHttpClient supabaseHttpClient) {
+        return new SupabaseInventarioRutaRepositoryAdapter(supabaseHttpClient);
+    }
+
+    @Bean
     public RutaRepositoryPort rutaRepositoryPort(SupabaseHttpClient supabaseHttpClient) {
         return new SupabaseRutaAdapter(supabaseHttpClient);
+    }
+
+    @Bean
+    public CierreJornadaRepositoryPort cierreJornadaRepositoryPort(SupabaseHttpClient supabaseHttpClient) {
+        return new SupabaseCierreJornadaRepositoryAdapter(supabaseHttpClient);
+    }
+
+    @Bean
+    public GestionCierreJornadaService gestionCierreJornadaService(CierreJornadaRepositoryPort cierreJornadaRepositoryPort) {
+        return new GestionCierreJornadaService(cierreJornadaRepositoryPort);
     }
 }

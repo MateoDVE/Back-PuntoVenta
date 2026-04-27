@@ -17,9 +17,12 @@ import com.back.puntoventa.app.domain.ruta.service.RutaService;
 import com.back.puntoventa.app.domain.vendedores.port.GestorUsuariosPort;
 import com.back.puntoventa.app.domain.vendedores.port.VendedorRepositoryPort;
 import com.back.puntoventa.app.domain.vendedores.service.GestionVendedoresService;
+import com.back.puntoventa.app.domain.cierre.port.CierreJornadaRepositoryPort;
+import com.back.puntoventa.app.domain.cierre.service.GestionCierreJornadaService;
 import com.back.puntoventa.app.domain.ventas.port.VentaRepositoryPort;
 import com.back.puntoventa.app.domain.ventas.service.GestionVentasService;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseAsignacionRepositoryAdapter;
+import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseCierreJornadaRepositoryAdapter;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseInventarioRutaRepositoryAdapter;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseAutenticacionAdapter;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseGestorUsuariosAdapter;
@@ -153,5 +156,15 @@ public class HexagonalArchitectureConfig {
     @Bean
     public RutaRepositoryPort rutaRepositoryPort(SupabaseHttpClient supabaseHttpClient) {
         return new SupabaseRutaAdapter(supabaseHttpClient);
+    }
+
+    @Bean
+    public CierreJornadaRepositoryPort cierreJornadaRepositoryPort(SupabaseHttpClient supabaseHttpClient) {
+        return new SupabaseCierreJornadaRepositoryAdapter(supabaseHttpClient);
+    }
+
+    @Bean
+    public GestionCierreJornadaService gestionCierreJornadaService(CierreJornadaRepositoryPort cierreJornadaRepositoryPort) {
+        return new GestionCierreJornadaService(cierreJornadaRepositoryPort);
     }
 }

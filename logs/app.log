@@ -1,594 +1,557 @@
-2026-04-27 00:00:15 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 95 class path changes (1 addition, 45 deletions, 49 modifications)
-2026-04-27 00:00:16 [Thread-5] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2026-04-27 00:00:16 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-3000"]
-2026-04-27 00:00:17 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2026-04-27 00:00:17 [Thread-5] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-3000"]
-2026-04-27 00:00:22 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 26 with PID 25608 (C:\Users\HP\Desktop\7mo SEMESTRE\Taller de sistemas de informacion\PuntoVenta\Back-PuntoVenta\target\classes started by HP in C:\Users\HP\Desktop\7mo SEMESTRE\Taller de sistemas de informacion\PuntoVenta\Back-PuntoVenta)
-2026-04-27 00:00:22 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
-2026-04-27 00:00:22 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
-2026-04-27 00:00:23 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 3000 (http)
-2026-04-27 00:00:23 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2026-04-27 00:00:23 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
-2026-04-27 00:00:23 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2026-04-27 00:00:23 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 620 ms
-2026-04-27 00:00:23 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2026-04-27 00:00:23 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 3000 (http) with context path '/'
-2026-04-27 00:00:23 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 1.001 seconds (process running for 1826.218)
-2026-04-27 00:00:23 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
-2026-04-27 00:00:25 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 3 class path changes (3 additions, 0 deletions, 0 modifications)
-2026-04-27 00:00:25 [Thread-11] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2026-04-27 00:00:25 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2026-04-27 00:00:25 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 26 with PID 25608 (C:\Users\HP\Desktop\7mo SEMESTRE\Taller de sistemas de informacion\PuntoVenta\Back-PuntoVenta\target\classes started by HP in C:\Users\HP\Desktop\7mo SEMESTRE\Taller de sistemas de informacion\PuntoVenta\Back-PuntoVenta)
-2026-04-27 00:00:25 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
-2026-04-27 00:00:25 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
-2026-04-27 00:00:26 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 3000 (http)
-2026-04-27 00:00:26 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2026-04-27 00:00:26 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
-2026-04-27 00:00:26 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2026-04-27 00:00:26 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 784 ms
-2026-04-27 00:00:26 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2026-04-27 00:00:26 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 3000 (http) with context path '/'
-2026-04-27 00:00:26 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 1.202 seconds (process running for 1829.064)
-2026-04-27 00:00:26 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
-2026-04-27 00:00:29 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
-2026-04-27 00:00:29 [Thread-15] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2026-04-27 00:00:29 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2026-04-27 00:00:29 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 26 with PID 25608 (C:\Users\HP\Desktop\7mo SEMESTRE\Taller de sistemas de informacion\PuntoVenta\Back-PuntoVenta\target\classes started by HP in C:\Users\HP\Desktop\7mo SEMESTRE\Taller de sistemas de informacion\PuntoVenta\Back-PuntoVenta)
-2026-04-27 00:00:29 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
-2026-04-27 00:00:29 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
-2026-04-27 00:00:29 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 3000 (http)
-2026-04-27 00:00:29 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2026-04-27 00:00:29 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
-2026-04-27 00:00:29 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2026-04-27 00:00:29 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 432 ms
-2026-04-27 00:00:29 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2026-04-27 00:00:29 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 3000 (http) with context path '/'
-2026-04-27 00:00:29 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 0.704 seconds (process running for 1832.375)
-2026-04-27 00:00:29 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
-2026-04-27 00:00:54 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
-2026-04-27 00:00:54 [Thread-19] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2026-04-27 00:00:54 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2026-04-27 00:00:54 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 26 with PID 25608 (C:\Users\HP\Desktop\7mo SEMESTRE\Taller de sistemas de informacion\PuntoVenta\Back-PuntoVenta\target\classes started by HP in C:\Users\HP\Desktop\7mo SEMESTRE\Taller de sistemas de informacion\PuntoVenta\Back-PuntoVenta)
-2026-04-27 00:00:54 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
-2026-04-27 00:00:54 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
-2026-04-27 00:00:55 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 3000 (http)
-2026-04-27 00:00:55 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2026-04-27 00:00:55 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
-2026-04-27 00:00:55 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2026-04-27 00:00:55 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 628 ms
-2026-04-27 00:00:55 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2026-04-27 00:00:55 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 3000 (http) with context path '/'
-2026-04-27 00:00:55 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 1.017 seconds (process running for 1858.403)
-2026-04-27 00:00:55 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
-2026-04-27 00:01:22 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
-2026-04-27 00:01:22 [Thread-23] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2026-04-27 00:01:22 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2026-04-27 00:01:23 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 26 with PID 25608 (C:\Users\HP\Desktop\7mo SEMESTRE\Taller de sistemas de informacion\PuntoVenta\Back-PuntoVenta\target\classes started by HP in C:\Users\HP\Desktop\7mo SEMESTRE\Taller de sistemas de informacion\PuntoVenta\Back-PuntoVenta)
-2026-04-27 00:01:23 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
-2026-04-27 00:01:23 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
-2026-04-27 00:01:23 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 3000 (http)
-2026-04-27 00:01:23 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2026-04-27 00:01:23 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
-2026-04-27 00:01:23 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2026-04-27 00:01:23 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 588 ms
-2026-04-27 00:01:23 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2026-04-27 00:01:23 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 3000 (http) with context path '/'
-2026-04-27 00:01:23 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 0.921 seconds (process running for 1886.439)
-2026-04-27 00:01:23 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
-2026-04-27 00:01:52 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
-2026-04-27 00:01:52 [Thread-27] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2026-04-27 00:01:52 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2026-04-27 00:01:52 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 26 with PID 25608 (C:\Users\HP\Desktop\7mo SEMESTRE\Taller de sistemas de informacion\PuntoVenta\Back-PuntoVenta\target\classes started by HP in C:\Users\HP\Desktop\7mo SEMESTRE\Taller de sistemas de informacion\PuntoVenta\Back-PuntoVenta)
-2026-04-27 00:01:52 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
-2026-04-27 00:01:52 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
-2026-04-27 00:01:53 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 3000 (http)
-2026-04-27 00:01:53 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2026-04-27 00:01:53 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
-2026-04-27 00:01:53 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2026-04-27 00:01:53 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 720 ms
-2026-04-27 00:01:53 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cierreJornadaRestAdapter' defined in file [C:\Users\HP\Desktop\7mo SEMESTRE\Taller de sistemas de informacion\PuntoVenta\Back-PuntoVenta\target\classes\com\back\puntoventa\app\application\cierre\CierreJornadaRestAdapter.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.back.puntoventa.app.domain.cierre.service.GestionCierreJornadaService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
-2026-04-27 00:01:53 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
-2026-04-27 00:01:53 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-04-27 00:01:53 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Parameter 0 of constructor in com.back.puntoventa.app.application.cierre.CierreJornadaRestAdapter required a bean of type 'com.back.puntoventa.app.domain.cierre.service.GestionCierreJornadaService' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'com.back.puntoventa.app.domain.cierre.service.GestionCierreJornadaService' in your configuration.
-
-2026-04-27 00:02:02 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 26 with PID 25608 (C:\Users\HP\Desktop\7mo SEMESTRE\Taller de sistemas de informacion\PuntoVenta\Back-PuntoVenta\target\classes started by HP in C:\Users\HP\Desktop\7mo SEMESTRE\Taller de sistemas de informacion\PuntoVenta\Back-PuntoVenta)
-2026-04-27 00:02:02 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
-2026-04-27 00:02:02 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
-2026-04-27 00:02:03 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 3000 (http)
-2026-04-27 00:02:03 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2026-04-27 00:02:03 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
-2026-04-27 00:02:03 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2026-04-27 00:02:03 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 692 ms
-2026-04-27 00:02:03 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cierreJornadaRestAdapter' defined in file [C:\Users\HP\Desktop\7mo SEMESTRE\Taller de sistemas de informacion\PuntoVenta\Back-PuntoVenta\target\classes\com\back\puntoventa\app\application\cierre\CierreJornadaRestAdapter.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.back.puntoventa.app.domain.cierre.service.GestionCierreJornadaService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
-2026-04-27 00:02:03 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
-2026-04-27 00:02:03 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-04-27 00:02:03 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Parameter 0 of constructor in com.back.puntoventa.app.application.cierre.CierreJornadaRestAdapter required a bean of type 'com.back.puntoventa.app.domain.cierre.service.GestionCierreJornadaService' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'com.back.puntoventa.app.domain.cierre.service.GestionCierreJornadaService' in your configuration.
-
-2026-04-27 00:02:08 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 26 with PID 25608 (C:\Users\HP\Desktop\7mo SEMESTRE\Taller de sistemas de informacion\PuntoVenta\Back-PuntoVenta\target\classes started by HP in C:\Users\HP\Desktop\7mo SEMESTRE\Taller de sistemas de informacion\PuntoVenta\Back-PuntoVenta)
-2026-04-27 00:02:08 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
-2026-04-27 00:02:08 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
-2026-04-27 00:02:08 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 3000 (http)
-2026-04-27 00:02:08 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2026-04-27 00:02:08 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
-2026-04-27 00:02:08 [restartedMain] INFO  o.a.c.c.C.[Tomcat-2].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2026-04-27 00:02:08 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 483 ms
-2026-04-27 00:02:08 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2026-04-27 00:02:08 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 3000 (http) with context path '/'
-2026-04-27 00:02:08 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 0.838 seconds (process running for 1931.45)
-2026-04-27 00:02:08 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
-2026-04-27 00:11:17 [http-nio-3000-exec-1] INFO  o.a.c.c.C.[Tomcat-2].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-04-27 00:11:17 [http-nio-3000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2026-04-27 00:11:17 [http-nio-3000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 42 ms
-2026-04-27 00:11:21 [http-nio-3000-exec-4] INFO  c.b.p.a.a.a.c.AuthRestAdapter - POST /auth/signin - Intento de autenticación para email: mateovargas220705@gmail.com
-2026-04-27 00:11:21 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticando usuario con email: mateovargas220705@gmail.com
-2026-04-27 00:11:23 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticación completada para email: mateovargas220705@gmail.com
-2026-04-27 00:11:23 [http-nio-3000-exec-4] INFO  c.b.p.a.a.a.c.AuthRestAdapter - Autenticación exitosa para email: mateovargas220705@gmail.com
-2026-04-27 00:11:23 [http-nio-3000-exec-9] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
-2026-04-27 00:11:23 [http-nio-3000-exec-7] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
-2026-04-27 00:11:23 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
-2026-04-27 00:11:23 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
-2026-04-27 00:11:23 [http-nio-3000-exec-8] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos/stock-bajo - Consultando alertas con umbral: 100
-2026-04-27 00:11:23 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo productos con stock bajo. Umbral: 100
-2026-04-27 00:11:23 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 7 vendedores
-2026-04-27 00:11:23 [http-nio-3000-exec-9] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 7 vendedores
-2026-04-27 00:11:23 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 25 productos
-2026-04-27 00:11:23 [http-nio-3000-exec-7] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 25 productos
-2026-04-27 00:11:23 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se encontraron 23 productos con stock bajo
-2026-04-27 00:11:24 [http-nio-3000-exec-1] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
-2026-04-27 00:11:24 [http-nio-3000-exec-10] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
-2026-04-27 00:11:24 [http-nio-3000-exec-2] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos/stock-bajo - Consultando alertas con umbral: 100
-2026-04-27 00:11:24 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
-2026-04-27 00:11:24 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo productos con stock bajo. Umbral: 100
-2026-04-27 00:11:24 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
-2026-04-27 00:11:24 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 7 vendedores
-2026-04-27 00:11:24 [http-nio-3000-exec-1] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 7 vendedores
-2026-04-27 00:11:25 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 25 productos
-2026-04-27 00:11:25 [http-nio-3000-exec-10] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 25 productos
-2026-04-27 00:11:25 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se encontraron 23 productos con stock bajo
-2026-04-27 00:11:30 [http-nio-3000-exec-3] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
-2026-04-27 00:11:30 [http-nio-3000-exec-4] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
-2026-04-27 00:11:30 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
-2026-04-27 00:11:30 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
-2026-04-27 00:11:30 [http-nio-3000-exec-5] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos/stock-bajo - Consultando alertas con umbral: 100
-2026-04-27 00:11:30 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo productos con stock bajo. Umbral: 100
-2026-04-27 00:11:30 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 7 vendedores
-2026-04-27 00:11:30 [http-nio-3000-exec-3] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 7 vendedores
-2026-04-27 00:11:30 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se encontraron 23 productos con stock bajo
-2026-04-27 00:11:30 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 25 productos
-2026-04-27 00:11:30 [http-nio-3000-exec-4] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 25 productos
-2026-04-27 00:11:34 [http-nio-3000-exec-6] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
-2026-04-27 00:11:34 [http-nio-3000-exec-9] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
-2026-04-27 00:11:34 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
-2026-04-27 00:11:34 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
-2026-04-27 00:11:34 [http-nio-3000-exec-7] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos/stock-bajo - Consultando alertas con umbral: 100
-2026-04-27 00:11:34 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo productos con stock bajo. Umbral: 100
-2026-04-27 00:11:34 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se encontraron 23 productos con stock bajo
-2026-04-27 00:11:34 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 25 productos
-2026-04-27 00:11:34 [http-nio-3000-exec-6] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 25 productos
-2026-04-27 00:11:34 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 7 vendedores
-2026-04-27 00:11:34 [http-nio-3000-exec-9] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 7 vendedores
-2026-04-27 00:11:50 [http-nio-3000-exec-1] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
-2026-04-27 00:11:50 [http-nio-3000-exec-8] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
-2026-04-27 00:11:50 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
-2026-04-27 00:11:50 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
-2026-04-27 00:11:50 [http-nio-3000-exec-10] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos/stock-bajo - Consultando alertas con umbral: 100
-2026-04-27 00:11:50 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo productos con stock bajo. Umbral: 100
-2026-04-27 00:11:51 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 25 productos
-2026-04-27 00:11:51 [http-nio-3000-exec-8] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 25 productos
-2026-04-27 00:11:51 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 7 vendedores
-2026-04-27 00:11:51 [http-nio-3000-exec-1] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 7 vendedores
-2026-04-27 00:11:51 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se encontraron 23 productos con stock bajo
-2026-04-27 00:13:16 [http-nio-3000-exec-4] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
-2026-04-27 00:13:16 [http-nio-3000-exec-7] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
-2026-04-27 00:13:16 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
-2026-04-27 00:13:16 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
-2026-04-27 00:13:17 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 25 productos
-2026-04-27 00:13:17 [http-nio-3000-exec-7] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 25 productos
-2026-04-27 00:13:17 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 7 vendedores
-2026-04-27 00:13:17 [http-nio-3000-exec-4] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 7 vendedores
-2026-04-27 00:13:18 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:13:18 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:13:18 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:13:18 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:13:18 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:13:18 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:13:18 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
-2026-04-27 00:13:18 [http-nio-3000-exec-5] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/5e0e4eff-aec3-46df-a77e-d4feeb19394c - consulta por mateovargas220705@gmail.com
-2026-04-27 00:13:18 [http-nio-3000-exec-5] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
-2026-04-27 00:13:18 [http-nio-3000-exec-5] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
-2026-04-27 00:13:18 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
-2026-04-27 00:13:18 [http-nio-3000-exec-4] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/2ab0631c-da17-4bd8-b9b9-237de54711c6 - consulta por mateovargas220705@gmail.com
-2026-04-27 00:13:18 [http-nio-3000-exec-4] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 2ab0631c-da17-4bd8-b9b9-237de54711c6
-2026-04-27 00:13:18 [http-nio-3000-exec-4] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 2ab0631c-da17-4bd8-b9b9-237de54711c6
-2026-04-27 00:13:18 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
-2026-04-27 00:13:18 [http-nio-3000-exec-8] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e - consulta por mateovargas220705@gmail.com
-2026-04-27 00:13:18 [http-nio-3000-exec-8] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e
-2026-04-27 00:13:18 [http-nio-3000-exec-8] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e
-2026-04-27 00:13:18 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
-2026-04-27 00:13:18 [http-nio-3000-exec-6] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/73ed0c2b-851c-44c8-a08b-ded6f61924f9 - consulta por mateovargas220705@gmail.com
-2026-04-27 00:13:18 [http-nio-3000-exec-6] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 73ed0c2b-851c-44c8-a08b-ded6f61924f9
-2026-04-27 00:13:18 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
-2026-04-27 00:13:18 [http-nio-3000-exec-9] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/6b0a5026-52f3-475a-a20f-5aacf94764f0 - consulta por mateovargas220705@gmail.com
-2026-04-27 00:13:18 [http-nio-3000-exec-6] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 73ed0c2b-851c-44c8-a08b-ded6f61924f9
-2026-04-27 00:13:18 [http-nio-3000-exec-9] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
-2026-04-27 00:13:18 [http-nio-3000-exec-9] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
-2026-04-27 00:13:18 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
-2026-04-27 00:13:18 [http-nio-3000-exec-3] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/0b9544ca-bfbe-4335-821c-5c8eb4b553b2 - consulta por mateovargas220705@gmail.com
-2026-04-27 00:13:18 [http-nio-3000-exec-3] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 0b9544ca-bfbe-4335-821c-5c8eb4b553b2
-2026-04-27 00:13:18 [http-nio-3000-exec-3] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 0b9544ca-bfbe-4335-821c-5c8eb4b553b2
-2026-04-27 00:13:18 [http-nio-3000-exec-5] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 5e0e4eff-aec3-46df-a77e-d4feeb19394c: 0
-2026-04-27 00:13:18 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:13:18 [http-nio-3000-exec-4] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 2ab0631c-da17-4bd8-b9b9-237de54711c6: 9
-2026-04-27 00:13:18 [http-nio-3000-exec-8] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e: 0
-2026-04-27 00:13:18 [http-nio-3000-exec-6] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 73ed0c2b-851c-44c8-a08b-ded6f61924f9: 4
-2026-04-27 00:13:19 [http-nio-3000-exec-3] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 0b9544ca-bfbe-4335-821c-5c8eb4b553b2: 1
-2026-04-27 00:13:19 [http-nio-3000-exec-9] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0: 23
-2026-04-27 00:13:19 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
-2026-04-27 00:13:19 [http-nio-3000-exec-1] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/997e2337-32a6-4ba5-84fb-873ef1b6036f - consulta por mateovargas220705@gmail.com
-2026-04-27 00:13:19 [http-nio-3000-exec-1] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 997e2337-32a6-4ba5-84fb-873ef1b6036f
-2026-04-27 00:13:19 [http-nio-3000-exec-1] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 997e2337-32a6-4ba5-84fb-873ef1b6036f
-2026-04-27 00:13:19 [http-nio-3000-exec-1] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 997e2337-32a6-4ba5-84fb-873ef1b6036f: 0
-2026-04-27 00:13:45 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:13:45 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:13:45 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
-2026-04-27 00:13:45 [http-nio-3000-exec-7] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - POST /inventario/asignar - admin mateovargas220705@gmail.com asigna stock
-2026-04-27 00:13:45 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
-2026-04-27 00:13:45 [http-nio-3000-exec-5] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - POST /inventario/asignar - admin mateovargas220705@gmail.com asigna stock
-2026-04-27 00:13:45 [http-nio-3000-exec-7] INFO  c.b.p.a.d.i.s.GestionInventarioService - Asignando stock - Producto: 9000117, Vendedor: 5e0e4eff-aec3-46df-a77e-d4feeb19394c, Cantidad: 3
-2026-04-27 00:13:45 [http-nio-3000-exec-5] INFO  c.b.p.a.d.i.s.GestionInventarioService - Asignando stock - Producto: 9000113, Vendedor: 5e0e4eff-aec3-46df-a77e-d4feeb19394c, Cantidad: 3
-2026-04-27 00:13:45 [http-nio-3000-exec-7] INFO  c.b.p.a.d.i.s.GestionInventarioService - Stock central descontado - Producto: 9000117, Stock anterior: 3, Stock nuevo: 0
-2026-04-27 00:13:45 [http-nio-3000-exec-7] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Guardando asignación en Supabase - vendedor: 5e0e4eff-aec3-46df-a77e-d4feeb19394c, producto: 9000117, cantidad: 3
-2026-04-27 00:13:45 [http-nio-3000-exec-5] INFO  c.b.p.a.d.i.s.GestionInventarioService - Stock central descontado - Producto: 9000113, Stock anterior: 5, Stock nuevo: 2
-2026-04-27 00:13:45 [http-nio-3000-exec-5] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Guardando asignación en Supabase - vendedor: 5e0e4eff-aec3-46df-a77e-d4feeb19394c, producto: 9000113, cantidad: 3
-2026-04-27 00:13:45 [http-nio-3000-exec-5] INFO  c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignación guardada correctamente - idCarga: 38
-2026-04-27 00:13:45 [http-nio-3000-exec-5] INFO  c.b.p.a.d.i.s.GestionInventarioService - Asignación creada - idCarga: 38, Estado: PENDIENTE
-2026-04-27 00:13:45 [http-nio-3000-exec-7] INFO  c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignación guardada correctamente - idCarga: 39
-2026-04-27 00:13:45 [http-nio-3000-exec-7] INFO  c.b.p.a.d.i.s.GestionInventarioService - Asignación creada - idCarga: 39, Estado: PENDIENTE
-2026-04-27 00:13:45 [http-nio-3000-exec-6] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
-2026-04-27 00:13:45 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
-2026-04-27 00:13:45 [http-nio-3000-exec-8] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
-2026-04-27 00:13:45 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
-2026-04-27 00:13:46 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 25 productos
-2026-04-27 00:13:46 [http-nio-3000-exec-6] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 25 productos
-2026-04-27 00:13:46 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 7 vendedores
-2026-04-27 00:13:46 [http-nio-3000-exec-8] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 7 vendedores
-2026-04-27 00:13:46 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:13:46 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:13:46 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:13:46 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:13:46 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:13:46 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:13:46 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
-2026-04-27 00:13:46 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
-2026-04-27 00:13:46 [http-nio-3000-exec-9] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/5e0e4eff-aec3-46df-a77e-d4feeb19394c - consulta por mateovargas220705@gmail.com
-2026-04-27 00:13:46 [http-nio-3000-exec-9] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
-2026-04-27 00:13:46 [http-nio-3000-exec-9] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
-2026-04-27 00:13:46 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
-2026-04-27 00:13:46 [http-nio-3000-exec-3] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/2ab0631c-da17-4bd8-b9b9-237de54711c6 - consulta por mateovargas220705@gmail.com
-2026-04-27 00:13:46 [http-nio-3000-exec-3] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 2ab0631c-da17-4bd8-b9b9-237de54711c6
-2026-04-27 00:13:46 [http-nio-3000-exec-4] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/0b9544ca-bfbe-4335-821c-5c8eb4b553b2 - consulta por mateovargas220705@gmail.com
-2026-04-27 00:13:46 [http-nio-3000-exec-3] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 2ab0631c-da17-4bd8-b9b9-237de54711c6
-2026-04-27 00:13:46 [http-nio-3000-exec-4] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 0b9544ca-bfbe-4335-821c-5c8eb4b553b2
-2026-04-27 00:13:46 [http-nio-3000-exec-4] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 0b9544ca-bfbe-4335-821c-5c8eb4b553b2
-2026-04-27 00:13:46 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
-2026-04-27 00:13:46 [http-nio-3000-exec-1] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/6b0a5026-52f3-475a-a20f-5aacf94764f0 - consulta por mateovargas220705@gmail.com
-2026-04-27 00:13:46 [http-nio-3000-exec-1] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
-2026-04-27 00:13:46 [http-nio-3000-exec-1] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
-2026-04-27 00:13:46 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
-2026-04-27 00:13:46 [http-nio-3000-exec-10] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/73ed0c2b-851c-44c8-a08b-ded6f61924f9 - consulta por mateovargas220705@gmail.com
-2026-04-27 00:13:46 [http-nio-3000-exec-10] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 73ed0c2b-851c-44c8-a08b-ded6f61924f9
-2026-04-27 00:13:46 [http-nio-3000-exec-10] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 73ed0c2b-851c-44c8-a08b-ded6f61924f9
-2026-04-27 00:13:46 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
-2026-04-27 00:13:46 [http-nio-3000-exec-2] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e - consulta por mateovargas220705@gmail.com
-2026-04-27 00:13:46 [http-nio-3000-exec-2] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e
-2026-04-27 00:13:46 [http-nio-3000-exec-2] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e
-2026-04-27 00:13:46 [http-nio-3000-exec-9] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 5e0e4eff-aec3-46df-a77e-d4feeb19394c: 2
-2026-04-27 00:13:46 [http-nio-3000-exec-4] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 0b9544ca-bfbe-4335-821c-5c8eb4b553b2: 1
-2026-04-27 00:13:46 [http-nio-3000-exec-3] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 2ab0631c-da17-4bd8-b9b9-237de54711c6: 9
-2026-04-27 00:13:46 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:13:46 [http-nio-3000-exec-1] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0: 23
-2026-04-27 00:13:47 [http-nio-3000-exec-10] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 73ed0c2b-851c-44c8-a08b-ded6f61924f9: 4
-2026-04-27 00:13:47 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
-2026-04-27 00:13:47 [http-nio-3000-exec-7] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/997e2337-32a6-4ba5-84fb-873ef1b6036f - consulta por mateovargas220705@gmail.com
-2026-04-27 00:13:47 [http-nio-3000-exec-2] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e: 0
-2026-04-27 00:13:47 [http-nio-3000-exec-7] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 997e2337-32a6-4ba5-84fb-873ef1b6036f
-2026-04-27 00:13:47 [http-nio-3000-exec-7] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 997e2337-32a6-4ba5-84fb-873ef1b6036f
-2026-04-27 00:13:48 [http-nio-3000-exec-7] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 997e2337-32a6-4ba5-84fb-873ef1b6036f: 0
-2026-04-27 00:13:53 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:13:53 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
-2026-04-27 00:13:53 [http-nio-3000-exec-6] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - PATCH /inventario/validar-admin/39 por mateovargas220705@gmail.com
-2026-04-27 00:13:53 [http-nio-3000-exec-6] INFO  c.b.p.a.d.i.s.GestionInventarioService - Validación de admin para carga: 39
-2026-04-27 00:13:53 [http-nio-3000-exec-6] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignación por idCarga: 39
-2026-04-27 00:13:53 [http-nio-3000-exec-6] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignación encontrada para idCarga: 39
-2026-04-27 00:13:53 [http-nio-3000-exec-6] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Actualizando estado de asignación - idCarga: 39, nuevoEstado: VALIDADO_ADMIN
-2026-04-27 00:13:53 [http-nio-3000-exec-6] INFO  c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Estado actualizado correctamente - idCarga: 39, estado: VALIDADO_ADMIN
-2026-04-27 00:13:53 [http-nio-3000-exec-6] INFO  c.b.p.a.d.i.s.GestionInventarioService - Carga validada por admin - idCarga: 39
-2026-04-27 00:13:53 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:13:53 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:13:53 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:13:53 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:13:53 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:13:53 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:13:54 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
-2026-04-27 00:13:54 [http-nio-3000-exec-1] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/73ed0c2b-851c-44c8-a08b-ded6f61924f9 - consulta por mateovargas220705@gmail.com
-2026-04-27 00:13:54 [http-nio-3000-exec-1] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 73ed0c2b-851c-44c8-a08b-ded6f61924f9
-2026-04-27 00:13:54 [http-nio-3000-exec-1] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 73ed0c2b-851c-44c8-a08b-ded6f61924f9
-2026-04-27 00:13:54 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
-2026-04-27 00:13:54 [http-nio-3000-exec-8] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/0b9544ca-bfbe-4335-821c-5c8eb4b553b2 - consulta por mateovargas220705@gmail.com
-2026-04-27 00:13:54 [http-nio-3000-exec-8] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 0b9544ca-bfbe-4335-821c-5c8eb4b553b2
-2026-04-27 00:13:54 [http-nio-3000-exec-8] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 0b9544ca-bfbe-4335-821c-5c8eb4b553b2
-2026-04-27 00:13:54 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
-2026-04-27 00:13:54 [http-nio-3000-exec-9] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/2ab0631c-da17-4bd8-b9b9-237de54711c6 - consulta por mateovargas220705@gmail.com
-2026-04-27 00:13:54 [http-nio-3000-exec-9] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 2ab0631c-da17-4bd8-b9b9-237de54711c6
-2026-04-27 00:13:54 [http-nio-3000-exec-9] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 2ab0631c-da17-4bd8-b9b9-237de54711c6
-2026-04-27 00:13:54 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
-2026-04-27 00:13:54 [http-nio-3000-exec-3] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/6b0a5026-52f3-475a-a20f-5aacf94764f0 - consulta por mateovargas220705@gmail.com
-2026-04-27 00:13:54 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
-2026-04-27 00:13:54 [http-nio-3000-exec-3] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
-2026-04-27 00:13:54 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
-2026-04-27 00:13:54 [http-nio-3000-exec-4] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/5e0e4eff-aec3-46df-a77e-d4feeb19394c - consulta por mateovargas220705@gmail.com
-2026-04-27 00:13:54 [http-nio-3000-exec-4] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
-2026-04-27 00:13:54 [http-nio-3000-exec-3] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
-2026-04-27 00:13:54 [http-nio-3000-exec-10] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e - consulta por mateovargas220705@gmail.com
-2026-04-27 00:13:54 [http-nio-3000-exec-10] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e
-2026-04-27 00:13:54 [http-nio-3000-exec-4] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
-2026-04-27 00:13:54 [http-nio-3000-exec-10] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e
-2026-04-27 00:13:54 [http-nio-3000-exec-1] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 73ed0c2b-851c-44c8-a08b-ded6f61924f9: 4
-2026-04-27 00:13:54 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:13:54 [http-nio-3000-exec-8] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 0b9544ca-bfbe-4335-821c-5c8eb4b553b2: 1
-2026-04-27 00:13:54 [http-nio-3000-exec-9] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 2ab0631c-da17-4bd8-b9b9-237de54711c6: 9
-2026-04-27 00:13:54 [http-nio-3000-exec-3] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0: 23
-2026-04-27 00:13:54 [http-nio-3000-exec-4] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 5e0e4eff-aec3-46df-a77e-d4feeb19394c: 2
-2026-04-27 00:13:54 [http-nio-3000-exec-10] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e: 0
-2026-04-27 00:13:54 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
-2026-04-27 00:13:54 [http-nio-3000-exec-2] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/997e2337-32a6-4ba5-84fb-873ef1b6036f - consulta por mateovargas220705@gmail.com
-2026-04-27 00:13:54 [http-nio-3000-exec-2] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 997e2337-32a6-4ba5-84fb-873ef1b6036f
-2026-04-27 00:13:54 [http-nio-3000-exec-2] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 997e2337-32a6-4ba5-84fb-873ef1b6036f
-2026-04-27 00:13:54 [http-nio-3000-exec-2] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 997e2337-32a6-4ba5-84fb-873ef1b6036f: 0
-2026-04-27 00:13:55 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:13:56 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
-2026-04-27 00:13:56 [http-nio-3000-exec-5] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - PATCH /inventario/validar-admin/38 por mateovargas220705@gmail.com
-2026-04-27 00:13:56 [http-nio-3000-exec-5] INFO  c.b.p.a.d.i.s.GestionInventarioService - Validación de admin para carga: 38
-2026-04-27 00:13:56 [http-nio-3000-exec-5] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignación por idCarga: 38
-2026-04-27 00:13:56 [http-nio-3000-exec-5] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignación encontrada para idCarga: 38
-2026-04-27 00:13:56 [http-nio-3000-exec-5] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Actualizando estado de asignación - idCarga: 38, nuevoEstado: VALIDADO_ADMIN
-2026-04-27 00:13:56 [http-nio-3000-exec-5] INFO  c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Estado actualizado correctamente - idCarga: 38, estado: VALIDADO_ADMIN
-2026-04-27 00:13:56 [http-nio-3000-exec-5] INFO  c.b.p.a.d.i.s.GestionInventarioService - Carga validada por admin - idCarga: 38
-2026-04-27 00:13:56 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:13:56 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:13:56 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:13:56 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:13:56 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:13:56 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:13:56 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
-2026-04-27 00:13:56 [http-nio-3000-exec-9] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/6b0a5026-52f3-475a-a20f-5aacf94764f0 - consulta por mateovargas220705@gmail.com
-2026-04-27 00:13:56 [http-nio-3000-exec-9] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
-2026-04-27 00:13:56 [http-nio-3000-exec-9] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
-2026-04-27 00:13:56 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
-2026-04-27 00:13:56 [http-nio-3000-exec-1] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/2ab0631c-da17-4bd8-b9b9-237de54711c6 - consulta por mateovargas220705@gmail.com
-2026-04-27 00:13:56 [http-nio-3000-exec-1] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 2ab0631c-da17-4bd8-b9b9-237de54711c6
-2026-04-27 00:13:56 [http-nio-3000-exec-1] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 2ab0631c-da17-4bd8-b9b9-237de54711c6
-2026-04-27 00:13:56 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
-2026-04-27 00:13:56 [http-nio-3000-exec-6] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/0b9544ca-bfbe-4335-821c-5c8eb4b553b2 - consulta por mateovargas220705@gmail.com
-2026-04-27 00:13:56 [http-nio-3000-exec-6] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 0b9544ca-bfbe-4335-821c-5c8eb4b553b2
-2026-04-27 00:13:56 [http-nio-3000-exec-6] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 0b9544ca-bfbe-4335-821c-5c8eb4b553b2
-2026-04-27 00:13:56 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
-2026-04-27 00:13:56 [http-nio-3000-exec-8] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/5e0e4eff-aec3-46df-a77e-d4feeb19394c - consulta por mateovargas220705@gmail.com
-2026-04-27 00:13:56 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
-2026-04-27 00:13:56 [http-nio-3000-exec-8] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
-2026-04-27 00:13:56 [http-nio-3000-exec-3] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/73ed0c2b-851c-44c8-a08b-ded6f61924f9 - consulta por mateovargas220705@gmail.com
-2026-04-27 00:13:56 [http-nio-3000-exec-8] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
-2026-04-27 00:13:56 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
-2026-04-27 00:13:56 [http-nio-3000-exec-3] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 73ed0c2b-851c-44c8-a08b-ded6f61924f9
-2026-04-27 00:13:56 [http-nio-3000-exec-4] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e - consulta por mateovargas220705@gmail.com
-2026-04-27 00:13:56 [http-nio-3000-exec-3] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 73ed0c2b-851c-44c8-a08b-ded6f61924f9
-2026-04-27 00:13:56 [http-nio-3000-exec-4] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e
-2026-04-27 00:13:56 [http-nio-3000-exec-4] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e
-2026-04-27 00:13:57 [http-nio-3000-exec-1] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 2ab0631c-da17-4bd8-b9b9-237de54711c6: 9
-2026-04-27 00:13:57 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:13:57 [http-nio-3000-exec-9] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0: 23
-2026-04-27 00:13:57 [http-nio-3000-exec-8] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 5e0e4eff-aec3-46df-a77e-d4feeb19394c: 2
-2026-04-27 00:13:57 [http-nio-3000-exec-4] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e: 0
-2026-04-27 00:13:57 [http-nio-3000-exec-3] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 73ed0c2b-851c-44c8-a08b-ded6f61924f9: 4
-2026-04-27 00:13:57 [http-nio-3000-exec-6] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 0b9544ca-bfbe-4335-821c-5c8eb4b553b2: 1
-2026-04-27 00:13:57 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
-2026-04-27 00:13:57 [http-nio-3000-exec-10] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/997e2337-32a6-4ba5-84fb-873ef1b6036f - consulta por mateovargas220705@gmail.com
-2026-04-27 00:13:57 [http-nio-3000-exec-10] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 997e2337-32a6-4ba5-84fb-873ef1b6036f
-2026-04-27 00:13:57 [http-nio-3000-exec-10] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 997e2337-32a6-4ba5-84fb-873ef1b6036f
-2026-04-27 00:13:57 [http-nio-3000-exec-10] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 997e2337-32a6-4ba5-84fb-873ef1b6036f: 0
-2026-04-27 00:13:59 [http-nio-3000-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'userId' for method parameter type String is not present]
-2026-04-27 00:14:03 [http-nio-3000-exec-7] INFO  c.b.p.a.a.a.c.AuthRestAdapter - POST /auth/signin - Intento de autenticación para email: alejandraloayza68@gmail.com
-2026-04-27 00:14:03 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticando usuario con email: alejandraloayza68@gmail.com
-2026-04-27 00:14:04 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticación completada para email: alejandraloayza68@gmail.com
-2026-04-27 00:14:04 [http-nio-3000-exec-7] INFO  c.b.p.a.a.a.c.AuthRestAdapter - Autenticación exitosa para email: alejandraloayza68@gmail.com
-2026-04-27 00:14:04 [http-nio-3000-exec-1] INFO  c.b.p.a.a.a.c.AuthRestAdapter - GET /auth/me - Obtener perfil del usuario actual
-2026-04-27 00:14:04 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:14:04 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
-2026-04-27 00:14:04 [http-nio-3000-exec-1] DEBUG c.b.p.a.a.a.c.AuthRestAdapter - Perfil obtenido para usuario: alejandraloayza68@gmail.com
-2026-04-27 00:14:04 [http-nio-3000-exec-9] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
-2026-04-27 00:14:04 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:14:04 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
-2026-04-27 00:14:04 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 25 productos
-2026-04-27 00:14:04 [http-nio-3000-exec-9] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 25 productos
-2026-04-27 00:14:05 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
-2026-04-27 00:14:05 [http-nio-3000-exec-4] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/5e0e4eff-aec3-46df-a77e-d4feeb19394c - consulta por alejandraloayza68@gmail.com
-2026-04-27 00:14:05 [http-nio-3000-exec-4] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
-2026-04-27 00:14:05 [http-nio-3000-exec-4] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
-2026-04-27 00:14:05 [http-nio-3000-exec-4] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 5e0e4eff-aec3-46df-a77e-d4feeb19394c: 2
-2026-04-27 00:14:07 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:14:07 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
-2026-04-27 00:14:07 [http-nio-3000-exec-3] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - PATCH /inventario/confirmar-salida/39 por vendedor alejandraloayza68@gmail.com
-2026-04-27 00:14:07 [http-nio-3000-exec-3] INFO  c.b.p.a.d.i.s.GestionInventarioService - Confirmación de salida por vendedor - idCarga: 39, vendedor: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
-2026-04-27 00:14:07 [http-nio-3000-exec-3] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignación por idCarga: 39
-2026-04-27 00:14:07 [http-nio-3000-exec-3] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignación encontrada para idCarga: 39
-2026-04-27 00:14:07 [http-nio-3000-exec-3] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Actualizando estado de asignación - idCarga: 39, nuevoEstado: VALIDADO
-2026-04-27 00:14:07 [http-nio-3000-exec-3] INFO  c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Estado actualizado correctamente - idCarga: 39, estado: VALIDADO
-2026-04-27 00:14:07 [http-nio-3000-exec-3] INFO  c.b.p.a.d.i.s.GestionInventarioService - Carga validada por vendedor y confirmada en salida - idCarga: 39
-2026-04-27 00:14:07 [http-nio-3000-exec-6] INFO  c.b.p.a.a.a.c.AuthRestAdapter - GET /auth/me - Obtener perfil del usuario actual
-2026-04-27 00:14:07 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:14:08 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
-2026-04-27 00:14:08 [http-nio-3000-exec-6] DEBUG c.b.p.a.a.a.c.AuthRestAdapter - Perfil obtenido para usuario: alejandraloayza68@gmail.com
-2026-04-27 00:14:08 [http-nio-3000-exec-10] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
-2026-04-27 00:14:08 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:14:08 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
-2026-04-27 00:14:08 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 25 productos
-2026-04-27 00:14:08 [http-nio-3000-exec-10] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 25 productos
-2026-04-27 00:14:08 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
-2026-04-27 00:14:08 [http-nio-3000-exec-2] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/5e0e4eff-aec3-46df-a77e-d4feeb19394c - consulta por alejandraloayza68@gmail.com
-2026-04-27 00:14:08 [http-nio-3000-exec-2] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
-2026-04-27 00:14:08 [http-nio-3000-exec-2] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
-2026-04-27 00:14:08 [http-nio-3000-exec-2] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 5e0e4eff-aec3-46df-a77e-d4feeb19394c: 2
-2026-04-27 00:14:10 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:14:10 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
-2026-04-27 00:14:10 [http-nio-3000-exec-5] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - PATCH /inventario/confirmar-salida/38 por vendedor alejandraloayza68@gmail.com
-2026-04-27 00:14:10 [http-nio-3000-exec-5] INFO  c.b.p.a.d.i.s.GestionInventarioService - Confirmación de salida por vendedor - idCarga: 38, vendedor: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
-2026-04-27 00:14:10 [http-nio-3000-exec-5] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignación por idCarga: 38
-2026-04-27 00:14:10 [http-nio-3000-exec-5] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignación encontrada para idCarga: 38
-2026-04-27 00:14:10 [http-nio-3000-exec-5] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Actualizando estado de asignación - idCarga: 38, nuevoEstado: VALIDADO
-2026-04-27 00:14:10 [http-nio-3000-exec-5] INFO  c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Estado actualizado correctamente - idCarga: 38, estado: VALIDADO
-2026-04-27 00:14:10 [http-nio-3000-exec-5] INFO  c.b.p.a.d.i.s.GestionInventarioService - Carga validada por vendedor y confirmada en salida - idCarga: 38
-2026-04-27 00:14:10 [http-nio-3000-exec-1] INFO  c.b.p.a.a.a.c.AuthRestAdapter - GET /auth/me - Obtener perfil del usuario actual
-2026-04-27 00:14:10 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:14:11 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
-2026-04-27 00:14:11 [http-nio-3000-exec-1] DEBUG c.b.p.a.a.a.c.AuthRestAdapter - Perfil obtenido para usuario: alejandraloayza68@gmail.com
-2026-04-27 00:14:11 [http-nio-3000-exec-9] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
-2026-04-27 00:14:11 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:14:11 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
-2026-04-27 00:14:11 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 25 productos
-2026-04-27 00:14:11 [http-nio-3000-exec-9] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 25 productos
-2026-04-27 00:14:11 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
-2026-04-27 00:14:11 [http-nio-3000-exec-4] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/5e0e4eff-aec3-46df-a77e-d4feeb19394c - consulta por alejandraloayza68@gmail.com
-2026-04-27 00:14:11 [http-nio-3000-exec-4] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
-2026-04-27 00:14:11 [http-nio-3000-exec-4] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
-2026-04-27 00:14:11 [http-nio-3000-exec-4] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 5e0e4eff-aec3-46df-a77e-d4feeb19394c: 2
-2026-04-27 00:14:13 [http-nio-3000-exec-8] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
-2026-04-27 00:14:13 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
-2026-04-27 00:14:14 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 25 productos
-2026-04-27 00:14:14 [http-nio-3000-exec-8] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 25 productos
-2026-04-27 00:20:31 [http-nio-3000-exec-5] INFO  c.b.p.a.a.a.c.AuthRestAdapter - GET /auth/me - Obtener perfil del usuario actual
-2026-04-27 00:20:31 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:20:33 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
-2026-04-27 00:20:33 [http-nio-3000-exec-5] DEBUG c.b.p.a.a.a.c.AuthRestAdapter - Perfil obtenido para usuario: alejandraloayza68@gmail.com
-2026-04-27 00:20:33 [http-nio-3000-exec-9] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=5e0e4eff-aec3-46df-a77e-d4feeb19394c
-2026-04-27 00:20:33 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
-2026-04-27 00:20:33 [http-nio-3000-exec-9] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=5e0e4eff-aec3-46df-a77e-d4feeb19394c
-2026-04-27 00:20:35 [http-nio-3000-exec-4] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
-2026-04-27 00:20:35 [http-nio-3000-exec-8] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=5e0e4eff-aec3-46df-a77e-d4feeb19394c
-2026-04-27 00:20:35 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
-2026-04-27 00:20:35 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
-2026-04-27 00:20:35 [http-nio-3000-exec-8] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=5e0e4eff-aec3-46df-a77e-d4feeb19394c
-2026-04-27 00:20:35 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:20:35 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 25 productos
-2026-04-27 00:20:35 [http-nio-3000-exec-4] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 25 productos
-2026-04-27 00:20:35 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
-2026-04-27 00:20:35 [http-nio-3000-exec-6] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/5e0e4eff-aec3-46df-a77e-d4feeb19394c - consulta por alejandraloayza68@gmail.com
-2026-04-27 00:20:35 [http-nio-3000-exec-6] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
-2026-04-27 00:20:35 [http-nio-3000-exec-6] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
-2026-04-27 00:20:35 [http-nio-3000-exec-6] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 5e0e4eff-aec3-46df-a77e-d4feeb19394c: 2
-2026-04-27 00:21:19 [http-nio-3000-exec-10] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=5e0e4eff-aec3-46df-a77e-d4feeb19394c
-2026-04-27 00:21:19 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
-2026-04-27 00:21:19 [http-nio-3000-exec-10] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=5e0e4eff-aec3-46df-a77e-d4feeb19394c
-2026-04-27 00:21:32 [http-nio-3000-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'userId' for method parameter type String is not present]
-2026-04-27 00:21:36 [http-nio-3000-exec-5] INFO  c.b.p.a.a.a.c.AuthRestAdapter - POST /auth/signin - Intento de autenticación para email: andres@gmail.com
-2026-04-27 00:21:36 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticando usuario con email: andres@gmail.com
-2026-04-27 00:21:36 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticación completada para email: andres@gmail.com
-2026-04-27 00:21:36 [http-nio-3000-exec-5] INFO  c.b.p.a.a.a.c.AuthRestAdapter - Autenticación exitosa para email: andres@gmail.com
-2026-04-27 00:21:36 [http-nio-3000-exec-1] INFO  c.b.p.a.a.a.c.AuthRestAdapter - GET /auth/me - Obtener perfil del usuario actual
-2026-04-27 00:21:36 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:21:36 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 6b0a5026-52f3-475a-a20f-5aacf94764f0
-2026-04-27 00:21:36 [http-nio-3000-exec-1] DEBUG c.b.p.a.a.a.c.AuthRestAdapter - Perfil obtenido para usuario: andres@gmail.com
-2026-04-27 00:21:36 [http-nio-3000-exec-9] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
-2026-04-27 00:21:36 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
-2026-04-27 00:21:36 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:21:36 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 25 productos
-2026-04-27 00:21:36 [http-nio-3000-exec-9] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 25 productos
-2026-04-27 00:21:37 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 6b0a5026-52f3-475a-a20f-5aacf94764f0
-2026-04-27 00:21:37 [http-nio-3000-exec-8] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/6b0a5026-52f3-475a-a20f-5aacf94764f0 - consulta por andres@gmail.com
-2026-04-27 00:21:37 [http-nio-3000-exec-8] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
-2026-04-27 00:21:37 [http-nio-3000-exec-8] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
-2026-04-27 00:21:37 [http-nio-3000-exec-8] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0: 23
-2026-04-27 00:21:38 [http-nio-3000-exec-4] INFO  c.b.p.a.a.a.c.AuthRestAdapter - GET /auth/me - Obtener perfil del usuario actual
-2026-04-27 00:21:38 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:21:38 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 6b0a5026-52f3-475a-a20f-5aacf94764f0
-2026-04-27 00:21:38 [http-nio-3000-exec-4] DEBUG c.b.p.a.a.a.c.AuthRestAdapter - Perfil obtenido para usuario: andres@gmail.com
-2026-04-27 00:21:38 [http-nio-3000-exec-10] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=6b0a5026-52f3-475a-a20f-5aacf94764f0
-2026-04-27 00:21:38 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
-2026-04-27 00:21:38 [http-nio-3000-exec-10] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=6b0a5026-52f3-475a-a20f-5aacf94764f0
-2026-04-27 00:21:40 [http-nio-3000-exec-7] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
-2026-04-27 00:21:40 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:21:40 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
-2026-04-27 00:21:40 [http-nio-3000-exec-2] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=6b0a5026-52f3-475a-a20f-5aacf94764f0
-2026-04-27 00:21:40 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
-2026-04-27 00:21:40 [http-nio-3000-exec-2] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=6b0a5026-52f3-475a-a20f-5aacf94764f0
-2026-04-27 00:21:41 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 25 productos
-2026-04-27 00:21:41 [http-nio-3000-exec-7] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 25 productos
-2026-04-27 00:21:41 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 6b0a5026-52f3-475a-a20f-5aacf94764f0
-2026-04-27 00:21:41 [http-nio-3000-exec-3] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/6b0a5026-52f3-475a-a20f-5aacf94764f0 - consulta por andres@gmail.com
-2026-04-27 00:21:41 [http-nio-3000-exec-3] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
-2026-04-27 00:21:41 [http-nio-3000-exec-3] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
-2026-04-27 00:21:41 [http-nio-3000-exec-3] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0: 23
-2026-04-27 00:22:58 [http-nio-3000-exec-4] INFO  c.b.p.a.a.ventas.VentaRestAdapter - POST /ventas - Crear nueva venta
-2026-04-27 00:22:58 [http-nio-3000-exec-4] INFO  c.b.p.a.d.v.s.GestionVentasService - Creando venta para cliente 5 por vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0
-2026-04-27 00:23:00 [http-nio-3000-exec-4] INFO  c.b.p.a.d.v.s.GestionVentasService - Venta creada con ID: 5
-2026-04-27 00:23:01 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.v.s.GestionVentasService - Detalles de venta creados: 3
-2026-04-27 00:23:01 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.v.s.GestionVentasService - Stock actualizado para producto 9000100: 122
-2026-04-27 00:23:01 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.v.s.GestionVentasService - Stock actualizado para producto 9000124: 0
-2026-04-27 00:23:01 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.v.s.GestionVentasService - Stock actualizado para producto 9000127: 0
-2026-04-27 00:23:01 [http-nio-3000-exec-4] INFO  c.b.p.a.d.v.s.GestionVentasService - Venta completada exitosamente - ID: 5, Total: 178.7
-2026-04-27 00:23:01 [http-nio-3000-exec-4] INFO  c.b.p.a.a.ventas.VentaRestAdapter - Venta creada exitosamente - ID: 5
-2026-04-27 00:23:05 [http-nio-3000-exec-10] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0 y fecha 2026-04-27
-2026-04-27 00:23:05 [http-nio-3000-exec-10] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0 en fecha 2026-04-27
-2026-04-27 00:23:28 [http-nio-3000-exec-2] INFO  c.b.p.a.a.a.c.AuthRestAdapter - GET /auth/me - Obtener perfil del usuario actual
-2026-04-27 00:23:28 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:23:30 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 6b0a5026-52f3-475a-a20f-5aacf94764f0
-2026-04-27 00:23:30 [http-nio-3000-exec-2] DEBUG c.b.p.a.a.a.c.AuthRestAdapter - Perfil obtenido para usuario: andres@gmail.com
-2026-04-27 00:23:30 [http-nio-3000-exec-7] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
-2026-04-27 00:23:30 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
-2026-04-27 00:23:30 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
-2026-04-27 00:23:30 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 25 productos
-2026-04-27 00:23:30 [http-nio-3000-exec-7] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 25 productos
-2026-04-27 00:23:30 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 6b0a5026-52f3-475a-a20f-5aacf94764f0
-2026-04-27 00:23:30 [http-nio-3000-exec-3] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/6b0a5026-52f3-475a-a20f-5aacf94764f0 - consulta por andres@gmail.com
-2026-04-27 00:23:30 [http-nio-3000-exec-3] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
-2026-04-27 00:23:30 [http-nio-3000-exec-3] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
-2026-04-27 00:23:31 [http-nio-3000-exec-3] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0: 23
-2026-04-27 00:23:44 [http-nio-3000-exec-5] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0 y fecha 2026-04-27
-2026-04-27 00:23:44 [http-nio-3000-exec-5] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0 en fecha 2026-04-27
-2026-04-27 00:24:35 [http-nio-3000-exec-8] INFO  c.b.p.a.a.ventas.VentaRestAdapter - POST /ventas/confirmar-cierre - Confirmar cierre de jornada para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0 y fecha 2026-04-27
-2026-04-27 00:24:35 [http-nio-3000-exec-8] INFO  c.b.p.a.d.v.s.GestionVentasService - Confirmando cierre de jornada para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0 en fecha 2026-04-27 con dinero contado 178.7
-2026-04-27 00:24:36 [http-nio-3000-exec-8] INFO  c.b.p.a.d.v.s.GestionVentasService - Conciliación de efectivo completada - Esperado: 178.7, Contado: 178.7, Diferencia: 0.0, Estado: CORRECTO
-2026-04-27 00:24:36 [http-nio-3000-exec-8] INFO  c.b.p.a.a.ventas.VentaRestAdapter - Cierre de jornada confirmado - Estado conciliación: CORRECTO
-2026-04-27 00:24:36 [http-nio-3000-exec-6] INFO  c.b.p.a.a.c.CierreJornadaRestAdapter - POST /cierres - Registrar cierre para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0 en fecha 2026-04-27
-2026-04-27 00:24:36 [http-nio-3000-exec-6] INFO  c.b.p.a.d.c.s.GestionCierreJornadaService - Registrando cierre de jornada para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0 en fecha 2026-04-27
-2026-04-27 00:24:36 [http-nio-3000-exec-6] INFO  c.b.p.a.d.c.s.GestionCierreJornadaService - Cierre registrado con ID: 9ff09612-7faa-43a6-a441-a6afa7a4489c
-2026-04-27 00:24:36 [http-nio-3000-exec-6] INFO  c.b.p.a.a.c.CierreJornadaRestAdapter - Cierre registrado con ID: 9ff09612-7faa-43a6-a441-a6afa7a4489c
+2026-04-16 00:20:09 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-04-16 00:20:09 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 26 with PID 21652 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-04-16 00:20:09 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-04-16 00:20:09 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-16 00:20:10 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-16 00:20:10 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-16 00:20:11 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-16 00:20:11 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-16 00:20:11 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-16 00:20:11 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-04-16 00:20:11 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-16 00:20:11 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1024 ms
+2026-04-16 00:20:11 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-04-16 00:20:11 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-04-16 00:20:11 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-04-16 00:20:11 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 2.103 seconds (process running for 2.489)
+2026-04-16 00:25:29 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-16 00:25:29 [Thread-5] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-16 00:25:29 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2026-04-16 00:25:29 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-04-16 00:25:29 [Thread-5] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2026-04-16 00:25:30 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 26 with PID 21652 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-04-16 00:25:30 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-04-16 00:25:30 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-16 00:25:30 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-16 00:25:30 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-16 00:25:30 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-16 00:25:30 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-04-16 00:25:30 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-16 00:25:30 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 289 ms
+2026-04-16 00:25:30 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-04-16 00:25:30 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-04-16 00:25:30 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-04-16 00:25:30 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 0.476 seconds (process running for 321.356)
+2026-04-16 00:25:30 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-04-16 00:25:34 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-16 00:25:34 [Thread-7] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-16 00:25:34 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2026-04-16 00:25:34 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-04-16 00:25:34 [Thread-7] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2026-04-16 00:25:35 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 26 with PID 21652 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-04-16 00:25:35 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-04-16 00:25:35 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-16 00:25:35 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 3000 (http)
+2026-04-16 00:25:35 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2026-04-16 00:25:35 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-16 00:25:35 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-04-16 00:25:35 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-16 00:25:35 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 228 ms
+2026-04-16 00:25:35 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-04-16 00:25:35 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2026-04-16 00:25:35 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 3000 (http) with context path '/'
+2026-04-16 00:25:35 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 0.38 seconds (process running for 326.267)
+2026-04-16 00:25:35 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-04-16 00:25:43 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-16 00:25:43 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-04-16 00:25:50 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-04-16 00:25:51 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 26 with PID 11640 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-04-16 00:25:51 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-04-16 00:25:51 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-16 00:25:51 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-16 00:25:51 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-16 00:25:51 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 3000 (http)
+2026-04-16 00:25:51 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2026-04-16 00:25:51 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-16 00:25:51 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-04-16 00:25:51 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-16 00:25:51 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 881 ms
+2026-04-16 00:25:52 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-04-16 00:25:52 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2026-04-16 00:25:52 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 3000 (http) with context path '/'
+2026-04-16 00:25:52 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 1.765 seconds (process running for 2.041)
+2026-04-16 00:26:12 [http-nio-3000-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-16 00:26:12 [http-nio-3000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-16 00:26:12 [http-nio-3000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-04-16 00:26:13 [http-nio-3000-exec-3] INFO  c.b.p.a.a.a.c.AuthRestAdapter - POST /auth/signin - Intento de autenticación para email: mateovargas220705@gmail.com
+2026-04-16 00:26:13 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticando usuario con email: mateovargas220705@gmail.com
+2026-04-16 00:26:14 [http-nio-3000-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.back.puntoventa.app.common.ApiException: {"message":"Invalid API key","hint":"Double check your Supabase `anon` or `service_role` API key."}]
+2026-04-16 00:26:38 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-16 00:26:38 [Thread-5] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-16 00:26:38 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-3000"]
+2026-04-16 00:26:38 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-04-16 00:26:38 [Thread-5] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-3000"]
+2026-04-16 00:26:38 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 26 with PID 11640 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-04-16 00:26:38 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-04-16 00:26:38 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-16 00:26:39 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8 (http)
+2026-04-16 00:26:39 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8"]
+2026-04-16 00:26:39 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-16 00:26:39 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-04-16 00:26:39 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-16 00:26:39 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 253 ms
+2026-04-16 00:26:39 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-04-16 00:26:39 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8"]
+2026-04-16 00:26:39 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8 (http) with context path '/'
+2026-04-16 00:26:39 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 0.401 seconds (process running for 48.89)
+2026-04-16 00:26:39 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-04-16 00:26:40 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-16 00:26:40 [Thread-7] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-16 00:26:40 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8"]
+2026-04-16 00:26:40 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-04-16 00:26:40 [Thread-7] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8"]
+2026-04-16 00:26:40 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 26 with PID 11640 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-04-16 00:26:40 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-04-16 00:26:40 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-16 00:26:40 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-16 00:26:40 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-16 00:26:40 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-16 00:26:40 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-04-16 00:26:40 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-16 00:26:40 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 238 ms
+2026-04-16 00:26:41 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-04-16 00:26:41 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-04-16 00:26:41 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-04-16 00:26:41 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 0.378 seconds (process running for 50.741)
+2026-04-16 00:26:41 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-04-16 00:27:09 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-16 00:27:09 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-04-16 00:27:17 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-04-16 00:27:17 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 26 with PID 18584 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-04-16 00:27:17 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-04-16 00:27:17 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-16 00:27:17 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-16 00:27:17 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-16 00:27:18 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-16 00:27:18 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-16 00:27:18 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-16 00:27:18 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-04-16 00:27:18 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-16 00:27:18 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 882 ms
+2026-04-16 00:27:19 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-04-16 00:27:19 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-04-16 00:27:19 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-04-16 00:27:19 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 1.803 seconds (process running for 2.068)
+2026-04-16 00:27:36 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-16 00:27:36 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-16 00:27:36 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-04-16 00:27:36 [http-nio-8080-exec-2] INFO  c.b.p.a.a.a.c.AuthRestAdapter - POST /auth/signin - Intento de autenticación para email: mateovargas220705@gmail.com
+2026-04-16 00:27:36 [http-nio-8080-exec-2] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticando usuario con email: mateovargas220705@gmail.com
+2026-04-16 00:27:36 [http-nio-8080-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.back.puntoventa.app.common.ApiException: {"message":"Invalid API key","hint":"Double check your Supabase `anon` or `service_role` API key."}]
+2026-04-16 00:28:55 [http-nio-8080-exec-4] INFO  c.b.p.a.a.a.c.AuthRestAdapter - POST /auth/signin - Intento de autenticación para email: mateovargas220705@gmail.com
+2026-04-16 00:28:55 [http-nio-8080-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticando usuario con email: mateovargas220705@gmail.com
+2026-04-16 00:28:55 [http-nio-8080-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.back.puntoventa.app.common.ApiException: {"message":"Invalid API key","hint":"Double check your Supabase `anon` or `service_role` API key."}]
+2026-04-16 00:41:24 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-16 00:41:24 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-04-16 00:41:31 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-04-16 00:41:31 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 26 with PID 15672 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-04-16 00:41:31 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-04-16 00:41:31 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-16 00:41:32 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-16 00:41:32 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-16 00:41:32 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-16 00:41:32 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-16 00:41:32 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-16 00:41:32 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-04-16 00:41:32 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-16 00:41:32 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 924 ms
+2026-04-16 00:41:33 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-04-16 00:41:33 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-04-16 00:41:33 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-04-16 00:41:33 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 1.831 seconds (process running for 2.118)
+2026-04-16 00:41:38 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-16 00:41:38 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-16 00:41:38 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-04-16 00:41:38 [http-nio-8080-exec-2] INFO  c.b.p.a.a.a.c.AuthRestAdapter - POST /auth/signin - Intento de autenticación para email: mateovargas220705@gmail.com
+2026-04-16 00:41:38 [http-nio-8080-exec-2] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticando usuario con email: mateovargas220705@gmail.com
+2026-04-16 00:41:40 [http-nio-8080-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.back.puntoventa.app.common.ApiException: {"message":"Invalid API key","hint":"Double check your Supabase `anon` or `service_role` API key."}]
+2026-04-16 00:45:06 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-16 00:45:06 [Thread-5] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-16 00:45:06 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2026-04-16 00:45:06 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-04-16 00:45:06 [Thread-5] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2026-04-16 00:45:06 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 26 with PID 15672 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-04-16 00:45:06 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-04-16 00:45:06 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-16 00:45:07 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-16 00:45:07 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-16 00:45:07 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-16 00:45:07 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-04-16 00:45:07 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-16 00:45:07 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 427 ms
+2026-04-16 00:45:07 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-04-16 00:45:07 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-04-16 00:45:07 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-04-16 00:45:07 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 0.749 seconds (process running for 216.239)
+2026-04-16 00:45:07 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-04-16 00:46:01 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-16 00:46:01 [Thread-7] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-16 00:46:01 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2026-04-16 00:46:01 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-04-16 00:46:01 [Thread-7] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2026-04-16 00:46:02 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 26 with PID 15672 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-04-16 00:46:02 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-04-16 00:46:02 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-16 00:46:02 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-16 00:46:02 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-16 00:46:02 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-16 00:46:02 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-04-16 00:46:02 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-16 00:46:02 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 354 ms
+2026-04-16 00:46:02 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-04-16 00:46:02 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-04-16 00:46:02 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-04-16 00:46:02 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 0.608 seconds (process running for 271.315)
+2026-04-16 00:46:02 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-04-16 00:46:16 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-16 00:46:16 [Thread-11] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-16 00:46:16 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2026-04-16 00:46:16 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-04-16 00:46:16 [Thread-11] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2026-04-16 00:46:16 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 26 with PID 15672 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-04-16 00:46:16 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-04-16 00:46:16 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-16 00:46:16 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-16 00:46:16 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-16 00:46:16 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-16 00:46:16 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-04-16 00:46:16 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-16 00:46:16 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 199 ms
+2026-04-16 00:46:16 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-04-16 00:46:16 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-04-16 00:46:16 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-04-16 00:46:16 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 0.324 seconds (process running for 285.507)
+2026-04-16 00:46:16 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-04-16 00:46:21 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-16 00:46:21 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-04-16 00:46:29 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-04-16 00:46:29 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 26 with PID 5032 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-04-16 00:46:29 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-04-16 00:46:29 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-16 00:46:29 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-16 00:46:29 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-16 00:46:30 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-16 00:46:30 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-16 00:46:30 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-16 00:46:30 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-04-16 00:46:30 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-16 00:46:30 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 853 ms
+2026-04-16 00:46:31 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-04-16 00:46:31 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-04-16 00:46:31 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-04-16 00:46:31 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 1.722 seconds (process running for 1.995)
+2026-04-16 00:46:55 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-16 00:46:55 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-16 00:46:55 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-04-16 00:46:55 [http-nio-8080-exec-1] INFO  c.b.p.a.a.a.c.AuthRestAdapter - POST /auth/signin - Intento de autenticación para email: mateovargas220705@gmail.com
+2026-04-16 00:46:55 [http-nio-8080-exec-1] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticando usuario con email: mateovargas220705@gmail.com
+2026-04-16 00:46:58 [http-nio-8080-exec-1] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticación completada para email: mateovargas220705@gmail.com
+2026-04-16 00:46:58 [http-nio-8080-exec-1] INFO  c.b.p.a.a.a.c.AuthRestAdapter - Autenticación exitosa para email: mateovargas220705@gmail.com
+2026-04-16 00:46:58 [http-nio-8080-exec-7] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
+2026-04-16 00:46:58 [http-nio-8080-exec-6] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
+2026-04-16 00:46:58 [http-nio-8080-exec-7] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
+2026-04-16 00:46:58 [http-nio-8080-exec-6] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
+2026-04-16 00:46:58 [http-nio-8080-exec-5] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos/stock-bajo - Consultando alertas con umbral: 100
+2026-04-16 00:46:58 [http-nio-8080-exec-5] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo productos con stock bajo. Umbral: 100
+2026-04-16 00:46:58 [http-nio-8080-exec-6] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 23 productos
+2026-04-16 00:46:58 [http-nio-8080-exec-6] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 23 productos
+2026-04-16 00:46:58 [http-nio-8080-exec-5] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se encontraron 21 productos con stock bajo
+2026-04-16 00:46:58 [http-nio-8080-exec-7] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 5 vendedores
+2026-04-16 00:46:58 [http-nio-8080-exec-7] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 5 vendedores
+2026-04-16 00:47:39 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-16 00:47:39 [Thread-5] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-16 00:47:39 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2026-04-16 00:47:39 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-04-16 00:47:39 [Thread-5] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2026-04-16 00:47:40 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 26 with PID 5032 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-04-16 00:47:40 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-04-16 00:47:40 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-16 00:47:40 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 3 (http)
+2026-04-16 00:47:40 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3"]
+2026-04-16 00:47:40 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-16 00:47:40 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-04-16 00:47:40 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-16 00:47:40 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 293 ms
+2026-04-16 00:47:40 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-04-16 00:47:40 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3"]
+2026-04-16 00:47:40 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 3 (http) with context path '/'
+2026-04-16 00:47:40 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 0.469 seconds (process running for 71.33)
+2026-04-16 00:47:40 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-04-16 00:47:42 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-16 00:47:42 [Thread-7] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-16 00:47:42 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-3"]
+2026-04-16 00:47:42 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-04-16 00:47:42 [Thread-7] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-3"]
+2026-04-16 00:47:43 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 26 with PID 5032 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-04-16 00:47:43 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-04-16 00:47:43 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-16 00:47:43 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 3000 (http)
+2026-04-16 00:47:43 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2026-04-16 00:47:43 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-16 00:47:43 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-04-16 00:47:43 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-16 00:47:43 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 221 ms
+2026-04-16 00:47:43 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-04-16 00:47:43 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2026-04-16 00:47:43 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 3000 (http) with context path '/'
+2026-04-16 00:47:43 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 0.348 seconds (process running for 74.186)
+2026-04-16 00:47:43 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-04-16 00:48:17 [http-nio-3000-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-16 00:48:17 [http-nio-3000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-16 00:48:17 [http-nio-3000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-04-16 00:48:17 [http-nio-3000-exec-7] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
+2026-04-16 00:48:17 [http-nio-3000-exec-6] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
+2026-04-16 00:48:17 [http-nio-3000-exec-4] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos/stock-bajo - Consultando alertas con umbral: 100
+2026-04-16 00:48:17 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
+2026-04-16 00:48:17 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
+2026-04-16 00:48:17 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo productos con stock bajo. Umbral: 100
+2026-04-16 00:48:18 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 5 vendedores
+2026-04-16 00:48:18 [http-nio-3000-exec-6] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 5 vendedores
+2026-04-16 00:48:19 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se encontraron 21 productos con stock bajo
+2026-04-16 00:48:20 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 23 productos
+2026-04-16 00:48:20 [http-nio-3000-exec-7] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 23 productos
+2026-04-16 00:48:23 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-16 00:48:23 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-04-16 00:48:29 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-04-16 00:48:29 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 26 with PID 10636 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-04-16 00:48:29 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-04-16 00:48:29 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-16 00:48:29 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-16 00:48:29 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-16 00:48:30 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 3000 (http)
+2026-04-16 00:48:30 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2026-04-16 00:48:30 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-16 00:48:30 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-04-16 00:48:30 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-16 00:48:30 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 914 ms
+2026-04-16 00:48:31 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-04-16 00:48:31 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2026-04-16 00:48:31 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 3000 (http) with context path '/'
+2026-04-16 00:48:31 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 1.818 seconds (process running for 2.096)
+2026-04-16 00:48:44 [http-nio-3000-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-16 00:48:44 [http-nio-3000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-16 00:48:44 [http-nio-3000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-04-16 00:48:44 [http-nio-3000-exec-1] INFO  c.b.p.a.a.a.c.AuthRestAdapter - POST /auth/signin - Intento de autenticación para email: mateovargas220705@gmail.com
+2026-04-16 00:48:44 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticando usuario con email: mateovargas220705@gmail.com
+2026-04-16 00:48:45 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticación completada para email: mateovargas220705@gmail.com
+2026-04-16 00:48:45 [http-nio-3000-exec-1] INFO  c.b.p.a.a.a.c.AuthRestAdapter - Autenticación exitosa para email: mateovargas220705@gmail.com
+2026-04-16 00:48:45 [http-nio-3000-exec-2] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
+2026-04-16 00:48:45 [http-nio-3000-exec-3] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
+2026-04-16 00:48:45 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
+2026-04-16 00:48:45 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
+2026-04-16 00:48:45 [http-nio-3000-exec-4] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos/stock-bajo - Consultando alertas con umbral: 100
+2026-04-16 00:48:45 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo productos con stock bajo. Umbral: 100
+2026-04-16 00:48:45 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 23 productos
+2026-04-16 00:48:45 [http-nio-3000-exec-2] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 23 productos
+2026-04-16 00:48:45 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se encontraron 21 productos con stock bajo
+2026-04-16 00:48:45 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 5 vendedores
+2026-04-16 00:48:45 [http-nio-3000-exec-3] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 5 vendedores
+2026-04-16 00:48:54 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-16 00:48:54 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-04-27 12:00:33 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-04-27 12:00:33 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 17.0.18 with PID 9124 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-04-27 12:00:33 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-04-27 12:00:33 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-27 12:00:33 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-27 12:00:33 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-27 12:00:34 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 3000 (http)
+2026-04-27 12:00:34 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2026-04-27 12:00:34 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-27 12:00:34 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-04-27 12:00:34 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-27 12:00:34 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1210 ms
+2026-04-27 12:00:35 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-04-27 12:00:35 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2026-04-27 12:00:35 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 3000 (http) with context path '/'
+2026-04-27 12:00:35 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 2.445 seconds (process running for 2.882)
+2026-04-27 12:01:39 [http-nio-3000-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-27 12:01:39 [http-nio-3000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-27 12:01:39 [http-nio-3000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-04-27 12:01:39 [http-nio-3000-exec-2] INFO  c.b.p.a.a.a.c.AuthRestAdapter - POST /auth/signin - Intento de autenticación para email: mateovargas220705@gmail.com
+2026-04-27 12:01:39 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticando usuario con email: mateovargas220705@gmail.com
+2026-04-27 12:01:41 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticación completada para email: mateovargas220705@gmail.com
+2026-04-27 12:01:41 [http-nio-3000-exec-2] INFO  c.b.p.a.a.a.c.AuthRestAdapter - Autenticación exitosa para email: mateovargas220705@gmail.com
+2026-04-27 12:01:41 [http-nio-3000-exec-8] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
+2026-04-27 12:01:41 [http-nio-3000-exec-7] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
+2026-04-27 12:01:41 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
+2026-04-27 12:01:41 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
+2026-04-27 12:01:41 [http-nio-3000-exec-6] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos/stock-bajo - Consultando alertas con umbral: 100
+2026-04-27 12:01:41 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo productos con stock bajo. Umbral: 100
+2026-04-27 12:01:42 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se encontraron 24 productos con stock bajo
+2026-04-27 12:01:42 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 25 productos
+2026-04-27 12:01:42 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 7 vendedores
+2026-04-27 12:01:42 [http-nio-3000-exec-8] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 25 productos
+2026-04-27 12:01:42 [http-nio-3000-exec-7] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 7 vendedores
+2026-04-27 12:03:04 [http-nio-3000-exec-2] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
+2026-04-27 12:03:04 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
+2026-04-27 12:03:04 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 7 vendedores
+2026-04-27 12:03:04 [http-nio-3000-exec-2] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 7 vendedores
+2026-04-27 12:04:05 [http-nio-3000-exec-5] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
+2026-04-27 12:04:05 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
+2026-04-27 12:04:05 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 25 productos
+2026-04-27 12:04:05 [http-nio-3000-exec-5] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 25 productos
+2026-04-27 12:04:06 [http-nio-3000-exec-4] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
+2026-04-27 12:04:06 [http-nio-3000-exec-3] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
+2026-04-27 12:04:06 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
+2026-04-27 12:04:06 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
+2026-04-27 12:04:07 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 25 productos
+2026-04-27 12:04:07 [http-nio-3000-exec-3] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 25 productos
+2026-04-27 12:04:07 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 7 vendedores
+2026-04-27 12:04:07 [http-nio-3000-exec-4] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 7 vendedores
+2026-04-27 12:04:07 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-04-27 12:04:07 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-04-27 12:04:07 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-04-27 12:04:07 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-04-27 12:04:07 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-04-27 12:04:07 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-04-27 12:04:07 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-04-27 12:04:07 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-04-27 12:04:07 [http-nio-3000-exec-4] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/5e0e4eff-aec3-46df-a77e-d4feeb19394c - consulta por mateovargas220705@gmail.com
+2026-04-27 12:04:07 [http-nio-3000-exec-3] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/2ab0631c-da17-4bd8-b9b9-237de54711c6 - consulta por mateovargas220705@gmail.com
+2026-04-27 12:04:07 [http-nio-3000-exec-4] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
+2026-04-27 12:04:07 [http-nio-3000-exec-3] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 2ab0631c-da17-4bd8-b9b9-237de54711c6
+2026-04-27 12:04:07 [http-nio-3000-exec-4] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
+2026-04-27 12:04:07 [http-nio-3000-exec-3] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 2ab0631c-da17-4bd8-b9b9-237de54711c6
+2026-04-27 12:04:07 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-04-27 12:04:07 [http-nio-3000-exec-6] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/6b0a5026-52f3-475a-a20f-5aacf94764f0 - consulta por mateovargas220705@gmail.com
+2026-04-27 12:04:07 [http-nio-3000-exec-6] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-04-27 12:04:07 [http-nio-3000-exec-6] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-04-27 12:04:07 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-04-27 12:04:07 [http-nio-3000-exec-8] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/73ed0c2b-851c-44c8-a08b-ded6f61924f9 - consulta por mateovargas220705@gmail.com
+2026-04-27 12:04:07 [http-nio-3000-exec-8] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 73ed0c2b-851c-44c8-a08b-ded6f61924f9
+2026-04-27 12:04:07 [http-nio-3000-exec-8] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 73ed0c2b-851c-44c8-a08b-ded6f61924f9
+2026-04-27 12:04:07 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-04-27 12:04:07 [http-nio-3000-exec-5] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/0b9544ca-bfbe-4335-821c-5c8eb4b553b2 - consulta por mateovargas220705@gmail.com
+2026-04-27 12:04:07 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-04-27 12:04:07 [http-nio-3000-exec-5] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 0b9544ca-bfbe-4335-821c-5c8eb4b553b2
+2026-04-27 12:04:07 [http-nio-3000-exec-7] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e - consulta por mateovargas220705@gmail.com
+2026-04-27 12:04:07 [http-nio-3000-exec-5] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 0b9544ca-bfbe-4335-821c-5c8eb4b553b2
+2026-04-27 12:04:07 [http-nio-3000-exec-7] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e
+2026-04-27 12:04:07 [http-nio-3000-exec-7] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e
+2026-04-27 12:04:07 [http-nio-3000-exec-3] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 2ab0631c-da17-4bd8-b9b9-237de54711c6: 9
+2026-04-27 12:04:07 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-04-27 12:04:07 [http-nio-3000-exec-4] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 5e0e4eff-aec3-46df-a77e-d4feeb19394c: 4
+2026-04-27 12:04:07 [http-nio-3000-exec-6] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0: 27
+2026-04-27 12:04:07 [http-nio-3000-exec-8] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 73ed0c2b-851c-44c8-a08b-ded6f61924f9: 4
+2026-04-27 12:04:07 [http-nio-3000-exec-7] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e: 0
+2026-04-27 12:04:07 [http-nio-3000-exec-5] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 0b9544ca-bfbe-4335-821c-5c8eb4b553b2: 1
+2026-04-27 12:04:08 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-04-27 12:04:08 [http-nio-3000-exec-9] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/997e2337-32a6-4ba5-84fb-873ef1b6036f - consulta por mateovargas220705@gmail.com
+2026-04-27 12:04:08 [http-nio-3000-exec-9] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 997e2337-32a6-4ba5-84fb-873ef1b6036f
+2026-04-27 12:04:08 [http-nio-3000-exec-9] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 997e2337-32a6-4ba5-84fb-873ef1b6036f
+2026-04-27 12:04:08 [http-nio-3000-exec-9] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 997e2337-32a6-4ba5-84fb-873ef1b6036f: 0
+2026-04-27 12:04:30 [http-nio-3000-exec-10] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
+2026-04-27 12:04:30 [http-nio-3000-exec-2] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos/stock-bajo - Consultando alertas con umbral: 100
+2026-04-27 12:04:30 [http-nio-3000-exec-1] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
+2026-04-27 12:04:30 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo productos con stock bajo. Umbral: 100
+2026-04-27 12:04:30 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
+2026-04-27 12:04:30 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
+2026-04-27 12:04:30 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se encontraron 24 productos con stock bajo
+2026-04-27 12:04:30 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 25 productos
+2026-04-27 12:04:30 [http-nio-3000-exec-1] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 25 productos
+2026-04-27 12:04:30 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 7 vendedores
+2026-04-27 12:04:30 [http-nio-3000-exec-10] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 7 vendedores
+2026-04-27 12:30:10 [http-nio-3000-exec-9] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
+2026-04-27 12:30:10 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
+2026-04-27 12:30:11 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 7 vendedores
+2026-04-27 12:30:11 [http-nio-3000-exec-9] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 7 vendedores
+2026-04-27 12:30:12 [http-nio-3000-exec-2] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
+2026-04-27 12:30:12 [http-nio-3000-exec-1] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
+2026-04-27 12:30:12 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
+2026-04-27 12:30:12 [http-nio-3000-exec-10] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos/stock-bajo - Consultando alertas con umbral: 100
+2026-04-27 12:30:12 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
+2026-04-27 12:30:12 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo productos con stock bajo. Umbral: 100
+2026-04-27 12:30:12 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 7 vendedores
+2026-04-27 12:30:12 [http-nio-3000-exec-1] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 7 vendedores
+2026-04-27 12:30:13 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se encontraron 24 productos con stock bajo
+2026-04-27 12:30:13 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 25 productos
+2026-04-27 12:30:13 [http-nio-3000-exec-2] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 25 productos
+2026-04-27 12:30:14 [http-nio-3000-exec-3] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
+2026-04-27 12:30:14 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
+2026-04-27 12:30:14 [http-nio-3000-exec-6] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
+2026-04-27 12:30:14 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
+2026-04-27 12:30:14 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 7 vendedores
+2026-04-27 12:30:14 [http-nio-3000-exec-3] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 7 vendedores
+2026-04-27 12:30:14 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 25 productos
+2026-04-27 12:30:14 [http-nio-3000-exec-6] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 25 productos
+2026-04-27 12:30:14 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-04-27 12:30:14 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-04-27 12:30:14 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-04-27 12:30:14 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-04-27 12:30:14 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-04-27 12:30:14 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-04-27 12:30:14 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-04-27 12:30:14 [http-nio-3000-exec-9] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/73ed0c2b-851c-44c8-a08b-ded6f61924f9 - consulta por mateovargas220705@gmail.com
+2026-04-27 12:30:14 [http-nio-3000-exec-9] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 73ed0c2b-851c-44c8-a08b-ded6f61924f9
+2026-04-27 12:30:14 [http-nio-3000-exec-9] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 73ed0c2b-851c-44c8-a08b-ded6f61924f9
+2026-04-27 12:30:14 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-04-27 12:30:14 [http-nio-3000-exec-5] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/5e0e4eff-aec3-46df-a77e-d4feeb19394c - consulta por mateovargas220705@gmail.com
+2026-04-27 12:30:14 [http-nio-3000-exec-5] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
+2026-04-27 12:30:15 [http-nio-3000-exec-5] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
+2026-04-27 12:30:15 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-04-27 12:30:15 [http-nio-3000-exec-4] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/0b9544ca-bfbe-4335-821c-5c8eb4b553b2 - consulta por mateovargas220705@gmail.com
+2026-04-27 12:30:15 [http-nio-3000-exec-4] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 0b9544ca-bfbe-4335-821c-5c8eb4b553b2
+2026-04-27 12:30:15 [http-nio-3000-exec-4] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 0b9544ca-bfbe-4335-821c-5c8eb4b553b2
+2026-04-27 12:30:15 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-04-27 12:30:15 [http-nio-3000-exec-8] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/2ab0631c-da17-4bd8-b9b9-237de54711c6 - consulta por mateovargas220705@gmail.com
+2026-04-27 12:30:15 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-04-27 12:30:15 [http-nio-3000-exec-1] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e - consulta por mateovargas220705@gmail.com
+2026-04-27 12:30:15 [http-nio-3000-exec-1] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e
+2026-04-27 12:30:15 [http-nio-3000-exec-9] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 73ed0c2b-851c-44c8-a08b-ded6f61924f9: 4
+2026-04-27 12:30:15 [http-nio-3000-exec-8] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 2ab0631c-da17-4bd8-b9b9-237de54711c6
+2026-04-27 12:30:15 [http-nio-3000-exec-1] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e
+2026-04-27 12:30:15 [http-nio-3000-exec-8] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 2ab0631c-da17-4bd8-b9b9-237de54711c6
+2026-04-27 12:30:15 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-04-27 12:30:15 [http-nio-3000-exec-7] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/6b0a5026-52f3-475a-a20f-5aacf94764f0 - consulta por mateovargas220705@gmail.com
+2026-04-27 12:30:15 [http-nio-3000-exec-7] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-04-27 12:30:15 [http-nio-3000-exec-7] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-04-27 12:30:15 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-04-27 12:30:15 [http-nio-3000-exec-5] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 5e0e4eff-aec3-46df-a77e-d4feeb19394c: 4
+2026-04-27 12:30:15 [http-nio-3000-exec-4] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 0b9544ca-bfbe-4335-821c-5c8eb4b553b2: 1
+2026-04-27 12:30:15 [http-nio-3000-exec-7] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0: 27
+2026-04-27 12:30:15 [http-nio-3000-exec-8] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 2ab0631c-da17-4bd8-b9b9-237de54711c6: 9
+2026-04-27 12:30:15 [http-nio-3000-exec-1] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e: 1
+2026-04-27 12:30:15 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-04-27 12:30:15 [http-nio-3000-exec-10] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/997e2337-32a6-4ba5-84fb-873ef1b6036f - consulta por mateovargas220705@gmail.com
+2026-04-27 12:30:15 [http-nio-3000-exec-10] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 997e2337-32a6-4ba5-84fb-873ef1b6036f
+2026-04-27 12:30:15 [http-nio-3000-exec-10] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 997e2337-32a6-4ba5-84fb-873ef1b6036f
+2026-04-27 12:30:15 [http-nio-3000-exec-10] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 997e2337-32a6-4ba5-84fb-873ef1b6036f: 0
+2026-04-27 12:30:15 [http-nio-3000-exec-2] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
+2026-04-27 12:30:15 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
+2026-04-27 12:30:16 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 25 productos
+2026-04-27 12:30:16 [http-nio-3000-exec-2] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 25 productos
+2026-04-27 12:30:16 [http-nio-3000-exec-3] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
+2026-04-27 12:30:16 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
+2026-04-27 12:30:17 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 7 vendedores
+2026-04-27 12:30:17 [http-nio-3000-exec-3] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 7 vendedores
+2026-04-27 12:30:17 [http-nio-3000-exec-6] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
+2026-04-27 12:30:17 [http-nio-3000-exec-9] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
+2026-04-27 12:30:17 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
+2026-04-27 12:30:17 [http-nio-3000-exec-5] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos/stock-bajo - Consultando alertas con umbral: 100
+2026-04-27 12:30:17 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
+2026-04-27 12:30:17 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo productos con stock bajo. Umbral: 100
+2026-04-27 12:30:17 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se encontraron 24 productos con stock bajo
+2026-04-27 12:30:17 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 25 productos
+2026-04-27 12:30:17 [http-nio-3000-exec-6] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 25 productos
+2026-04-27 12:30:17 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 7 vendedores
+2026-04-27 12:30:17 [http-nio-3000-exec-9] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 7 vendedores
+2026-04-27 12:30:26 [http-nio-3000-exec-4] INFO  c.b.p.a.a.a.c.AuthRestAdapter - POST /auth/signin - Intento de autenticación para email: andres@gmail.com
+2026-04-27 12:30:26 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticando usuario con email: andres@gmail.com
+2026-04-27 12:30:27 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticación completada para email: andres@gmail.com
+2026-04-27 12:30:27 [http-nio-3000-exec-4] INFO  c.b.p.a.a.a.c.AuthRestAdapter - Autenticación exitosa para email: andres@gmail.com
+2026-04-27 12:30:27 [http-nio-3000-exec-7] INFO  c.b.p.a.a.a.c.AuthRestAdapter - GET /auth/me - Obtener perfil del usuario actual
+2026-04-27 12:30:27 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-04-27 12:30:27 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-04-27 12:30:27 [http-nio-3000-exec-7] DEBUG c.b.p.a.a.a.c.AuthRestAdapter - Perfil obtenido para usuario: andres@gmail.com
+2026-04-27 12:30:27 [http-nio-3000-exec-1] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
+2026-04-27 12:30:27 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-04-27 12:30:27 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
+2026-04-27 12:30:27 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 25 productos
+2026-04-27 12:30:27 [http-nio-3000-exec-1] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 25 productos
+2026-04-27 12:30:28 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-04-27 12:30:28 [http-nio-3000-exec-10] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/6b0a5026-52f3-475a-a20f-5aacf94764f0 - consulta por andres@gmail.com
+2026-04-27 12:30:28 [http-nio-3000-exec-10] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-04-27 12:30:28 [http-nio-3000-exec-10] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-04-27 12:30:28 [http-nio-3000-exec-10] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0: 27
+2026-04-27 12:33:56 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-27 12:33:56 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete

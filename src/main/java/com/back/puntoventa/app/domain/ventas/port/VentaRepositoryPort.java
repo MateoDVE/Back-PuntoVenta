@@ -6,6 +6,7 @@ import com.back.puntoventa.app.domain.ventas.model.DetalleVenta;
 import com.back.puntoventa.app.domain.ventas.model.Venta;
 import java.util.List;
 import java.util.UUID;
+import java.util.Optional;
 
 /**
  * Puerto: Contrato para persistencia de ventas.
@@ -23,4 +24,6 @@ public interface VentaRepositoryPort {
     List<Venta> obtenerVentasPorVendedorYFecha(UUID idVendedor, java.time.LocalDate fecha);
     List<DetalleVenta> obtenerDetallesPorVentasIds(List<String> idsVentas);
     List<CargaTransporte> obtenerCargasPorVendedorYFecha(UUID idVendedor, java.time.LocalDate fecha);
+    // En VentaRepositoryPort.java
+    Optional<Venta> findByIdTransaccionLocal(String idTransaccionLocal);
 }

@@ -55,6 +55,17 @@ public class VentaRestAdapter {
         }
     }
 
+    @PostMapping("/sincronizar")
+    public ResponseEntity<List<VentaResponse>> sincronizar(@RequestBody List<CrearVentaRequest> ventas) {
+        logger.info("Sincronizando lote de {} ventas", ventas.size());
+        
+        // Gracias a la idempotencia que programaste, si alguna ya existe, no se duplicará
+        List<VentaResponse> respuestas = ventas.stream()
+                .map(gestionVentasService::crearVenta)
+                .toList();
+
+        return ResponseEntity.status(HttpStatus.CREATED).body(respuestas);
+    }
     @GetMapping
     public ResponseEntity<List<VentaResumenResponse>> obtenerVentas() {
         logger.info("GET /ventas - Listar ventas resumidas");

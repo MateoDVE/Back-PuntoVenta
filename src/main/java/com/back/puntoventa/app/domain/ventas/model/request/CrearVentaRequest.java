@@ -12,6 +12,7 @@ public class CrearVentaRequest {
     private UUID idVendedor;
     private BigDecimal descuento;
     private List<ItemVentaRequest> items;
+    private String idTransaccionLocal;
 
     public CrearVentaRequest() {}
 
@@ -52,5 +53,12 @@ public class CrearVentaRequest {
 
     public void setItems(List<ItemVentaRequest> items) {
         this.items = items;
+    }
+    public String getIdTransaccionLocal() {
+    return idTransaccionLocal;
+    }
+
+    public void setIdTransaccionLocal(String idTransaccionLocal) {
+        this.idTransaccionLocal = idTransaccionLocal;
     }
 }

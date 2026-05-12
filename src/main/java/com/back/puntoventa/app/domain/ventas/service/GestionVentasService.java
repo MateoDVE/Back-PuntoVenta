@@ -2,14 +2,15 @@ package com.back.puntoventa.app.domain.ventas.service;
 
 import com.back.puntoventa.app.domain.common.exception.DomainException;
 import com.back.puntoventa.app.domain.productos.model.Producto;
+import com.back.puntoventa.app.domain.ventas.model.CargaTransporte;
 import com.back.puntoventa.app.domain.ventas.model.DetalleVenta;
 import com.back.puntoventa.app.domain.ventas.model.Venta;
 import com.back.puntoventa.app.domain.ventas.model.response.CierreJornadaResponse;
 import com.back.puntoventa.app.domain.ventas.model.response.ConciliacionInventarioResponse;
 import com.back.puntoventa.app.domain.ventas.model.response.DetalleProductoConciliacionResponse;
 import com.back.puntoventa.app.domain.ventas.model.response.DetalleVentaCierreResponse;
+import com.back.puntoventa.app.domain.ventas.model.response.ItemVentaCierreResponse;
 import com.back.puntoventa.app.domain.ventas.model.response.ResumenFinancieroResponse;
-import com.back.puntoventa.app.domain.ventas.model.request.ConfirmarCierreRequest;
 import com.back.puntoventa.app.domain.ventas.model.request.CrearVentaRequest;
 import com.back.puntoventa.app.domain.ventas.model.request.ItemVentaRequest;
 import com.back.puntoventa.app.domain.ventas.model.response.ConfirmarCierreResponse;
@@ -22,8 +23,10 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.UUID;
 import java.util.stream.Collectors;
 import org.slf4j.Logger;
@@ -81,9 +84,10 @@ public class GestionVentasService {
     Map<String, Producto> productosMap = productos.stream()
             .collect(Collectors.toMap(Producto::getId, p -> p));
 
-    // Validar productos y stock
+    // Validar productos y stock contra carga_transporte del vendedor
     BigDecimal subtotal = BigDecimal.ZERO;
     List<DetalleLinea> lineas = new ArrayList<>();
+    Map<String, CargaTransporte> cargasMap = new HashMap<>();
 
     for (ItemVentaRequest item : request.getItems()) {
         Producto producto = productosMap.get(item.getIdProducto());
@@ -92,12 +96,19 @@ public class GestionVentasService {
             throw new DomainException("Producto no encontrado: " + item.getIdProducto());
         }
 
-        Integer stockActual = producto.getStockAlmacenCentral() != null ? producto.getStockAlmacenCentral() : 0;
+        CargaTransporte carga = ventaRepositoryPort
+                .obtenerCargaPorVendedorYProducto(request.getIdVendedor(), item.getIdProducto())
+                .orElseThrow(() -> new DomainException(
+                        "No hay carga asignada y validada para producto " + producto.getNombre()));
+
+        Integer stockActual = carga.getCantidadActual() != null ? carga.getCantidadActual() : 0;
         if (stockActual < item.getCantidad()) {
             logger.warn("Stock insuficiente para producto {}: disponible {}, solicitado {}",
                     item.getIdProducto(), stockActual, item.getCantidad());
             throw new DomainException("Stock insuficiente para producto " + producto.getNombre());
         }
+
+        cargasMap.put(item.getIdProducto(), carga);
 
         BigDecimal precioUnitario = BigDecimal.valueOf(producto.getPrecioUnidad() != null ? producto.getPrecioUnidad() : 0.0);
         BigDecimal subtotalItem = precioUnitario.multiply(BigDecimal.valueOf(item.getCantidad()));
@@ -141,12 +152,12 @@ public class GestionVentasService {
     detalles = ventaRepositoryPort.crearDetallesVenta(detalles);
     logger.debug("Detalles de venta creados: {}", detalles.size());
 
-    // Actualizar stock
+    // Descontar stock de carga_transporte del vendedor
     for (DetalleVenta detalle : detalles) {
-        Producto producto = productosMap.get(detalle.getIdProducto());
-        Integer nuevoStock = (producto.getStockAlmacenCentral() != null ? producto.getStockAlmacenCentral() : 0) - detalle.getCantidad();
-        ventaRepositoryPort.actualizarStock(detalle.getIdProducto(), nuevoStock);
-        logger.debug("Stock actualizado para producto {}: {}", detalle.getIdProducto(), nuevoStock);
+        CargaTransporte carga = cargasMap.get(detalle.getIdProducto());
+        Integer nuevaCantidad = (carga.getCantidadActual() != null ? carga.getCantidadActual() : 0) - detalle.getCantidad();
+        ventaRepositoryPort.actualizarCantidadActualCarga(carga.getIdCarga(), nuevaCantidad);
+        logger.debug("Carga {} actualizada para producto {}: cantidad_actual={}", carga.getIdCarga(), detalle.getIdProducto(), nuevaCantidad);
     }
 
     // Construir response
@@ -282,9 +293,24 @@ public class GestionVentasService {
         BigDecimal totalDescuentos = ventas.stream()
                 .map(Venta::getDescuento)
                 .reduce(BigDecimal.ZERO, BigDecimal::add);
+        Map<String, List<DetalleVenta>> detallesPorVenta = detallesVentas.stream()
+                .collect(Collectors.groupingBy(DetalleVenta::getIdVenta));
+
         List<DetalleVentaCierreResponse> detalleVentasResponse = ventas.stream()
-                .map(v -> new DetalleVentaCierreResponse(v.getIdVenta(), v.getFechaHora(), v.getSubtotal(),
-                        v.getDescuento(), v.getTotalEfectivo(), v.getEstado()))
+                .map(v -> {
+                    List<ItemVentaCierreResponse> items = detallesPorVenta
+                            .getOrDefault(v.getIdVenta(), List.of())
+                            .stream()
+                            .map(d -> {
+                                Producto p = productosMap.get(d.getIdProducto());
+                                String nombre = p != null ? p.getNombre() : d.getIdProducto();
+                                return new ItemVentaCierreResponse(nombre, d.getCantidad(),
+                                        d.getTipoUnidad(), d.getPrecioUnitario(), d.getSubtotal());
+                            })
+                            .toList();
+                    return new DetalleVentaCierreResponse(v.getIdVenta(), v.getFechaHora(),
+                            v.getSubtotal(), v.getDescuento(), v.getTotalEfectivo(), v.getEstado(), items);
+                })
                 .toList();
         ResumenFinancieroResponse resumenFinanciero = new ResumenFinancieroResponse(ventasRealizadas,
                 totalEfectivo, totalDescuentos, detalleVentasResponse);
@@ -305,8 +331,10 @@ public class GestionVentasService {
             if (producto == null) continue;
 
             Integer vendido = vendidosPorProducto.getOrDefault(idProducto, 0);
-            Integer actual = producto.getStockAlmacenCentral() != null ? producto.getStockAlmacenCentral() : 0;
-            Integer stockInicial = actual + vendido;
+
+            Optional<CargaTransporte> cargaOpt = ventaRepositoryPort.obtenerCargaPorVendedorYProducto(idVendedor, idProducto);
+            Integer actual = cargaOpt.map(c -> c.getCantidadActual() != null ? c.getCantidadActual() : 0).orElse(0);
+            Integer stockInicial = cargaOpt.map(c -> c.getCantidadInicial() != null ? c.getCantidadInicial() : (actual + vendido)).orElse(actual + vendido);
             Integer esperado = stockInicial - vendido;
 
             if (!esperado.equals(actual)) {

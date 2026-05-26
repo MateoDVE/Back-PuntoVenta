@@ -30,6 +30,7 @@ public class SupabaseVendedorRepositoryAdapter implements VendedorRepositoryPort
         query.put("select", "id_usuario,nombre,email,estado,created_at");
         query.put("rol", "eq.VENDEDOR");
         query.put("order", "id_usuario.asc");
+        query.put("is_delete", "eq.false");
 
         List<Map<String, Object>> rows = supabaseHttpClient.select("usuarios", query);
         return rows.stream().map(this::mapToVendedor).toList();
@@ -41,6 +42,7 @@ public class SupabaseVendedorRepositoryAdapter implements VendedorRepositoryPort
         query.put("select", "id_usuario,nombre,email,estado,created_at");
         query.put("id_usuario", "eq." + id);
         query.put("rol", "eq.VENDEDOR");
+        query.put("is_delete", "eq.false");
 
         List<Map<String, Object>> rows = supabaseHttpClient.select("usuarios", query);
         return rows.stream().findFirst().map(this::mapToVendedor);
@@ -52,6 +54,7 @@ public class SupabaseVendedorRepositoryAdapter implements VendedorRepositoryPort
         query.put("select", "id_usuario,nombre,email,estado,created_at");
         query.put("email", "ilike." + email);
         query.put("rol", "eq.VENDEDOR");
+        query.put("is_delete", "eq.false");
 
         List<Map<String, Object>> rows = supabaseHttpClient.select("usuarios", query);
         return rows.stream().findFirst().map(this::mapToVendedor);
@@ -98,7 +101,11 @@ public class SupabaseVendedorRepositoryAdapter implements VendedorRepositoryPort
         Map<String, String> query = new HashMap<>();
         query.put("id_usuario", "eq." + id);
         query.put("rol", "eq.VENDEDOR");
-        supabaseHttpClient.deleteRows("usuarios", query);
+        
+        Map<String, Object> body = new HashMap<>();
+        body.put("is_delete", true);
+        
+        supabaseHttpClient.update("usuarios", query, body);
     }
 
     @Override
@@ -107,6 +114,7 @@ public class SupabaseVendedorRepositoryAdapter implements VendedorRepositoryPort
         query.put("select", "id_usuario");
         query.put("email", "ilike." + email);
         query.put("rol", "eq.VENDEDOR");
+        query.put("is_delete", "eq.false");
 
         if (excludeId != null) {
             query.put("id_usuario", "neq." + excludeId);

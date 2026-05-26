@@ -31,6 +31,7 @@ public class SupabaseProductoRepositoryAdapter implements ProductoRepositoryPort
         Map<String, String> queryParams = new HashMap<>();
         queryParams.put("order", "id_producto.asc");
         queryParams.put("select", "*");
+        queryParams.put("is_delete", "eq.false");
 
         List<Map<String, Object>> rows = supabaseHttpClient.select(TABLE, queryParams);
         return rows.stream()
@@ -43,6 +44,7 @@ public class SupabaseProductoRepositoryAdapter implements ProductoRepositoryPort
         Map<String, String> queryParams = new HashMap<>();
         queryParams.put("id_producto", "eq." + id);
         queryParams.put("select", "*");
+        queryParams.put("is_delete", "eq.false");
 
         List<Map<String, Object>> rows = supabaseHttpClient.select(TABLE, queryParams);
         if (rows.isEmpty()) {
@@ -56,6 +58,7 @@ public class SupabaseProductoRepositoryAdapter implements ProductoRepositoryPort
         Map<String, String> queryParams = new HashMap<>();
         queryParams.put("sku", "eq." + sku);
         queryParams.put("select", "*");
+        queryParams.put("is_delete", "eq.false");
 
         List<Map<String, Object>> rows = supabaseHttpClient.select(TABLE, queryParams);
         if (rows.isEmpty()) {
@@ -113,7 +116,11 @@ public class SupabaseProductoRepositoryAdapter implements ProductoRepositoryPort
     public void eliminar(String id) {
         Map<String, String> queryParams = new HashMap<>();
         queryParams.put("id_producto", "eq." + id);
-        supabaseHttpClient.deleteRows(TABLE, queryParams);
+        
+        Map<String, Object> body = new HashMap<>();
+        body.put("is_delete", true);
+        
+        supabaseHttpClient.update(TABLE, queryParams, body);
     }
 
     @Override
@@ -124,6 +131,7 @@ public class SupabaseProductoRepositoryAdapter implements ProductoRepositoryPort
             queryParams.put("id_producto", "neq." + excludeId);
         }
         queryParams.put("select", "id_producto");
+        queryParams.put("is_delete", "eq.false");
 
         List<Map<String, Object>> rows = supabaseHttpClient.select(TABLE, queryParams);
         return !rows.isEmpty();

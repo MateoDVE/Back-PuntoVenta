@@ -26,6 +26,14 @@ public class AutorizacionAuthService {
 
     public Map<String, Object> autenticar(String email, String password) {
         logger.debug("Autenticando usuario con email: {}", email);
+        
+        // Validar que el usuario existe en nuestra base de datos y no está borrado lógicamente
+        usuarioRepositoryPort.obtenerPorEmail(email)
+                .orElseThrow(() -> {
+                    logger.warn("Intento de login fallido: usuario no existe o está inactivo para email: {}", email);
+                    return new IllegalArgumentException("Usuario no encontrado o inactivo");
+                });
+
         Credenciales credenciales = new Credenciales(email, password);
         Map<String, Object> result = autenticacionPort.autenticar(credenciales);
         logger.debug("Autenticación completada para email: {}", email);

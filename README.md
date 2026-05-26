@@ -23,8 +23,12 @@ Este backend expone APIs REST para:
 
 - Autenticación de usuarios
 - Gestión de vendedores
-- Gestión de productos
-- Carga y eliminación de imágenes de productos en Supabase Storage
+- Gestión de productos con carga de imágenes en Supabase Storage
+- Gestión de clientes registrados por cada vendedor con foto de fachada
+- Control de inventario: asignación de stock del almacén central a transportes de vendedores
+- Registro y sincronización de ventas (incluye modo offline con idempotencia por `id_transaccion_local`)
+- Cierre de jornada: conciliación financiera e inventario por vendedor
+- Reportes consolidados: ventas, ingresos, stock y discrepancias de inventario
 
 La lógica de negocio vive en la capa de dominio y depende de interfaces (puertos), mientras que los adapters de infraestructura implementan esas interfaces usando Supabase.
 
@@ -311,6 +315,270 @@ Base path:
 - Método: DELETE
 - Ruta: /vendedores/{id}
 
+### Clientes
+
+Base path:
+
+- /clientes
+
+1) Listar clientes
+
+- Método: GET
+- Ruta: /clientes
+- Query param opcional: vendedorId={uuid} — filtra clientes por vendedor
+- Respuesta: lista de clientes con ubicación GPS, foto de fachada y datos de contacto
+
+2) Obtener cliente por id
+
+- Método: GET
+- Ruta: /clientes/{id}
+
+3) Crear cliente
+
+- Método: POST
+- Ruta: /clientes
+- Body JSON:
+
+```json
+{
+  "nombre": "Cliente A",
+  "telefono": "70000000",
+  "direccion": "Calle 1 #100",
+  "latitud": -17.783,
+  "longitud": -63.182,
+  "id_vendedor": "uuid",
+  "url_foto": "https://..."
+}
+```
+
+4) Subir foto de fachada
+
+- Método: POST
+- Ruta: /clientes/upload-photo
+- Content-Type: multipart/form-data
+- Campo archivo: photo
+- Respuesta:
+
+```json
+{
+  "photoUrl": "https://..."
+}
+```
+
+5) Actualizar cliente
+
+- Método: PUT
+- Ruta: /clientes/{id}
+- Body JSON: mismos campos que creación + estado (ACTIVO / INACTIVO)
+
+6) Eliminar cliente
+
+- Método: DELETE
+- Ruta: /clientes/{id}
+
+### Inventario
+
+Base path:
+
+- /inventario
+
+1) Asignar stock a transporte de vendedor
+
+- Método: POST
+- Ruta: /inventario/asignar
+- Body JSON:
+
+```json
+{
+  "id_vendedor": "uuid",
+  "productos": [
+    { "id_producto": 1, "cantidad": 20 }
+  ]
+}
+```
+
+2) Registrar stock inicial (apertura de jornada)
+
+- Método: POST
+- Ruta: /inventario/stock-inicial
+- Body JSON: misma estructura que asignar
+
+3) Consultar inventario de vendedor
+
+- Método: GET
+- Ruta: /inventario/vendedor/{id}
+- Respuesta: lista de ítems con producto, cantidad asignada, cantidad actual y diferencia
+
+4) Validar inventario como admin
+
+- Método: PATCH
+- Ruta: /inventario/validar-admin/{id}
+- Respuesta: 200 con el registro actualizado
+
+5) Confirmar salida del vendedor
+
+- Método: PATCH
+- Ruta: /inventario/confirmar-salida/{id}
+- Respuesta: 200 con el registro actualizado
+
+### Ventas
+
+Base path:
+
+- /ventas
+
+1) Registrar venta
+
+- Método: POST
+- Ruta: /ventas
+- Body JSON:
+
+```json
+{
+  "id_vendedor": "uuid",
+  "id_cliente": "uuid",
+  "id_transaccion_local": "uuid",
+  "productos": [
+    { "id_producto": 1, "cantidad": 2, "precio_unidad": 10.5, "descuento": 0 }
+  ],
+  "total_efectivo": 21.0,
+  "fecha": "2026-05-26"
+}
+```
+
+> `id_transaccion_local` es la clave de idempotencia generada en el cliente con `crypto.randomUUID()`. Si la misma venta se envía más de una vez, el backend ignora el duplicado.
+
+2) Sincronizar ventas pendientes (modo offline)
+
+- Método: POST
+- Ruta: /ventas/sincronizar
+- Body JSON: array de ventas con la misma estructura que la creación individual
+
+3) Listar ventas
+
+- Método: GET
+- Ruta: /ventas
+
+4) Obtener venta por id
+
+- Método: GET
+- Ruta: /ventas/{id}
+
+5) Resumen diario de ventas
+
+- Método: GET
+- Ruta: /ventas/resumen-diario?fecha={yyyy-MM-dd}&vendedorId={uuid}
+- Respuesta: lista de ventas del día con totales por vendedor
+
+6) Datos de cierre de jornada por vendedor
+
+- Método: GET
+- Ruta: /ventas/cierre-jornada?vendedorId={uuid}&fecha={yyyy-MM-dd}
+- Respuesta: resumen financiero y discrepancias de inventario para el cierre
+
+7) Confirmar cierre de jornada
+
+- Método: POST
+- Ruta: /ventas/confirmar-cierre
+- Body JSON:
+
+```json
+{
+  "id_vendedor": "uuid",
+  "fecha": "2026-05-26",
+  "dinero_contado": 150.0
+}
+```
+
+8) Reportes consolidados
+
+- Método: GET
+- Ruta: /ventas/reportes?fecha={yyyy-MM-dd}
+- Respuesta:
+
+```json
+{
+  "ventas": [...],
+  "vendedores": [...],
+  "productos": [...],
+  "discrepancias": [
+    {
+      "nombre": "Vendedor A",
+      "stockEsperado": 10,
+      "stockActual": 8,
+      "diferencia": -2,
+      "correcto": false
+    }
+  ]
+}
+```
+
+9) Devolver stock al almacén central
+
+- Método: POST
+- Ruta: /ventas/devolver-stock
+- Body JSON:
+
+```json
+{
+  "idVendedor": "uuid",
+  "fecha": "2026-05-26"
+}
+```
+
+### Cierres de jornada
+
+Base path:
+
+- /cierres
+
+1) Registrar cierre
+
+- Método: POST
+- Ruta: /cierres
+- Body JSON:
+
+```json
+{
+  "id_vendedor": "uuid",
+  "fecha": "2026-05-26",
+  "dinero_esperado": 200.0,
+  "dinero_contado": 198.0
+}
+```
+
+2) Listar todos los cierres
+
+- Método: GET
+- Ruta: /cierres
+
+3) Obtener cierre por id
+
+- Método: GET
+- Ruta: /cierres/{id}
+
+4) Cierres por vendedor
+
+- Método: GET
+- Ruta: /cierres/vendedor/{id}
+
+5) Cierre de vendedor por fecha
+
+- Método: GET
+- Ruta: /cierres/vendedor/{id}/fecha/{fecha}
+- Parámetro fecha: yyyy-MM-dd
+
+6) Actualizar cierre
+
+- Método: PUT
+- Ruta: /cierres/{id}
+- Body JSON: mismos campos que la creación
+
+7) Eliminar cierre
+
+- Método: DELETE
+- Ruta: /cierres/{id}
+
 ## Manejo de errores
 
 El proyecto centraliza errores en:
@@ -463,7 +731,7 @@ Métodos permitidos:
 
 ## Estructura de carpetas
 
-Organizado por módulos de negocio (auth, productos, vendedores) siguiendo arquitectura hexagonal:
+Organizado por módulos de negocio siguiendo arquitectura hexagonal:
 
 ```
 src/main/java/com/back/puntoventa/app/
@@ -473,6 +741,23 @@ src/main/java/com/back/puntoventa/app/
 │   │   │   └── AuthRestAdapter.java
 │   │   └── dto/
 │   │       └── SignInDto.java
+│   ├── cierre/
+│   │   ├── controller/
+│   │   │   └── CierreJornadaRestAdapter.java
+│   │   └── dto/
+│   │       ├── CreateCierreDto.java
+│   │       └── UpdateCierreDto.java
+│   ├── clientes/
+│   │   ├── controller/
+│   │   │   └── ClientesRestAdapter.java
+│   │   └── dto/
+│   │       ├── CreateClienteDto.java
+│   │       └── UpdateClienteDto.java
+│   ├── inventario/
+│   │   ├── controller/
+│   │   │   └── InventarioRestAdapter.java
+│   │   └── dto/
+│   │       └── AsignarInventarioDto.java
 │   ├── productos/
 │   │   ├── controller/
 │   │   │   └── ProductosRestAdapter.java
@@ -480,6 +765,12 @@ src/main/java/com/back/puntoventa/app/
 │   │       ├── CreateProductoDto.java
 │   │       ├── UpdateProductoDto.java
 │   │       └── DeleteImageDto.java
+│   ├── ventas/
+│   │   ├── controller/
+│   │   │   └── VentaRestAdapter.java
+│   │   └── dto/
+│   │       ├── CreateVentaDto.java
+│   │       └── ConfirmarCierreDto.java
 │   └── vendedores/
 │       ├── controller/
 │       │   └── VendedoresRestAdapter.java
@@ -491,9 +782,25 @@ src/main/java/com/back/puntoventa/app/
 │   │   ├── model/
 │   │   ├── port/
 │   │   └── service/
+│   ├── cierre/
+│   │   ├── model/
+│   │   ├── port/
+│   │   └── service/
+│   ├── clientes/
+│   │   ├── model/
+│   │   ├── port/
+│   │   └── service/
 │   ├── common/
 │   │   └── exception/
+│   ├── inventario/
+│   │   ├── model/
+│   │   ├── port/
+│   │   └── service/
 │   ├── productos/
+│   │   ├── model/
+│   │   ├── port/
+│   │   └── service/
+│   ├── ventas/
 │   │   ├── model/
 │   │   ├── port/
 │   │   └── service/
@@ -505,7 +812,15 @@ src/main/java/com/back/puntoventa/app/
 │   └── persistence/
 │       └── supabase/
 │           ├── adapter/
+│           │   ├── SupabaseAuthAdapter.java
+│           │   ├── SupabaseCierreJornadaAdapter.java
+│           │   ├── SupabaseClientesAdapter.java
+│           │   ├── SupabaseInventarioAdapter.java
+│           │   ├── SupabaseProductosAdapter.java
+│           │   ├── SupabaseVentasAdapter.java
+│           │   └── SupabaseVendedoresAdapter.java
 │           └── client/
+│               └── SupabaseClient.java
 ├── common/
 │   ├── ApiException.java
 │   └── GlobalExceptionHandler.java
@@ -528,7 +843,7 @@ src/main/java/com/back/puntoventa/app/
 - Ports: interfaces para contratos con infraestructura
 
 **Infrastructure** (adapters secundarios - Supabase)
-- Adapters: implementan puertos para acceso a datos
+- Adapters: implementan puertos para acceso a datos (PostgREST + Storage)
 - Client: cliente HTTP configurado para Supabase
 
 **Common**: excepciones y utilidades transversales
@@ -538,8 +853,9 @@ src/main/java/com/back/puntoventa/app/
 
 - Definir variables de entorno en el proveedor de hosting.
 - No usar credenciales hardcodeadas en producción.
-- Verificar que el bucket productos exista en Supabase Storage.
+- Verificar que los buckets `productos` y `clientes` existan en Supabase Storage.
 - Confirmar políticas/RLS y permisos para operaciones de Auth, tablas y Storage.
+- El endpoint `/ventas/sincronizar` es idempotente: duplicados se identifican por `id_transaccion_local` y se ignoran silenciosamente.
 
 ## Comandos útiles
 

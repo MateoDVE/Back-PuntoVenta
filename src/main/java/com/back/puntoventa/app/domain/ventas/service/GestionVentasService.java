@@ -19,6 +19,11 @@ import com.back.puntoventa.app.domain.ventas.model.response.ResumenDiarioRespons
 import com.back.puntoventa.app.domain.ventas.model.response.VentaResumenResponse;
 import com.back.puntoventa.app.domain.ventas.model.response.VentaResponse;
 import com.back.puntoventa.app.domain.ventas.port.VentaRepositoryPort;
+import com.back.puntoventa.app.domain.productos.port.ProductoRepositoryPort;
+import com.back.puntoventa.app.domain.vendedores.port.VendedorRepositoryPort;
+import com.back.puntoventa.app.domain.vendedores.model.Vendedor;
+import com.back.puntoventa.app.domain.ventas.model.response.ReportesResumenResponse;
+import com.back.puntoventa.app.domain.ventas.model.response.DiscrepanciaVendedorDto;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -40,9 +45,53 @@ public class GestionVentasService {
 
     private static final Logger logger = LoggerFactory.getLogger(GestionVentasService.class);
     private final VentaRepositoryPort ventaRepositoryPort;
+    private final VendedorRepositoryPort vendedorRepositoryPort;
+    private final ProductoRepositoryPort productoRepositoryPort;
 
-    public GestionVentasService(VentaRepositoryPort ventaRepositoryPort) {
+    public GestionVentasService(VentaRepositoryPort ventaRepositoryPort,
+                                VendedorRepositoryPort vendedorRepositoryPort,
+                                ProductoRepositoryPort productoRepositoryPort) {
         this.ventaRepositoryPort = ventaRepositoryPort;
+        this.vendedorRepositoryPort = vendedorRepositoryPort;
+        this.productoRepositoryPort = productoRepositoryPort;
+    }
+
+    public ReportesResumenResponse obtenerReportesConsolidados(LocalDate fecha) {
+        logger.info("Generando reportes consolidados para la fecha: {}", fecha);
+        
+        // 1. Obtener todas las ventas resumidas
+        List<VentaResumenResponse> ventas = obtenerVentas();
+        
+        // 2. Obtener todos los vendedores activos
+        List<Vendedor> vendedores = vendedorRepositoryPort.obtenerTodos();
+        
+        // 3. Obtener todos los productos activos
+        List<Producto> productos = productoRepositoryPort.obtenerTodos();
+        
+        // 4. Calcular discrepancias de inventario para cada vendedor
+        List<DiscrepanciaVendedorDto> discrepancias = new ArrayList<>();
+        for (Vendedor v : vendedores) {
+            try {
+                CierreJornadaResponse cierre = obtenerResumenCierreJornada(UUID.fromString(v.getId()), fecha);
+                var inv = cierre.getConciliacionInventario();
+                int esperado = (inv.getStockInicialTotal() != null ? inv.getStockInicialTotal() : 0) 
+                             - (inv.getVendidosTotal() != null ? inv.getVendidosTotal() : 0);
+                int actual = inv.getStockFinalTotal() != null ? inv.getStockFinalTotal() : 0;
+                boolean correcto = "CORRECTO".equals(inv.getEstado());
+                
+                discrepancias.add(new DiscrepanciaVendedorDto(
+                    v.getNombre(),
+                    esperado,
+                    actual,
+                    actual - esperado,
+                    correcto
+                ));
+            } catch (Exception ex) {
+                logger.warn("No se pudo calcular el cierre para el vendedor {} en la fecha {}: {}", v.getNombre(), fecha, ex.getMessage());
+            }
+        }
+        
+        return new ReportesResumenResponse(ventas, vendedores, productos, discrepancias);
     }
 
     public VentaResponse crearVenta(CrearVentaRequest request) {
@@ -97,7 +146,7 @@ public class GestionVentasService {
         }
 
         CargaTransporte carga = ventaRepositoryPort
-                .obtenerCargaPorVendedorYProducto(request.getIdVendedor(), item.getIdProducto())
+                .obtenerCargaPorVendedorYProducto(request.getIdVendedor(), item.getIdProducto(), LocalDate.now())
                 .orElseThrow(() -> new DomainException(
                         "No hay carga asignada y validada para producto " + producto.getNombre()));
 
@@ -332,7 +381,7 @@ public class GestionVentasService {
 
             Integer vendido = vendidosPorProducto.getOrDefault(idProducto, 0);
 
-            Optional<CargaTransporte> cargaOpt = ventaRepositoryPort.obtenerCargaPorVendedorYProducto(idVendedor, idProducto);
+            Optional<CargaTransporte> cargaOpt = ventaRepositoryPort.obtenerCargaPorVendedorYProducto(idVendedor, idProducto, fecha);
             Integer actual = cargaOpt.map(c -> c.getCantidadActual() != null ? c.getCantidadActual() : 0).orElse(0);
             Integer stockInicial = cargaOpt.map(c -> c.getCantidadInicial() != null ? c.getCantidadInicial() : (actual + vendido)).orElse(actual + vendido);
             Integer esperado = stockInicial - vendido;
@@ -394,6 +443,50 @@ public class GestionVentasService {
                 dineroEsperado, dineroContado, diferencia, estadoConciliacion);
 
         return new ConfirmarCierreResponse(dineroEsperado, dineroContado, diferencia, estadoConciliacion);
+    }
+
+    public void devolverStockAlmacen(UUID idVendedor, LocalDate fecha) {
+        logger.info("Procesando devolución de stock al almacén para vendedor {} y fecha {}", idVendedor, fecha);
+        validarVendedor(idVendedor);
+
+        // 1. Obtener todas las cargas del vendedor para esa fecha
+        List<CargaTransporte> cargas = ventaRepositoryPort.obtenerCargasPorVendedorYFecha(idVendedor, fecha);
+
+        for (CargaTransporte carga : cargas) {
+            Integer cantidadActual = carga.getCantidadActual() != null ? carga.getCantidadActual() : 0;
+            if (cantidadActual > 0) {
+                // Obtener el producto
+                Producto producto = productoRepositoryPort.obtenerPorId(carga.getIdProducto())
+                        .orElseThrow(() -> new DomainException("Producto no encontrado: " + carga.getIdProducto()));
+
+                // Calcular nuevo stock central
+                Integer stockCentralActual = producto.getStockAlmacenCentral() != null ? producto.getStockAlmacenCentral() : 0;
+                Integer nuevoStockCentral = stockCentralActual + cantidadActual;
+
+                // Actualizar stock central del producto
+                Producto productoActualizado = new Producto(
+                        producto.getId(),
+                        producto.getSku(),
+                        producto.getIdCategoria(),
+                        producto.getNombre(),
+                        producto.getPrecioUnidad(),
+                        producto.getPrecioCaja(),
+                        producto.getUnidadesPorCaja(),
+                        nuevoStockCentral,
+                        producto.getDescripcion(),
+                        producto.getUrlImagen(),
+                        producto.getEstado(),
+                        producto.getCreatedAt()
+                );
+                productoRepositoryPort.actualizar(producto.getId(), productoActualizado);
+                logger.info("Stock de producto {} devuelto al almacén central. Cantidad devuelta: {}, Nuevo stock central: {}",
+                        producto.getNombre(), cantidadActual, nuevoStockCentral);
+
+                // Poner en 0 la cantidad actual de la carga
+                ventaRepositoryPort.actualizarCantidadActualCarga(carga.getIdCarga(), 0);
+                logger.info("Cantidad actual de carga {} reseteada a 0", carga.getIdCarga());
+            }
+        }
     }
 
     private void validarCliente(Integer idCliente) {

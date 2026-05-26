@@ -122,8 +122,11 @@ public class HexagonalArchitectureConfig {
     }
 
     @Bean
-    public GestionVentasService gestionVentasService(VentaRepositoryPort ventaRepositoryPort) {
-        return new GestionVentasService(ventaRepositoryPort);
+    public GestionVentasService gestionVentasService(
+            VentaRepositoryPort ventaRepositoryPort,
+            VendedorRepositoryPort vendedorRepositoryPort,
+            ProductoRepositoryPort productoRepositoryPort) {
+        return new GestionVentasService(ventaRepositoryPort, vendedorRepositoryPort, productoRepositoryPort);
     }
 
     @Bean

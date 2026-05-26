@@ -5,6 +5,7 @@ import com.back.puntoventa.app.domain.vendedores.service.GestionVendedoresServic
 import com.back.puntoventa.app.common.ApiException;
 import com.back.puntoventa.app.application.vendedores.dto.CreateVendedorDto;
 import com.back.puntoventa.app.application.vendedores.dto.UpdateVendedorDto;
+import jakarta.validation.Valid;
 import java.util.List;
 import java.util.Map;
 import org.springframework.http.HttpStatus;
@@ -31,7 +32,7 @@ public class VendedoresRestAdapter {
     }
 
     @PostMapping
-    public ResponseEntity<Map<String, Object>> crear(@RequestBody CreateVendedorDto request) {
+    public ResponseEntity<Map<String, Object>> crear(@Valid @RequestBody CreateVendedorDto request) {
         logger.info("POST /vendedores - Crear nuevo vendedor: {}", request.getEmail());
         try {
             Vendedor vendedor = gestionVendedoresService.crearVendedor(
@@ -79,9 +80,9 @@ public class VendedoresRestAdapter {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Map<String, Object>> actualizar(
+        public ResponseEntity<Map<String, Object>> actualizar(
             @PathVariable String id,
-            @RequestBody UpdateVendedorDto request) {
+            @Valid @RequestBody UpdateVendedorDto request) {
         logger.info("PUT /vendedores/{} - Actualizar vendedor", id);
         try {
             Vendedor vendedor = gestionVendedoresService.actualizar(

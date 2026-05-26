@@ -1,9 +1,13 @@
 package com.back.puntoventa.app.application.clientes.dto;
 
+import jakarta.validation.constraints.Pattern;
+
 public class CreateClienteDto {
 
     private String idVendedorCreador;
     private String nombreNegocio;
+    @Pattern(regexp = "^\\d{6,12}(?:-?[A-Za-z0-9]{1,3})?$",
+             message = "El CI/NIT introducido no tiene un formato válido (solo se permiten números y extensiones válidas)")
     private String ciNit;
     private String celular;
     private Double latitud;

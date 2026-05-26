@@ -1,6 +1,9 @@
 package com.back.puntoventa.app.application.vendedores.dto;
 
+import jakarta.validation.constraints.Pattern;
+
 public class CreateVendedorDto {
+    @Pattern(regexp = "^(?=.*[A-Za-zÁÉÍÓÚáéíóúÑñ]).+$", message = "El nombre del vendedor debe contener letras y no puede ser puramente numérico")
     private String nombre;
     private String email;
     private String password;

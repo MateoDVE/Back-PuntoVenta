@@ -4750,3 +4750,785 @@ Consider defining a bean of type 'com.back.puntoventa.app.domain.auth.service.Au
 2026-05-26 01:57:43 [http-nio-3000-exec-7] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor c1cbc4b0-eafd-490a-be95-b1c42036ad16 en fecha 2026-05-26
 2026-05-26 02:18:47 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
 2026-05-26 02:18:47 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-05-26 16:52:42 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-05-26 16:52:42 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 17.0.18 with PID 26424 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-05-26 16:52:42 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-05-26 16:52:42 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-26 16:52:43 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-26 16:52:43 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-26 16:52:44 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 3000 (http)
+2026-05-26 16:52:44 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2026-05-26 16:52:44 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-26 16:52:44 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-05-26 16:52:44 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-26 16:52:44 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1420 ms
+2026-05-26 16:52:45 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-05-26 16:52:45 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2026-05-26 16:52:45 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 3000 (http) with context path '/'
+2026-05-26 16:52:45 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 2.977 seconds (process running for 3.444)
+2026-05-26 16:54:23 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 103 class path changes (0 additions, 103 deletions, 0 modifications)
+2026-05-26 16:54:23 [Thread-5] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-26 16:54:23 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-3000"]
+2026-05-26 16:54:23 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-05-26 16:54:23 [Thread-5] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-3000"]
+2026-05-26 16:54:58 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 17.0.18 with PID 26424 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-05-26 16:54:58 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-05-26 16:54:58 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-26 16:54:58 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalArgumentException: Could not find class [com.back.puntoventa.app.config.SupabaseProperties]
+2026-05-26 16:54:58 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-26 16:54:58 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalArgumentException: Could not find class [com.back.puntoventa.app.config.SupabaseProperties]
+	at org.springframework.util.ClassUtils.resolveClassName(ClassUtils.java:372)
+	at org.springframework.core.annotation.TypeMappedAnnotation.adapt(TypeMappedAnnotation.java:466)
+	at org.springframework.core.annotation.TypeMappedAnnotation.getValue(TypeMappedAnnotation.java:391)
+	at org.springframework.core.annotation.TypeMappedAnnotation.getAttributeValue(TypeMappedAnnotation.java:372)
+	at org.springframework.core.annotation.AbstractMergedAnnotation.getRequiredAttributeValue(AbstractMergedAnnotation.java:215)
+	at org.springframework.core.annotation.AbstractMergedAnnotation.getClassArray(AbstractMergedAnnotation.java:153)
+	at org.springframework.boot.context.properties.EnableConfigurationPropertiesRegistrar.lambda$getTypes$0(EnableConfigurationPropertiesRegistrar.java:55)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:273)
+	at org.springframework.core.annotation.MergedAnnotationsCollection$AnnotationsSpliterator.tryAdvance(MergedAnnotationsCollection.java:256)
+	at java.base/java.util.Spliterator.forEachRemaining(Spliterator.java:332)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.springframework.boot.context.properties.EnableConfigurationPropertiesRegistrar.getTypes(EnableConfigurationPropertiesRegistrar.java:57)
+	at org.springframework.boot.context.properties.EnableConfigurationPropertiesRegistrar.registerBeanDefinitions(EnableConfigurationPropertiesRegistrar.java:49)
+	at org.springframework.context.annotation.ImportBeanDefinitionRegistrar.registerBeanDefinitions(ImportBeanDefinitionRegistrar.java:86)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromRegistrars$1(ConfigurationClassBeanDefinitionReader.java:397)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromRegistrars(ConfigurationClassBeanDefinitionReader.java:396)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:149)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:121)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:430)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.back.puntoventa.app.AppApplication.main(AppApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.ClassNotFoundException: com.back.puntoventa.app.config.SupabaseProperties
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:469)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:469)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:321)
+	at org.springframework.util.ClassUtils.resolveClassName(ClassUtils.java:362)
+	... 40 common frames omitted
+2026-05-26 16:55:01 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 17.0.18 with PID 26424 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-05-26 16:55:01 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-05-26 16:55:01 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-26 16:55:01 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 3000 (http)
+2026-05-26 16:55:01 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-26 16:55:01 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-05-26 16:55:01 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-26 16:55:01 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 337 ms
+2026-05-26 16:55:01 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-05-26 16:55:01 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 3000 (http) with context path '/'
+2026-05-26 16:55:01 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 0.541 seconds (process running for 139.844)
+2026-05-26 16:55:01 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-05-26 16:55:01 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-05-26 16:55:01 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 17.0.18 with PID 21392 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-05-26 16:55:01 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-05-26 16:55:01 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-26 16:55:01 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-26 16:55:01 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-26 16:55:02 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 3000 (http)
+2026-05-26 16:55:03 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2026-05-26 16:55:03 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-26 16:55:03 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-05-26 16:55:03 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-26 16:55:03 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1121 ms
+2026-05-26 16:55:03 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2026-05-26 16:55:03 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2026-05-26 16:55:03 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-05-26 16:55:03 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-26 16:55:03 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 3000 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 3000 or configure this application to listen on another port.
+
+2026-05-26 16:56:54 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-05-26 16:56:54 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 17.0.18 with PID 26612 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-05-26 16:56:54 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-05-26 16:56:54 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-26 16:56:54 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-26 16:56:54 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-26 16:56:55 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 3000 (http)
+2026-05-26 16:56:55 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2026-05-26 16:56:55 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-26 16:56:55 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-05-26 16:56:55 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-26 16:56:55 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1069 ms
+2026-05-26 16:56:55 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2026-05-26 16:56:56 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2026-05-26 16:56:56 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-05-26 16:56:56 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-26 16:56:56 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 3000 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 3000 or configure this application to listen on another port.
+
+2026-05-26 16:59:38 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-05-26 16:59:38 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 17.0.18 with PID 20496 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-05-26 16:59:38 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-05-26 16:59:38 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-26 16:59:38 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-26 16:59:38 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-26 16:59:39 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 3000 (http)
+2026-05-26 16:59:39 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2026-05-26 16:59:39 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-26 16:59:39 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-05-26 16:59:39 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-26 16:59:39 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1116 ms
+2026-05-26 16:59:40 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-05-26 16:59:40 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2026-05-26 16:59:40 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 3000 (http) with context path '/'
+2026-05-26 16:59:40 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 2.315 seconds (process running for 2.654)
+2026-05-26 17:00:25 [http-nio-3000-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-26 17:00:25 [http-nio-3000-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-26 17:00:25 [http-nio-3000-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-05-26 17:00:25 [http-nio-3000-exec-10] INFO  c.b.p.a.a.a.c.AuthRestAdapter - POST /auth/signin - Intento de autenticación para email: mateovargas220705@gmail.com
+2026-05-26 17:00:25 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticando usuario con email: mateovargas220705@gmail.com
+2026-05-26 17:00:28 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticación completada para email: mateovargas220705@gmail.com
+2026-05-26 17:00:28 [http-nio-3000-exec-10] INFO  c.b.p.a.a.a.c.AuthRestAdapter - Autenticación exitosa para email: mateovargas220705@gmail.com
+2026-05-26 17:00:28 [http-nio-3000-exec-5] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
+2026-05-26 17:00:28 [http-nio-3000-exec-9] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
+2026-05-26 17:00:28 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
+2026-05-26 17:00:28 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
+2026-05-26 17:00:28 [http-nio-3000-exec-7] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos/stock-bajo - Consultando alertas con umbral: 100
+2026-05-26 17:00:28 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo productos con stock bajo. Umbral: 100
+2026-05-26 17:00:29 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 6 vendedores
+2026-05-26 17:00:29 [http-nio-3000-exec-5] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 6 vendedores
+2026-05-26 17:00:29 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 23 productos
+2026-05-26 17:00:29 [http-nio-3000-exec-9] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 23 productos
+2026-05-26 17:00:29 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se encontraron 0 productos con stock bajo
+2026-05-26 17:00:45 [http-nio-3000-exec-8] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
+2026-05-26 17:00:45 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
+2026-05-26 17:00:45 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 6 vendedores
+2026-05-26 17:00:45 [http-nio-3000-exec-8] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 6 vendedores
+2026-05-26 17:01:06 [http-nio-3000-exec-2] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
+2026-05-26 17:01:06 [http-nio-3000-exec-6] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
+2026-05-26 17:01:06 [http-nio-3000-exec-10] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos/stock-bajo - Consultando alertas con umbral: 100
+2026-05-26 17:01:06 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo productos con stock bajo. Umbral: 100
+2026-05-26 17:01:06 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
+2026-05-26 17:01:06 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
+2026-05-26 17:01:06 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 23 productos
+2026-05-26 17:01:06 [http-nio-3000-exec-6] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 23 productos
+2026-05-26 17:01:06 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se encontraron 0 productos con stock bajo
+2026-05-26 17:01:06 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 6 vendedores
+2026-05-26 17:01:06 [http-nio-3000-exec-2] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 6 vendedores
+2026-05-26 17:01:08 [http-nio-3000-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'userId' for method parameter type String is not present]
+2026-05-26 17:01:13 [http-nio-3000-exec-1] INFO  c.b.p.a.a.a.c.AuthRestAdapter - POST /auth/signin - Intento de autenticación para email: andres@gmail.com
+2026-05-26 17:01:13 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticando usuario con email: andres@gmail.com
+2026-05-26 17:01:14 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticación completada para email: andres@gmail.com
+2026-05-26 17:01:14 [http-nio-3000-exec-1] INFO  c.b.p.a.a.a.c.AuthRestAdapter - Autenticación exitosa para email: andres@gmail.com
+2026-05-26 17:01:14 [http-nio-3000-exec-9] INFO  c.b.p.a.a.a.c.AuthRestAdapter - GET /auth/me - Obtener perfil del usuario actual
+2026-05-26 17:01:14 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-26 17:01:14 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-26 17:01:14 [http-nio-3000-exec-9] DEBUG c.b.p.a.a.a.c.AuthRestAdapter - Perfil obtenido para usuario: andres@gmail.com
+2026-05-26 17:01:14 [http-nio-3000-exec-6] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
+2026-05-26 17:01:14 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
+2026-05-26 17:01:14 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-26 17:01:14 [http-nio-3000-exec-10] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0 y fecha 2026-05-26
+2026-05-26 17:01:14 [http-nio-3000-exec-10] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0 en fecha 2026-05-26
+2026-05-26 17:01:14 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 23 productos
+2026-05-26 17:01:14 [http-nio-3000-exec-6] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 23 productos
+2026-05-26 17:01:14 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-26 17:01:14 [http-nio-3000-exec-2] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/6b0a5026-52f3-475a-a20f-5aacf94764f0 - consulta por andres@gmail.com
+2026-05-26 17:01:14 [http-nio-3000-exec-2] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-26 17:01:14 [http-nio-3000-exec-2] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-26 17:01:15 [http-nio-3000-exec-2] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0: 0
+2026-05-26 17:01:17 [http-nio-3000-exec-3] INFO  c.b.p.a.a.a.c.AuthRestAdapter - GET /auth/me - Obtener perfil del usuario actual
+2026-05-26 17:01:17 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-26 17:01:18 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-26 17:01:18 [http-nio-3000-exec-3] DEBUG c.b.p.a.a.a.c.AuthRestAdapter - Perfil obtenido para usuario: andres@gmail.com
+2026-05-26 17:01:18 [http-nio-3000-exec-1] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-26 17:01:18 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-26 17:01:18 [http-nio-3000-exec-1] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-26 17:01:58 [http-nio-3000-exec-9] INFO  c.b.p.a.a.c.c.ClientesRestAdapter - Creando cliente; negocio=tienda doña gladys, ciNit=hola
+2026-05-26 17:01:58 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.c.s.GestionClientesService - Creando cliente - Negocio: tienda doña gladys, CI/NIT: hola
+2026-05-26 17:01:59 [http-nio-3000-exec-9] INFO  c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Insertando cliente en Supabase; negocio=tienda doña gladys, ciNit=hola
+2026-05-26 17:01:59 [http-nio-3000-exec-9] INFO  c.b.p.a.d.c.s.GestionClientesService - Cliente creado exitosamente - ID: 24
+2026-05-26 17:01:59 [http-nio-3000-exec-8] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-26 17:01:59 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-26 17:01:59 [http-nio-3000-exec-8] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-26 17:02:31 [http-nio-3000-exec-10] INFO  c.b.p.a.a.a.c.AuthRestAdapter - GET /auth/me - Obtener perfil del usuario actual
+2026-05-26 17:02:31 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-26 17:02:32 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-26 17:02:32 [http-nio-3000-exec-10] DEBUG c.b.p.a.a.a.c.AuthRestAdapter - Perfil obtenido para usuario: andres@gmail.com
+2026-05-26 17:02:32 [http-nio-3000-exec-2] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
+2026-05-26 17:02:32 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-26 17:02:32 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
+2026-05-26 17:02:32 [http-nio-3000-exec-4] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0 y fecha 2026-05-26
+2026-05-26 17:02:32 [http-nio-3000-exec-4] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0 en fecha 2026-05-26
+2026-05-26 17:02:32 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 23 productos
+2026-05-26 17:02:32 [http-nio-3000-exec-2] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 23 productos
+2026-05-26 17:02:32 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-26 17:02:32 [http-nio-3000-exec-3] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/6b0a5026-52f3-475a-a20f-5aacf94764f0 - consulta por andres@gmail.com
+2026-05-26 17:02:32 [http-nio-3000-exec-3] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-26 17:02:32 [http-nio-3000-exec-3] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-26 17:02:33 [http-nio-3000-exec-3] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0: 0
+2026-05-26 17:02:34 [http-nio-3000-exec-1] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-26 17:02:34 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-26 17:02:34 [http-nio-3000-exec-1] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-26 17:04:20 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-05-26 17:04:20 [Thread-5] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-26 17:04:20 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-3000"]
+2026-05-26 17:04:20 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-05-26 17:04:20 [Thread-5] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-3000"]
+2026-05-26 17:04:20 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 17.0.18 with PID 20496 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-05-26 17:04:20 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-05-26 17:04:20 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-26 17:04:20 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Incompatible class format in file [C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes\com\back\puntoventa\app\application\clientes\controller\ClientesRestAdapter.class]: set system property 'spring.classformat.ignore' to 'true' if you mean to ignore such files during classpath scanning
+2026-05-26 17:04:20 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Incompatible class format in file [C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes\com\back\puntoventa\app\application\clientes\controller\ClientesRestAdapter.class]: set system property 'spring.classformat.ignore' to 'true' if you mean to ignore such files during classpath scanning
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:504)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.findCandidateComponents(ClassPathScanningCandidateComponentProvider.java:351)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:277)
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:332)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:267)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:193)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:171)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:418)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.back.puntoventa.app.AppApplication.main(AppApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.core.type.classreading.ClassFormatException: ASM ClassReader failed to parse class file - probably due to a new Java class file version that is not supported yet. Consider compiling with a lower '-target' or upgrade your framework version. Affected class: file [C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes\com\back\puntoventa\app\application\clientes\controller\ClientesRestAdapter.class]
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:59)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.core.type.classreading.CachingMetadataReaderFactory.getMetadataReader(CachingMetadataReaderFactory.java:122)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:470)
+	... 25 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Unsupported class file major version 69
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:200)
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:180)
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:166)
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:288)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:56)
+	... 29 common frames omitted
+2026-05-26 17:04:38 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 17.0.18 with PID 20496 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-05-26 17:04:38 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-05-26 17:04:38 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-26 17:04:38 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Incompatible class format in file [C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes\com\back\puntoventa\app\application\clientes\controller\ClientesRestAdapter.class]: set system property 'spring.classformat.ignore' to 'true' if you mean to ignore such files during classpath scanning
+2026-05-26 17:04:38 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Incompatible class format in file [C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes\com\back\puntoventa\app\application\clientes\controller\ClientesRestAdapter.class]: set system property 'spring.classformat.ignore' to 'true' if you mean to ignore such files during classpath scanning
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:504)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.findCandidateComponents(ClassPathScanningCandidateComponentProvider.java:351)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:277)
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:332)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:267)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:193)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:171)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:418)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.back.puntoventa.app.AppApplication.main(AppApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.core.type.classreading.ClassFormatException: ASM ClassReader failed to parse class file - probably due to a new Java class file version that is not supported yet. Consider compiling with a lower '-target' or upgrade your framework version. Affected class: file [C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes\com\back\puntoventa\app\application\clientes\controller\ClientesRestAdapter.class]
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:59)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.core.type.classreading.CachingMetadataReaderFactory.getMetadataReader(CachingMetadataReaderFactory.java:122)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:470)
+	... 25 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Unsupported class file major version 69
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:200)
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:180)
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:166)
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:288)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:56)
+	... 29 common frames omitted
+2026-05-26 17:06:46 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-05-26 17:06:47 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 17.0.18 with PID 23212 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-05-26 17:06:47 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-05-26 17:06:47 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-26 17:06:47 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-26 17:06:47 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-26 17:06:48 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 3000 (http)
+2026-05-26 17:06:48 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2026-05-26 17:06:48 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-26 17:06:48 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-05-26 17:06:48 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-26 17:06:48 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1052 ms
+2026-05-26 17:06:48 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-05-26 17:06:48 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2026-05-26 17:06:48 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 3000 (http) with context path '/'
+2026-05-26 17:06:48 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 2.112 seconds (process running for 2.437)
+2026-05-26 17:07:20 [http-nio-3000-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-26 17:07:20 [http-nio-3000-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-26 17:07:20 [http-nio-3000-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-05-26 17:07:20 [http-nio-3000-exec-2] INFO  c.b.p.a.a.a.c.AuthRestAdapter - POST /auth/signin - Intento de autenticación para email: andres@gmail.com
+2026-05-26 17:07:20 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticando usuario con email: andres@gmail.com
+2026-05-26 17:07:22 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticación completada para email: andres@gmail.com
+2026-05-26 17:07:22 [http-nio-3000-exec-2] INFO  c.b.p.a.a.a.c.AuthRestAdapter - Autenticación exitosa para email: andres@gmail.com
+2026-05-26 17:07:22 [http-nio-3000-exec-1] INFO  c.b.p.a.a.a.c.AuthRestAdapter - GET /auth/me - Obtener perfil del usuario actual
+2026-05-26 17:07:22 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-26 17:07:22 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-26 17:07:22 [http-nio-3000-exec-1] DEBUG c.b.p.a.a.a.c.AuthRestAdapter - Perfil obtenido para usuario: andres@gmail.com
+2026-05-26 17:07:22 [http-nio-3000-exec-3] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
+2026-05-26 17:07:22 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-26 17:07:22 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
+2026-05-26 17:07:22 [http-nio-3000-exec-7] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0 y fecha 2026-05-26
+2026-05-26 17:07:22 [http-nio-3000-exec-7] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0 en fecha 2026-05-26
+2026-05-26 17:07:23 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 23 productos
+2026-05-26 17:07:23 [http-nio-3000-exec-3] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 23 productos
+2026-05-26 17:07:23 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-26 17:07:23 [http-nio-3000-exec-4] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/6b0a5026-52f3-475a-a20f-5aacf94764f0 - consulta por andres@gmail.com
+2026-05-26 17:07:23 [http-nio-3000-exec-4] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-26 17:07:23 [http-nio-3000-exec-4] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-26 17:07:23 [http-nio-3000-exec-4] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0: 0
+2026-05-26 17:07:27 [http-nio-3000-exec-6] INFO  c.b.p.a.a.a.c.AuthRestAdapter - GET /auth/me - Obtener perfil del usuario actual
+2026-05-26 17:07:27 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-26 17:07:27 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-26 17:07:27 [http-nio-3000-exec-6] DEBUG c.b.p.a.a.a.c.AuthRestAdapter - Perfil obtenido para usuario: andres@gmail.com
+2026-05-26 17:07:27 [http-nio-3000-exec-5] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-26 17:07:27 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-26 17:07:27 [http-nio-3000-exec-5] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-26 17:08:28 [http-nio-3000-exec-10] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.back.puntoventa.app.domain.clientes.model.Cliente> com.back.puntoventa.app.application.clientes.controller.ClientesRestAdapter.crearCliente(com.back.puntoventa.app.application.clientes.dto.CreateClienteDto): [Field error in object 'createClienteDto' on field 'ciNit': rejected value [hola]; codes [Pattern.createClienteDto.ciNit,Pattern.ciNit,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [createClienteDto.ciNit,ciNit]; arguments []; default message [ciNit],[Ljakarta.validation.constraints.Pattern$Flag;@60a793ff,^\d{6,12}(?:-?[A-Za-z0-9]{1,3})?$]; default message [El CI/NIT introducido no tiene un formato válido (solo se permiten números y extensiones válidas)]] ]
+2026-05-26 17:14:22 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-26 17:14:22 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-05-26 17:14:45 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-05-26 17:14:45 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 17.0.18 with PID 17312 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-05-26 17:14:45 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-05-26 17:14:45 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-26 17:14:45 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-26 17:14:45 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-26 17:14:46 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 3000 (http)
+2026-05-26 17:14:46 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2026-05-26 17:14:46 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-26 17:14:46 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-05-26 17:14:46 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-26 17:14:46 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1070 ms
+2026-05-26 17:14:46 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-05-26 17:14:46 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2026-05-26 17:14:46 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 3000 (http) with context path '/'
+2026-05-26 17:14:46 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 2.126 seconds (process running for 2.449)
+2026-05-26 17:15:42 [http-nio-3000-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-26 17:15:42 [http-nio-3000-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-26 17:15:42 [http-nio-3000-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-05-26 17:15:42 [http-nio-3000-exec-2] INFO  c.b.p.a.a.a.c.AuthRestAdapter - POST /auth/signin - Intento de autenticación para email: andres@gmail.com
+2026-05-26 17:15:42 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticando usuario con email: andres@gmail.com
+2026-05-26 17:15:43 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticación completada para email: andres@gmail.com
+2026-05-26 17:15:43 [http-nio-3000-exec-2] INFO  c.b.p.a.a.a.c.AuthRestAdapter - Autenticación exitosa para email: andres@gmail.com
+2026-05-26 17:15:43 [http-nio-3000-exec-1] INFO  c.b.p.a.a.a.c.AuthRestAdapter - GET /auth/me - Obtener perfil del usuario actual
+2026-05-26 17:15:43 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-26 17:15:44 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-26 17:15:44 [http-nio-3000-exec-1] DEBUG c.b.p.a.a.a.c.AuthRestAdapter - Perfil obtenido para usuario: andres@gmail.com
+2026-05-26 17:15:44 [http-nio-3000-exec-3] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
+2026-05-26 17:15:44 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-26 17:15:44 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
+2026-05-26 17:15:44 [http-nio-3000-exec-5] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0 y fecha 2026-05-26
+2026-05-26 17:15:44 [http-nio-3000-exec-5] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0 en fecha 2026-05-26
+2026-05-26 17:15:44 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 23 productos
+2026-05-26 17:15:44 [http-nio-3000-exec-3] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 23 productos
+2026-05-26 17:15:44 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-26 17:15:44 [http-nio-3000-exec-4] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/6b0a5026-52f3-475a-a20f-5aacf94764f0 - consulta por andres@gmail.com
+2026-05-26 17:15:44 [http-nio-3000-exec-4] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-26 17:15:44 [http-nio-3000-exec-4] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-26 17:15:45 [http-nio-3000-exec-4] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0: 0
+2026-05-26 17:15:48 [http-nio-3000-exec-6] INFO  c.b.p.a.a.a.c.AuthRestAdapter - GET /auth/me - Obtener perfil del usuario actual
+2026-05-26 17:15:48 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-26 17:15:48 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-26 17:15:48 [http-nio-3000-exec-6] DEBUG c.b.p.a.a.a.c.AuthRestAdapter - Perfil obtenido para usuario: andres@gmail.com
+2026-05-26 17:15:48 [http-nio-3000-exec-7] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-26 17:15:48 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-26 17:15:48 [http-nio-3000-exec-7] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-26 17:20:20 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2026-05-26 17:20:20 [Thread-5] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-26 17:20:20 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-3000"]
+2026-05-26 17:20:21 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-05-26 17:20:21 [Thread-5] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-3000"]
+2026-05-26 17:20:21 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 17.0.18 with PID 17312 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-05-26 17:20:21 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-05-26 17:20:21 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-26 17:20:21 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Incompatible class format in file [C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes\com\back\puntoventa\app\application\vendedores\controller\VendedoresRestAdapter.class]: set system property 'spring.classformat.ignore' to 'true' if you mean to ignore such files during classpath scanning
+2026-05-26 17:20:21 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Incompatible class format in file [C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes\com\back\puntoventa\app\application\vendedores\controller\VendedoresRestAdapter.class]: set system property 'spring.classformat.ignore' to 'true' if you mean to ignore such files during classpath scanning
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:504)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.findCandidateComponents(ClassPathScanningCandidateComponentProvider.java:351)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:277)
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:332)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:267)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:193)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:171)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:418)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.back.puntoventa.app.AppApplication.main(AppApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.core.type.classreading.ClassFormatException: ASM ClassReader failed to parse class file - probably due to a new Java class file version that is not supported yet. Consider compiling with a lower '-target' or upgrade your framework version. Affected class: file [C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes\com\back\puntoventa\app\application\vendedores\controller\VendedoresRestAdapter.class]
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:59)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.core.type.classreading.CachingMetadataReaderFactory.getMetadataReader(CachingMetadataReaderFactory.java:122)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:470)
+	... 25 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Unsupported class file major version 69
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:200)
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:180)
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:166)
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:288)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:56)
+	... 29 common frames omitted
+2026-05-26 17:20:23 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 17.0.18 with PID 17312 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-05-26 17:20:23 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-05-26 17:20:23 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-26 17:20:24 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Incompatible class format in file [C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes\com\back\puntoventa\app\application\vendedores\controller\VendedoresRestAdapter.class]: set system property 'spring.classformat.ignore' to 'true' if you mean to ignore such files during classpath scanning
+2026-05-26 17:20:24 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Incompatible class format in file [C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes\com\back\puntoventa\app\application\vendedores\controller\VendedoresRestAdapter.class]: set system property 'spring.classformat.ignore' to 'true' if you mean to ignore such files during classpath scanning
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:504)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.findCandidateComponents(ClassPathScanningCandidateComponentProvider.java:351)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:277)
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:332)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:267)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:193)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:171)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:418)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.back.puntoventa.app.AppApplication.main(AppApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.core.type.classreading.ClassFormatException: ASM ClassReader failed to parse class file - probably due to a new Java class file version that is not supported yet. Consider compiling with a lower '-target' or upgrade your framework version. Affected class: file [C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes\com\back\puntoventa\app\application\vendedores\controller\VendedoresRestAdapter.class]
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:59)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.core.type.classreading.CachingMetadataReaderFactory.getMetadataReader(CachingMetadataReaderFactory.java:122)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:470)
+	... 25 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Unsupported class file major version 69
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:200)
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:180)
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:166)
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:288)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:56)
+	... 29 common frames omitted
+2026-05-26 17:20:44 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 17.0.18 with PID 17312 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-05-26 17:20:44 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-05-26 17:20:44 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-26 17:20:44 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Incompatible class format in file [C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes\com\back\puntoventa\app\application\vendedores\controller\VendedoresRestAdapter.class]: set system property 'spring.classformat.ignore' to 'true' if you mean to ignore such files during classpath scanning
+2026-05-26 17:20:44 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Incompatible class format in file [C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes\com\back\puntoventa\app\application\vendedores\controller\VendedoresRestAdapter.class]: set system property 'spring.classformat.ignore' to 'true' if you mean to ignore such files during classpath scanning
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:504)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.findCandidateComponents(ClassPathScanningCandidateComponentProvider.java:351)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:277)
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:332)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:267)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:193)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:171)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:418)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.back.puntoventa.app.AppApplication.main(AppApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.core.type.classreading.ClassFormatException: ASM ClassReader failed to parse class file - probably due to a new Java class file version that is not supported yet. Consider compiling with a lower '-target' or upgrade your framework version. Affected class: file [C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes\com\back\puntoventa\app\application\vendedores\controller\VendedoresRestAdapter.class]
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:59)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.core.type.classreading.CachingMetadataReaderFactory.getMetadataReader(CachingMetadataReaderFactory.java:122)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:470)
+	... 25 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Unsupported class file major version 69
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:200)
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:180)
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:166)
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:288)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:56)
+	... 29 common frames omitted
+2026-05-26 17:24:27 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-05-26 17:24:27 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 17.0.18 with PID 3868 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-05-26 17:24:27 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-05-26 17:24:27 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-26 17:24:27 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-26 17:24:27 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-26 17:24:28 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 3000 (http)
+2026-05-26 17:24:28 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2026-05-26 17:24:28 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-26 17:24:28 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-05-26 17:24:28 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-26 17:24:28 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1462 ms
+2026-05-26 17:24:29 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-05-26 17:24:29 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2026-05-26 17:24:29 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 3000 (http) with context path '/'
+2026-05-26 17:24:29 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 2.76 seconds (process running for 3.12)
+2026-05-26 17:24:47 [http-nio-3000-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-26 17:24:47 [http-nio-3000-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-26 17:24:47 [http-nio-3000-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-05-26 17:24:47 [http-nio-3000-exec-2] INFO  c.b.p.a.a.a.c.AuthRestAdapter - POST /auth/signin - Intento de autenticación para email: mateovargas220705@gmail.com
+2026-05-26 17:24:47 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticando usuario con email: mateovargas220705@gmail.com
+2026-05-26 17:24:48 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticación completada para email: mateovargas220705@gmail.com
+2026-05-26 17:24:48 [http-nio-3000-exec-2] INFO  c.b.p.a.a.a.c.AuthRestAdapter - Autenticación exitosa para email: mateovargas220705@gmail.com
+2026-05-26 17:24:48 [http-nio-3000-exec-3] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
+2026-05-26 17:24:48 [http-nio-3000-exec-1] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
+2026-05-26 17:24:48 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
+2026-05-26 17:24:48 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
+2026-05-26 17:24:48 [http-nio-3000-exec-4] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos/stock-bajo - Consultando alertas con umbral: 100
+2026-05-26 17:24:48 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo productos con stock bajo. Umbral: 100
+2026-05-26 17:24:49 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 23 productos
+2026-05-26 17:24:49 [http-nio-3000-exec-1] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 23 productos
+2026-05-26 17:24:49 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se encontraron 0 productos con stock bajo
+2026-05-26 17:24:49 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 6 vendedores
+2026-05-26 17:24:49 [http-nio-3000-exec-3] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 6 vendedores
+2026-05-26 17:24:50 [http-nio-3000-exec-5] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
+2026-05-26 17:24:50 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
+2026-05-26 17:24:50 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 6 vendedores
+2026-05-26 17:24:50 [http-nio-3000-exec-5] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 6 vendedores
+2026-05-26 17:25:16 [http-nio-3000-exec-7] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - POST /vendedores - Crear nuevo vendedor: asfsa@gmail.com
+2026-05-26 17:25:16 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Creando vendedor - Email: asfsa@gmail.com, Nombre: 23498723
+2026-05-26 17:25:17 [http-nio-3000-exec-7] INFO  c.b.p.a.d.v.s.GestionVendedoresService - Vendedor creado exitosamente - ID: 491af701-c936-4d95-838e-694e53a239ab, Email: asfsa@gmail.com
+2026-05-26 17:25:17 [http-nio-3000-exec-7] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - Vendedor creado exitosamente - ID: 491af701-c936-4d95-838e-694e53a239ab, Email: asfsa@gmail.com
+2026-05-26 17:25:17 [http-nio-3000-exec-8] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
+2026-05-26 17:25:17 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
+2026-05-26 17:25:18 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 7 vendedores
+2026-05-26 17:25:18 [http-nio-3000-exec-8] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 7 vendedores
+2026-05-26 17:26:27 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-05-26 17:26:27 [Thread-5] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-26 17:26:27 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-3000"]
+2026-05-26 17:26:27 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-05-26 17:26:27 [Thread-5] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-3000"]
+2026-05-26 17:26:27 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 17.0.18 with PID 3868 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-05-26 17:26:27 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-05-26 17:26:27 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-26 17:26:27 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Incompatible class format in file [C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes\com\back\puntoventa\app\application\vendedores\controller\VendedoresRestAdapter.class]: set system property 'spring.classformat.ignore' to 'true' if you mean to ignore such files during classpath scanning
+2026-05-26 17:26:27 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Incompatible class format in file [C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes\com\back\puntoventa\app\application\vendedores\controller\VendedoresRestAdapter.class]: set system property 'spring.classformat.ignore' to 'true' if you mean to ignore such files during classpath scanning
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:504)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.findCandidateComponents(ClassPathScanningCandidateComponentProvider.java:351)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:277)
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:332)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:267)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:193)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:171)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:418)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.back.puntoventa.app.AppApplication.main(AppApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.core.type.classreading.ClassFormatException: ASM ClassReader failed to parse class file - probably due to a new Java class file version that is not supported yet. Consider compiling with a lower '-target' or upgrade your framework version. Affected class: file [C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes\com\back\puntoventa\app\application\vendedores\controller\VendedoresRestAdapter.class]
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:59)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.core.type.classreading.CachingMetadataReaderFactory.getMetadataReader(CachingMetadataReaderFactory.java:122)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:470)
+	... 25 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Unsupported class file major version 69
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:200)
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:180)
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:166)
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:288)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:56)
+	... 29 common frames omitted
+2026-05-26 17:26:39 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 17.0.18 with PID 3868 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-05-26 17:26:39 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-05-26 17:26:39 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-26 17:26:39 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Incompatible class format in file [C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes\com\back\puntoventa\app\application\vendedores\controller\VendedoresRestAdapter.class]: set system property 'spring.classformat.ignore' to 'true' if you mean to ignore such files during classpath scanning
+2026-05-26 17:26:39 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Incompatible class format in file [C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes\com\back\puntoventa\app\application\vendedores\controller\VendedoresRestAdapter.class]: set system property 'spring.classformat.ignore' to 'true' if you mean to ignore such files during classpath scanning
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:504)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.findCandidateComponents(ClassPathScanningCandidateComponentProvider.java:351)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:277)
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:332)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:267)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:193)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:171)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:418)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.back.puntoventa.app.AppApplication.main(AppApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.core.type.classreading.ClassFormatException: ASM ClassReader failed to parse class file - probably due to a new Java class file version that is not supported yet. Consider compiling with a lower '-target' or upgrade your framework version. Affected class: file [C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes\com\back\puntoventa\app\application\vendedores\controller\VendedoresRestAdapter.class]
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:59)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.core.type.classreading.CachingMetadataReaderFactory.getMetadataReader(CachingMetadataReaderFactory.java:122)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:470)
+	... 25 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Unsupported class file major version 69
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:200)
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:180)
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:166)
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:288)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:56)
+	... 29 common frames omitted
+2026-05-26 17:27:36 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-05-26 17:27:36 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 17.0.18 with PID 24104 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-05-26 17:27:36 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-05-26 17:27:36 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-26 17:27:36 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-26 17:27:36 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-26 17:27:37 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 3000 (http)
+2026-05-26 17:27:37 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2026-05-26 17:27:37 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-26 17:27:37 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-05-26 17:27:37 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-26 17:27:37 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1042 ms
+2026-05-26 17:27:38 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-05-26 17:27:38 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2026-05-26 17:27:38 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 3000 (http) with context path '/'
+2026-05-26 17:27:38 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 2.153 seconds (process running for 2.474)
+2026-05-26 17:28:02 [http-nio-3000-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-26 17:28:02 [http-nio-3000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-26 17:28:02 [http-nio-3000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-05-26 17:28:02 [http-nio-3000-exec-1] INFO  c.b.p.a.a.a.c.AuthRestAdapter - POST /auth/signin - Intento de autenticación para email: mateovargas220705@gmail.com
+2026-05-26 17:28:02 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticando usuario con email: mateovargas220705@gmail.com
+2026-05-26 17:28:04 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticación completada para email: mateovargas220705@gmail.com
+2026-05-26 17:28:04 [http-nio-3000-exec-1] INFO  c.b.p.a.a.a.c.AuthRestAdapter - Autenticación exitosa para email: mateovargas220705@gmail.com
+2026-05-26 17:28:04 [http-nio-3000-exec-3] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
+2026-05-26 17:28:04 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
+2026-05-26 17:28:04 [http-nio-3000-exec-2] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
+2026-05-26 17:28:04 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
+2026-05-26 17:28:04 [http-nio-3000-exec-4] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos/stock-bajo - Consultando alertas con umbral: 100
+2026-05-26 17:28:04 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo productos con stock bajo. Umbral: 100
+2026-05-26 17:28:04 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se encontraron 0 productos con stock bajo
+2026-05-26 17:28:04 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 23 productos
+2026-05-26 17:28:04 [http-nio-3000-exec-2] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 23 productos
+2026-05-26 17:28:04 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 7 vendedores
+2026-05-26 17:28:04 [http-nio-3000-exec-3] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 7 vendedores
+2026-05-26 17:28:08 [http-nio-3000-exec-7] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
+2026-05-26 17:28:08 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
+2026-05-26 17:28:08 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 7 vendedores
+2026-05-26 17:28:08 [http-nio-3000-exec-7] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 7 vendedores
+2026-05-26 17:28:27 [http-nio-3000-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> com.back.puntoventa.app.application.vendedores.controller.VendedoresRestAdapter.crear(com.back.puntoventa.app.application.vendedores.dto.CreateVendedorDto): [Field error in object 'createVendedorDto' on field 'nombre': rejected value [2938472]; codes [Pattern.createVendedorDto.nombre,Pattern.nombre,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [createVendedorDto.nombre,nombre]; arguments []; default message [nombre],[Ljakarta.validation.constraints.Pattern$Flag;@40255f48,^(?=.*[A-Za-zÁÉÍÓÚáéíóúÑñ]).+$]; default message [El nombre del vendedor debe contener letras y no puede ser puramente numérico]] ]
+2026-05-26 17:29:28 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-26 17:29:28 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete

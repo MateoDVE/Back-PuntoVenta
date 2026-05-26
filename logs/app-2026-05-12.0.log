@@ -1,0 +1,755 @@
+2026-05-12 17:11:00 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-05-12 17:11:00 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 26 with PID 18032 (C:\Users\HP\Desktop\7mo SEMESTRE\Taller de sistemas de informacion\PuntoVenta\Back-PuntoVenta\target\classes started by HP in C:\Users\HP\Desktop\7mo SEMESTRE\Taller de sistemas de informacion\PuntoVenta\Back-PuntoVenta)
+2026-05-12 17:11:00 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-05-12 17:11:00 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-12 17:11:00 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-12 17:11:00 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-12 17:11:01 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 3000 (http)
+2026-05-12 17:11:01 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2026-05-12 17:11:01 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-12 17:11:01 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-05-12 17:11:01 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-12 17:11:01 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1572 ms
+2026-05-12 17:11:02 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-05-12 17:11:02 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2026-05-12 17:11:02 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 3000 (http) with context path '/'
+2026-05-12 17:11:02 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 3.428 seconds (process running for 4.066)
+2026-05-12 17:15:28 [http-nio-3000-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-12 17:15:28 [http-nio-3000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-12 17:15:28 [http-nio-3000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-05-12 17:15:28 [http-nio-3000-exec-2] INFO  c.b.p.a.a.a.c.AuthRestAdapter - POST /auth/signin - Intento de autenticación para email: mateovargas220705@gmail.com
+2026-05-12 17:15:28 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticando usuario con email: mateovargas220705@gmail.com
+2026-05-12 17:15:31 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticación completada para email: mateovargas220705@gmail.com
+2026-05-12 17:15:31 [http-nio-3000-exec-2] INFO  c.b.p.a.a.a.c.AuthRestAdapter - Autenticación exitosa para email: mateovargas220705@gmail.com
+2026-05-12 17:15:31 [http-nio-3000-exec-8] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
+2026-05-12 17:15:31 [http-nio-3000-exec-7] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
+2026-05-12 17:15:31 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
+2026-05-12 17:15:31 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
+2026-05-12 17:15:31 [http-nio-3000-exec-6] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos/stock-bajo - Consultando alertas con umbral: 100
+2026-05-12 17:15:31 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo productos con stock bajo. Umbral: 100
+2026-05-12 17:15:32 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 25 productos
+2026-05-12 17:15:32 [http-nio-3000-exec-7] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 25 productos
+2026-05-12 17:15:32 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se encontraron 24 productos con stock bajo
+2026-05-12 17:15:32 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 10 vendedores
+2026-05-12 17:15:32 [http-nio-3000-exec-8] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 10 vendedores
+2026-05-12 17:15:33 [http-nio-3000-exec-9] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
+2026-05-12 17:15:33 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
+2026-05-12 17:15:33 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 10 vendedores
+2026-05-12 17:15:33 [http-nio-3000-exec-9] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 10 vendedores
+2026-05-12 17:15:33 [http-nio-3000-exec-7] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=5e0e4eff-aec3-46df-a77e-d4feeb19394c
+2026-05-12 17:15:33 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
+2026-05-12 17:15:33 [http-nio-3000-exec-7] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=5e0e4eff-aec3-46df-a77e-d4feeb19394c
+2026-05-12 17:15:33 [http-nio-3000-exec-9] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=0b9544ca-bfbe-4335-821c-5c8eb4b553b2
+2026-05-12 17:15:33 [http-nio-3000-exec-6] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=2ab0631c-da17-4bd8-b9b9-237de54711c6
+2026-05-12 17:15:33 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 0b9544ca-bfbe-4335-821c-5c8eb4b553b2
+2026-05-12 17:15:33 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 2ab0631c-da17-4bd8-b9b9-237de54711c6
+2026-05-12 17:15:33 [http-nio-3000-exec-9] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=0b9544ca-bfbe-4335-821c-5c8eb4b553b2
+2026-05-12 17:15:33 [http-nio-3000-exec-6] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=2ab0631c-da17-4bd8-b9b9-237de54711c6
+2026-05-12 17:15:33 [http-nio-3000-exec-1] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=7ca8780f-864c-4179-8c8a-9d8ae55b6df8
+2026-05-12 17:15:33 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 7ca8780f-864c-4179-8c8a-9d8ae55b6df8
+2026-05-12 17:15:33 [http-nio-3000-exec-1] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=7ca8780f-864c-4179-8c8a-9d8ae55b6df8
+2026-05-12 17:15:33 [http-nio-3000-exec-10] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-12 17:15:33 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-12 17:15:33 [http-nio-3000-exec-10] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-12 17:15:33 [http-nio-3000-exec-4] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=73ed0c2b-851c-44c8-a08b-ded6f61924f9
+2026-05-12 17:15:33 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 73ed0c2b-851c-44c8-a08b-ded6f61924f9
+2026-05-12 17:15:33 [http-nio-3000-exec-4] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=73ed0c2b-851c-44c8-a08b-ded6f61924f9
+2026-05-12 17:15:33 [http-nio-3000-exec-3] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e
+2026-05-12 17:15:33 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e
+2026-05-12 17:15:33 [http-nio-3000-exec-3] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e
+2026-05-12 17:15:33 [http-nio-3000-exec-6] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=c1cbc4b0-eafd-490a-be95-b1c42036ad16
+2026-05-12 17:15:33 [http-nio-3000-exec-2] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-12 17:15:33 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: c1cbc4b0-eafd-490a-be95-b1c42036ad16
+2026-05-12 17:15:33 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-12 17:15:33 [http-nio-3000-exec-6] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=c1cbc4b0-eafd-490a-be95-b1c42036ad16
+2026-05-12 17:15:33 [http-nio-3000-exec-2] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-12 17:15:34 [http-nio-3000-exec-4] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=997e2337-32a6-4ba5-84fb-873ef1b6036f
+2026-05-12 17:15:34 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 997e2337-32a6-4ba5-84fb-873ef1b6036f
+2026-05-12 17:15:34 [http-nio-3000-exec-4] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=997e2337-32a6-4ba5-84fb-873ef1b6036f
+2026-05-12 17:16:34 [http-nio-3000-exec-2] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
+2026-05-12 17:16:34 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
+2026-05-12 17:16:35 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 10 vendedores
+2026-05-12 17:16:35 [http-nio-3000-exec-2] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 10 vendedores
+2026-05-12 17:16:35 [http-nio-3000-exec-6] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=0b9544ca-bfbe-4335-821c-5c8eb4b553b2
+2026-05-12 17:16:35 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 0b9544ca-bfbe-4335-821c-5c8eb4b553b2
+2026-05-12 17:16:35 [http-nio-3000-exec-8] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=2ab0631c-da17-4bd8-b9b9-237de54711c6
+2026-05-12 17:16:35 [http-nio-3000-exec-9] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor 0b9544ca-bfbe-4335-821c-5c8eb4b553b2 y fecha 2026-05-12
+2026-05-12 17:16:35 [http-nio-3000-exec-6] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=0b9544ca-bfbe-4335-821c-5c8eb4b553b2
+2026-05-12 17:16:35 [http-nio-3000-exec-7] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor 2ab0631c-da17-4bd8-b9b9-237de54711c6 y fecha 2026-05-12
+2026-05-12 17:16:35 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 2ab0631c-da17-4bd8-b9b9-237de54711c6
+2026-05-12 17:16:35 [http-nio-3000-exec-10] INFO  c.b.p.a.a.c.CierreJornadaRestAdapter - GET /cierres/vendedor/0b9544ca-bfbe-4335-821c-5c8eb4b553b2 - Historial de cierres
+2026-05-12 17:16:35 [http-nio-3000-exec-9] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 0b9544ca-bfbe-4335-821c-5c8eb4b553b2 en fecha 2026-05-12
+2026-05-12 17:16:35 [http-nio-3000-exec-7] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 2ab0631c-da17-4bd8-b9b9-237de54711c6 en fecha 2026-05-12
+2026-05-12 17:16:35 [http-nio-3000-exec-8] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=2ab0631c-da17-4bd8-b9b9-237de54711c6
+2026-05-12 17:16:35 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-12 17:16:36 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-12 17:16:36 [http-nio-3000-exec-3] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor 5e0e4eff-aec3-46df-a77e-d4feeb19394c y fecha 2026-05-12
+2026-05-12 17:16:36 [http-nio-3000-exec-3] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 5e0e4eff-aec3-46df-a77e-d4feeb19394c en fecha 2026-05-12
+2026-05-12 17:16:36 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-05-12 17:16:36 [http-nio-3000-exec-4] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/0b9544ca-bfbe-4335-821c-5c8eb4b553b2 - consulta por mateovargas220705@gmail.com
+2026-05-12 17:16:36 [http-nio-3000-exec-4] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 0b9544ca-bfbe-4335-821c-5c8eb4b553b2
+2026-05-12 17:16:36 [http-nio-3000-exec-4] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 0b9544ca-bfbe-4335-821c-5c8eb4b553b2
+2026-05-12 17:16:36 [http-nio-3000-exec-1] INFO  c.b.p.a.a.c.CierreJornadaRestAdapter - GET /cierres/vendedor/2ab0631c-da17-4bd8-b9b9-237de54711c6 - Historial de cierres
+2026-05-12 17:16:36 [http-nio-3000-exec-2] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=5e0e4eff-aec3-46df-a77e-d4feeb19394c
+2026-05-12 17:16:36 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
+2026-05-12 17:16:36 [http-nio-3000-exec-2] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=5e0e4eff-aec3-46df-a77e-d4feeb19394c
+2026-05-12 17:16:36 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-12 17:16:36 [http-nio-3000-exec-9] INFO  c.b.p.a.a.c.CierreJornadaRestAdapter - GET /cierres/vendedor/5e0e4eff-aec3-46df-a77e-d4feeb19394c - Historial de cierres
+2026-05-12 17:16:36 [http-nio-3000-exec-4] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 0b9544ca-bfbe-4335-821c-5c8eb4b553b2: 1
+2026-05-12 17:16:36 [http-nio-3000-exec-4] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-12 17:16:36 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-12 17:16:36 [http-nio-3000-exec-4] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-12 17:16:36 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-05-12 17:16:36 [http-nio-3000-exec-5] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/2ab0631c-da17-4bd8-b9b9-237de54711c6 - consulta por mateovargas220705@gmail.com
+2026-05-12 17:16:36 [http-nio-3000-exec-5] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 2ab0631c-da17-4bd8-b9b9-237de54711c6
+2026-05-12 17:16:36 [http-nio-3000-exec-5] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 2ab0631c-da17-4bd8-b9b9-237de54711c6
+2026-05-12 17:16:36 [http-nio-3000-exec-8] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=73ed0c2b-851c-44c8-a08b-ded6f61924f9
+2026-05-12 17:16:36 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 73ed0c2b-851c-44c8-a08b-ded6f61924f9
+2026-05-12 17:16:36 [http-nio-3000-exec-8] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=73ed0c2b-851c-44c8-a08b-ded6f61924f9
+2026-05-12 17:16:36 [http-nio-3000-exec-10] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=7ca8780f-864c-4179-8c8a-9d8ae55b6df8
+2026-05-12 17:16:36 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 7ca8780f-864c-4179-8c8a-9d8ae55b6df8
+2026-05-12 17:16:36 [http-nio-3000-exec-10] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=7ca8780f-864c-4179-8c8a-9d8ae55b6df8
+2026-05-12 17:16:36 [http-nio-3000-exec-1] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e
+2026-05-12 17:16:36 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e
+2026-05-12 17:16:36 [http-nio-3000-exec-1] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e
+2026-05-12 17:16:36 [http-nio-3000-exec-5] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 2ab0631c-da17-4bd8-b9b9-237de54711c6: 9
+2026-05-12 17:16:36 [http-nio-3000-exec-2] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-12 17:16:36 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-12 17:16:36 [http-nio-3000-exec-2] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-12 17:16:36 [http-nio-3000-exec-4] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=997e2337-32a6-4ba5-84fb-873ef1b6036f
+2026-05-12 17:16:36 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 997e2337-32a6-4ba5-84fb-873ef1b6036f
+2026-05-12 17:16:36 [http-nio-3000-exec-4] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=997e2337-32a6-4ba5-84fb-873ef1b6036f
+2026-05-12 17:16:36 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-05-12 17:16:36 [http-nio-3000-exec-7] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/5e0e4eff-aec3-46df-a77e-d4feeb19394c - consulta por mateovargas220705@gmail.com
+2026-05-12 17:16:36 [http-nio-3000-exec-7] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
+2026-05-12 17:16:36 [http-nio-3000-exec-7] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
+2026-05-12 17:16:36 [http-nio-3000-exec-6] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=c1cbc4b0-eafd-490a-be95-b1c42036ad16
+2026-05-12 17:16:36 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: c1cbc4b0-eafd-490a-be95-b1c42036ad16
+2026-05-12 17:16:36 [http-nio-3000-exec-6] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=c1cbc4b0-eafd-490a-be95-b1c42036ad16
+2026-05-12 17:16:36 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-12 17:16:36 [http-nio-3000-exec-10] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0 y fecha 2026-05-12
+2026-05-12 17:16:36 [http-nio-3000-exec-10] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0 en fecha 2026-05-12
+2026-05-12 17:16:37 [http-nio-3000-exec-5] INFO  c.b.p.a.a.c.CierreJornadaRestAdapter - GET /cierres/vendedor/6b0a5026-52f3-475a-a20f-5aacf94764f0 - Historial de cierres
+2026-05-12 17:16:37 [http-nio-3000-exec-7] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 5e0e4eff-aec3-46df-a77e-d4feeb19394c: 4
+2026-05-12 17:16:37 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-12 17:16:37 [http-nio-3000-exec-2] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor 73ed0c2b-851c-44c8-a08b-ded6f61924f9 y fecha 2026-05-12
+2026-05-12 17:16:37 [http-nio-3000-exec-2] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 73ed0c2b-851c-44c8-a08b-ded6f61924f9 en fecha 2026-05-12
+2026-05-12 17:16:37 [http-nio-3000-exec-1] INFO  c.b.p.a.a.c.CierreJornadaRestAdapter - GET /cierres/vendedor/73ed0c2b-851c-44c8-a08b-ded6f61924f9 - Historial de cierres
+2026-05-12 17:16:37 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-05-12 17:16:37 [http-nio-3000-exec-9] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/6b0a5026-52f3-475a-a20f-5aacf94764f0 - consulta por mateovargas220705@gmail.com
+2026-05-12 17:16:37 [http-nio-3000-exec-9] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-12 17:16:37 [http-nio-3000-exec-9] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-12 17:16:37 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-12 17:16:37 [http-nio-3000-exec-7] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor 7ca8780f-864c-4179-8c8a-9d8ae55b6df8 y fecha 2026-05-12
+2026-05-12 17:16:37 [http-nio-3000-exec-7] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 7ca8780f-864c-4179-8c8a-9d8ae55b6df8 en fecha 2026-05-12
+2026-05-12 17:16:37 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-05-12 17:16:37 [http-nio-3000-exec-8] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/73ed0c2b-851c-44c8-a08b-ded6f61924f9 - consulta por mateovargas220705@gmail.com
+2026-05-12 17:16:37 [http-nio-3000-exec-8] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 73ed0c2b-851c-44c8-a08b-ded6f61924f9
+2026-05-12 17:16:37 [http-nio-3000-exec-8] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 73ed0c2b-851c-44c8-a08b-ded6f61924f9
+2026-05-12 17:16:37 [http-nio-3000-exec-6] INFO  c.b.p.a.a.c.CierreJornadaRestAdapter - GET /cierres/vendedor/7ca8780f-864c-4179-8c8a-9d8ae55b6df8 - Historial de cierres
+2026-05-12 17:16:37 [http-nio-3000-exec-9] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0: 31
+2026-05-12 17:16:37 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-12 17:16:37 [http-nio-3000-exec-10] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor 7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e y fecha 2026-05-12
+2026-05-12 17:16:37 [http-nio-3000-exec-10] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e en fecha 2026-05-12
+2026-05-12 17:16:37 [http-nio-3000-exec-8] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 73ed0c2b-851c-44c8-a08b-ded6f61924f9: 4
+2026-05-12 17:16:37 [http-nio-3000-exec-1] INFO  c.b.p.a.a.c.CierreJornadaRestAdapter - GET /cierres/vendedor/7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e - Historial de cierres
+2026-05-12 17:16:37 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-12 17:16:37 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-05-12 17:16:37 [http-nio-3000-exec-4] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/7ca8780f-864c-4179-8c8a-9d8ae55b6df8 - consulta por mateovargas220705@gmail.com
+2026-05-12 17:16:37 [http-nio-3000-exec-4] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 7ca8780f-864c-4179-8c8a-9d8ae55b6df8
+2026-05-12 17:16:37 [http-nio-3000-exec-4] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 7ca8780f-864c-4179-8c8a-9d8ae55b6df8
+2026-05-12 17:16:37 [http-nio-3000-exec-3] INFO  c.b.p.a.a.c.CierreJornadaRestAdapter - GET /cierres/vendedor/86676371-8389-4969-89b4-6a10d3e65cbd - Historial de cierres
+2026-05-12 17:16:37 [http-nio-3000-exec-9] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor 86676371-8389-4969-89b4-6a10d3e65cbd y fecha 2026-05-12
+2026-05-12 17:16:37 [http-nio-3000-exec-9] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 86676371-8389-4969-89b4-6a10d3e65cbd en fecha 2026-05-12
+2026-05-12 17:16:37 [http-nio-3000-exec-4] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 7ca8780f-864c-4179-8c8a-9d8ae55b6df8: 3
+2026-05-12 17:16:37 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-05-12 17:16:37 [http-nio-3000-exec-5] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e - consulta por mateovargas220705@gmail.com
+2026-05-12 17:16:37 [http-nio-3000-exec-5] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e
+2026-05-12 17:16:37 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-12 17:16:37 [http-nio-3000-exec-5] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e
+2026-05-12 17:16:38 [http-nio-3000-exec-6] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor 997e2337-32a6-4ba5-84fb-873ef1b6036f y fecha 2026-05-12
+2026-05-12 17:16:38 [http-nio-3000-exec-6] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 997e2337-32a6-4ba5-84fb-873ef1b6036f en fecha 2026-05-12
+2026-05-12 17:16:38 [http-nio-3000-exec-7] INFO  c.b.p.a.a.c.CierreJornadaRestAdapter - GET /cierres/vendedor/997e2337-32a6-4ba5-84fb-873ef1b6036f - Historial de cierres
+2026-05-12 17:16:38 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-05-12 17:16:38 [http-nio-3000-exec-2] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/86676371-8389-4969-89b4-6a10d3e65cbd - consulta por mateovargas220705@gmail.com
+2026-05-12 17:16:38 [http-nio-3000-exec-2] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-12 17:16:38 [http-nio-3000-exec-2] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-12 17:16:38 [http-nio-3000-exec-5] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e: 1
+2026-05-12 17:16:38 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-12 17:16:38 [http-nio-3000-exec-4] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor c1cbc4b0-eafd-490a-be95-b1c42036ad16 y fecha 2026-05-12
+2026-05-12 17:16:38 [http-nio-3000-exec-4] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor c1cbc4b0-eafd-490a-be95-b1c42036ad16 en fecha 2026-05-12
+2026-05-12 17:16:38 [http-nio-3000-exec-10] INFO  c.b.p.a.a.c.CierreJornadaRestAdapter - GET /cierres/vendedor/c1cbc4b0-eafd-490a-be95-b1c42036ad16 - Historial de cierres
+2026-05-12 17:16:38 [http-nio-3000-exec-2] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 86676371-8389-4969-89b4-6a10d3e65cbd: 6
+2026-05-12 17:16:38 [http-nio-3000-exec-3] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas - Listar ventas resumidas
+2026-05-12 17:16:38 [http-nio-3000-exec-3] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo listado de ventas resumidas
+2026-05-12 17:16:38 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-05-12 17:16:38 [http-nio-3000-exec-8] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/997e2337-32a6-4ba5-84fb-873ef1b6036f - consulta por mateovargas220705@gmail.com
+2026-05-12 17:16:38 [http-nio-3000-exec-8] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 997e2337-32a6-4ba5-84fb-873ef1b6036f
+2026-05-12 17:16:38 [http-nio-3000-exec-8] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 997e2337-32a6-4ba5-84fb-873ef1b6036f
+2026-05-12 17:16:38 [http-nio-3000-exec-8] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 997e2337-32a6-4ba5-84fb-873ef1b6036f: 1
+2026-05-12 17:16:38 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-05-12 17:16:38 [http-nio-3000-exec-1] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/c1cbc4b0-eafd-490a-be95-b1c42036ad16 - consulta por mateovargas220705@gmail.com
+2026-05-12 17:16:38 [http-nio-3000-exec-1] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: c1cbc4b0-eafd-490a-be95-b1c42036ad16
+2026-05-12 17:16:38 [http-nio-3000-exec-1] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: c1cbc4b0-eafd-490a-be95-b1c42036ad16
+2026-05-12 17:16:38 [http-nio-3000-exec-1] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor c1cbc4b0-eafd-490a-be95-b1c42036ad16: 1
+2026-05-12 17:17:12 [http-nio-3000-exec-5] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
+2026-05-12 17:17:12 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
+2026-05-12 17:17:12 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 10 vendedores
+2026-05-12 17:17:12 [http-nio-3000-exec-5] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 10 vendedores
+2026-05-12 17:17:12 [http-nio-3000-exec-7] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=2ab0631c-da17-4bd8-b9b9-237de54711c6
+2026-05-12 17:17:12 [http-nio-3000-exec-2] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=5e0e4eff-aec3-46df-a77e-d4feeb19394c
+2026-05-12 17:17:12 [http-nio-3000-exec-9] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=0b9544ca-bfbe-4335-821c-5c8eb4b553b2
+2026-05-12 17:17:12 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 0b9544ca-bfbe-4335-821c-5c8eb4b553b2
+2026-05-12 17:17:12 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 2ab0631c-da17-4bd8-b9b9-237de54711c6
+2026-05-12 17:17:12 [http-nio-3000-exec-7] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=2ab0631c-da17-4bd8-b9b9-237de54711c6
+2026-05-12 17:17:12 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
+2026-05-12 17:17:12 [http-nio-3000-exec-2] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=5e0e4eff-aec3-46df-a77e-d4feeb19394c
+2026-05-12 17:17:12 [http-nio-3000-exec-9] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=0b9544ca-bfbe-4335-821c-5c8eb4b553b2
+2026-05-12 17:17:12 [http-nio-3000-exec-10] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=73ed0c2b-851c-44c8-a08b-ded6f61924f9
+2026-05-12 17:17:12 [http-nio-3000-exec-6] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-12 17:17:12 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 73ed0c2b-851c-44c8-a08b-ded6f61924f9
+2026-05-12 17:17:12 [http-nio-3000-exec-3] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=7ca8780f-864c-4179-8c8a-9d8ae55b6df8
+2026-05-12 17:17:12 [http-nio-3000-exec-10] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=73ed0c2b-851c-44c8-a08b-ded6f61924f9
+2026-05-12 17:17:12 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-12 17:17:12 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 7ca8780f-864c-4179-8c8a-9d8ae55b6df8
+2026-05-12 17:17:13 [http-nio-3000-exec-6] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-12 17:17:13 [http-nio-3000-exec-3] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=7ca8780f-864c-4179-8c8a-9d8ae55b6df8
+2026-05-12 17:17:13 [http-nio-3000-exec-8] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e
+2026-05-12 17:17:13 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e
+2026-05-12 17:17:13 [http-nio-3000-exec-8] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e
+2026-05-12 17:17:13 [http-nio-3000-exec-4] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-12 17:17:13 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-12 17:17:13 [http-nio-3000-exec-4] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-12 17:17:13 [http-nio-3000-exec-1] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=997e2337-32a6-4ba5-84fb-873ef1b6036f
+2026-05-12 17:17:13 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 997e2337-32a6-4ba5-84fb-873ef1b6036f
+2026-05-12 17:17:13 [http-nio-3000-exec-5] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=c1cbc4b0-eafd-490a-be95-b1c42036ad16
+2026-05-12 17:17:13 [http-nio-3000-exec-1] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=997e2337-32a6-4ba5-84fb-873ef1b6036f
+2026-05-12 17:17:13 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: c1cbc4b0-eafd-490a-be95-b1c42036ad16
+2026-05-12 17:17:13 [http-nio-3000-exec-5] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=c1cbc4b0-eafd-490a-be95-b1c42036ad16
+2026-05-12 17:17:18 [http-nio-3000-exec-9] INFO  c.b.p.a.a.c.c.ClientesRestAdapter - Actualizando cliente id=14; negocio=null, ciNit=null
+2026-05-12 17:17:18 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.c.s.GestionClientesService - Actualizando cliente - ID: 14
+2026-05-12 17:17:18 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo cliente por ID: 14
+2026-05-12 17:17:18 [http-nio-3000-exec-9] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo cliente por id=14
+2026-05-12 17:17:18 [http-nio-3000-exec-9] INFO  c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Actualizando cliente en Supabase id=14
+2026-05-12 17:17:18 [http-nio-3000-exec-9] INFO  c.b.p.a.d.c.s.GestionClientesService - Cliente actualizado exitosamente - ID: 14
+2026-05-12 17:17:20 [http-nio-3000-exec-2] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
+2026-05-12 17:17:20 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
+2026-05-12 17:17:20 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 10 vendedores
+2026-05-12 17:17:20 [http-nio-3000-exec-2] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 10 vendedores
+2026-05-12 17:17:20 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-12 17:17:20 [http-nio-3000-exec-6] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor 0b9544ca-bfbe-4335-821c-5c8eb4b553b2 y fecha 2026-05-12
+2026-05-12 17:17:20 [http-nio-3000-exec-6] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 0b9544ca-bfbe-4335-821c-5c8eb4b553b2 en fecha 2026-05-12
+2026-05-12 17:17:20 [http-nio-3000-exec-3] INFO  c.b.p.a.a.c.CierreJornadaRestAdapter - GET /cierres/vendedor/0b9544ca-bfbe-4335-821c-5c8eb4b553b2 - Historial de cierres
+2026-05-12 17:17:20 [http-nio-3000-exec-4] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=0b9544ca-bfbe-4335-821c-5c8eb4b553b2
+2026-05-12 17:17:20 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-12 17:17:20 [http-nio-3000-exec-5] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor 2ab0631c-da17-4bd8-b9b9-237de54711c6 y fecha 2026-05-12
+2026-05-12 17:17:20 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 0b9544ca-bfbe-4335-821c-5c8eb4b553b2
+2026-05-12 17:17:20 [http-nio-3000-exec-5] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 2ab0631c-da17-4bd8-b9b9-237de54711c6 en fecha 2026-05-12
+2026-05-12 17:17:20 [http-nio-3000-exec-4] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=0b9544ca-bfbe-4335-821c-5c8eb4b553b2
+2026-05-12 17:17:21 [http-nio-3000-exec-1] INFO  c.b.p.a.a.c.CierreJornadaRestAdapter - GET /cierres/vendedor/2ab0631c-da17-4bd8-b9b9-237de54711c6 - Historial de cierres
+2026-05-12 17:17:21 [http-nio-3000-exec-10] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=2ab0631c-da17-4bd8-b9b9-237de54711c6
+2026-05-12 17:17:21 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 2ab0631c-da17-4bd8-b9b9-237de54711c6
+2026-05-12 17:17:21 [http-nio-3000-exec-10] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=2ab0631c-da17-4bd8-b9b9-237de54711c6
+2026-05-12 17:17:21 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-05-12 17:17:21 [http-nio-3000-exec-7] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/0b9544ca-bfbe-4335-821c-5c8eb4b553b2 - consulta por mateovargas220705@gmail.com
+2026-05-12 17:17:21 [http-nio-3000-exec-7] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 0b9544ca-bfbe-4335-821c-5c8eb4b553b2
+2026-05-12 17:17:21 [http-nio-3000-exec-7] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 0b9544ca-bfbe-4335-821c-5c8eb4b553b2
+2026-05-12 17:17:21 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-12 17:17:21 [http-nio-3000-exec-2] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor 5e0e4eff-aec3-46df-a77e-d4feeb19394c y fecha 2026-05-12
+2026-05-12 17:17:21 [http-nio-3000-exec-2] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 5e0e4eff-aec3-46df-a77e-d4feeb19394c en fecha 2026-05-12
+2026-05-12 17:17:21 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-05-12 17:17:21 [http-nio-3000-exec-8] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/2ab0631c-da17-4bd8-b9b9-237de54711c6 - consulta por mateovargas220705@gmail.com
+2026-05-12 17:17:21 [http-nio-3000-exec-8] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 2ab0631c-da17-4bd8-b9b9-237de54711c6
+2026-05-12 17:17:21 [http-nio-3000-exec-8] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 2ab0631c-da17-4bd8-b9b9-237de54711c6
+2026-05-12 17:17:21 [http-nio-3000-exec-3] INFO  c.b.p.a.a.c.CierreJornadaRestAdapter - GET /cierres/vendedor/5e0e4eff-aec3-46df-a77e-d4feeb19394c - Historial de cierres
+2026-05-12 17:17:21 [http-nio-3000-exec-4] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=5e0e4eff-aec3-46df-a77e-d4feeb19394c
+2026-05-12 17:17:21 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
+2026-05-12 17:17:21 [http-nio-3000-exec-4] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=5e0e4eff-aec3-46df-a77e-d4feeb19394c
+2026-05-12 17:17:21 [http-nio-3000-exec-7] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 0b9544ca-bfbe-4335-821c-5c8eb4b553b2: 1
+2026-05-12 17:17:21 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-12 17:17:21 [http-nio-3000-exec-8] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 2ab0631c-da17-4bd8-b9b9-237de54711c6: 9
+2026-05-12 17:17:21 [http-nio-3000-exec-6] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0 y fecha 2026-05-12
+2026-05-12 17:17:21 [http-nio-3000-exec-6] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0 en fecha 2026-05-12
+2026-05-12 17:17:21 [http-nio-3000-exec-1] INFO  c.b.p.a.a.c.CierreJornadaRestAdapter - GET /cierres/vendedor/6b0a5026-52f3-475a-a20f-5aacf94764f0 - Historial de cierres
+2026-05-12 17:17:21 [http-nio-3000-exec-10] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-12 17:17:21 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-12 17:17:21 [http-nio-3000-exec-10] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-12 17:17:21 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-05-12 17:17:21 [http-nio-3000-exec-9] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/5e0e4eff-aec3-46df-a77e-d4feeb19394c - consulta por mateovargas220705@gmail.com
+2026-05-12 17:17:21 [http-nio-3000-exec-9] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
+2026-05-12 17:17:21 [http-nio-3000-exec-9] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
+2026-05-12 17:17:21 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-12 17:17:21 [http-nio-3000-exec-3] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor 73ed0c2b-851c-44c8-a08b-ded6f61924f9 y fecha 2026-05-12
+2026-05-12 17:17:21 [http-nio-3000-exec-3] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 73ed0c2b-851c-44c8-a08b-ded6f61924f9 en fecha 2026-05-12
+2026-05-12 17:17:21 [http-nio-3000-exec-9] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 5e0e4eff-aec3-46df-a77e-d4feeb19394c: 4
+2026-05-12 17:17:21 [http-nio-3000-exec-8] INFO  c.b.p.a.a.c.CierreJornadaRestAdapter - GET /cierres/vendedor/73ed0c2b-851c-44c8-a08b-ded6f61924f9 - Historial de cierres
+2026-05-12 17:17:21 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-05-12 17:17:21 [http-nio-3000-exec-5] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/6b0a5026-52f3-475a-a20f-5aacf94764f0 - consulta por mateovargas220705@gmail.com
+2026-05-12 17:17:21 [http-nio-3000-exec-5] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-12 17:17:21 [http-nio-3000-exec-5] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-12 17:17:21 [http-nio-3000-exec-4] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=73ed0c2b-851c-44c8-a08b-ded6f61924f9
+2026-05-12 17:17:21 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 73ed0c2b-851c-44c8-a08b-ded6f61924f9
+2026-05-12 17:17:21 [http-nio-3000-exec-4] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=73ed0c2b-851c-44c8-a08b-ded6f61924f9
+2026-05-12 17:17:22 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-12 17:17:22 [http-nio-3000-exec-5] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0: 31
+2026-05-12 17:17:22 [http-nio-3000-exec-10] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor 7ca8780f-864c-4179-8c8a-9d8ae55b6df8 y fecha 2026-05-12
+2026-05-12 17:17:22 [http-nio-3000-exec-10] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 7ca8780f-864c-4179-8c8a-9d8ae55b6df8 en fecha 2026-05-12
+2026-05-12 17:17:22 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-05-12 17:17:22 [http-nio-3000-exec-7] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/73ed0c2b-851c-44c8-a08b-ded6f61924f9 - consulta por mateovargas220705@gmail.com
+2026-05-12 17:17:22 [http-nio-3000-exec-7] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 73ed0c2b-851c-44c8-a08b-ded6f61924f9
+2026-05-12 17:17:22 [http-nio-3000-exec-7] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 73ed0c2b-851c-44c8-a08b-ded6f61924f9
+2026-05-12 17:17:22 [http-nio-3000-exec-9] INFO  c.b.p.a.a.c.CierreJornadaRestAdapter - GET /cierres/vendedor/7ca8780f-864c-4179-8c8a-9d8ae55b6df8 - Historial de cierres
+2026-05-12 17:17:22 [http-nio-3000-exec-6] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=7ca8780f-864c-4179-8c8a-9d8ae55b6df8
+2026-05-12 17:17:22 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 7ca8780f-864c-4179-8c8a-9d8ae55b6df8
+2026-05-12 17:17:22 [http-nio-3000-exec-6] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=7ca8780f-864c-4179-8c8a-9d8ae55b6df8
+2026-05-12 17:17:22 [http-nio-3000-exec-7] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 73ed0c2b-851c-44c8-a08b-ded6f61924f9: 4
+2026-05-12 17:17:22 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-12 17:17:22 [http-nio-3000-exec-5] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor 7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e y fecha 2026-05-12
+2026-05-12 17:17:22 [http-nio-3000-exec-5] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e en fecha 2026-05-12
+2026-05-12 17:17:22 [http-nio-3000-exec-4] INFO  c.b.p.a.a.c.CierreJornadaRestAdapter - GET /cierres/vendedor/7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e - Historial de cierres
+2026-05-12 17:17:22 [http-nio-3000-exec-3] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e
+2026-05-12 17:17:22 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e
+2026-05-12 17:17:22 [http-nio-3000-exec-3] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e
+2026-05-12 17:17:22 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-05-12 17:17:22 [http-nio-3000-exec-1] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/7ca8780f-864c-4179-8c8a-9d8ae55b6df8 - consulta por mateovargas220705@gmail.com
+2026-05-12 17:17:22 [http-nio-3000-exec-1] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 7ca8780f-864c-4179-8c8a-9d8ae55b6df8
+2026-05-12 17:17:22 [http-nio-3000-exec-1] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 7ca8780f-864c-4179-8c8a-9d8ae55b6df8
+2026-05-12 17:17:22 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-12 17:17:22 [http-nio-3000-exec-9] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor 86676371-8389-4969-89b4-6a10d3e65cbd y fecha 2026-05-12
+2026-05-12 17:17:22 [http-nio-3000-exec-9] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 86676371-8389-4969-89b4-6a10d3e65cbd en fecha 2026-05-12
+2026-05-12 17:17:22 [http-nio-3000-exec-6] INFO  c.b.p.a.a.c.CierreJornadaRestAdapter - GET /cierres/vendedor/86676371-8389-4969-89b4-6a10d3e65cbd - Historial de cierres
+2026-05-12 17:17:22 [http-nio-3000-exec-1] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 7ca8780f-864c-4179-8c8a-9d8ae55b6df8: 3
+2026-05-12 17:17:22 [http-nio-3000-exec-10] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-12 17:17:22 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-12 17:17:22 [http-nio-3000-exec-10] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-12 17:17:22 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-05-12 17:17:22 [http-nio-3000-exec-8] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e - consulta por mateovargas220705@gmail.com
+2026-05-12 17:17:22 [http-nio-3000-exec-8] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e
+2026-05-12 17:17:22 [http-nio-3000-exec-8] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e
+2026-05-12 17:17:22 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-12 17:17:22 [http-nio-3000-exec-4] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor 997e2337-32a6-4ba5-84fb-873ef1b6036f y fecha 2026-05-12
+2026-05-12 17:17:22 [http-nio-3000-exec-4] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 997e2337-32a6-4ba5-84fb-873ef1b6036f en fecha 2026-05-12
+2026-05-12 17:17:22 [http-nio-3000-exec-3] INFO  c.b.p.a.a.c.CierreJornadaRestAdapter - GET /cierres/vendedor/997e2337-32a6-4ba5-84fb-873ef1b6036f - Historial de cierres
+2026-05-12 17:17:22 [http-nio-3000-exec-8] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e: 1
+2026-05-12 17:17:22 [http-nio-3000-exec-1] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=997e2337-32a6-4ba5-84fb-873ef1b6036f
+2026-05-12 17:17:22 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 997e2337-32a6-4ba5-84fb-873ef1b6036f
+2026-05-12 17:17:22 [http-nio-3000-exec-1] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=997e2337-32a6-4ba5-84fb-873ef1b6036f
+2026-05-12 17:17:23 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-05-12 17:17:23 [http-nio-3000-exec-7] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/86676371-8389-4969-89b4-6a10d3e65cbd - consulta por mateovargas220705@gmail.com
+2026-05-12 17:17:23 [http-nio-3000-exec-7] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-12 17:17:23 [http-nio-3000-exec-7] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-12 17:17:23 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-12 17:17:23 [http-nio-3000-exec-5] WARN  c.b.p.a.a.i.c.InventarioRestAdapter - Error en consulta de inventario vendedor c1cbc4b0-eafd-490a-be95-b1c42036ad16: I/O error on GET request for "https://xaoeygmghbvnwsrkcouo.supabase.co/auth/v1/user": Connection reset
+2026-05-12 17:17:23 [http-nio-3000-exec-2] WARN  c.b.p.a.a.i.c.InventarioRestAdapter - Error en consulta de inventario vendedor 997e2337-32a6-4ba5-84fb-873ef1b6036f: I/O error on GET request for "https://xaoeygmghbvnwsrkcouo.supabase.co/rest/v1/usuarios": Connection reset
+2026-05-12 17:17:23 [http-nio-3000-exec-7] WARN  c.b.p.a.a.i.c.InventarioRestAdapter - Error en consulta de inventario vendedor 86676371-8389-4969-89b4-6a10d3e65cbd: I/O error on GET request for "https://xaoeygmghbvnwsrkcouo.supabase.co/rest/v1/carga_transporte": Connection reset
+2026-05-12 17:17:23 [http-nio-3000-exec-4] ERROR c.b.p.a.a.ventas.VentaRestAdapter - Error interno al obtener cierre de jornada
+org.springframework.web.client.ResourceAccessException: I/O error on GET request for "https://xaoeygmghbvnwsrkcouo.supabase.co/rest/v1/usuarios": Connection reset
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.createResourceAccessException(DefaultRestClient.java:692)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:577)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:535)
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:677)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:809)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.body(DefaultRestClient.java:745)
+	at com.back.puntoventa.app.infrastructure.persistence.supabase.client.SupabaseHttpClient.select(SupabaseHttpClient.java:135)
+	at com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseVentaRepositoryAdapter.vendedorExiste(SupabaseVentaRepositoryAdapter.java:56)
+	at com.back.puntoventa.app.domain.ventas.service.GestionVentasService.validarVendedor(GestionVentasService.java:407)
+	at com.back.puntoventa.app.domain.ventas.service.GestionVentasService.obtenerResumenCierreJornada(GestionVentasService.java:269)
+	at com.back.puntoventa.app.application.ventas.VentaRestAdapter.obtenerResumenCierreJornada(VentaRestAdapter.java:122)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1516)
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:398)
+	at java.base/sun.nio.ch.SocketChannelImpl.implRead(SocketChannelImpl.java:430)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:488)
+	at java.net.http/jdk.internal.net.http.SocketTube.readAvailable(SocketTube.java:1212)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.read(SocketTube.java:844)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowTask.run(SocketTube.java:181)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:207)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:280)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:233)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.signalReadable(SocketTube.java:785)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$ReadEvent.signalEvent(SocketTube.java:999)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowEvent.handle(SocketTube.java:253)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.handleEvent(HttpClientImpl.java:1610)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.lambda$run$3(HttpClientImpl.java:1555)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:1555)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:475)
+2026-05-12 17:17:23 [http-nio-3000-exec-3] ERROR c.b.p.a.a.c.CierreJornadaRestAdapter - Error al obtener cierres del vendedor
+org.springframework.web.client.ResourceAccessException: I/O error on GET request for "https://xaoeygmghbvnwsrkcouo.supabase.co/rest/v1/cierres_jornada": Connection reset
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.createResourceAccessException(DefaultRestClient.java:692)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:577)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:535)
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:677)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:809)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.body(DefaultRestClient.java:745)
+	at com.back.puntoventa.app.infrastructure.persistence.supabase.client.SupabaseHttpClient.select(SupabaseHttpClient.java:135)
+	at com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseCierreJornadaRepositoryAdapter.obtenerPorVendedor(SupabaseCierreJornadaRepositoryAdapter.java:63)
+	at com.back.puntoventa.app.domain.cierre.service.GestionCierreJornadaService.obtenerPorVendedor(GestionCierreJornadaService.java:74)
+	at com.back.puntoventa.app.application.cierre.CierreJornadaRestAdapter.obtenerPorVendedor(CierreJornadaRestAdapter.java:90)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1516)
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:398)
+	at java.base/sun.nio.ch.SocketChannelImpl.implRead(SocketChannelImpl.java:430)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:488)
+	at java.net.http/jdk.internal.net.http.SocketTube.readAvailable(SocketTube.java:1212)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.read(SocketTube.java:844)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowTask.run(SocketTube.java:181)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:207)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:280)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:233)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.signalReadable(SocketTube.java:785)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$ReadEvent.signalEvent(SocketTube.java:999)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowEvent.handle(SocketTube.java:253)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.handleEvent(HttpClientImpl.java:1610)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.lambda$run$3(HttpClientImpl.java:1555)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:1555)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:475)
+2026-05-12 17:17:23 [http-nio-3000-exec-10] INFO  c.b.p.a.a.c.CierreJornadaRestAdapter - GET /cierres/vendedor/c1cbc4b0-eafd-490a-be95-b1c42036ad16 - Historial de cierres
+2026-05-12 17:17:23 [http-nio-3000-exec-9] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas - Listar ventas resumidas
+2026-05-12 17:17:23 [http-nio-3000-exec-8] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=c1cbc4b0-eafd-490a-be95-b1c42036ad16
+2026-05-12 17:17:23 [http-nio-3000-exec-9] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo listado de ventas resumidas
+2026-05-12 17:17:23 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: c1cbc4b0-eafd-490a-be95-b1c42036ad16
+2026-05-12 17:17:23 [http-nio-3000-exec-6] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor c1cbc4b0-eafd-490a-be95-b1c42036ad16 y fecha 2026-05-12
+2026-05-12 17:17:23 [http-nio-3000-exec-8] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=c1cbc4b0-eafd-490a-be95-b1c42036ad16
+2026-05-12 17:17:23 [http-nio-3000-exec-6] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor c1cbc4b0-eafd-490a-be95-b1c42036ad16 en fecha 2026-05-12
+2026-05-12 17:17:40 [http-nio-3000-exec-1] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
+2026-05-12 17:17:40 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
+2026-05-12 17:17:41 [http-nio-3000-exec-1] ERROR c.b.p.a.a.v.c.VendedoresRestAdapter - Error al obtener vendedores
+org.springframework.web.client.ResourceAccessException: I/O error on GET request for "https://xaoeygmghbvnwsrkcouo.supabase.co/rest/v1/usuarios": Connection reset
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.createResourceAccessException(DefaultRestClient.java:692)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:577)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:535)
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:677)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:809)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.body(DefaultRestClient.java:745)
+	at com.back.puntoventa.app.infrastructure.persistence.supabase.client.SupabaseHttpClient.select(SupabaseHttpClient.java:135)
+	at com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseVendedorRepositoryAdapter.obtenerTodos(SupabaseVendedorRepositoryAdapter.java:34)
+	at com.back.puntoventa.app.domain.vendedores.service.GestionVendedoresService.obtenerTodos(GestionVendedoresService.java:68)
+	at com.back.puntoventa.app.application.vendedores.controller.VendedoresRestAdapter.obtenerTodos(VendedoresRestAdapter.java:56)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1516)
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:398)
+	at java.base/sun.nio.ch.SocketChannelImpl.implRead(SocketChannelImpl.java:430)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:488)
+	at java.net.http/jdk.internal.net.http.SocketTube.readAvailable(SocketTube.java:1212)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.read(SocketTube.java:844)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowTask.run(SocketTube.java:181)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:207)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:280)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:233)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.signalReadable(SocketTube.java:785)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$ReadEvent.signalEvent(SocketTube.java:999)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowEvent.handle(SocketTube.java:253)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.handleEvent(HttpClientImpl.java:1610)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.lambda$run$3(HttpClientImpl.java:1555)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:1555)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:475)
+2026-05-12 17:17:43 [http-nio-3000-exec-7] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
+2026-05-12 17:17:43 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
+2026-05-12 17:17:43 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 10 vendedores
+2026-05-12 17:17:43 [http-nio-3000-exec-7] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 10 vendedores
+2026-05-12 17:17:43 [http-nio-3000-exec-2] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=0b9544ca-bfbe-4335-821c-5c8eb4b553b2
+2026-05-12 17:17:43 [http-nio-3000-exec-3] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=5e0e4eff-aec3-46df-a77e-d4feeb19394c
+2026-05-12 17:17:43 [http-nio-3000-exec-5] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=2ab0631c-da17-4bd8-b9b9-237de54711c6
+2026-05-12 17:17:43 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 2ab0631c-da17-4bd8-b9b9-237de54711c6
+2026-05-12 17:17:43 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 0b9544ca-bfbe-4335-821c-5c8eb4b553b2
+2026-05-12 17:17:43 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
+2026-05-12 17:17:43 [http-nio-3000-exec-5] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=2ab0631c-da17-4bd8-b9b9-237de54711c6
+2026-05-12 17:17:43 [http-nio-3000-exec-2] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=0b9544ca-bfbe-4335-821c-5c8eb4b553b2
+2026-05-12 17:17:43 [http-nio-3000-exec-3] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=5e0e4eff-aec3-46df-a77e-d4feeb19394c
+2026-05-12 17:17:43 [http-nio-3000-exec-4] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-12 17:17:43 [http-nio-3000-exec-8] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=7ca8780f-864c-4179-8c8a-9d8ae55b6df8
+2026-05-12 17:17:43 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-12 17:17:43 [http-nio-3000-exec-4] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-12 17:17:43 [http-nio-3000-exec-10] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=73ed0c2b-851c-44c8-a08b-ded6f61924f9
+2026-05-12 17:17:43 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 7ca8780f-864c-4179-8c8a-9d8ae55b6df8
+2026-05-12 17:17:43 [http-nio-3000-exec-8] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=7ca8780f-864c-4179-8c8a-9d8ae55b6df8
+2026-05-12 17:17:43 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 73ed0c2b-851c-44c8-a08b-ded6f61924f9
+2026-05-12 17:17:43 [http-nio-3000-exec-10] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=73ed0c2b-851c-44c8-a08b-ded6f61924f9
+2026-05-12 17:17:43 [http-nio-3000-exec-6] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-12 17:17:43 [http-nio-3000-exec-1] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=997e2337-32a6-4ba5-84fb-873ef1b6036f
+2026-05-12 17:17:43 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-12 17:17:43 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 997e2337-32a6-4ba5-84fb-873ef1b6036f
+2026-05-12 17:17:43 [http-nio-3000-exec-9] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e
+2026-05-12 17:17:43 [http-nio-3000-exec-1] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=997e2337-32a6-4ba5-84fb-873ef1b6036f
+2026-05-12 17:17:43 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e
+2026-05-12 17:17:43 [http-nio-3000-exec-9] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e
+2026-05-12 17:17:43 [http-nio-3000-exec-6] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-12 17:17:43 [http-nio-3000-exec-7] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=c1cbc4b0-eafd-490a-be95-b1c42036ad16
+2026-05-12 17:17:43 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: c1cbc4b0-eafd-490a-be95-b1c42036ad16
+2026-05-12 17:17:43 [http-nio-3000-exec-7] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=c1cbc4b0-eafd-490a-be95-b1c42036ad16
+2026-05-12 17:17:48 [http-nio-3000-exec-10] INFO  c.b.p.a.a.c.c.ClientesRestAdapter - Actualizando cliente id=14; negocio=null, ciNit=null
+2026-05-12 17:17:48 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.c.s.GestionClientesService - Actualizando cliente - ID: 14
+2026-05-12 17:17:48 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo cliente por ID: 14
+2026-05-12 17:17:48 [http-nio-3000-exec-10] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo cliente por id=14
+2026-05-12 17:17:48 [http-nio-3000-exec-10] INFO  c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Actualizando cliente en Supabase id=14
+2026-05-12 17:17:48 [http-nio-3000-exec-10] INFO  c.b.p.a.d.c.s.GestionClientesService - Cliente actualizado exitosamente - ID: 14
+2026-05-12 17:17:53 [http-nio-3000-exec-2] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
+2026-05-12 17:17:53 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
+2026-05-12 17:17:54 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 10 vendedores
+2026-05-12 17:17:54 [http-nio-3000-exec-2] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 10 vendedores
+2026-05-12 17:17:54 [http-nio-3000-exec-5] INFO  c.b.p.a.a.c.CierreJornadaRestAdapter - GET /cierres/vendedor/0b9544ca-bfbe-4335-821c-5c8eb4b553b2 - Historial de cierres
+2026-05-12 17:17:54 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-12 17:17:54 [http-nio-3000-exec-3] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor 0b9544ca-bfbe-4335-821c-5c8eb4b553b2 y fecha 2026-05-12
+2026-05-12 17:17:54 [http-nio-3000-exec-3] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 0b9544ca-bfbe-4335-821c-5c8eb4b553b2 en fecha 2026-05-12
+2026-05-12 17:17:54 [http-nio-3000-exec-8] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=0b9544ca-bfbe-4335-821c-5c8eb4b553b2
+2026-05-12 17:17:54 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-12 17:17:54 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 0b9544ca-bfbe-4335-821c-5c8eb4b553b2
+2026-05-12 17:17:54 [http-nio-3000-exec-8] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=0b9544ca-bfbe-4335-821c-5c8eb4b553b2
+2026-05-12 17:17:54 [http-nio-3000-exec-7] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor 2ab0631c-da17-4bd8-b9b9-237de54711c6 y fecha 2026-05-12
+2026-05-12 17:17:54 [http-nio-3000-exec-7] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 2ab0631c-da17-4bd8-b9b9-237de54711c6 en fecha 2026-05-12
+2026-05-12 17:17:54 [http-nio-3000-exec-1] INFO  c.b.p.a.a.c.CierreJornadaRestAdapter - GET /cierres/vendedor/2ab0631c-da17-4bd8-b9b9-237de54711c6 - Historial de cierres
+2026-05-12 17:17:54 [http-nio-3000-exec-9] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=2ab0631c-da17-4bd8-b9b9-237de54711c6
+2026-05-12 17:17:54 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 2ab0631c-da17-4bd8-b9b9-237de54711c6
+2026-05-12 17:17:54 [http-nio-3000-exec-9] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=2ab0631c-da17-4bd8-b9b9-237de54711c6
+2026-05-12 17:17:54 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-05-12 17:17:54 [http-nio-3000-exec-4] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/0b9544ca-bfbe-4335-821c-5c8eb4b553b2 - consulta por mateovargas220705@gmail.com
+2026-05-12 17:17:54 [http-nio-3000-exec-4] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 0b9544ca-bfbe-4335-821c-5c8eb4b553b2
+2026-05-12 17:17:54 [http-nio-3000-exec-4] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 0b9544ca-bfbe-4335-821c-5c8eb4b553b2
+2026-05-12 17:17:54 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-12 17:17:54 [http-nio-3000-exec-5] INFO  c.b.p.a.a.c.CierreJornadaRestAdapter - GET /cierres/vendedor/5e0e4eff-aec3-46df-a77e-d4feeb19394c - Historial de cierres
+2026-05-12 17:17:54 [http-nio-3000-exec-2] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor 5e0e4eff-aec3-46df-a77e-d4feeb19394c y fecha 2026-05-12
+2026-05-12 17:17:54 [http-nio-3000-exec-2] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 5e0e4eff-aec3-46df-a77e-d4feeb19394c en fecha 2026-05-12
+2026-05-12 17:17:54 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-05-12 17:17:54 [http-nio-3000-exec-6] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/2ab0631c-da17-4bd8-b9b9-237de54711c6 - consulta por mateovargas220705@gmail.com
+2026-05-12 17:17:54 [http-nio-3000-exec-6] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 2ab0631c-da17-4bd8-b9b9-237de54711c6
+2026-05-12 17:17:54 [http-nio-3000-exec-6] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 2ab0631c-da17-4bd8-b9b9-237de54711c6
+2026-05-12 17:17:54 [http-nio-3000-exec-8] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=5e0e4eff-aec3-46df-a77e-d4feeb19394c
+2026-05-12 17:17:54 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
+2026-05-12 17:17:54 [http-nio-3000-exec-8] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=5e0e4eff-aec3-46df-a77e-d4feeb19394c
+2026-05-12 17:17:54 [http-nio-3000-exec-4] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 0b9544ca-bfbe-4335-821c-5c8eb4b553b2: 1
+2026-05-12 17:17:54 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-12 17:17:54 [http-nio-3000-exec-9] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0 y fecha 2026-05-12
+2026-05-12 17:17:54 [http-nio-3000-exec-9] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0 en fecha 2026-05-12
+2026-05-12 17:17:54 [http-nio-3000-exec-6] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 2ab0631c-da17-4bd8-b9b9-237de54711c6: 9
+2026-05-12 17:17:54 [http-nio-3000-exec-3] INFO  c.b.p.a.a.c.CierreJornadaRestAdapter - GET /cierres/vendedor/6b0a5026-52f3-475a-a20f-5aacf94764f0 - Historial de cierres
+2026-05-12 17:17:54 [http-nio-3000-exec-7] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-12 17:17:54 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-12 17:17:54 [http-nio-3000-exec-7] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-12 17:17:54 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-05-12 17:17:54 [http-nio-3000-exec-10] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/5e0e4eff-aec3-46df-a77e-d4feeb19394c - consulta por mateovargas220705@gmail.com
+2026-05-12 17:17:54 [http-nio-3000-exec-10] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
+2026-05-12 17:17:54 [http-nio-3000-exec-10] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 5e0e4eff-aec3-46df-a77e-d4feeb19394c
+2026-05-12 17:17:54 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-12 17:17:54 [http-nio-3000-exec-5] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor 73ed0c2b-851c-44c8-a08b-ded6f61924f9 y fecha 2026-05-12
+2026-05-12 17:17:54 [http-nio-3000-exec-5] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 73ed0c2b-851c-44c8-a08b-ded6f61924f9 en fecha 2026-05-12
+2026-05-12 17:17:55 [http-nio-3000-exec-10] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 5e0e4eff-aec3-46df-a77e-d4feeb19394c: 4
+2026-05-12 17:17:55 [http-nio-3000-exec-8] INFO  c.b.p.a.a.c.CierreJornadaRestAdapter - GET /cierres/vendedor/73ed0c2b-851c-44c8-a08b-ded6f61924f9 - Historial de cierres
+2026-05-12 17:17:55 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-05-12 17:17:55 [http-nio-3000-exec-1] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/6b0a5026-52f3-475a-a20f-5aacf94764f0 - consulta por mateovargas220705@gmail.com
+2026-05-12 17:17:55 [http-nio-3000-exec-1] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-12 17:17:55 [http-nio-3000-exec-1] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-12 17:17:55 [http-nio-3000-exec-6] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=73ed0c2b-851c-44c8-a08b-ded6f61924f9
+2026-05-12 17:17:55 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 73ed0c2b-851c-44c8-a08b-ded6f61924f9
+2026-05-12 17:17:55 [http-nio-3000-exec-6] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=73ed0c2b-851c-44c8-a08b-ded6f61924f9
+2026-05-12 17:17:55 [http-nio-3000-exec-1] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0: 31
+2026-05-12 17:17:55 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-12 17:17:55 [http-nio-3000-exec-7] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor 7ca8780f-864c-4179-8c8a-9d8ae55b6df8 y fecha 2026-05-12
+2026-05-12 17:17:55 [http-nio-3000-exec-7] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 7ca8780f-864c-4179-8c8a-9d8ae55b6df8 en fecha 2026-05-12
+2026-05-12 17:17:55 [http-nio-3000-exec-10] INFO  c.b.p.a.a.c.CierreJornadaRestAdapter - GET /cierres/vendedor/7ca8780f-864c-4179-8c8a-9d8ae55b6df8 - Historial de cierres
+2026-05-12 17:17:55 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-05-12 17:17:55 [http-nio-3000-exec-4] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/73ed0c2b-851c-44c8-a08b-ded6f61924f9 - consulta por mateovargas220705@gmail.com
+2026-05-12 17:17:55 [http-nio-3000-exec-4] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 73ed0c2b-851c-44c8-a08b-ded6f61924f9
+2026-05-12 17:17:55 [http-nio-3000-exec-4] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 73ed0c2b-851c-44c8-a08b-ded6f61924f9
+2026-05-12 17:17:55 [http-nio-3000-exec-9] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=7ca8780f-864c-4179-8c8a-9d8ae55b6df8
+2026-05-12 17:17:55 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 7ca8780f-864c-4179-8c8a-9d8ae55b6df8
+2026-05-12 17:17:55 [http-nio-3000-exec-9] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=7ca8780f-864c-4179-8c8a-9d8ae55b6df8
+2026-05-12 17:17:55 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-12 17:17:55 [http-nio-3000-exec-4] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 73ed0c2b-851c-44c8-a08b-ded6f61924f9: 4
+2026-05-12 17:17:55 [http-nio-3000-exec-1] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor 7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e y fecha 2026-05-12
+2026-05-12 17:17:55 [http-nio-3000-exec-1] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e en fecha 2026-05-12
+2026-05-12 17:17:55 [http-nio-3000-exec-6] INFO  c.b.p.a.a.c.CierreJornadaRestAdapter - GET /cierres/vendedor/7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e - Historial de cierres
+2026-05-12 17:17:55 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-05-12 17:17:55 [http-nio-3000-exec-3] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/7ca8780f-864c-4179-8c8a-9d8ae55b6df8 - consulta por mateovargas220705@gmail.com
+2026-05-12 17:17:55 [http-nio-3000-exec-3] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 7ca8780f-864c-4179-8c8a-9d8ae55b6df8
+2026-05-12 17:17:55 [http-nio-3000-exec-3] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 7ca8780f-864c-4179-8c8a-9d8ae55b6df8
+2026-05-12 17:17:55 [http-nio-3000-exec-5] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e
+2026-05-12 17:17:55 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e
+2026-05-12 17:17:55 [http-nio-3000-exec-5] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e
+2026-05-12 17:17:55 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-12 17:17:55 [http-nio-3000-exec-3] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 7ca8780f-864c-4179-8c8a-9d8ae55b6df8: 3
+2026-05-12 17:17:55 [http-nio-3000-exec-4] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor 86676371-8389-4969-89b4-6a10d3e65cbd y fecha 2026-05-12
+2026-05-12 17:17:55 [http-nio-3000-exec-4] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 86676371-8389-4969-89b4-6a10d3e65cbd en fecha 2026-05-12
+2026-05-12 17:17:55 [http-nio-3000-exec-9] INFO  c.b.p.a.a.c.CierreJornadaRestAdapter - GET /cierres/vendedor/86676371-8389-4969-89b4-6a10d3e65cbd - Historial de cierres
+2026-05-12 17:17:55 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-05-12 17:17:55 [http-nio-3000-exec-8] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e - consulta por mateovargas220705@gmail.com
+2026-05-12 17:17:55 [http-nio-3000-exec-8] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e
+2026-05-12 17:17:55 [http-nio-3000-exec-8] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e
+2026-05-12 17:17:55 [http-nio-3000-exec-7] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-12 17:17:55 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-12 17:17:55 [http-nio-3000-exec-7] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-12 17:17:55 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-12 17:17:55 [http-nio-3000-exec-3] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor 997e2337-32a6-4ba5-84fb-873ef1b6036f y fecha 2026-05-12
+2026-05-12 17:17:55 [http-nio-3000-exec-3] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 997e2337-32a6-4ba5-84fb-873ef1b6036f en fecha 2026-05-12
+2026-05-12 17:17:56 [http-nio-3000-exec-8] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 7dec6fc9-8ddc-48c6-86a3-a1dbfc46f80e: 1
+2026-05-12 17:17:56 [http-nio-3000-exec-5] INFO  c.b.p.a.a.c.CierreJornadaRestAdapter - GET /cierres/vendedor/997e2337-32a6-4ba5-84fb-873ef1b6036f - Historial de cierres
+2026-05-12 17:17:56 [http-nio-3000-exec-2] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=997e2337-32a6-4ba5-84fb-873ef1b6036f
+2026-05-12 17:17:56 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 997e2337-32a6-4ba5-84fb-873ef1b6036f
+2026-05-12 17:17:56 [http-nio-3000-exec-2] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=997e2337-32a6-4ba5-84fb-873ef1b6036f
+2026-05-12 17:17:56 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-05-12 17:17:56 [http-nio-3000-exec-10] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/86676371-8389-4969-89b4-6a10d3e65cbd - consulta por mateovargas220705@gmail.com
+2026-05-12 17:17:56 [http-nio-3000-exec-10] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-12 17:17:56 [http-nio-3000-exec-10] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-12 17:17:56 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-12 17:17:56 [http-nio-3000-exec-8] INFO  c.b.p.a.a.c.CierreJornadaRestAdapter - GET /cierres/vendedor/c1cbc4b0-eafd-490a-be95-b1c42036ad16 - Historial de cierres
+2026-05-12 17:17:56 [http-nio-3000-exec-9] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor c1cbc4b0-eafd-490a-be95-b1c42036ad16 y fecha 2026-05-12
+2026-05-12 17:17:56 [http-nio-3000-exec-9] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor c1cbc4b0-eafd-490a-be95-b1c42036ad16 en fecha 2026-05-12
+2026-05-12 17:17:56 [http-nio-3000-exec-10] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 86676371-8389-4969-89b4-6a10d3e65cbd: 6
+2026-05-12 17:17:56 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-05-12 17:17:56 [http-nio-3000-exec-6] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/997e2337-32a6-4ba5-84fb-873ef1b6036f - consulta por mateovargas220705@gmail.com
+2026-05-12 17:17:56 [http-nio-3000-exec-6] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 997e2337-32a6-4ba5-84fb-873ef1b6036f
+2026-05-12 17:17:56 [http-nio-3000-exec-6] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 997e2337-32a6-4ba5-84fb-873ef1b6036f
+2026-05-12 17:17:56 [http-nio-3000-exec-7] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=c1cbc4b0-eafd-490a-be95-b1c42036ad16
+2026-05-12 17:17:56 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: c1cbc4b0-eafd-490a-be95-b1c42036ad16
+2026-05-12 17:17:56 [http-nio-3000-exec-7] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=c1cbc4b0-eafd-490a-be95-b1c42036ad16
+2026-05-12 17:17:56 [http-nio-3000-exec-4] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas - Listar ventas resumidas
+2026-05-12 17:17:56 [http-nio-3000-exec-4] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo listado de ventas resumidas
+2026-05-12 17:17:56 [http-nio-3000-exec-6] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 997e2337-32a6-4ba5-84fb-873ef1b6036f: 1
+2026-05-12 17:17:56 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: f2dc5b92-7ded-4c42-9e5a-d8a22aaf4a3a
+2026-05-12 17:17:56 [http-nio-3000-exec-1] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/c1cbc4b0-eafd-490a-be95-b1c42036ad16 - consulta por mateovargas220705@gmail.com
+2026-05-12 17:17:56 [http-nio-3000-exec-1] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: c1cbc4b0-eafd-490a-be95-b1c42036ad16
+2026-05-12 17:17:56 [http-nio-3000-exec-1] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: c1cbc4b0-eafd-490a-be95-b1c42036ad16
+2026-05-12 17:17:56 [http-nio-3000-exec-1] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor c1cbc4b0-eafd-490a-be95-b1c42036ad16: 1

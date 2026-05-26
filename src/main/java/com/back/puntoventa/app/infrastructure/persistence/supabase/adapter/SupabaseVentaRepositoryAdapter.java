@@ -204,11 +204,12 @@ public class SupabaseVentaRepositoryAdapter implements VentaRepositoryPort {
                 .toList();
     }
     @Override
-    public Optional<CargaTransporte> obtenerCargaPorVendedorYProducto(UUID idVendedor, String idProducto) {
+    public Optional<CargaTransporte> obtenerCargaPorVendedorYProducto(UUID idVendedor, String idProducto, java.time.LocalDate fecha) {
         List<Map.Entry<String, String>> queryParams = List.of(
                 Map.entry("id_vendedor", "eq." + idVendedor),
                 Map.entry("id_producto", "eq." + idProducto),
                 Map.entry("estado_validacion", "eq.VALIDADO"),
+                Map.entry("fecha_asignacion", "eq." + fecha.toString()),
                 Map.entry("order", "fecha_asignacion.desc"),
                 Map.entry("select", "*"));
 

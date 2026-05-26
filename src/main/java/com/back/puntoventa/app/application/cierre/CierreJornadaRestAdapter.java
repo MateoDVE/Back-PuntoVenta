@@ -3,6 +3,7 @@ package com.back.puntoventa.app.application.cierre;
 import com.back.puntoventa.app.common.ApiException;
 import com.back.puntoventa.app.domain.cierre.model.CierreJornada;
 import com.back.puntoventa.app.domain.cierre.model.request.RegistrarCierreRequest;
+import com.back.puntoventa.app.domain.cierre.model.request.LiquidarJornadaRequest;
 import com.back.puntoventa.app.domain.cierre.service.GestionCierreJornadaService;
 import com.back.puntoventa.app.domain.common.exception.DomainException;
 import java.time.LocalDate;
@@ -133,6 +134,25 @@ public class CierreJornadaRestAdapter {
         }
     }
 
+    /** PUT /cierres/{id}/liquidar — Liquidar un cierre de jornada */
+    @PutMapping("/{id}/liquidar")
+    public ResponseEntity<Map<String, Object>> liquidar(
+            @PathVariable String id,
+            @RequestBody LiquidarJornadaRequest request) {
+        logger.info("PUT /cierres/{}/liquidar - Liquidar jornada", id);
+        try {
+            CierreJornada liquidado = gestionCierreService.liquidarJornada(id, request.getDineroRecibido());
+            return ResponseEntity.ok(toResponse(liquidado));
+        } catch (DomainException ex) {
+            throw new ApiException(HttpStatus.BAD_REQUEST, ex.getMessage());
+        } catch (IllegalArgumentException ex) {
+            throw new ApiException(HttpStatus.BAD_REQUEST, ex.getMessage());
+        } catch (Exception ex) {
+            logger.error("Error al liquidar jornada", ex);
+            throw new ApiException(HttpStatus.INTERNAL_SERVER_ERROR, ex.getMessage());
+        }
+    }
+
     /** DELETE /cierres/{id} — Eliminar un cierre */
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> eliminar(@PathVariable String id) {
@@ -167,6 +187,7 @@ public class CierreJornadaRestAdapter {
         r.put("diferencia", c.getDiferencia());
         r.put("estado_efectivo", c.getEstadoEfectivo());
         r.put("estado", c.getEstado());
+        r.put("dinero_recibido", c.getDineroRecibido());
         r.put("created_at", c.getCreatedAt() != null ? c.getCreatedAt().toString() : null);
         return r;
     }

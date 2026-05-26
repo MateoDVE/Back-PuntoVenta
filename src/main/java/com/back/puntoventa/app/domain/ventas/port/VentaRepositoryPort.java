@@ -24,7 +24,7 @@ public interface VentaRepositoryPort {
     List<Venta> obtenerVentasPorVendedorYFecha(UUID idVendedor, java.time.LocalDate fecha);
     List<DetalleVenta> obtenerDetallesPorVentasIds(List<String> idsVentas);
     List<CargaTransporte> obtenerCargasPorVendedorYFecha(UUID idVendedor, java.time.LocalDate fecha);
-    Optional<CargaTransporte> obtenerCargaPorVendedorYProducto(UUID idVendedor, String idProducto);
+    Optional<CargaTransporte> obtenerCargaPorVendedorYProducto(UUID idVendedor, String idProducto, java.time.LocalDate fecha);
     void actualizarCantidadActualCarga(String idCarga, Integer nuevaCantidad);
     Optional<Venta> findByIdTransaccionLocal(String idTransaccionLocal);
 }

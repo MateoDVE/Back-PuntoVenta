@@ -104,6 +104,7 @@ public class SupabaseAsignacionRepositoryAdapter implements AsignacionRepository
         String idVendedor = getString(row.get("id_vendedor"));
         String idProducto = getString(row.get("id_producto"));
         Integer cantidadInicial = getInteger(row.get("cantidad_inicial"));
+        Integer cantidadActual = getInteger(row.get("cantidad_actual"));
         String estadoValidacion = getString(row.get("estado_validacion"));
         LocalDateTime fechaAsignacion = getDateTime(row.get("fecha_asignacion"));
 
@@ -112,6 +113,7 @@ public class SupabaseAsignacionRepositoryAdapter implements AsignacionRepository
                 idVendedor,
                 idProducto,
                 cantidadInicial,
+                cantidadActual,
                 estadoValidacion,
                 fechaAsignacion);
     }

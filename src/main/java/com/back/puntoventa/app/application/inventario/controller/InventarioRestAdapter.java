@@ -176,6 +176,7 @@ public class InventarioRestAdapter {
         response.put("id_vendedor", asignacion.getIdVendedor());
         response.put("id_producto", asignacion.getIdProducto());
         response.put("cantidad_inicial", asignacion.getCantidadAsignada());
+        response.put("cantidad_actual", asignacion.getCantidadActual());
         response.put("estado_validacion", asignacion.getEstadoValidacion());
         response.put("fecha_asignacion", asignacion.getFechaAsignacion());
         return response;

@@ -29,6 +29,7 @@ public class SupabaseUsuarioRepositoryAdapter implements UsuarioRepositoryPort {
         Map<String, String> query = new HashMap<>();
         query.put("select", "id_usuario,nombre,email,rol,estado,created_at");
         query.put("id_usuario", "eq." + id);
+        query.put("is_delete", "eq.false");
 
         List<Map<String, Object>> rows = supabaseHttpClient.select("usuarios", query);
         return rows.stream().findFirst().map(this::mapToUsuario);
@@ -39,6 +40,7 @@ public class SupabaseUsuarioRepositoryAdapter implements UsuarioRepositoryPort {
         Map<String, String> query = new HashMap<>();
         query.put("select", "id_usuario,nombre,email,rol,estado,created_at");
         query.put("email", "ilike." + email);
+        query.put("is_delete", "eq.false");
 
         List<Map<String, Object>> rows = supabaseHttpClient.select("usuarios", query);
         return rows.stream().findFirst().map(this::mapToUsuario);
@@ -68,7 +70,11 @@ public class SupabaseUsuarioRepositoryAdapter implements UsuarioRepositoryPort {
     public void eliminar(String id) {
         Map<String, String> query = new HashMap<>();
         query.put("id_usuario", "eq." + id);
-        supabaseHttpClient.deleteRows("usuarios", query);
+        
+        Map<String, Object> body = new HashMap<>();
+        body.put("is_delete", true);
+        
+        supabaseHttpClient.update("usuarios", query, body);
     }
 
     @Override
@@ -76,6 +82,7 @@ public class SupabaseUsuarioRepositoryAdapter implements UsuarioRepositoryPort {
         Map<String, String> query = new HashMap<>();
         query.put("select", "id_usuario");
         query.put("email", "ilike." + email);
+        query.put("is_delete", "eq.false");
 
         if (excludeUserId != null) {
             query.put("id_usuario", "neq." + excludeUserId);

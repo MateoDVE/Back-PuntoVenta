@@ -36,6 +36,7 @@ import java.util.UUID;
 import java.util.stream.Collectors;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import com.back.puntoventa.app.domain.cierre.port.CierreJornadaRepositoryPort;
 
 /**
  * Caso de uso: Gestión de ventas.
@@ -47,13 +48,16 @@ public class GestionVentasService {
     private final VentaRepositoryPort ventaRepositoryPort;
     private final VendedorRepositoryPort vendedorRepositoryPort;
     private final ProductoRepositoryPort productoRepositoryPort;
+    private final CierreJornadaRepositoryPort cierreJornadaRepositoryPort;
 
     public GestionVentasService(VentaRepositoryPort ventaRepositoryPort,
                                 VendedorRepositoryPort vendedorRepositoryPort,
-                                ProductoRepositoryPort productoRepositoryPort) {
+                                ProductoRepositoryPort productoRepositoryPort,
+                                CierreJornadaRepositoryPort cierreJornadaRepositoryPort) {
         this.ventaRepositoryPort = ventaRepositoryPort;
         this.vendedorRepositoryPort = vendedorRepositoryPort;
         this.productoRepositoryPort = productoRepositoryPort;
+        this.cierreJornadaRepositoryPort = cierreJornadaRepositoryPort;
     }
 
     public ReportesResumenResponse obtenerReportesConsolidados(LocalDate fecha) {
@@ -123,6 +127,11 @@ public class GestionVentasService {
     // Validaciones iniciales
     validarCliente(request.getIdCliente());
     validarVendedor(request.getIdVendedor());
+
+    if (cierreJornadaRepositoryPort.existePorVendedorYFecha(request.getIdVendedor(), LocalDate.now())) {
+        logger.warn("Intento de venta en jornada ya cerrada para vendedor {}", request.getIdVendedor());
+        throw new DomainException("No se pueden realizar ventas porque la jornada de hoy ya está cerrada.");
+    }
 
     // Obtener productos
     List<String> idsProductos = request.getItems().stream()
@@ -330,7 +339,15 @@ public class GestionVentasService {
                 .distinct()
                 .toList();
 
-        List<Producto> productos = ventaRepositoryPort.obtenerProductosPorIds(idsProductosVendidos);
+        // Obtener todas las cargas asignadas a ruta el día de hoy
+        List<CargaTransporte> cargas = ventaRepositoryPort.obtenerCargasPorVendedorYFecha(idVendedor, fecha);
+        java.util.Set<String> allProductIds = new java.util.HashSet<>();
+        for (CargaTransporte c : cargas) {
+            allProductIds.add(c.getIdProducto());
+        }
+        allProductIds.addAll(idsProductosVendidos);
+
+        List<Producto> productos = ventaRepositoryPort.obtenerProductosPorIds(new ArrayList<>(allProductIds));
         Map<String, Producto> productosMap = productos.stream()
                 .collect(Collectors.toMap(Producto::getId, p -> p));
 
@@ -375,13 +392,18 @@ public class GestionVentasService {
         List<DetalleProductoConciliacionResponse> detalleProductos = new ArrayList<>();
         boolean conciliacionCorrecta = true;
 
-        for (String idProducto : idsProductosVendidos) {
+        for (String idProducto : allProductIds) {
             Producto producto = productosMap.get(idProducto);
             if (producto == null) continue;
 
             Integer vendido = vendidosPorProducto.getOrDefault(idProducto, 0);
 
-            Optional<CargaTransporte> cargaOpt = ventaRepositoryPort.obtenerCargaPorVendedorYProducto(idVendedor, idProducto, fecha);
+            Optional<CargaTransporte> cargaOpt = cargas.stream()
+                    .filter(c -> c.getIdProducto().equals(idProducto))
+                    .findFirst();
+            if (cargaOpt.isEmpty()) {
+                cargaOpt = ventaRepositoryPort.obtenerCargaPorVendedorYProducto(idVendedor, idProducto, fecha);
+            }
             Integer actual = cargaOpt.map(c -> c.getCantidadActual() != null ? c.getCantidadActual() : 0).orElse(0);
             Integer stockInicial = cargaOpt.map(c -> c.getCantidadInicial() != null ? c.getCantidadInicial() : (actual + vendido)).orElse(actual + vendido);
             Integer esperado = stockInicial - vendido;

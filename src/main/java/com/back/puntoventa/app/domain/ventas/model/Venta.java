@@ -17,9 +17,10 @@ public final class Venta {
     private final BigDecimal descuento;
     private final BigDecimal totalEfectivo;
     private final String estado;
+    private String idTransaccionLocal;
 
     public Venta(String idVenta, Integer idCliente, UUID idVendedor, LocalDateTime fechaHora,
-            BigDecimal subtotal, BigDecimal descuento, BigDecimal totalEfectivo, String estado) {
+            BigDecimal subtotal, BigDecimal descuento, BigDecimal totalEfectivo, String estado, String idTransaccionLocal) {
         if (idCliente == null || idCliente <= 0) {
             throw new IllegalArgumentException("ID cliente debe ser válido");
         }
@@ -44,6 +45,7 @@ public final class Venta {
         this.descuento = descuento;
         this.totalEfectivo = totalEfectivo;
         this.estado = estado;
+        this.idTransaccionLocal = idTransaccionLocal;
     }
 
     public String getIdVenta() {
@@ -76,5 +78,8 @@ public final class Venta {
 
     public String getEstado() {
         return estado;
+    }
+    public String getIdTransaccionLocal() {
+        return idTransaccionLocal;
     }
 }

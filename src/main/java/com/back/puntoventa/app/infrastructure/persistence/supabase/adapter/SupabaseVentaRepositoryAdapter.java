@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 import org.springframework.stereotype.Component;
+import java.util.Optional;
 
 /**
  * Adaptador secundario: Implementa VentaRepositoryPort usando Supabase.
@@ -82,6 +83,7 @@ public class SupabaseVentaRepositoryAdapter implements VentaRepositoryPort {
         body.put("descuento", venta.getDescuento());
         body.put("total_efectivo", venta.getTotalEfectivo());
         body.put("estado", venta.getEstado());
+        body.put("id_transaccion_local", venta.getIdTransaccionLocal());
 
         List<Map<String, Object>> result = supabaseHttpClient.insert(TABLE_VENTAS, body, null, "return=representation");
         if (result.isEmpty()) {
@@ -201,6 +203,50 @@ public class SupabaseVentaRepositoryAdapter implements VentaRepositoryPort {
                 .map(this::mapToCargaTransporte)
                 .toList();
     }
+    @Override
+    public Optional<CargaTransporte> obtenerCargaPorVendedorYProducto(UUID idVendedor, String idProducto, java.time.LocalDate fecha) {
+        List<Map.Entry<String, String>> queryParams = List.of(
+                Map.entry("id_vendedor", "eq." + idVendedor),
+                Map.entry("id_producto", "eq." + idProducto),
+                Map.entry("estado_validacion", "eq.VALIDADO"),
+                Map.entry("fecha_asignacion", "eq." + fecha.toString()),
+                Map.entry("order", "fecha_asignacion.desc"),
+                Map.entry("select", "*"));
+
+        List<Map<String, Object>> rows = supabaseHttpClient.select(TABLE_CARGA_TRANSPORTE, queryParams);
+        return rows.stream().map(this::mapToCargaTransporte).findFirst();
+    }
+
+    @Override
+    public void actualizarCantidadActualCarga(String idCarga, Integer nuevaCantidad) {
+        Map<String, String> queryParams = new HashMap<>();
+        queryParams.put("id_carga", "eq." + idCarga);
+
+        Map<String, Object> body = new HashMap<>();
+        body.put("cantidad_actual", nuevaCantidad);
+
+        List<Map<String, Object>> result = supabaseHttpClient.update(TABLE_CARGA_TRANSPORTE, queryParams, body);
+        if (result.isEmpty()) {
+            throw new RuntimeException("Carga no encontrada para actualizar cantidad: " + idCarga);
+        }
+    }
+
+    @Override
+    public Optional<Venta> findByIdTransaccionLocal(String idTransaccionLocal) {
+    if (idTransaccionLocal == null || idTransaccionLocal.isBlank()) {
+        return Optional.empty();
+    }
+
+    // Usamos la misma lógica que tienes arriba en la línea 200
+    Map<String, String> queryParams = Map.of("id_transaccion_local", "eq." + idTransaccionLocal);
+    
+    // Suponiendo que tu tabla se llama "ventas"
+    List<Map<String, Object>> rows = supabaseHttpClient.select("ventas", queryParams);
+    
+    return rows.stream()
+            .map(this::mapToVenta) // Usa tu método que convierte el Map de Supabase a objeto Venta
+            .findFirst();
+}
 
     private Map<String, Object> mapDetalleToBody(DetalleVenta detalle) {
         Map<String, Object> body = new HashMap<>();
@@ -230,8 +276,8 @@ public class SupabaseVentaRepositoryAdapter implements VentaRepositoryPort {
         BigDecimal descuento = getBigDecimal(row.get("descuento"));
         BigDecimal totalEfectivo = getBigDecimal(row.get("total_efectivo"));
         String estado = getString(row.get("estado"));
-
-        return new Venta(idVenta, idCliente, idVendedor, fechaHora, subtotal, descuento, totalEfectivo, estado);
+        String idTransaccionLocal = getString(row.get("id_transaccion_local"));
+        return new Venta(idVenta, idCliente, idVendedor, fechaHora, subtotal, descuento, totalEfectivo, estado, idTransaccionLocal);
     }
 
     private DetalleVenta mapToDetalleVenta(Map<String, Object> row) {

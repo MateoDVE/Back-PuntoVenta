@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -57,7 +58,7 @@ public class ClientesRestAdapter {
     }
 
     @PostMapping
-    public ResponseEntity<Cliente> crearCliente(@RequestBody CreateClienteDto dto) {
+    public ResponseEntity<Cliente> crearCliente(@Valid @RequestBody CreateClienteDto dto) {
         logger.info("Creando cliente; negocio={}, ciNit={}", dto.getNombreNegocio(), dto.getCiNit());
         Cliente cliente = gestionClientesService.crearCliente(
                 dto.getIdVendedorCreador(),
@@ -106,9 +107,9 @@ public class ClientesRestAdapter {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Cliente> actualizarCliente(
+        public ResponseEntity<Cliente> actualizarCliente(
             @PathVariable String id,
-            @RequestBody UpdateClienteDto dto) {
+            @Valid @RequestBody UpdateClienteDto dto) {
         logger.info("Actualizando cliente id={}; negocio={}, ciNit={}", id, dto.getNombreNegocio(), dto.getCiNit());
         Cliente clienteActualizado = gestionClientesService.actualizarCliente(
                 id,

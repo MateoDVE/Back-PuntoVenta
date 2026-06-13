@@ -52,7 +52,8 @@ public class GestionCierreJornadaService {
                 request.getDiferencia() != null ? request.getDiferencia() : BigDecimal.ZERO,
                 request.getEstadoEfectivo() != null ? request.getEstadoEfectivo() : "CORRECTO",
                 "CONFIRMADO",
-                null
+                null,
+                BigDecimal.ZERO
         );
 
         cierre.validate();
@@ -91,6 +92,10 @@ public class GestionCierreJornadaService {
 
         CierreJornada existente = obtenerPorId(id);
 
+        if ("LIQUIDADA".equalsIgnoreCase(existente.getEstado())) {
+            throw new DomainException("La jornada está LIQUIDADA y no puede ser modificada.");
+        }
+
         CierreJornada actualizado = new CierreJornada(
                 existente.getIdCierre(),
                 existente.getIdVendedor(),
@@ -107,7 +112,42 @@ public class GestionCierreJornadaService {
                 request.getDiferencia() != null ? request.getDiferencia() : existente.getDiferencia(),
                 request.getEstadoEfectivo() != null ? request.getEstadoEfectivo() : existente.getEstadoEfectivo(),
                 existente.getEstado(),
-                existente.getCreatedAt()
+                existente.getCreatedAt(),
+                existente.getDineroRecibido()
+        );
+
+        return cierreRepositoryPort.actualizar(id, actualizado);
+    }
+
+    public CierreJornada liquidarJornada(String id, BigDecimal dineroRecibido) {
+        logger.info("Liquidando jornada ID: {} con efectivo recibido: {}", id, dineroRecibido);
+        CierreJornada existente = obtenerPorId(id);
+
+        if ("LIQUIDADA".equalsIgnoreCase(existente.getEstado())) {
+            throw new DomainException("La jornada ya se encuentra LIQUIDADA y no puede ser modificada.");
+        }
+        if (dineroRecibido == null || dineroRecibido.compareTo(BigDecimal.ZERO) < 0) {
+            throw new IllegalArgumentException("El dinero recibido debe ser mayor o igual a 0");
+        }
+
+        CierreJornada actualizado = new CierreJornada(
+                existente.getIdCierre(),
+                existente.getIdVendedor(),
+                existente.getFecha(),
+                existente.getVentasRealizadas(),
+                existente.getTotalEfectivo(),
+                existente.getTotalDescuentos(),
+                existente.getStockInicialTotal(),
+                existente.getVendidosTotal(),
+                existente.getStockFinalTotal(),
+                existente.getEstadoInventario(),
+                existente.getDineroEsperado(),
+                existente.getDineroContado(),
+                existente.getDiferencia(),
+                existente.getEstadoEfectivo(),
+                "LIQUIDADA",
+                existente.getCreatedAt(),
+                dineroRecibido
         );
 
         return cierreRepositoryPort.actualizar(id, actualizado);
@@ -115,7 +155,10 @@ public class GestionCierreJornadaService {
 
     public void eliminarCierre(String id) {
         logger.info("Eliminando cierre de jornada ID: {}", id);
-        obtenerPorId(id);
+        CierreJornada existente = obtenerPorId(id);
+        if ("LIQUIDADA".equalsIgnoreCase(existente.getEstado())) {
+            throw new DomainException("La jornada está LIQUIDADA y no puede ser eliminada.");
+        }
         cierreRepositoryPort.eliminar(id);
     }
 }

@@ -116,6 +116,7 @@ public class SupabaseCierreJornadaRepositoryAdapter implements CierreJornadaRepo
         body.put("diferencia", c.getDiferencia());
         body.put("estado_efectivo", c.getEstadoEfectivo());
         body.put("estado", c.getEstado());
+        body.put("dinero_recibido", c.getDineroRecibido());
         return body;
     }
 
@@ -154,7 +155,8 @@ public class SupabaseCierreJornadaRepositoryAdapter implements CierreJornadaRepo
                 getBigDecimal(row.get("diferencia")),
                 getString(row.get("estado_efectivo")),
                 getString(row.get("estado")),
-                createdAt
+                createdAt,
+                getBigDecimal(row.get("dinero_recibido"))
         );
     }
 

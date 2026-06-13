@@ -136,7 +136,7 @@ public class GestionVendedoresService {
     public void eliminar(String id) {
         logger.debug("Eliminando vendedor - ID: {}", id);
         obtenerPorId(id); // Valida que exista
-        gestorUsuariosPort.eliminarUsuario(id);
+        // gestorUsuariosPort.eliminarUsuario(id); // Comentado para permitir soft delete completo (evita borrar físicamente de Supabase Auth)
         vendedorRepositoryPort.eliminar(id);
         logger.info("Vendedor eliminado exitosamente - ID: {}", id);
     }

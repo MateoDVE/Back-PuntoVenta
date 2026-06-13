@@ -33,6 +33,7 @@ public class CierreJornada {
 
     private String estado;
     private LocalDateTime createdAt;
+    private BigDecimal dineroRecibido;
 
     public CierreJornada() {}
 
@@ -40,7 +41,8 @@ public class CierreJornada {
                          Integer ventasRealizadas, BigDecimal totalEfectivo, BigDecimal totalDescuentos,
                          Integer stockInicialTotal, Integer vendidosTotal, Integer stockFinalTotal,
                          String estadoInventario, BigDecimal dineroEsperado, BigDecimal dineroContado,
-                         BigDecimal diferencia, String estadoEfectivo, String estado, LocalDateTime createdAt) {
+                         BigDecimal diferencia, String estadoEfectivo, String estado, LocalDateTime createdAt,
+                         BigDecimal dineroRecibido) {
         this.idCierre = idCierre;
         this.idVendedor = idVendedor;
         this.fecha = fecha;
@@ -57,6 +59,7 @@ public class CierreJornada {
         this.estadoEfectivo = estadoEfectivo;
         this.estado = estado;
         this.createdAt = createdAt;
+        this.dineroRecibido = dineroRecibido;
     }
 
     public void validate() {
@@ -115,4 +118,7 @@ public class CierreJornada {
 
     public LocalDateTime getCreatedAt() { return createdAt; }
     public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
+
+    public BigDecimal getDineroRecibido() { return dineroRecibido; }
+    public void setDineroRecibido(BigDecimal dineroRecibido) { this.dineroRecibido = dineroRecibido; }
 }

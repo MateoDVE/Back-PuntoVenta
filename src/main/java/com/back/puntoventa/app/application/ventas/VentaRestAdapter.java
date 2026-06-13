@@ -7,6 +7,7 @@ import com.back.puntoventa.app.domain.ventas.model.response.CierreJornadaRespons
 import com.back.puntoventa.app.domain.ventas.model.response.ResumenDiarioResponse;
 import com.back.puntoventa.app.domain.ventas.model.response.VentaResumenResponse;
 import com.back.puntoventa.app.domain.ventas.model.response.VentaResponse;
+import com.back.puntoventa.app.domain.ventas.model.response.ReportesResumenResponse;
 import com.back.puntoventa.app.domain.ventas.service.GestionVentasService;
 import com.back.puntoventa.app.domain.common.exception.DomainException;
 import com.back.puntoventa.app.common.ApiException;
@@ -147,6 +148,52 @@ public class VentaRestAdapter {
             throw new ApiException(HttpStatus.BAD_REQUEST, ex.getMessage());
         } catch (Exception ex) {
             logger.error("Error interno al confirmar cierre", ex);
+            throw new ApiException(HttpStatus.INTERNAL_SERVER_ERROR, ex.getMessage());
+        }
+    }
+
+    @GetMapping("/reportes")
+    public ResponseEntity<ReportesResumenResponse> obtenerReportesConsolidados(
+            @RequestParam(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate fecha) {
+        LocalDate fechaConsulta = fecha != null ? fecha : LocalDate.now();
+        logger.info("GET /ventas/reportes - Obtener reportes consolidados para la fecha: {}", fechaConsulta);
+        try {
+            return ResponseEntity.ok(gestionVentasService.obtenerReportesConsolidados(fechaConsulta));
+        } catch (Exception ex) {
+            logger.error("Error interno al obtener reportes consolidados", ex);
+            throw new ApiException(HttpStatus.INTERNAL_SERVER_ERROR, ex.getMessage());
+        }
+    }
+
+    @PostMapping("/devolver-stock")
+    public ResponseEntity<java.util.Map<String, String>> devolverStock(@RequestBody java.util.Map<String, Object> payload) {
+        String idVendedorStr = (String) payload.get("idVendedor");
+        String fechaStr = (String) payload.get("fecha");
+        
+        if (idVendedorStr == null || idVendedorStr.isBlank()) {
+            throw new ApiException(HttpStatus.BAD_REQUEST, "idVendedor es obligatorio");
+        }
+        if (fechaStr == null || fechaStr.isBlank()) {
+            throw new ApiException(HttpStatus.BAD_REQUEST, "fecha es obligatoria");
+        }
+        
+        logger.info("POST /ventas/devolver-stock - Devolver stock al almacén para vendedor {} y fecha {}", idVendedorStr, fechaStr);
+        try {
+            UUID idVendedor = UUID.fromString(idVendedorStr);
+            LocalDate fecha = LocalDate.parse(fechaStr);
+            gestionVentasService.devolverStockAlmacen(idVendedor, fecha);
+            
+            java.util.Map<String, String> response = new java.util.HashMap<>();
+            response.put("message", "Stock devuelto al almacén central exitosamente");
+            return ResponseEntity.ok(response);
+        } catch (DomainException ex) {
+            logger.warn("Error de dominio al devolver stock: {}", ex.getMessage());
+            throw new ApiException(HttpStatus.BAD_REQUEST, ex.getMessage());
+        } catch (IllegalArgumentException ex) {
+            logger.warn("Argumento inválido al devolver stock: {}", ex.getMessage());
+            throw new ApiException(HttpStatus.BAD_REQUEST, ex.getMessage());
+        } catch (Exception ex) {
+            logger.error("Error interno al devolver stock", ex);
             throw new ApiException(HttpStatus.INTERNAL_SERVER_ERROR, ex.getMessage());
         }
     }

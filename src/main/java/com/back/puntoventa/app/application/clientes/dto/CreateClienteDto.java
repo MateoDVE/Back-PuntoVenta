@@ -17,6 +17,7 @@ public class CreateClienteDto {
 
     public void setIdVendedorCreador(String idVendedorCreador) {
         this.idVendedorCreador = idVendedorCreador;
+        
     }
 
     public String getNombreNegocio() {

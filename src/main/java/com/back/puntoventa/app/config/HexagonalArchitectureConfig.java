@@ -34,6 +34,8 @@ import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.Supab
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseVendedorRepositoryAdapter;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseVentaRepositoryAdapter;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.client.SupabaseHttpClient;
+import com.back.puntoventa.app.domain.pedidos.port.PedidoProgramadoRepositoryPort;
+import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabasePedidoProgramadoRepositoryAdapter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -161,6 +163,11 @@ public class HexagonalArchitectureConfig {
     @Bean
     public CierreJornadaRepositoryPort cierreJornadaRepositoryPort(SupabaseHttpClient supabaseHttpClient) {
         return new SupabaseCierreJornadaRepositoryAdapter(supabaseHttpClient);
+    }
+
+    @Bean
+    public PedidoProgramadoRepositoryPort pedidoProgramadoRepositoryPort(SupabaseHttpClient supabaseHttpClient) {
+        return new SupabasePedidoProgramadoRepositoryAdapter(supabaseHttpClient);
     }
 
     @Bean

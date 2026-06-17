@@ -218,7 +218,35 @@ public class SupabaseVentaRepositoryAdapter implements VentaRepositoryPort {
                 .toList();
     }
     @Override
-public Optional<Venta> findByIdTransaccionLocal(String idTransaccionLocal) {
+    public Optional<CargaTransporte> obtenerCargaPorVendedorYProducto(UUID idVendedor, String idProducto, java.time.LocalDate fecha) {
+        List<Map.Entry<String, String>> queryParams = List.of(
+                Map.entry("id_vendedor", "eq." + idVendedor),
+                Map.entry("id_producto", "eq." + idProducto),
+                Map.entry("estado_validacion", "eq.VALIDADO"),
+                Map.entry("fecha_asignacion", "eq." + fecha.toString()),
+                Map.entry("order", "fecha_asignacion.desc"),
+                Map.entry("select", "*"));
+
+        List<Map<String, Object>> rows = supabaseHttpClient.select(TABLE_CARGA_TRANSPORTE, queryParams);
+        return rows.stream().map(this::mapToCargaTransporte).findFirst();
+    }
+
+    @Override
+    public void actualizarCantidadActualCarga(String idCarga, Integer nuevaCantidad) {
+        Map<String, String> queryParams = new HashMap<>();
+        queryParams.put("id_carga", "eq." + idCarga);
+
+        Map<String, Object> body = new HashMap<>();
+        body.put("cantidad_actual", nuevaCantidad);
+
+        List<Map<String, Object>> result = supabaseHttpClient.update(TABLE_CARGA_TRANSPORTE, queryParams, body);
+        if (result.isEmpty()) {
+            throw new RuntimeException("Carga no encontrada para actualizar cantidad: " + idCarga);
+        }
+    }
+
+    @Override
+    public Optional<Venta> findByIdTransaccionLocal(String idTransaccionLocal) {
     if (idTransaccionLocal == null || idTransaccionLocal.isBlank()) {
         return Optional.empty();
     }

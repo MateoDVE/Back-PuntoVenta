@@ -1,0 +1,390 @@
+2026-05-11 23:00:04 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2026-05-11 23:00:04 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Starting AppApplication using Java 17.0.18 with PID 23352 (C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta\target\classes started by LENOVO in C:\Users\LENOVO\Desktop\PuntoVentaOficial\Back-PuntoVenta)
+2026-05-11 23:00:04 [restartedMain] DEBUG c.back.puntoventa.app.AppApplication - Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-05-11 23:00:04 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-11 23:00:04 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-11 23:00:04 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-11 23:00:05 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 3000 (http)
+2026-05-11 23:00:05 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2026-05-11 23:00:05 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-11 23:00:05 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-05-11 23:00:05 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-11 23:00:05 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1159 ms
+2026-05-11 23:00:06 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-05-11 23:00:06 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2026-05-11 23:00:06 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 3000 (http) with context path '/'
+2026-05-11 23:00:06 [restartedMain] INFO  c.back.puntoventa.app.AppApplication - Started AppApplication in 2.328 seconds (process running for 2.7)
+2026-05-11 23:01:00 [http-nio-3000-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-11 23:01:00 [http-nio-3000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-11 23:01:00 [http-nio-3000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-05-11 23:01:00 [http-nio-3000-exec-2] INFO  c.b.p.a.a.a.c.AuthRestAdapter - POST /auth/signin - Intento de autenticación para email: andres@gmail.com
+2026-05-11 23:01:00 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticando usuario con email: andres@gmail.com
+2026-05-11 23:01:02 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticación completada para email: andres@gmail.com
+2026-05-11 23:01:02 [http-nio-3000-exec-2] INFO  c.b.p.a.a.a.c.AuthRestAdapter - Autenticación exitosa para email: andres@gmail.com
+2026-05-11 23:01:02 [http-nio-3000-exec-4] INFO  c.b.p.a.a.a.c.AuthRestAdapter - GET /auth/me - Obtener perfil del usuario actual
+2026-05-11 23:01:02 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-11 23:01:03 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-11 23:01:03 [http-nio-3000-exec-4] DEBUG c.b.p.a.a.a.c.AuthRestAdapter - Perfil obtenido para usuario: andres@gmail.com
+2026-05-11 23:01:03 [http-nio-3000-exec-8] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
+2026-05-11 23:01:03 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
+2026-05-11 23:01:03 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-11 23:01:03 [http-nio-3000-exec-9] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0 y fecha 2026-05-11
+2026-05-11 23:01:03 [http-nio-3000-exec-9] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0 en fecha 2026-05-11
+2026-05-11 23:01:03 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 25 productos
+2026-05-11 23:01:03 [http-nio-3000-exec-8] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 25 productos
+2026-05-11 23:01:03 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-11 23:01:03 [http-nio-3000-exec-10] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/6b0a5026-52f3-475a-a20f-5aacf94764f0 - consulta por andres@gmail.com
+2026-05-11 23:01:03 [http-nio-3000-exec-10] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-11 23:01:03 [http-nio-3000-exec-10] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 6b0a5026-52f3-475a-a20f-5aacf94764f0
+2026-05-11 23:01:03 [http-nio-3000-exec-10] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 6b0a5026-52f3-475a-a20f-5aacf94764f0: 31
+2026-05-11 23:01:10 [http-nio-3000-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'userId' for method parameter type String is not present]
+2026-05-11 23:01:16 [http-nio-3000-exec-3] INFO  c.b.p.a.a.a.c.AuthRestAdapter - POST /auth/signin - Intento de autenticación para email: mateovargas220705@gmail.com
+2026-05-11 23:01:16 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticando usuario con email: mateovargas220705@gmail.com
+2026-05-11 23:01:16 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticación completada para email: mateovargas220705@gmail.com
+2026-05-11 23:01:16 [http-nio-3000-exec-3] INFO  c.b.p.a.a.a.c.AuthRestAdapter - Autenticación exitosa para email: mateovargas220705@gmail.com
+2026-05-11 23:01:17 [http-nio-3000-exec-4] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
+2026-05-11 23:01:17 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
+2026-05-11 23:01:17 [http-nio-3000-exec-6] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
+2026-05-11 23:01:17 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
+2026-05-11 23:01:17 [http-nio-3000-exec-8] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos/stock-bajo - Consultando alertas con umbral: 100
+2026-05-11 23:01:17 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo productos con stock bajo. Umbral: 100
+2026-05-11 23:01:17 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se encontraron 24 productos con stock bajo
+2026-05-11 23:01:17 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 25 productos
+2026-05-11 23:01:17 [http-nio-3000-exec-4] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 25 productos
+2026-05-11 23:01:17 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 10 vendedores
+2026-05-11 23:01:17 [http-nio-3000-exec-6] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 10 vendedores
+2026-05-11 23:01:19 [http-nio-3000-exec-10] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
+2026-05-11 23:01:19 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
+2026-05-11 23:01:19 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 10 vendedores
+2026-05-11 23:01:19 [http-nio-3000-exec-10] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 10 vendedores
+2026-05-11 23:01:26 [http-nio-3000-exec-9] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
+2026-05-11 23:01:26 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
+2026-05-11 23:01:26 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 25 productos
+2026-05-11 23:01:26 [http-nio-3000-exec-9] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 25 productos
+2026-05-11 23:01:37 [http-nio-3000-exec-2] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - DELETE /productos/16 - Eliminar producto
+2026-05-11 23:01:37 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.p.s.GestionProductosService - Eliminando producto - ID: 16
+2026-05-11 23:01:37 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo producto por ID: 16
+2026-05-11 23:01:38 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.p.s.GestionProductosService - Producto encontrado - ID: 16, SKU: PA;ENLERA
+2026-05-11 23:01:38 [http-nio-3000-exec-2] ERROR c.b.p.a.a.p.c.ProductosRestAdapter - Error al eliminar producto - ID: 16
+com.back.puntoventa.app.common.ApiException: {"code":"23503","details":"Key (id_producto)=(16) is still referenced from table \"carga_transporte\".","hint":null,"message":"update or delete on table \"productos\" violates foreign key constraint \"carga_transporte_id_producto_fkey\" on table \"carga_transporte\""}
+	at com.back.puntoventa.app.infrastructure.persistence.supabase.client.SupabaseHttpClient.toApiException(SupabaseHttpClient.java:341)
+	at com.back.puntoventa.app.infrastructure.persistence.supabase.client.SupabaseHttpClient.deleteRows(SupabaseHttpClient.java:213)
+	at com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseProductoRepositoryAdapter.eliminar(SupabaseProductoRepositoryAdapter.java:116)
+	at com.back.puntoventa.app.domain.productos.service.GestionProductosService.eliminar(GestionProductosService.java:143)
+	at com.back.puntoventa.app.application.productos.controller.ProductosRestAdapter.eliminar(ProductosRestAdapter.java:148)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2026-05-11 23:01:38 [http-nio-3000-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.back.puntoventa.app.common.ApiException: {"code":"23503","details":"Key (id_producto)=(16) is still referenced from table \"carga_transporte\".","hint":null,"message":"update or delete on table \"productos\" violates foreign key constraint \"carga_transporte_id_producto_fkey\" on table \"carga_transporte\""}]
+2026-05-11 23:01:49 [http-nio-3000-exec-3] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - DELETE /productos/16 - Eliminar producto
+2026-05-11 23:01:49 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.p.s.GestionProductosService - Eliminando producto - ID: 16
+2026-05-11 23:01:49 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo producto por ID: 16
+2026-05-11 23:01:50 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.p.s.GestionProductosService - Producto encontrado - ID: 16, SKU: PA;ENLERA
+2026-05-11 23:01:50 [http-nio-3000-exec-3] ERROR c.b.p.a.a.p.c.ProductosRestAdapter - Error al eliminar producto - ID: 16
+com.back.puntoventa.app.common.ApiException: {"code":"23503","details":"Key (id_producto)=(16) is still referenced from table \"carga_transporte\".","hint":null,"message":"update or delete on table \"productos\" violates foreign key constraint \"carga_transporte_id_producto_fkey\" on table \"carga_transporte\""}
+	at com.back.puntoventa.app.infrastructure.persistence.supabase.client.SupabaseHttpClient.toApiException(SupabaseHttpClient.java:341)
+	at com.back.puntoventa.app.infrastructure.persistence.supabase.client.SupabaseHttpClient.deleteRows(SupabaseHttpClient.java:213)
+	at com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseProductoRepositoryAdapter.eliminar(SupabaseProductoRepositoryAdapter.java:116)
+	at com.back.puntoventa.app.domain.productos.service.GestionProductosService.eliminar(GestionProductosService.java:143)
+	at com.back.puntoventa.app.application.productos.controller.ProductosRestAdapter.eliminar(ProductosRestAdapter.java:148)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2026-05-11 23:01:50 [http-nio-3000-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.back.puntoventa.app.common.ApiException: {"code":"23503","details":"Key (id_producto)=(16) is still referenced from table \"carga_transporte\".","hint":null,"message":"update or delete on table \"productos\" violates foreign key constraint \"carga_transporte_id_producto_fkey\" on table \"carga_transporte\""}]
+2026-05-11 23:04:02 [http-nio-3000-exec-8] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - DELETE /productos/15 - Eliminar producto
+2026-05-11 23:04:02 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.p.s.GestionProductosService - Eliminando producto - ID: 15
+2026-05-11 23:04:02 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo producto por ID: 15
+2026-05-11 23:04:03 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.p.s.GestionProductosService - Producto encontrado - ID: 15, SKU: PEPSI-2.L
+2026-05-11 23:04:03 [http-nio-3000-exec-8] ERROR c.b.p.a.a.p.c.ProductosRestAdapter - Error al eliminar producto - ID: 15
+com.back.puntoventa.app.common.ApiException: {"code":"23503","details":"Key (id_producto)=(15) is still referenced from table \"carga_transporte\".","hint":null,"message":"update or delete on table \"productos\" violates foreign key constraint \"carga_transporte_id_producto_fkey\" on table \"carga_transporte\""}
+	at com.back.puntoventa.app.infrastructure.persistence.supabase.client.SupabaseHttpClient.toApiException(SupabaseHttpClient.java:341)
+	at com.back.puntoventa.app.infrastructure.persistence.supabase.client.SupabaseHttpClient.deleteRows(SupabaseHttpClient.java:213)
+	at com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseProductoRepositoryAdapter.eliminar(SupabaseProductoRepositoryAdapter.java:116)
+	at com.back.puntoventa.app.domain.productos.service.GestionProductosService.eliminar(GestionProductosService.java:143)
+	at com.back.puntoventa.app.application.productos.controller.ProductosRestAdapter.eliminar(ProductosRestAdapter.java:148)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2026-05-11 23:04:03 [http-nio-3000-exec-8] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.back.puntoventa.app.common.ApiException: {"code":"23503","details":"Key (id_producto)=(15) is still referenced from table \"carga_transporte\".","hint":null,"message":"update or delete on table \"productos\" violates foreign key constraint \"carga_transporte_id_producto_fkey\" on table \"carga_transporte\""}]
+2026-05-11 23:15:32 [http-nio-3000-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'userId' for method parameter type String is not present]
+2026-05-11 23:15:46 [http-nio-3000-exec-6] INFO  c.b.p.a.a.a.c.AuthRestAdapter - POST /auth/signin - Intento de autenticación para email: jorge@gmail.com
+2026-05-11 23:15:46 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticando usuario con email: jorge@gmail.com
+2026-05-11 23:16:38 [http-nio-3000-exec-10] INFO  c.b.p.a.a.a.c.AuthRestAdapter - POST /auth/signin - Intento de autenticación para email: mateovargas220705@gmail.com
+2026-05-11 23:16:38 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticando usuario con email: mateovargas220705@gmail.com
+2026-05-11 23:16:40 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticación completada para email: mateovargas220705@gmail.com
+2026-05-11 23:16:40 [http-nio-3000-exec-10] INFO  c.b.p.a.a.a.c.AuthRestAdapter - Autenticación exitosa para email: mateovargas220705@gmail.com
+2026-05-11 23:16:40 [http-nio-3000-exec-9] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
+2026-05-11 23:16:40 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
+2026-05-11 23:16:40 [http-nio-3000-exec-1] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
+2026-05-11 23:16:40 [http-nio-3000-exec-2] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos/stock-bajo - Consultando alertas con umbral: 100
+2026-05-11 23:16:40 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
+2026-05-11 23:16:40 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo productos con stock bajo. Umbral: 100
+2026-05-11 23:16:41 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 10 vendedores
+2026-05-11 23:16:41 [http-nio-3000-exec-1] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 10 vendedores
+2026-05-11 23:16:41 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se encontraron 24 productos con stock bajo
+2026-05-11 23:16:41 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 25 productos
+2026-05-11 23:16:41 [http-nio-3000-exec-9] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 25 productos
+2026-05-11 23:16:42 [http-nio-3000-exec-3] INFO  c.b.p.a.a.v.c.VendedoresRestAdapter - GET /vendedores - Obtener todos los vendedores
+2026-05-11 23:16:42 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Obteniendo todos los vendedores
+2026-05-11 23:16:42 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.v.s.GestionVendedoresService - Se obtuvieron 10 vendedores
+2026-05-11 23:16:42 [http-nio-3000-exec-3] DEBUG c.b.p.a.a.v.c.VendedoresRestAdapter - Se obtuvieron 10 vendedores
+2026-05-11 23:16:53 [http-nio-3000-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'userId' for method parameter type String is not present]
+2026-05-11 23:17:01 [http-nio-3000-exec-5] INFO  c.b.p.a.a.a.c.AuthRestAdapter - POST /auth/signin - Intento de autenticación para email: jose@gmail.com
+2026-05-11 23:17:01 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticando usuario con email: jose@gmail.com
+2026-05-11 23:17:01 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticación completada para email: jose@gmail.com
+2026-05-11 23:17:01 [http-nio-3000-exec-5] INFO  c.b.p.a.a.a.c.AuthRestAdapter - Autenticación exitosa para email: jose@gmail.com
+2026-05-11 23:17:01 [http-nio-3000-exec-8] INFO  c.b.p.a.a.a.c.AuthRestAdapter - GET /auth/me - Obtener perfil del usuario actual
+2026-05-11 23:17:01 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-11 23:17:02 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-11 23:17:02 [http-nio-3000-exec-8] DEBUG c.b.p.a.a.a.c.AuthRestAdapter - Perfil obtenido para usuario: jose@gmail.com
+2026-05-11 23:17:02 [http-nio-3000-exec-6] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
+2026-05-11 23:17:02 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
+2026-05-11 23:17:02 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-11 23:17:02 [http-nio-3000-exec-2] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor 86676371-8389-4969-89b4-6a10d3e65cbd y fecha 2026-05-11
+2026-05-11 23:17:02 [http-nio-3000-exec-2] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 86676371-8389-4969-89b4-6a10d3e65cbd en fecha 2026-05-11
+2026-05-11 23:17:02 [http-nio-3000-exec-6] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 25 productos
+2026-05-11 23:17:02 [http-nio-3000-exec-6] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 25 productos
+2026-05-11 23:17:02 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-11 23:17:02 [http-nio-3000-exec-1] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/86676371-8389-4969-89b4-6a10d3e65cbd - consulta por jose@gmail.com
+2026-05-11 23:17:02 [http-nio-3000-exec-1] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-11 23:17:02 [http-nio-3000-exec-1] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-11 23:17:02 [http-nio-3000-exec-1] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 86676371-8389-4969-89b4-6a10d3e65cbd: 6
+2026-05-11 23:17:06 [http-nio-3000-exec-9] INFO  c.b.p.a.a.a.c.AuthRestAdapter - GET /auth/me - Obtener perfil del usuario actual
+2026-05-11 23:17:06 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-11 23:17:07 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-11 23:17:07 [http-nio-3000-exec-9] DEBUG c.b.p.a.a.a.c.AuthRestAdapter - Perfil obtenido para usuario: jose@gmail.com
+2026-05-11 23:17:07 [http-nio-3000-exec-7] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-11 23:17:07 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-11 23:17:07 [http-nio-3000-exec-7] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-11 23:17:10 [http-nio-3000-exec-8] INFO  c.b.p.a.a.c.CierreJornadaRestAdapter - GET /cierres/vendedor/86676371-8389-4969-89b4-6a10d3e65cbd - Historial de cierres
+2026-05-11 23:17:10 [http-nio-3000-exec-10] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
+2026-05-11 23:17:10 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-11 23:17:10 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
+2026-05-11 23:17:10 [http-nio-3000-exec-6] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor 86676371-8389-4969-89b4-6a10d3e65cbd y fecha 2026-05-11
+2026-05-11 23:17:10 [http-nio-3000-exec-6] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 86676371-8389-4969-89b4-6a10d3e65cbd en fecha 2026-05-11
+2026-05-11 23:17:10 [http-nio-3000-exec-2] DEBUG c.b.p.a.a.c.c.ClientesRestAdapter - Obteniendo clientes; vendedorId=86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-11 23:17:10 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.c.s.GestionClientesService - Obteniendo clientes por vendedor: 86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-11 23:17:10 [http-nio-3000-exec-2] DEBUG c.b.p.a.i.p.s.a.SupabaseClienteRepositoryAdapter - Obteniendo clientes por vendedorId=86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-11 23:17:10 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 25 productos
+2026-05-11 23:17:10 [http-nio-3000-exec-10] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 25 productos
+2026-05-11 23:17:10 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-11 23:17:10 [http-nio-3000-exec-4] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/86676371-8389-4969-89b4-6a10d3e65cbd - consulta por jose@gmail.com
+2026-05-11 23:17:10 [http-nio-3000-exec-4] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-11 23:17:10 [http-nio-3000-exec-4] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-11 23:17:11 [http-nio-3000-exec-4] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 86676371-8389-4969-89b4-6a10d3e65cbd: 6
+2026-05-11 23:17:31 [http-nio-3000-exec-9] INFO  c.b.p.a.a.ventas.VentaRestAdapter - POST /ventas - Crear nueva venta
+2026-05-11 23:17:31 [http-nio-3000-exec-9] INFO  c.b.p.a.d.v.s.GestionVentasService - Procesando solicitud de venta. Cliente: 18, Vendedor: 86676371-8389-4969-89b4-6a10d3e65cbd, ID Local: e0f66fa8-e97f-44b5-a20e-e900a564bb9a
+2026-05-11 23:17:32 [http-nio-3000-exec-9] INFO  c.b.p.a.d.v.s.GestionVentasService - Venta creada con ID: 38
+2026-05-11 23:17:32 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.v.s.GestionVentasService - Detalles de venta creados: 3
+2026-05-11 23:17:32 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.v.s.GestionVentasService - Carga 57 actualizada para producto 9000100: cantidad_actual=4
+2026-05-11 23:17:32 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.v.s.GestionVentasService - Carga 56 actualizada para producto 9000109: cantidad_actual=9
+2026-05-11 23:17:32 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.v.s.GestionVentasService - Carga 61 actualizada para producto 9000154: cantidad_actual=2
+2026-05-11 23:17:32 [http-nio-3000-exec-9] INFO  c.b.p.a.d.v.s.GestionVentasService - Venta completada exitosamente - ID: 38, Total: 55.1
+2026-05-11 23:17:32 [http-nio-3000-exec-9] INFO  c.b.p.a.a.ventas.VentaRestAdapter - Venta creada exitosamente - ID: 38
+2026-05-11 23:17:34 [http-nio-3000-exec-7] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
+2026-05-11 23:17:34 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-11 23:17:34 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
+2026-05-11 23:17:34 [http-nio-3000-exec-5] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor 86676371-8389-4969-89b4-6a10d3e65cbd y fecha 2026-05-11
+2026-05-11 23:17:34 [http-nio-3000-exec-5] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 86676371-8389-4969-89b4-6a10d3e65cbd en fecha 2026-05-11
+2026-05-11 23:17:34 [http-nio-3000-exec-7] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 25 productos
+2026-05-11 23:17:34 [http-nio-3000-exec-7] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 25 productos
+2026-05-11 23:17:35 [http-nio-3000-exec-3] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-11 23:17:35 [http-nio-3000-exec-3] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/86676371-8389-4969-89b4-6a10d3e65cbd - consulta por jose@gmail.com
+2026-05-11 23:17:35 [http-nio-3000-exec-3] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-11 23:17:35 [http-nio-3000-exec-3] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-11 23:17:35 [http-nio-3000-exec-3] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 86676371-8389-4969-89b4-6a10d3e65cbd: 6
+2026-05-11 23:17:37 [http-nio-3000-exec-8] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor 86676371-8389-4969-89b4-6a10d3e65cbd y fecha 2026-05-11
+2026-05-11 23:17:37 [http-nio-3000-exec-8] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 86676371-8389-4969-89b4-6a10d3e65cbd en fecha 2026-05-11
+2026-05-11 23:17:37 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-11 23:17:37 [http-nio-3000-exec-2] INFO  c.b.p.a.a.c.CierreJornadaRestAdapter - GET /cierres/vendedor/86676371-8389-4969-89b4-6a10d3e65cbd - Historial de cierres
+2026-05-11 23:17:37 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-11 23:17:37 [http-nio-3000-exec-10] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/86676371-8389-4969-89b4-6a10d3e65cbd - consulta por jose@gmail.com
+2026-05-11 23:17:37 [http-nio-3000-exec-10] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-11 23:17:37 [http-nio-3000-exec-10] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-11 23:17:38 [http-nio-3000-exec-10] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 86676371-8389-4969-89b4-6a10d3e65cbd: 6
+2026-05-11 23:18:03 [http-nio-3000-exec-4] INFO  c.b.p.a.a.ventas.VentaRestAdapter - POST /ventas/confirmar-cierre - Confirmar cierre de jornada para vendedor 86676371-8389-4969-89b4-6a10d3e65cbd y fecha 2026-05-11
+2026-05-11 23:18:03 [http-nio-3000-exec-4] INFO  c.b.p.a.d.v.s.GestionVentasService - Confirmando cierre de jornada para vendedor 86676371-8389-4969-89b4-6a10d3e65cbd en fecha 2026-05-11 con dinero contado 55.1
+2026-05-11 23:18:03 [http-nio-3000-exec-4] INFO  c.b.p.a.d.v.s.GestionVentasService - Conciliación de efectivo completada - Esperado: 55.1, Contado: 55.1, Diferencia: 0.0, Estado: CORRECTO
+2026-05-11 23:18:03 [http-nio-3000-exec-4] INFO  c.b.p.a.a.ventas.VentaRestAdapter - Cierre de jornada confirmado - Estado conciliación: CORRECTO
+2026-05-11 23:18:03 [http-nio-3000-exec-9] INFO  c.b.p.a.a.c.CierreJornadaRestAdapter - POST /cierres - Registrar cierre para vendedor 86676371-8389-4969-89b4-6a10d3e65cbd en fecha 2026-05-11
+2026-05-11 23:18:03 [http-nio-3000-exec-9] INFO  c.b.p.a.d.c.s.GestionCierreJornadaService - Registrando cierre de jornada para vendedor 86676371-8389-4969-89b4-6a10d3e65cbd en fecha 2026-05-11
+2026-05-11 23:18:04 [http-nio-3000-exec-9] INFO  c.b.p.a.d.c.s.GestionCierreJornadaService - Cierre registrado con ID: cd6f75c0-cd30-4dc8-857e-047fc2519831
+2026-05-11 23:18:04 [http-nio-3000-exec-9] INFO  c.b.p.a.a.c.CierreJornadaRestAdapter - Cierre registrado con ID: cd6f75c0-cd30-4dc8-857e-047fc2519831
+2026-05-11 23:18:17 [http-nio-3000-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'userId' for method parameter type String is not present]
+2026-05-11 23:18:24 [http-nio-3000-exec-5] INFO  c.b.p.a.a.a.c.AuthRestAdapter - POST /auth/signin - Intento de autenticación para email: jose@gmail.com
+2026-05-11 23:18:24 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticando usuario con email: jose@gmail.com
+2026-05-11 23:18:24 [http-nio-3000-exec-5] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Autenticación completada para email: jose@gmail.com
+2026-05-11 23:18:24 [http-nio-3000-exec-5] INFO  c.b.p.a.a.a.c.AuthRestAdapter - Autenticación exitosa para email: jose@gmail.com
+2026-05-11 23:18:24 [http-nio-3000-exec-2] INFO  c.b.p.a.a.a.c.AuthRestAdapter - GET /auth/me - Obtener perfil del usuario actual
+2026-05-11 23:18:24 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-11 23:18:25 [http-nio-3000-exec-2] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-11 23:18:25 [http-nio-3000-exec-2] DEBUG c.b.p.a.a.a.c.AuthRestAdapter - Perfil obtenido para usuario: jose@gmail.com
+2026-05-11 23:18:25 [http-nio-3000-exec-10] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
+2026-05-11 23:18:25 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-11 23:18:25 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
+2026-05-11 23:18:25 [http-nio-3000-exec-6] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor 86676371-8389-4969-89b4-6a10d3e65cbd y fecha 2026-05-11
+2026-05-11 23:18:25 [http-nio-3000-exec-6] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 86676371-8389-4969-89b4-6a10d3e65cbd en fecha 2026-05-11
+2026-05-11 23:18:25 [http-nio-3000-exec-10] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 25 productos
+2026-05-11 23:18:25 [http-nio-3000-exec-10] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 25 productos
+2026-05-11 23:18:25 [http-nio-3000-exec-8] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-11 23:18:25 [http-nio-3000-exec-8] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/86676371-8389-4969-89b4-6a10d3e65cbd - consulta por jose@gmail.com
+2026-05-11 23:18:25 [http-nio-3000-exec-8] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-11 23:18:25 [http-nio-3000-exec-8] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-11 23:18:25 [http-nio-3000-exec-8] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 86676371-8389-4969-89b4-6a10d3e65cbd: 6
+2026-05-11 23:18:47 [http-nio-3000-exec-4] INFO  c.b.p.a.a.a.c.AuthRestAdapter - GET /auth/me - Obtener perfil del usuario actual
+2026-05-11 23:18:47 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-11 23:18:48 [http-nio-3000-exec-4] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-11 23:18:48 [http-nio-3000-exec-4] DEBUG c.b.p.a.a.a.c.AuthRestAdapter - Perfil obtenido para usuario: jose@gmail.com
+2026-05-11 23:18:48 [http-nio-3000-exec-1] INFO  c.b.p.a.a.p.c.ProductosRestAdapter - GET /productos - Obtener todos los productos
+2026-05-11 23:18:48 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Obteniendo perfil por token
+2026-05-11 23:18:48 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.p.s.GestionProductosService - Obteniendo todos los productos
+2026-05-11 23:18:48 [http-nio-3000-exec-7] INFO  c.b.p.a.a.ventas.VentaRestAdapter - GET /ventas/cierre-jornada - Obtener cierre de jornada para vendedor 86676371-8389-4969-89b4-6a10d3e65cbd y fecha 2026-05-11
+2026-05-11 23:18:48 [http-nio-3000-exec-7] INFO  c.b.p.a.d.v.s.GestionVentasService - Obteniendo resumen de cierre de jornada para vendedor 86676371-8389-4969-89b4-6a10d3e65cbd en fecha 2026-05-11
+2026-05-11 23:18:48 [http-nio-3000-exec-1] DEBUG c.b.p.a.d.p.s.GestionProductosService - Se obtuvieron 25 productos
+2026-05-11 23:18:48 [http-nio-3000-exec-1] DEBUG c.b.p.a.a.p.c.ProductosRestAdapter - Se obtuvieron 25 productos
+2026-05-11 23:18:48 [http-nio-3000-exec-9] DEBUG c.b.p.a.d.a.s.AutorizacionAuthService - Perfil obtenido exitosamente para usuario ID: 86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-11 23:18:48 [http-nio-3000-exec-9] INFO  c.b.p.a.a.i.c.InventarioRestAdapter - GET /inventario/vendedor/86676371-8389-4969-89b4-6a10d3e65cbd - consulta por jose@gmail.com
+2026-05-11 23:18:48 [http-nio-3000-exec-9] INFO  c.b.p.a.d.i.s.GestionInventarioService - Consultando cargas por vendedor: 86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-11 23:18:48 [http-nio-3000-exec-9] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Consultando asignaciones por vendedor: 86676371-8389-4969-89b4-6a10d3e65cbd
+2026-05-11 23:18:48 [http-nio-3000-exec-9] DEBUG c.b.p.a.i.p.s.a.SupabaseAsignacionRepositoryAdapter - Asignaciones encontradas para vendedor 86676371-8389-4969-89b4-6a10d3e65cbd: 6

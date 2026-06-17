@@ -11,6 +11,7 @@ import java.util.List;
 public class PedidoProgramado {
     private String id;
     private Integer idCliente;
+    private String idVendedor;
     private LocalDate fechaProgramada;
     private EstadoPedido estado;
     private PrioridadPedido prioridad;
@@ -22,11 +23,12 @@ public class PedidoProgramado {
         this.detalles = new ArrayList<>();
     }
 
-    public PedidoProgramado(String id, Integer idCliente, LocalDate fechaProgramada, EstadoPedido estado,
+    public PedidoProgramado(String id, Integer idCliente, String idVendedor, LocalDate fechaProgramada, EstadoPedido estado,
                             PrioridadPedido prioridad, String observaciones, LocalDateTime createdAt,
                             List<DetallePedidoProgramado> detalles) {
         this.id = id;
         this.idCliente = idCliente;
+        this.idVendedor = idVendedor;
         this.fechaProgramada = fechaProgramada;
         this.estado = estado;
         this.prioridad = prioridad;
@@ -50,6 +52,14 @@ public class PedidoProgramado {
 
     public void setIdCliente(Integer idCliente) {
         this.idCliente = idCliente;
+    }
+
+    public String getIdVendedor() {
+        return idVendedor;
+    }
+
+    public void setIdVendedor(String idVendedor) {
+        this.idVendedor = idVendedor;
     }
 
     public LocalDate getFechaProgramada() {

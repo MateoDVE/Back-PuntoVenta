@@ -2,6 +2,7 @@ package com.back.puntoventa.app.domain.ventas.service;
 
 import com.back.puntoventa.app.domain.common.exception.DomainException;
 import com.back.puntoventa.app.domain.productos.model.Producto;
+import com.back.puntoventa.app.domain.ventas.model.CargaTransporte;
 import com.back.puntoventa.app.domain.ventas.model.DetalleVenta;
 import com.back.puntoventa.app.domain.ventas.model.Venta;
 import com.back.puntoventa.app.domain.ventas.model.response.CierreJornadaResponse;
@@ -81,9 +82,15 @@ public class GestionVentasService {
     Map<String, Producto> productosMap = productos.stream()
             .collect(Collectors.toMap(Producto::getId, p -> p));
 
-    // Validar productos y stock
+    // Validar productos y stock en transporte (camión) del vendedor
     BigDecimal subtotal = BigDecimal.ZERO;
     List<DetalleLinea> lineas = new ArrayList<>();
+
+    // Obtener las cargas asignadas y validadas al camión/vendedor para el día de hoy
+    List<CargaTransporte> cargasVendedor = ventaRepositoryPort.obtenerCargasPorVendedorYFecha(request.getIdVendedor(), LocalDate.now());
+    Map<String, CargaTransporte> cargasMap = cargasVendedor.stream()
+            .filter(c -> "VALIDADO".equalsIgnoreCase(c.getEstadoValidacion()))
+            .collect(Collectors.toMap(CargaTransporte::getIdProducto, c -> c, (c1, c2) -> c1));
 
     for (ItemVentaRequest item : request.getItems()) {
         Producto producto = productosMap.get(item.getIdProducto());
@@ -92,11 +99,17 @@ public class GestionVentasService {
             throw new DomainException("Producto no encontrado: " + item.getIdProducto());
         }
 
-        Integer stockActual = producto.getStockAlmacenCentral() != null ? producto.getStockAlmacenCentral() : 0;
+        CargaTransporte carga = cargasMap.get(item.getIdProducto());
+        if (carga == null) {
+            logger.warn("El vendedor {} no tiene carga asignada y validada para el producto {}", request.getIdVendedor(), item.getIdProducto());
+            throw new DomainException("No tienes stock asignado en tu transporte para el producto " + producto.getNombre());
+        }
+
+        Integer stockActual = carga.getCantidadActual() != null ? carga.getCantidadActual() : 0;
         if (stockActual < item.getCantidad()) {
-            logger.warn("Stock insuficiente para producto {}: disponible {}, solicitado {}",
+            logger.warn("Stock en transporte insuficiente para producto {}: disponible {}, solicitado {}",
                     item.getIdProducto(), stockActual, item.getCantidad());
-            throw new DomainException("Stock insuficiente para producto " + producto.getNombre());
+            throw new DomainException("Stock insuficiente en tu transporte para el producto " + producto.getNombre() + " (Disponible: " + stockActual + ")");
         }
 
         BigDecimal precioUnitario = BigDecimal.valueOf(producto.getPrecioUnidad() != null ? producto.getPrecioUnidad() : 0.0);
@@ -141,12 +154,12 @@ public class GestionVentasService {
     detalles = ventaRepositoryPort.crearDetallesVenta(detalles);
     logger.debug("Detalles de venta creados: {}", detalles.size());
 
-    // Actualizar stock
+    // Actualizar stock de la carga en transporte
     for (DetalleVenta detalle : detalles) {
-        Producto producto = productosMap.get(detalle.getIdProducto());
-        Integer nuevoStock = (producto.getStockAlmacenCentral() != null ? producto.getStockAlmacenCentral() : 0) - detalle.getCantidad();
-        ventaRepositoryPort.actualizarStock(detalle.getIdProducto(), nuevoStock);
-        logger.debug("Stock actualizado para producto {}: {}", detalle.getIdProducto(), nuevoStock);
+        CargaTransporte carga = cargasMap.get(detalle.getIdProducto());
+        Integer nuevoStock = (carga.getCantidadActual() != null ? carga.getCantidadActual() : 0) - detalle.getCantidad();
+        ventaRepositoryPort.actualizarCargaStock(carga.getIdCarga(), nuevoStock);
+        logger.info("Stock en transporte actualizado para producto {}: {}", detalle.getIdProducto(), nuevoStock);
     }
 
     // Construir response

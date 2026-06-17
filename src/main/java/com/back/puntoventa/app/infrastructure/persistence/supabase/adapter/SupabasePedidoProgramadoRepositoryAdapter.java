@@ -36,6 +36,7 @@ public class SupabasePedidoProgramadoRepositoryAdapter implements PedidoPrograma
     public PedidoProgramado crear(PedidoProgramado pedido) {
         Map<String, Object> body = new HashMap<>();
         body.put("id_cliente", pedido.getIdCliente());
+        body.put("id_vendedor", pedido.getIdVendedor());
         body.put("fecha_programada", pedido.getFechaProgramada().toString());
         body.put("prioridad", pedido.getPrioridad().name());
         body.put("estado", pedido.getEstado().name());
@@ -100,10 +101,62 @@ public class SupabasePedidoProgramadoRepositoryAdapter implements PedidoPrograma
         return rows.stream().map(this::mapToDetallePedidoProgramado).toList();
     }
 
+    @Override
+    public List<PedidoProgramado> obtenerTodos() {
+        Map<String, String> queryParams = new HashMap<>();
+        queryParams.put("select", "*");
+
+        List<Map<String, Object>> rows = supabaseHttpClient.select(TABLE_PEDIDOS, queryParams);
+        return rows.stream().map(row -> {
+            PedidoProgramado p = mapToPedidoProgramado(row);
+            p.setDetalles(obtenerDetallesPorPedidoId(p.getId()));
+            return p;
+        }).toList();
+    }
+
+    @Override
+    public List<PedidoProgramado> obtenerPorVendedorYFecha(String idVendedor, LocalDate fecha) {
+        Map<String, String> queryParams = new HashMap<>();
+        queryParams.put("id_vendedor", "eq." + idVendedor);
+        queryParams.put("fecha_programada", "eq." + fecha.toString());
+        queryParams.put("select", "*");
+
+        List<Map<String, Object>> rows = supabaseHttpClient.select(TABLE_PEDIDOS, queryParams);
+        return rows.stream().map(row -> {
+            PedidoProgramado p = mapToPedidoProgramado(row);
+            p.setDetalles(obtenerDetallesPorPedidoId(p.getId()));
+            return p;
+        }).toList();
+    }
+
+    @Override
+    public PedidoProgramado actualizar(PedidoProgramado pedido) {
+        Map<String, String> queryParams = new HashMap<>();
+        queryParams.put("id_pedido_programado", "eq." + pedido.getId());
+
+        Map<String, Object> body = new HashMap<>();
+        body.put("id_cliente", pedido.getIdCliente());
+        body.put("id_vendedor", pedido.getIdVendedor());
+        body.put("fecha_programada", pedido.getFechaProgramada().toString());
+        body.put("prioridad", pedido.getPrioridad().name());
+        body.put("estado", pedido.getEstado().name());
+        body.put("observaciones", pedido.getObservaciones());
+
+        List<Map<String, Object>> result = supabaseHttpClient.update(TABLE_PEDIDOS, queryParams, body);
+        if (result.isEmpty()) {
+            throw new RuntimeException("Error al actualizar pedido programado en Supabase");
+        }
+
+        PedidoProgramado p = mapToPedidoProgramado(result.get(0));
+        p.setDetalles(obtenerDetallesPorPedidoId(p.getId()));
+        return p;
+    }
+
     // Mapeadores auxiliares
     private PedidoProgramado mapToPedidoProgramado(Map<String, Object> row) {
         String id = getString(row.get("id_pedido_programado"));
         Integer idCliente = getInteger(row.get("id_cliente"));
+        String idVendedor = getString(row.get("id_vendedor"));
         
         LocalDate fechaProgramada = null;
         Object fechaObj = row.get("fecha_programada");
@@ -152,7 +205,7 @@ public class SupabasePedidoProgramadoRepositoryAdapter implements PedidoPrograma
             }
         }
 
-        return new PedidoProgramado(id, idCliente, fechaProgramada, estado, prioridad, observaciones, createdAt, new ArrayList<>());
+        return new PedidoProgramado(id, idCliente, idVendedor, fechaProgramada, estado, prioridad, observaciones, createdAt, new ArrayList<>());
     }
 
     private DetallePedidoProgramado mapToDetallePedidoProgramado(Map<String, Object> row) {

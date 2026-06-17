@@ -10,6 +10,7 @@ import com.back.puntoventa.app.domain.pedidos.model.PrioridadPedido;
 import com.back.puntoventa.app.domain.pedidos.port.PedidoProgramadoRepositoryPort;
 import com.back.puntoventa.app.domain.productos.model.Producto;
 import com.back.puntoventa.app.domain.productos.port.ProductoRepositoryPort;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -54,9 +55,7 @@ public class PedidoProgramadoService {
             throw new DomainException("La prioridad especificada no es válida. Debe ser ALTA, MEDIA o BAJA.");
         }
 
-        // 2. Validación crítica de Stock (RF3)
-        // Se validan TODOS los productos antes de realizar cualquier actualización para asegurar la atomicidad de la operación
-        List<Producto> productosAActualizar = new ArrayList<>();
+        // 2. Validación crítica de Stock (RF3) - Reserva Blanda
         for (DetallePedidoDto det : dto.getDetalles()) {
             String idProducto = det.getIdProducto();
             Integer cantidadSolicitada = det.getCantidad();
@@ -75,40 +74,16 @@ public class PedidoProgramadoService {
             if (stockCentral < cantidadSolicitada) {
                 logger.warn("[PREVENTA] Validación de stock fallida - Producto: '{}' (ID: {}), Stock disponible: {}, Stock solicitado: {}",
                         producto.getNombre(), idProducto, stockCentral, cantidadSolicitada);
-                throw new DomainException("Stock insuficiente para el producto '" + producto.getNombre()
+                throw new DomainException("Stock insuficiente en Almacén Central para el producto '" + producto.getNombre()
                         + "'. Disponible actual: " + stockCentral);
             }
-
-            // Crear una nueva instancia inmutable del producto con el stock descontado
-            int nuevoStock = stockCentral - cantidadSolicitada;
-            Producto productoActualizado = new Producto(
-                    producto.getId(),
-                    producto.getSku(),
-                    producto.getIdCategoria(),
-                    producto.getNombre(),
-                    producto.getPrecioUnidad(),
-                    producto.getPrecioCaja(),
-                    producto.getUnidadesPorCaja(),
-                    nuevoStock,
-                    producto.getDescripcion(),
-                    producto.getUrlImagen(),
-                    producto.getEstado(),
-                    producto.getCreatedAt()
-            );
-            productosAActualizar.add(productoActualizado);
         }
 
-        // 3. Modificación del stock operativo en la persistencia
-        for (Producto prodAct : productosAActualizar) {
-            productoRepositoryPort.actualizar(prodAct.getId(), prodAct);
-            logger.info("[PREVENTA] Stock reservado exitosamente en base de datos - Producto: '{}' (ID: {}). Nuevo stock central: {}",
-                    prodAct.getNombre(), prodAct.getId(), prodAct.getStockAlmacenCentral());
-        }
-
-        // 4. Crear cabecera del Pedido Programado en estado PENDIENTE
+        // 3. Crear cabecera del Pedido Programado en estado PENDIENTE
         PedidoProgramado nuevoPedido = new PedidoProgramado(
                 null,
                 dto.getIdCliente(),
+                dto.getIdVendedor(),
                 dto.getFechaProgramada(),
                 EstadoPedido.PENDIENTE,
                 prioridad,
@@ -120,7 +95,7 @@ public class PedidoProgramadoService {
         PedidoProgramado pedidoGuardado = pedidoProgramadoRepositoryPort.crear(nuevoPedido);
         logger.info("[PREVENTA] Cabecera del pedido programado persistida exitosamente - ID: {}", pedidoGuardado.getId());
 
-        // 5. Crear detalles del Pedido Programado
+        // 4. Crear detalles del Pedido Programado
         List<DetallePedidoProgramado> detallesList = new ArrayList<>();
         for (DetallePedidoDto detDto : dto.getDetalles()) {
             DetallePedidoProgramado detPedido = new DetallePedidoProgramado(
@@ -137,5 +112,42 @@ public class PedidoProgramadoService {
 
         logger.info("[PREVENTA] Pedido programado procesado y registrado completamente con éxito - ID: {}", pedidoGuardado.getId());
         return pedidoGuardado;
+    }
+
+    @Transactional(readOnly = true)
+    public List<PedidoProgramado> obtenerTodos() {
+        logger.info("[PREVENTA] Listando todos los pedidos programados");
+        return pedidoProgramadoRepositoryPort.obtenerTodos();
+    }
+
+    @Transactional(readOnly = true)
+    public List<PedidoProgramado> obtenerPorVendedorYFecha(String idVendedor, LocalDate fecha) {
+        logger.info("[PREVENTA] Consultando pedidos programados para vendedor: {} en fecha: {}", idVendedor, fecha);
+        return pedidoProgramadoRepositoryPort.obtenerPorVendedorYFecha(idVendedor, fecha);
+    }
+
+    @Transactional
+    public PedidoProgramado actualizarEstadoPedido(String id, String nuevoEstadoStr, LocalDate nuevaFecha) {
+        logger.info("[PREVENTA] Actualizando estado del pedido programado ID: {} a {}", id, nuevoEstadoStr);
+        PedidoProgramado pedido = pedidoProgramadoRepositoryPort.obtenerPorId(id)
+                .orElseThrow(() -> new DomainException("Pedido programado no encontrado con ID: " + id));
+
+        EstadoPedido nuevoEstado;
+        try {
+            nuevoEstado = EstadoPedido.valueOf(nuevoEstadoStr.trim().toUpperCase());
+        } catch (Exception e) {
+            throw new DomainException("El estado '" + nuevoEstadoStr + "' no es un estado válido para un pedido programado.");
+        }
+
+        pedido.setEstado(nuevoEstado);
+        if (nuevoEstado == EstadoPedido.REPROGRAMADO && nuevaFecha != null) {
+            pedido.setFechaProgramada(nuevaFecha);
+            // Si es reprogramado, volvemos a ponerlo en estado PENDIENTE para la nueva fecha
+            pedido.setEstado(EstadoPedido.PENDIENTE);
+        }
+
+        PedidoProgramado actualizado = pedidoProgramadoRepositoryPort.actualizar(pedido);
+        logger.info("[PREVENTA] Pedido programado ID: {} actualizado exitosamente. Estado actual: {}", id, actualizado.getEstado());
+        return actualizado;
     }
 }

@@ -125,6 +125,20 @@ public class SupabaseVentaRepositoryAdapter implements VentaRepositoryPort {
     }
 
     @Override
+    public void actualizarCargaStock(String idCarga, Integer nuevaCantidad) {
+        Map<String, String> queryParams = new HashMap<>();
+        queryParams.put("id_carga", "eq." + idCarga);
+
+        Map<String, Object> body = new HashMap<>();
+        body.put("cantidad_actual", nuevaCantidad);
+
+        List<Map<String, Object>> result = supabaseHttpClient.update(TABLE_CARGA_TRANSPORTE, queryParams, body);
+        if (result.isEmpty()) {
+            throw new RuntimeException("Carga de transporte no encontrada para actualizar stock: " + idCarga);
+        }
+    }
+
+    @Override
     public List<Venta> obtenerVentas() {
         Map<String, String> queryParams = new HashMap<>();
         queryParams.put("select", "*");

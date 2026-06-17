@@ -18,6 +18,7 @@ public interface VentaRepositoryPort {
     Venta crearVenta(Venta venta);
     List<DetalleVenta> crearDetallesVenta(List<DetalleVenta> detalles);
     void actualizarStock(String idProducto, Integer nuevaCantidad);
+    void actualizarCargaStock(String idCarga, Integer nuevaCantidad);
     List<Venta> obtenerVentas();
     Venta obtenerVentaPorId(String idVenta);
     List<DetalleVenta> obtenerDetallesPorVentaId(String idVenta);

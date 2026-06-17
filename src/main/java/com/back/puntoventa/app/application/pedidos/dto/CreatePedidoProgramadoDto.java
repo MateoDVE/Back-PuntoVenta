@@ -19,6 +19,11 @@ public class CreatePedidoProgramadoDto {
     @JsonAlias("idCliente")
     private Integer idCliente;
 
+    @NotBlank(message = "El idVendedor es obligatorio")
+    @JsonProperty("id_vendedor")
+    @JsonAlias("idVendedor")
+    private String idVendedor;
+
     @NotNull(message = "La fecha programada es obligatoria")
     @JsonProperty("fecha_programada")
     @JsonAlias("fechaProgramada")
@@ -35,10 +40,11 @@ public class CreatePedidoProgramadoDto {
 
     public CreatePedidoProgramadoDto() {}
 
-    public CreatePedidoProgramadoDto(Integer idCliente, LocalDate fechaProgramada,
+    public CreatePedidoProgramadoDto(Integer idCliente, String idVendedor, LocalDate fechaProgramada,
                                       List<DetallePedidoDto> detalles, String observaciones,
                                       String prioridad) {
         this.idCliente = idCliente;
+        this.idVendedor = idVendedor;
         this.fechaProgramada = fechaProgramada;
         this.detalles = detalles;
         this.observaciones = observaciones;
@@ -51,6 +57,14 @@ public class CreatePedidoProgramadoDto {
 
     public void setIdCliente(Integer idCliente) {
         this.idCliente = idCliente;
+    }
+
+    public String getIdVendedor() {
+        return idVendedor;
+    }
+
+    public void setIdVendedor(String idVendedor) {
+        this.idVendedor = idVendedor;
     }
 
     public LocalDate getFechaProgramada() {

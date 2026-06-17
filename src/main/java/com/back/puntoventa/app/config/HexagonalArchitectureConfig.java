@@ -34,6 +34,11 @@ import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.Supab
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseVendedorRepositoryAdapter;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseVentaRepositoryAdapter;
 import com.back.puntoventa.app.infrastructure.persistence.supabase.client.SupabaseHttpClient;
+import com.back.puntoventa.app.domain.pedidos.port.PedidoProgramadoRepositoryPort;
+import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabasePedidoProgramadoRepositoryAdapter;
+import com.back.puntoventa.app.domain.sucursales.port.SucursalRepositoryPort;
+import com.back.puntoventa.app.domain.sucursales.service.GestionSucursalesService;
+import com.back.puntoventa.app.infrastructure.persistence.supabase.adapter.SupabaseSucursalRepositoryAdapter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -168,7 +173,22 @@ public class HexagonalArchitectureConfig {
     }
 
     @Bean
+    public PedidoProgramadoRepositoryPort pedidoProgramadoRepositoryPort(SupabaseHttpClient supabaseHttpClient) {
+        return new SupabasePedidoProgramadoRepositoryAdapter(supabaseHttpClient);
+    }
+
+    @Bean
     public GestionCierreJornadaService gestionCierreJornadaService(CierreJornadaRepositoryPort cierreJornadaRepositoryPort) {
         return new GestionCierreJornadaService(cierreJornadaRepositoryPort);
+    }
+
+    @Bean
+    public SucursalRepositoryPort sucursalRepositoryPort(SupabaseHttpClient supabaseHttpClient) {
+        return new SupabaseSucursalRepositoryAdapter(supabaseHttpClient);
+    }
+
+    @Bean
+    public GestionSucursalesService gestionSucursalesService(SucursalRepositoryPort sucursalRepositoryPort) {
+        return new GestionSucursalesService(sucursalRepositoryPort);
     }
 }

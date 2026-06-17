@@ -142,10 +142,15 @@ public class GestionVentasService {
     Map<String, Producto> productosMap = productos.stream()
             .collect(Collectors.toMap(Producto::getId, p -> p));
 
-    // Validar productos y stock contra carga_transporte del vendedor
+    // Validar productos y stock en transporte (camión) del vendedor
     BigDecimal subtotal = BigDecimal.ZERO;
     List<DetalleLinea> lineas = new ArrayList<>();
-    Map<String, CargaTransporte> cargasMap = new HashMap<>();
+
+    // Obtener las cargas asignadas y validadas al camión/vendedor para el día de hoy
+    List<CargaTransporte> cargasVendedor = ventaRepositoryPort.obtenerCargasPorVendedorYFecha(request.getIdVendedor(), LocalDate.now());
+    Map<String, CargaTransporte> cargasMap = cargasVendedor.stream()
+            .filter(c -> "VALIDADO".equalsIgnoreCase(c.getEstadoValidacion()))
+            .collect(Collectors.toMap(CargaTransporte::getIdProducto, c -> c, (c1, c2) -> c1));
 
     for (ItemVentaRequest item : request.getItems()) {
         Producto producto = productosMap.get(item.getIdProducto());
@@ -154,19 +159,18 @@ public class GestionVentasService {
             throw new DomainException("Producto no encontrado: " + item.getIdProducto());
         }
 
-        CargaTransporte carga = ventaRepositoryPort
-                .obtenerCargaPorVendedorYProducto(request.getIdVendedor(), item.getIdProducto(), LocalDate.now())
-                .orElseThrow(() -> new DomainException(
-                        "No hay carga asignada y validada para producto " + producto.getNombre()));
+        CargaTransporte carga = cargasMap.get(item.getIdProducto());
+        if (carga == null) {
+            logger.warn("El vendedor {} no tiene carga asignada y validada para el producto {}", request.getIdVendedor(), item.getIdProducto());
+            throw new DomainException("No tienes stock asignado en tu transporte para el producto " + producto.getNombre());
+        }
 
         Integer stockActual = carga.getCantidadActual() != null ? carga.getCantidadActual() : 0;
         if (stockActual < item.getCantidad()) {
-            logger.warn("Stock insuficiente para producto {}: disponible {}, solicitado {}",
+            logger.warn("Stock en transporte insuficiente para producto {}: disponible {}, solicitado {}",
                     item.getIdProducto(), stockActual, item.getCantidad());
-            throw new DomainException("Stock insuficiente para producto " + producto.getNombre());
+            throw new DomainException("Stock insuficiente en tu transporte para el producto " + producto.getNombre() + " (Disponible: " + stockActual + ")");
         }
-
-        cargasMap.put(item.getIdProducto(), carga);
 
         BigDecimal precioUnitario = BigDecimal.valueOf(producto.getPrecioUnidad() != null ? producto.getPrecioUnidad() : 0.0);
         BigDecimal subtotalItem = precioUnitario.multiply(BigDecimal.valueOf(item.getCantidad()));
@@ -210,12 +214,12 @@ public class GestionVentasService {
     detalles = ventaRepositoryPort.crearDetallesVenta(detalles);
     logger.debug("Detalles de venta creados: {}", detalles.size());
 
-    // Descontar stock de carga_transporte del vendedor
+    // Actualizar stock de la carga en transporte
     for (DetalleVenta detalle : detalles) {
         CargaTransporte carga = cargasMap.get(detalle.getIdProducto());
-        Integer nuevaCantidad = (carga.getCantidadActual() != null ? carga.getCantidadActual() : 0) - detalle.getCantidad();
-        ventaRepositoryPort.actualizarCantidadActualCarga(carga.getIdCarga(), nuevaCantidad);
-        logger.debug("Carga {} actualizada para producto {}: cantidad_actual={}", carga.getIdCarga(), detalle.getIdProducto(), nuevaCantidad);
+        Integer nuevoStock = (carga.getCantidadActual() != null ? carga.getCantidadActual() : 0) - detalle.getCantidad();
+        ventaRepositoryPort.actualizarCargaStock(carga.getIdCarga(), nuevoStock);
+        logger.info("Stock en transporte actualizado para producto {}: {}", detalle.getIdProducto(), nuevoStock);
     }
 
     // Construir response

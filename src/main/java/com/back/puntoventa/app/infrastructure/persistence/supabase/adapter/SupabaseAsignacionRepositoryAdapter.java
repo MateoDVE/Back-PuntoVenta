@@ -34,7 +34,7 @@ public class SupabaseAsignacionRepositoryAdapter implements AsignacionRepository
         row.put("id_vendedor", asignacion.getIdVendedor());
         row.put("id_producto", parseProductoId(asignacion.getIdProducto()));
         row.put("cantidad_inicial", asignacion.getCantidadAsignada());
-        row.put("cantidad_actual", asignacion.getCantidadAsignada());
+        row.put("cantidad_actual", asignacion.getCantidadActual());
         row.put("estado_validacion", asignacion.getEstadoValidacion());
 
         List<Map<String, Object>> result = supabaseHttpClient.insert(TABLE, row, null, "return=representation");

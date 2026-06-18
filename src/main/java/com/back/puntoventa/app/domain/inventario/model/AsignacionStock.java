@@ -21,7 +21,7 @@ public class AsignacionStock {
         this.idVendedor = idVendedor;
         this.idProducto = idProducto;
         this.cantidadAsignada = cantidadAsignada;
-        this.cantidadActual = cantidadActual;
+        this.cantidadActual = cantidadActual != null ? cantidadActual : cantidadAsignada;
         this.estadoValidacion = estadoValidacion;
         this.fechaAsignacion = fechaAsignacion;
     }
